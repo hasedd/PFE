@@ -1,0 +1,360 @@
+﻿@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: auto;
+    src: url(webfonts/fa-solid-900.eot);
+    src: url(webfonts/fa-solid-900d41d.eot?#iefix) format("embedded-opentype"), url(webfonts/fa-solid-900.woff2) format("woff2"), url(webfonts/fa-solid-900.woff) format("woff"), url(webfonts/fa-solid-900.ttf) format("truetype"), url(webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+[class^="apicon-"]:before,
+[class*=" apicon-"]:before {
+    font-family: 'Font Awesome 5 Free' !important;
+    font-style: normal;
+    font-weight: 900;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.apicon-bell-slash:before {
+    content: "\f1f6"
+}
+
+.apicon-bell:before {
+    content: "\f0f3"
+}
+
+.apicon-x:before {
+    content: "\f00d"
+}
+
+.apicon-dots:before {
+    content: "\f141"
+}
+
+.apicon-check:before {
+    content: "\f00c"
+}
+
+.apicon-chevron-down:before {
+    content: "\f078"
+}
+
+.apicon-chevron-up:before {
+    content: "\f077"
+}
+
+.apicon-chevron-right:before {
+    content: "\f054"
+}
+
+.apicon-chevron-left:before {
+    content: "\f053"
+}
+
+.apicon-file-image-o:before {
+    content: "\f1c5"
+}
+
+.apicon-file-excel-o:before {
+    content: "\f1c3"
+}
+
+.apicon-file-code-o:before {
+    content: "\f1c9"
+}
+
+.apicon-code:before {
+    content: "\f121"
+}
+
+.apicon-file-movie-o:before {
+    content: "\f1c8"
+}
+
+.apicon-file-audio-o:before {
+    content: "\f1c7"
+}
+
+.apicon-file-archive-o:before {
+    content: "\f1c6"
+}
+
+.apicon-file-word-o:before {
+    content: "\f1c2"
+}
+
+.apicon-file-pdf-o:before {
+    content: "\f1c1"
+}
+
+.apicon-file-text-o:before {
+    content: "\f15c"
+}
+
+.apicon-file-powerpoint-o:before {
+    content: "\f1c4"
+}
+
+.apicon-google-plus-square:before {
+    content: "\f0d4"
+}
+
+.apicon-twitter-square:before {
+    content: "\f081"
+}
+
+.apicon-facebook-square:before {
+    content: "\f082"
+}
+
+.apicon-toggle-on:before {
+    content: "\f205"
+}
+
+.apicon-toggle-off:before {
+    content: "\f204"
+}
+
+.apicon-image:before {
+    content: "\f03e"
+}
+
+.apicon-category:before {
+    content: "\f07b"
+}
+
+.apicon-tag:before {
+    content: "\f02b"
+}
+
+.apicon-comments:before {
+    content: "\f086"
+}
+
+.apicon-anspress:before {
+    content: "\f19a"
+}
+
+.apicon-anspress-icon:before {
+    content: "\f19a"
+}
+
+.apicon-pencil:before {
+    content: "\f304"
+}
+
+.apicon-users:before {
+    content: "\f0c0"
+}
+
+.apicon-user-check:before {
+    content: "\f4fc"
+}
+
+.apicon-user-minus:before {
+    content: "\f503"
+}
+
+.apicon-user-plus:before {
+    content: "\f234"
+}
+
+.apicon-user:before {
+    content: "\f007"
+}
+
+.apicon-profile:before {
+    content: "\f2bb"
+}
+
+.apicon-reputation:before {
+    content: "\f091"
+}
+
+.apicon-screen-normal:before {
+    content: "\f065"
+}
+
+.apicon-screen-full:before {
+    content: "\f31e"
+}
+
+.apicon-alert:before {
+    content: "\f06a"
+}
+
+.apicon-bug:before {
+    content: "\f188"
+}
+
+.apicon-calendar:before {
+    content: "\f133"
+}
+
+.apicon-clock:before {
+    content: "\f017"
+}
+
+.apicon-cloud-upload:before {
+    content: "\f382"
+}
+
+.apicon-ellipsis:before {
+    content: "\f141"
+}
+
+.apicon-eye:before {
+    content: "\f06e"
+}
+
+.apicon-gear:before {
+    content: "\f013"
+}
+
+.apicon-gist-secret:before {
+    content: "\f21b"
+}
+
+.apicon-globe:before {
+    content: "\f0ac"
+}
+
+.apicon-heart:before {
+    content: "\f004"
+}
+
+.apicon-link:before {
+    content: "\f0c1"
+}
+
+.apicon-lock:before {
+    content: "\f023"
+}
+
+.apicon-mail:before {
+    content: "\f0e0"
+}
+
+.apicon-mail-read:before {
+    content: "\f2b6"
+}
+
+.apicon-mark-github:before {
+    content: "\f09b"
+}
+
+.apicon-mention:before {
+    content: "\f10e"
+}
+
+.apicon-mortar-board:before {
+    content: "\f19d"
+}
+
+.apicon-mute:before {
+    content: "\f6a9"
+}
+
+.apicon-pin:before {
+    content: "\f08d"
+}
+
+.apicon-plus:before {
+    content: "\f067"
+}
+
+.apicon-pulse:before {
+    content: "\f1da"
+}
+
+.apicon-puzzle:before {
+    content: "\f12e"
+}
+
+.apicon-rss:before {
+    content: "\f143"
+}
+
+.apicon-search:before {
+    content: "\f002"
+}
+
+.apicon-star:before {
+    content: "\f005"
+}
+
+.apicon-stop:before {
+    content: "\f04d"
+}
+
+.apicon-sync:before {
+    content: "\f2f1"
+}
+
+.apicon-trashcan:before {
+    content: "\f1f8"
+}
+
+.apicon-flag:before {
+    content: "\f024"
+}
+
+.apicon-answer:before {
+    content: "\f075"
+}
+
+.apicon-question:before {
+    content: "\f059"
+}
+
+.apicon-home:before {
+    content: "\f015"
+}
+
+.apicon-thumbs-up-down:before {
+    content: "\f164 \f165"
+}
+
+.apicon-thumb-up:before {
+    content: "\f164"
+}
+
+.apicon-thumb-down:before {
+    content: "\f165"
+}
+
+.apicon-board:before {
+    content: "\f328"
+}
+
+.apicon-messages:before {
+    content: "\f0e0"
+}
+
+.apicon-blog:before {
+    content: "\f08d"
+}
+
+.apicon-submit:before {
+    content: "\f055"
+}
+
+.apicon-followers:before {
+    content: "\f500"
+}
+
+.apicon-following:before {
+    content: "\f06e"
+}
+
+.apicon-cart:before {
+    content: "\f07a"
+}
+
+.apicon-briefcase:before {
+    content: "\f0b1"
+}
