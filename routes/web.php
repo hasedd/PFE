@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');
+
+Route::get('/', function () {
+    return view('homepage');
+})->name('homepage');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
