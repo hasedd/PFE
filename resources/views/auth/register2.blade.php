@@ -4,30 +4,9 @@
             <x-jet-authentication-card-logo />
         </x-slot>
         <x-jet-validation-errors class="mb-4" />
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" x-data ="{ts : true}">
             @csrf
-            <div class="">
-                <x-jet-label for="domain" value="{{ __('Domain') }}" />
-                <x-jet-input id="domain" class="block mt-1 w-full" type="text" name="domain" :value="old('domain')" required/>
-            </div>
-                <div x-show="en===1">
-                    <div class="mt-4">
-                        <x-jet-label for="university" value="{{ __('University') }}" />
-                        <x-jet-input id="university" class="block mt-1 w-full" type="text" name="university" :value="old('university')" required/>
-                    </div>
-                    <div class="mt-4">
-                        <x-jet-label for="diplom" value="{{ __('Diplome') }}" />
-                        <x-jet-input id="diplom" class="block mt-1 w-full" type="text" name="diplom" :value="old('diplom')" required/>
-                    </div>
-                    <div class="mt-4" >
-                        <x-jet-label for="password" value="{{ __('Password') }}" />
-                        <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-                    </div>
-                    <div class="mt-4">
-                        <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                        <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-                    </div>
-                <!--<template x-show="ts===false">
+            <template x-show="ts===false">
                         <div class="">
                             <x-jet-label for="email" value="{{ __('Email') }}" />
                             <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required/>
@@ -56,7 +35,30 @@
                             <x-jet-label for="address" value="{{ __('Address') }}" />
                             <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required/>
                         </div>
-                    </template>-->
+                    </template>
+
+            <div class="">
+                <x-jet-label for="domain" value="{{ __('Domain') }}" />
+                <x-jet-input id="domain" class="block mt-1 w-full" type="text" name="domain" :value="old('domain')" required/>
+            </div>
+                <div x-show="en===1">
+                    <div class="mt-4">
+                        <x-jet-label for="university" value="{{ __('University') }}" />
+                        <x-jet-input id="university" class="block mt-1 w-full" type="text" name="university" :value="old('university')" required/>
+                    </div>
+                    <div class="mt-4">
+                        <x-jet-label for="diplom" value="{{ __('Diplome') }}" />
+                        <x-jet-input id="diplom" class="block mt-1 w-full" type="text" name="diplom" :value="old('diplom')" required/>
+                    </div>
+                    <div class="mt-4" >
+                        <x-jet-label for="password" value="{{ __('Password') }}" />
+                        <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                    </div>
+                    <div class="mt-4">
+                        <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                        <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                    </div>
+
 
                     @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                         <div class="mt-4">

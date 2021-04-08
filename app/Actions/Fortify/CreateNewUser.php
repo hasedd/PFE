@@ -52,8 +52,7 @@ class CreateNewUser implements CreatesNewUsers
         }
         if ($type!=null){
 
-            $type->user()->create(['name'=>$type->firstName,'email'=>$type->email,'password'=>Hash::make($input['password'])]);
-
+            $type->user()->create(['username'=>$type->lastName.".".$type->firstName,'name'=>$type->firstName,'email'=>$type->email,'password'=>Hash::make($input['password'])]);
             return $type->user;
         }else {
             $message = __('No '.$input['type'].' with this email');
