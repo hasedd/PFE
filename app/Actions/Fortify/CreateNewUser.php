@@ -4,6 +4,7 @@ namespace App\Actions\Fortify;
 
 use App\Models\Student;
 use App\Models\Other;
+use App\Models\Teacher;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
