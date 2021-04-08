@@ -8,7 +8,6 @@
             @csrf
             <template x-show="ts===false">
                         <div class="">
-                            <x-jet-label for="email" value="{{ __('Email') }}" />
                             <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required/>
                         </div>
                     </template>
@@ -37,11 +36,10 @@
                         </div>
                     </template>
 
-            <div class="">
-                <x-jet-label for="domain" value="{{ __('Domain') }}" />
-                <x-jet-input id="domain" class="block mt-1 w-full" type="text" name="domain" :value="old('domain')" required/>
-            </div>
-                <div x-show="en===1">
+                    <div class="">
+                        <x-jet-label for="domain" value="{{ __('Domain') }}" />
+                        <x-jet-input id="domain" class="block mt-1 w-full" type="text" name="domain" :value="old('domain')" required/>
+                    </div>
                     <div class="mt-4">
                         <x-jet-label for="university" value="{{ __('University') }}" />
                         <x-jet-input id="university" class="block mt-1 w-full" type="text" name="university" :value="old('university')" required/>
@@ -91,7 +89,6 @@
                         </x-jet-button>
                         </div>
                     </div>
-                </div>
             </div>
 
         </form>
