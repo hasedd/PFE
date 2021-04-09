@@ -22,13 +22,13 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
-
-        Validator::make($input, [
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => $this->passwordRules(),
-            'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
-        ])->validate();
-
+        if ($input['type']=='Student'|| $input['type']=='Teacher') {
+            Validator::make($input, [
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => $this->passwordRules(),
+                'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
+            ])->validate();
+        }
 
         if ($input['type']=='Student' ){
             $type = Student::where('email',$input['email'])->first();
@@ -36,7 +36,7 @@ class CreateNewUser implements CreatesNewUsers
         else if ($input['type']=='Teacher'){
             $type = Teacher::where('email',$input['email'])->first();
         }
-        else {
+        else if ($input['type']=='Other'){
             $type=new Other();
             $table='others';
             $id=$type->id;
@@ -50,6 +50,7 @@ class CreateNewUser implements CreatesNewUsers
             $type['diplom']=$input['diplom'];
             $type->save();
         }
+        else $type=null;
         if ($type!=null){
 
             $type->user()->create(['username'=>$type->lastName.".".$type->firstName,'name'=>$type->firstName,'email'=>$type->email,'password'=>Hash::make($input['password'])]);

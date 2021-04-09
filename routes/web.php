@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
 
+Route::MATCH(['GET','POST'],'/register/next', function () {
+    return view('auth.register2');
+})->name('register2');
+
 Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::get('/dashboard', function () {
