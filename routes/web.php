@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\OtherController ;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
 
-Route::MATCH(['GET','POST'],'/register/next', function () {
+Route::MATCH('POST','/register/next', function () {
     return view('auth.register2');
 })->name('register2');
 
@@ -32,4 +32,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     })->name('dashboard');
 
 });
+Route::match(['POST','GET'],'\othercreate',[OtherController::class,'createOther'])->name('createother');
 

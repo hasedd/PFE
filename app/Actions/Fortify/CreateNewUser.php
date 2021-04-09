@@ -2,6 +2,7 @@
 
 namespace App\Actions\Fortify;
 
+use App\Http\Controllers\OtherController;
 use App\Models\Student;
 use App\Models\Other;
 use App\Models\Teacher;
@@ -10,6 +11,9 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
+
+
+
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -23,13 +27,21 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
-        if ($input['type']=='Student'|| $input['type']=='Teacher') {
+        if ($input['type']=='Student'|| $input['type']=='Teacher'  ) {
             Validator::make($input, [
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
                 'password' => $this->passwordRules(),
                 'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
             ])->validate();
         }
+       /* if ( $input['type']=='Other'){
+            Validator::make($input, [
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'string', 'confirmed'] ,
+                'terms' => ['required', 'accepted'] ,
+            ])->validate();
+
+        }*/
 
         if ($input['type']=='Student' ){
             $type = Student::where('email',$input['email'])->first();
@@ -38,18 +50,9 @@ class CreateNewUser implements CreatesNewUsers
             $type = Teacher::where('email',$input['email'])->first();
         }
         else if ($input['type']=='Other'){
-            $type=new Other();
-            $table='others';
-            $id=$type->id;
-            $type['email']=$input['email'];
-            $type['firstName']=$input['f_name'];
-            $type['lastName']=$input['l_name'];
-            $type['age']=$input['age'];
-            $type['address']=$input['address'];
-            $type['domain']=$input['domain'];
-            $type['university']=$input['university'];
-            $type['diplom']=$input['diplom'];
-            $type->save();
+            $type=Other::where('email',$input['email'])->first();
+            $type->user()->create(['username'=>$type->lastName.".".$type->firstName,'name'=>$type->firstName,'email'=>$type->email,'password'=>Hash::make($input['password'])]);
+            return $type->user;
         }
         else $type=null;
         if ($type!=null){
