@@ -20,8 +20,9 @@ class CreateRepliesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->text('Content');
-            $table->integer('Votes_up');
-            $table->integer('Votes_down');
+            $table->integer('Votes_up')->default(0);
+            $table->integer('Votes_down')->default(0);
+            $table->timestamps();
         });
     }
 
