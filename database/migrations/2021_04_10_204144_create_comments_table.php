@@ -24,8 +24,6 @@ class CreateCommentsTable extends Migration
             $table->integer('Votes_down')->default(0);
             $table->timestamps();
 
-
-            $table->timestamps();
         });
     }
 
