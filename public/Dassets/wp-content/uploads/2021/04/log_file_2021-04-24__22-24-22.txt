@@ -1,0 +1,118 @@
+
+---Downloaded files---
+The import files for: Main demo were successfully downloaded!
+Initial max execution time = 36000
+Files info:
+Site URL = http://template.test
+Data file = C:\laragon\www\Template/wp-content/uploads/2021/04/demo-content-import-file_2021-04-24__22-24-22.xml
+Widget file = C:\laragon\www\Template/wp-content/uploads/2021/04/demo-widgets-import-file_2021-04-24__22-24-22.json
+Customizer file = not defined!
+Redux files:
+not defined!
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+---pt-ocdi/before_widgets_import---
+
+
+---Importing widgets---
+Sidebar : 
+
+WPQA - Buttons - Ask question - Imported
+WPQA - Stats - No Title - Imported
+WPQA - Tabs - Tabs - Imported
+WPQA - Related Questions - Related Questions - Imported
+WPQA - Activities log - Recent Activities - Imported
+WPQA - Users - Top Members - Imported
+Tag Cloud - Trending Tags - Imported
+
+widgets : Sidebar does not exist in theme (moving widget to Inactive)
+
+Discy - Social counter - Social Statistics - Imported to Inactive
+WPQA - Login - Login - Imported to Inactive
+WPQA - Notifications - Notifications - Imported to Inactive
+Discy - Facebook - Facebook - Imported to Inactive
+WPQA - Signup - Signup - Imported to Inactive
+WPQA - Stats - Stats - Imported to Inactive
+Discy - Subscribe - Subscribe - Imported to Inactive
+Discy - Twitter - Latest Tweets - Imported to Inactive
+Discy - Video - Video - Imported to Inactive
+
+First footer widget area : 
+
+Discy - About - empty - Imported
+
+Second footer widget area : 
+
+Navigation Menu - About Us - Imported
+
+Third footer widget area : 
+
+Navigation Menu - Legal Stuff - Imported
+
+Fourth footer widget area : 
+
+Navigation Menu - Help - Imported
+
+Fifth footer widget area : 
+
+Discy - Social media - Follow - Imported
+
+
+
+---pt-ocdi/before_widgets_import---
+
+
+---Importing widgets---
+Sidebar : 
+
+WPQA - Buttons - Ask question - Imported
+WPQA - Stats - No Title - Imported
+WPQA - Tabs - Tabs - Imported
+WPQA - Related Questions - Related Questions - Imported
+WPQA - Activities log - Recent Activities - Imported
+WPQA - Users - Top Members - Imported
+Tag Cloud - Trending Tags - Imported
+
+widgets : Sidebar does not exist in theme (moving widget to Inactive)
+
+Discy - Social counter - Social Statistics - Imported to Inactive
+WPQA - Login - Login - Imported to Inactive
+WPQA - Notifications - Notifications - Imported to Inactive
+Discy - Facebook - Facebook - Imported to Inactive
+WPQA - Signup - Signup - Imported to Inactive
+WPQA - Stats - Stats - Imported to Inactive
+Discy - Subscribe - Subscribe - Imported to Inactive
+Discy - Twitter - Latest Tweets - Imported to Inactive
+Discy - Video - Video - Imported to Inactive
+
+First footer widget area : 
+
+Discy - About - empty - Imported
+
+Second footer widget area : 
+
+Navigation Menu - About Us - Imported
+
+Third footer widget area : 
+
+Navigation Menu - Legal Stuff - Imported
+
+Fourth footer widget area : 
+
+Navigation Menu - Help - Imported
+
+Fifth footer widget area : 
+
+Discy - Social media - Follow - Imported
+
+
+
+---pt-ocdi/after_import---
+

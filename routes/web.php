@@ -16,6 +16,9 @@ use App\Http\Controllers\OtherController ;
 Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');
+Route::get('/test', function () {
+    return view('Posts.questions.Body');
+});
 
 Route::get('/', function () {
     return view('homepage');
@@ -32,5 +35,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     })->name('dashboard');
 
 });
-Route::match(['POST','GET'],'\othercreate',[OtherController::class,'createOther'])->name('createother');
+Route::match(['POST','GET'],'/othercreate',[OtherController::class,'createOther'])->name('createother');
 

@@ -1,0 +1,62 @@
+
+---Downloaded files---
+The import files for: Second demo were successfully downloaded!
+Initial max execution time = 36000
+Files info:
+Site URL = http://template.test
+Data file = C:\laragon\www\Template/wp-content/uploads/2021/04/demo-content-import-file_2021-04-24__22-44-27.xml
+Widget file = C:\laragon\www\Template/wp-content/uploads/2021/04/demo-widgets-import-file_2021-04-24__22-44-27.json
+Customizer file = not defined!
+Redux files:
+not defined!
+
+---pt-ocdi/before_widgets_import---
+
+
+---Importing widgets---
+Sidebar : 
+
+WPQA - Buttons - Ask question - Imported
+WPQA - Stats - No Title - Imported
+WPQA - Tabs - Tabs - Imported
+WPQA - Related Questions - Related Questions - Imported
+WPQA - Activities log - Recent Activities - Imported
+WPQA - Users - Top Members - Imported
+Tag Cloud - Trending Tags - Imported
+
+Widgets : 
+
+Discy - Social counter - Social Statistics - Imported
+WPQA - Login - Login - Imported
+WPQA - Notifications - Notifications - Imported
+Discy - Facebook - Facebook - Imported
+WPQA - Signup - Signup - Imported
+WPQA - Stats - Stats - Imported
+Discy - Subscribe - Subscribe - Imported
+Discy - Twitter - Latest Tweets - Imported
+Discy - Video - Video - Imported
+
+First footer widget area : 
+
+Discy - About - empty - Imported
+
+Second footer widget area : 
+
+Navigation Menu - About Us - Imported
+
+Third footer widget area : 
+
+Navigation Menu - Legal Stuff - Imported
+
+Fourth footer widget area : 
+
+Navigation Menu - Help - Imported
+
+Fifth footer widget area : 
+
+Discy - Social media - Follow - Imported
+
+
+
+---pt-ocdi/after_import---
+
