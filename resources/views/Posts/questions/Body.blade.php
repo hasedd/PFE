@@ -93,20 +93,20 @@
 
                     <span class="form-description">Please choose an appropriate title for the question so it can be answered easily.</span></p><div class="wpqa_category">
                     <label for="question-category-451">Category<span class="required">*</span></label>
-                    <span class="styled-select"><select  name='category' id='question-category-451' class='postform' >
-	<option value='-1'>Select a Category</option>
-    @foreach($categories as $category)
-
-   	<option class="level-0" value={{$category->id}}>{{$category->name}}</option>
+                    <span class="styled-select">
+                    <select  name='category' id='question-category-451' class='postform' >
+	                    <option value='-1'>Select a Category</option>
+	                    @foreach($categories as $category)
+                            <option class="level-0" value={{$category->id}}>{{$category->name}}</option>
                         @endforeach
-	<!-- <option class="level-0" value="6">Communication</option>
-	<option class="level-0" value="7">Company</option>
-	<option class="level-0" value="20">Language</option>
-	<option class="level-0" value="23">Management</option>
-	<option class="level-0" value="26">Programmers</option>
-	<option class="level-0" value="27">Programs</option>
-	<option class="level-0" value="30">University</option> -->
-</select>
+                        <!-- <option class="level-0" value="6">Communication</option>
+	                    <option class="level-0" value="7">Company</option>
+	                    <option class="level-0" value="20">Language</option>
+                        <option class="level-0" value="23">Management</option>
+                        <option class="level-0" value="26">Programmers</option>
+                        <option class="level-0" value="27">Programs</option>
+                        <option class="level-0" value="30">University</option> -->
+                    </select>
 </span><i class="icon-folder"></i>
                     <span class="form-description">Please choose the appropriate section so the question can be searched easily.</span>
                 </div><p class="wpqa_tag">

@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OtherController ;
-use App\Http\Controllers\PostController ;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,9 +23,6 @@ Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
 
-Route::match('POST','/addQuestion',[PostController::class,'store'])
-    ->name('addq');
-
 Route::MATCH('POST','/register/next', function () {
     return view('auth.register2');
 })->name('register2');
@@ -35,10 +32,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::get('/test', [PostController::class,'index']
 
+    Route::get('/test', [PostController::class,'index']
     )->name('QuestionBody');
 });
 Route::match(['POST','GET'],'/othercreate',[OtherController::class,'createOther'])
     ->name('createother');
-
