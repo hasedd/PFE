@@ -87,11 +87,15 @@
     <i class="icon-cancel"></i>
     <div class="panel-pop-content">
         <form class="form-post wpqa_form" action="http://template.test/add-question/" method="post" enctype="multipart/form-data">
-            <div class="form-inputs clearfix"><p><label for="question-title-451">Question Title<span class="required">*</span></label>
+            <div class="form-inputs clearfix">
+                <p>
+                    <label for="question-title-451">Question Title<span class="required">*</span></label>
                     <input name="title" id="question-title-451" class="the-title" type="text" value="">
                     <i class="icon-chat"></i>
 
-                    <span class="form-description">Please choose an appropriate title for the question so it can be answered easily.</span></p><div class="wpqa_category">
+                    <span class="form-description">Please choose an appropriate title for the question so it can be answered easily.</span>
+                </p>
+                <div class="wpqa_category">
                     <label for="question-category-451">Category<span class="required">*</span></label>
                     <span class="styled-select">
                     <select  name='category' id='question-category-451' class='postform' >
@@ -107,7 +111,7 @@
                         <option class="level-0" value="27">Programs</option>
                         <option class="level-0" value="30">University</option> -->
                     </select>
-</span><i class="icon-folder"></i>
+                    </span><i class="icon-folder"></i>
                     <span class="form-description">Please choose the appropriate section so the question can be searched easily.</span>
                 </div><p class="wpqa_tag">
                     <label for="question_tags-451">Tags</label>
@@ -152,7 +156,7 @@
                     <div class="clearfix"></div>
                 </div>-->
             <div class="question-multiple-upload question-upload-featured">
-                    <label for="featured_image-451">Featured image</label>
+                    <label for="featured_image-451">Add file</label>
                     <div class="clearfix"></div>
                     <div class="fileinputs">
                         <input type="file" class="file" name="featured_image" id="featured_image-451">
