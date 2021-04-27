@@ -19,6 +19,7 @@ Route::get('/welcome', function () {
 })->name('welcome');
 
 
+
 Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
@@ -35,6 +36,13 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::get('/test', [PostController::class,'index']
     )->name('QuestionBody');
+
+    Route::POST('/addQuestion',[PostController::class,'store'])
+        ->name('addq');
+
 });
+
+
+
 Route::match(['POST','GET'],'/othercreate',[OtherController::class,'createOther'])
     ->name('createother');

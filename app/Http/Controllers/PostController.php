@@ -46,13 +46,11 @@ class PostController extends Controller
         $post->type="Question";
         $post->space="Public";
         $post->user_id= Auth::user()->id ;
-        $cat=Category::where('name',$request->input('category'))->first();
+        $cat=Category::where('name',$request->input('category'))->firstOrFail();
         $post->category_id=$cat->id ;
-
         $post->title=$request->input('title');
         $post->content=$request->input('content');
         $post->tags=$request->input('tags');
-
         $post->save();
         if(isset($_FILES) ) {
             $post->file()->create(['name'=>$_FILES['file']['name'],'type'=>$_FILES['file']['type'],'size'=>$_FILES['file']['size']]);

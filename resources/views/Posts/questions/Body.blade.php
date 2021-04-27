@@ -86,7 +86,8 @@
 <div class="panel-pop panel-pop-login" id="wpqa-question" data-width="690">
     <i class="icon-cancel"></i>
     <div class="panel-pop-content">
-        <form class="form-post wpqa_form" action="http://template.test/add-question/" method="post" enctype="multipart/form-data">
+        <form class="form-post wpqa_form" action="{{route('addq')}}" method="post" enctype="multipart/form-data">
+            @csrf
             <div class="form-inputs clearfix">
                 <p>
                     <label for="question-title-451">Question Title<span class="required">*</span></label>
@@ -101,7 +102,7 @@
                     <select  name='category' id='question-category-451' class='postform' >
 	                    <option value='-1'>Select a Category</option>
 	                    @foreach($categories as $category)
-                            <option class="level-0" value={{$category->id}}>{{$category->name}}</option>
+                            <option class="level-0" value={{$category->name}}>{{$category->name}}</option>
                         @endforeach
                         <!-- <option class="level-0" value="6">Communication</option>
 	                    <option class="level-0" value="7">Company</option>
