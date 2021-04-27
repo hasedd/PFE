@@ -110,7 +110,8 @@
                     <label for="question_tags-451">Tags</label>
                     <input type="text" class="input question_tags" name="question_tags" id="question_tags-451" value="" data-seperator=",">
                     <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, poll</span>.</span>
-                </p><p class="wpqa_checkbox_p wpqa_checkbox_poll">
+                </p>
+                <!--<p class="wpqa_checkbox_p wpqa_checkbox_poll">
                     <label for="question_poll-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="question_poll-451" class="question_poll" value="on" name="question_poll"></span>
                         <span class="wpqa_checkbox_span">Is this question is a poll? If you want to be doing a poll click here.</span>
@@ -146,7 +147,8 @@
                         </li></ul>
                     <button type="button" class="button-default-3 add_poll_button_js">Add More Answers</button>
                     <div class="clearfix"></div>
-                </div><div class="question-multiple-upload question-upload-featured">
+                </div>-->
+            <div class="question-multiple-upload question-upload-featured">
                     <label for="featured_image-451">Featured image</label>
                     <div class="clearfix"></div>
                     <div class="fileinputs">
@@ -160,76 +162,25 @@
                     <div class="clearfix"></div>
                 </div><div class="wpqa_textarea">
                     <label for="question-details-add-451">Details<span class="required">*</span></label><div class="the-details the-textarea"><div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
-                            <div id="wp-question-details-add-451-editor-tools" class="wp-editor-tools hide-if-no-js"><div id="wp-question-details-add-451-media-buttons" class="wp-media-buttons"><button type="button" id="insert-media-button" class="button insert-media add_media" data-editor="question-details-add-451"><span class="wp-media-buttons-icon"></span> Add Media</button></div>
-                                <div class="wp-editor-tabs"><button type="button" id="question-details-add-451-tmce" class="wp-switch-editor switch-tmce" data-wp-editor-id="question-details-add-451">Visual</button>
-                                    <button type="button" id="question-details-add-451-html" class="wp-switch-editor switch-html" data-wp-editor-id="question-details-add-451">Text</button>
-                                </div>
-                            </div>
+
                             <div id="wp-question-details-add-451-editor-container" class="wp-editor-container"><div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="comment" id="question-details-add-451"></textarea></div>
                         </div>
 
-                    </div><span class="form-description">Type the description thoroughly and in details.</span>
-                </div><p class="wpqa_checkbox_p ask_anonymously_p">
-                    <label for="anonymously_question-451">
-                        <span class="wpqa_checkbox"><input type="checkbox" id="anonymously_question-451" class="ask_anonymously" name="anonymously_question" value="on"></span>
-                        <span class="wpqa_checkbox_span">Ask Anonymously</span><span class="anonymously_span ask_named"><img class='avatar avatar-25 photo' alt='root' title='root' width='25' height='25' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'><span>root asks</span>
-									</span>
-                        <span class="anonymously_span ask_none">
-										<img alt="Anonymous" src="{{asset("Dassets/wp-content/plugins/WPQA/images/avatar.png")}}">
-										<span>Anonymous asks</span>
-									</span></label>
-                </p><p class="wpqa_checkbox_p wpqa_checkbox_video">
-                    <label for="video_description-451">
-                        <span class="wpqa_checkbox"><input type="checkbox" id="video_description-451" class="video_description_input" name="video_description" value="on"></span>
-                        <span class="wpqa_checkbox_span">Add a Video to describe the problem better.</span>
-                    </label>
-                </p>
-
-                <div class="video_description wpqa_hide">
-                    <p>
-                        <label for="video_type-451">Video type</label>
-                        <span class="styled-select">
-									<select id="video_type-451" name="video_type">
-										<option value="youtube">Youtube</option>
-										<option value="vimeo">Vimeo</option>
-										<option value="daily">Dailymotion</option>
-										<option value="facebook">Facebook</option>
-									</select>
-								</span>
-                        <i class="icon-video"></i>
-                        <span class="form-description">Choose from here the video type.</span>
-                    </p>
-
-                    <p>
-                        <label for="video_id-451">Video ID</label>
-                        <input name="video_id" id="video_id-451" class="video_id" type="text" value="">
-                        <i class="icon-play"></i>
-                        <span class="form-description">Put Video ID here: https://www.youtube.com/watch?v=sdUUx5FdySs Ex: &quot;sdUUx5FdySs&quot;.</span>
-                    </p>
-
-                </div>
-                <p class="wpqa_checkbox_p ask_private_p">
-                    <label for="private_question-451">
-                        <span class="wpqa_checkbox"><input type="checkbox" id="private_question-451" class="private_question" name="private_question" value="on"></span>
-                        <span class="wpqa_checkbox_span">This question is a private question?</span>
-                    </label>
-                </p>
-                <p class="wpqa_checkbox_p ask_remember_answer_p">
+                    </div>
+                    <span class="form-description">Type the description thoroughly and in details.</span>
+                    </div>
+                <!--<p class="wpqa_checkbox_p ask_remember_answer_p">
                     <label for="remember_answer-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="remember_answer-451" class="remember_answer" name="remember_answer" value="on" checked='checked'></span>
                         <span class="wpqa_checkbox_span">Get notified by email when someone answers this question.</span>
-                    </label>
+                    </label>-->
                 </p><p class="wpqa_checkbox_p">
                     <label for="terms_active-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="terms_active-451" name="terms_active" value="on" ></span>
                         <span class="wpqa_checkbox_span">By asking your question, you agree to the <a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span>
                     </label>
-                </p><p class="wpqa_checkbox_p">
-                    <label for="sticky-451">
-                        <span class="wpqa_checkbox"><input type="checkbox" id="sticky-451" class="sticky_input" name="sticky" value="sticky"></span>
-                        <span class="wpqa_checkbox_span">Stick this question Note: this option shows for the admin only!</span>
-                    </label>
-                </p></div>
+                </p>
+            </div>
 
             <p class="form-submit"><input type="hidden" name="question_popup" value="popup"><input type="hidden" name="form_type" value="add_question">
                 <input type="hidden" name="wpqa_add_question_nonce" value="468aff96d4">
@@ -1791,12 +1742,5 @@
         b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
     }());
 </script>
-<div id="wpadminbar" class="nojq nojs">
-    <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
-    <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
-        <ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='Dassets/wp-admin/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='Dassets/wp-admin/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://wordpress.org/support/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/forums/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' aria-haspopup="true" href='Dassets/wp-admin/'>Template</a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-site-name-default' class="ab-submenu"><li id='wp-admin-bar-dashboard'><a class='ab-item' href='Dassets/wp-admin/'>Dashboard</a></li></ul><ul id='wp-admin-bar-appearance' class="ab-submenu"><li id='wp-admin-bar-themes'><a class='ab-item' href='Dassets/wp-admin/themes.php'>Themes</a></li><li id='wp-admin-bar-widgets'><a class='ab-item' href='Dassets/wp-admin/widgets.php'>Widgets</a></li><li id='wp-admin-bar-menus'><a class='ab-item' href='Dassets/wp-admin/nav-menus.php'>Menus</a></li></ul></div></li><li id='wp-admin-bar-customize' class="hide-if-no-customize"><a class='ab-item' href='Dassets/wp-admin/customize.php?url=http%3A%2F%2Ftemplate.test%2F'>Customize</a></li><li id='wp-admin-bar-comments'><a class='ab-item' href='Dassets/wp-admin/edit-comments.php'><span class="ab-icon"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 Comments in moderation</span></a></li><li id='wp-admin-bar-answers'><a class='ab-item' href='Dassets/wp-admin/edit-comments.php?comment_status=all&#038;answers=1'><span class="ab-icon dashicons-before dashicons-format-chat"></span><span class="count-71"><span>71</span></span></a></li><li id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' aria-haspopup="true" href='Dassets/wp-admin/post-new.php'><span class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-new-content-default' class="ab-submenu"><li id='wp-admin-bar-new-post'><a class='ab-item' href='Dassets/wp-admin/post-new.php'>Post</a></li><li id='wp-admin-bar-new-media'><a class='ab-item' href='Dassets/wp-admin/media-new.php'>Media</a></li><li id='wp-admin-bar-new-page'><a class='ab-item' href='Dassets/wp-admin/post-new.php?post_type=page'>Page</a></li><li id='wp-admin-bar-new-question'><a class='ab-item' href='Dassets/wp-admin/post-new.php?post_type=question'>Question</a></li><li id='wp-admin-bar-new-group'><a class='ab-item' href='Dassets/wp-admin/post-new.php?post_type=group'>Group</a></li><li id='wp-admin-bar-new-user'><a class='ab-item' href='Dassets/wp-admin/user-new.php'>User</a></li></ul></div></li><li id='wp-admin-bar-edit'><a class='ab-item' href='Dassets/wp-admin/post.php?post=64&#038;action=edit'>Edit Page</a></li><li id='wp-admin-bar-new_payments'><a class='ab-item' href='Dassets/wp-admin/edit.php?post_type=statement'><span class="ab-icon dashicons-before dashicons-cart"></span><span class="count-0"><span>0</span></span></a></li><li id='wp-admin-bar-discy_page'><a class='ab-item' href='Dassets/wp-admin/admin.php?page=options'>Discy Settings</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://template.test/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li><li id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' aria-haspopup="true" href='Dassets/wp-admin/profile.php'>Howdy, <span class="display-name">root</span><img alt='' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=26&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' loading='lazy'/></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-user-actions' class="ab-submenu"><li id='wp-admin-bar-user-info'><a class='ab-item' tabindex="-1" href='Dassets/wp-admin/profile.php'><img alt='' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=64&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' loading='lazy'/><span class='display-name'>root</span></a></li><li id='wp-admin-bar-edit-profile'><a class='ab-item' href='Dassets/wp-admin/profile.php'>Edit Profile</a></li><li id='wp-admin-bar-logout'><a class='ab-item' href='Dassets/wp-login.php?action=logout&#038;_wpnonce=11eb7ca8f1'>Log Out</a></li></ul></div></li></ul>			</div>
-    <a class="screen-reader-shortcut" href="Dassets/wp-login.php?action=logout&#038;_wpnonce=11eb7ca8f1">Log Out</a>
-</div>
-
 </body>
 </html>
