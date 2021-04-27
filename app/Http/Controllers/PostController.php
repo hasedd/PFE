@@ -19,7 +19,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('Posts.questions.Body',[
+            'categories'=>Category::all(),
+        ]);
     }
 
     /**
