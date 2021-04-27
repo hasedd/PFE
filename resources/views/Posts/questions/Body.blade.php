@@ -115,7 +115,7 @@
                     <span class="form-description">Please choose the appropriate section so the question can be searched easily.</span>
                 </div><p class="wpqa_tag">
                     <label for="question_tags-451">Tags</label>
-                    <input type="text" class="input question_tags" name="question_tags" id="question_tags-451" value="" data-seperator=",">
+                    <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="" data-seperator=",">
                     <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, poll</span>.</span>
                 </p>
                 <!--<p class="wpqa_checkbox_p wpqa_checkbox_poll">
@@ -159,7 +159,7 @@
                     <label for="featured_image-451">Add file</label>
                     <div class="clearfix"></div>
                     <div class="fileinputs">
-                        <input type="file" class="file" name="featured_image" id="featured_image-451">
+                        <input type="file" class="file" name="file" id="featured_image-451">
                         <i class="icon-camera"></i>
                         <div class="fakefile">
                             <button type="button">Select file</button>
@@ -170,7 +170,7 @@
                 </div><div class="wpqa_textarea">
                     <label for="question-details-add-451">Details<span class="required">*</span></label><div class="the-details the-textarea"><div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
 
-                            <div id="wp-question-details-add-451-editor-container" class="wp-editor-container"><div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="comment" id="question-details-add-451"></textarea></div>
+                            <div id="wp-question-details-add-451-editor-container" class="wp-editor-container"><div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="content" id="question-details-add-451"></textarea></div>
                         </div>
 
                     </div>
