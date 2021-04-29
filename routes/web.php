@@ -38,7 +38,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     )->name('QuestionBody');
 
     Route::POST('/addQuestion',[PostController::class,'store'])
-        ->name('addq');
+        ->name('Add_Question');
 
 });
 
