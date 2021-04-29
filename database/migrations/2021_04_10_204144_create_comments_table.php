@@ -20,6 +20,7 @@ class CreateCommentsTable extends Migration
             $table->unsignedBigInteger('post_id');
             $table->foreign('post_id')->references('id')->on('posts');
             $table->text('Content');
+            $table->boolean('isBestAnswer')->default(true);
             $table->integer('Votes_up')->default(0);
             $table->integer('Votes_down')->default(0);
             $table->timestamps();

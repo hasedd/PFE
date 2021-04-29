@@ -91,7 +91,7 @@
             <div class="form-inputs clearfix">
                 <p>
                     <label for="question-title-451">Question Title<span class="required">*</span></label>
-                    <input name="title" id="question-title-451" class="the-title" type="text" value="">
+                    <input name="title" id="question-title-451" class="the-title" type="text" value="" required>
                     <i class="icon-chat"></i>
 
                     <span class="form-description">Please choose an appropriate title for the question so it can be answered easily.</span>
@@ -99,7 +99,7 @@
                 <div class="wpqa_category">
                     <label for="question-category-451">Category<span class="required">*</span></label>
                     <span class="styled-select">
-                    <select  name='category' id='question-category-451' class='postform' >
+                    <select  name='category' id='question-category-451' class='postform' required>
 	                    <option value='-1'>Select a Category</option>
 	                    @foreach($categories as $category)
                             <option class="level-0" value={{$category->name}}>{{$category->name}}</option>
@@ -116,7 +116,7 @@
                     <span class="form-description">Please choose the appropriate section so the question can be searched easily.</span>
                 </div><p class="wpqa_tag">
                     <label for="question_tags-451">Tags</label>
-                    <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="" data-seperator=",">
+                    <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="" data-seperator="," required>
                     <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, poll</span>.</span>
                 </p>
                 <!--<p class="wpqa_checkbox_p wpqa_checkbox_poll">
@@ -168,15 +168,20 @@
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                </div><div class="wpqa_textarea">
-                    <label for="question-details-add-451">Details<span class="required">*</span></label><div class="the-details the-textarea"><div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
-
-                            <div id="wp-question-details-add-451-editor-container" class="wp-editor-container"><div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="content" id="question-details-add-451"></textarea></div>
+                </div>
+                <div class="wpqa_textarea">
+                    <label for="question-details-add-451">Details<span class="required">*</span></label>
+                    <div class="the-details the-textarea">
+                        <div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
+                            <div id="wp-question-details-add-451-editor-container" class="wp-editor-container">
+                                <div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div>
+                                    <textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="content" id="question-details-add-451" required></textarea>
+                            </div>
                         </div>
 
                     </div>
                     <span class="form-description">Type the description thoroughly and in details.</span>
-                    </div>
+                </div>
                 <!--<p class="wpqa_checkbox_p ask_remember_answer_p">
                     <label for="remember_answer-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="remember_answer-451" class="remember_answer" name="remember_answer" value="on" checked='checked'></span>
@@ -423,37 +428,56 @@
                         <section>
                             <h2 class="screen-reader-text">Discy Latest Questions</h2>
                             <div class="post-articles question-articles">
+                                @foreach($posts as $post)
                                 <article id="post-118" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language">
-                                    <div class="question-sticky-ribbon"><div>Pinned</div></div>
+                                    <div class="question-sticky-ribbon">
+                                        <div>{{$post->state}}</div>
+									</div>
                                     <div class="single-inner-content">
                                         <div class="question-inner">
                                             <div class="question-image-vote">
-                                                <div class="author-image author-image-42"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
+                                                <div class="author-image author-image-42">
+													<a href="http://template.test/profile/root/">
+														<span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
                                                         <div class="post-section user-area user-area-columns_pop">
-                                                            <div class="post-inner"><div class="author-image author-image-70"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div><div class="user-content">
-                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://template.test/profile/root/">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                    <ul><li class="user-columns-questions">
+                                                            <div class="post-inner"><div class="author-image author-image-70">
+																<a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div>
+																<div class="user-content">
+																	<div class="user-inner">
+																		<div class="user-data-columns">
+																			<h4><a href="http://template.test/profile/root/">{{$post->user->username}}</a></h4>
+																		</div>
+																	</div>
+																</div><!-- End user-content -->
+																<div class="user-columns-data">
+                                                                    <ul>
+																		<li class="user-columns-questions">
                                                                             <a href="http://template.test/profile/root/questions/">
-                                                                                <i class="icon-book-open"></i>21 Questions
+																				<i class="icon-book-open"></i>{{ count($post->user->posts) }} Posts
                                                                             </a>
                                                                         </li>
                                                                         <li class="user-columns-answers">
                                                                             <a href="http://template.test/profile/root/answers/">
-                                                                                <i class="icon-comment"></i>0 Answers
+                                                                                <i class="icon-comment"></i>{{ count($post->user->comments) }} Answers
                                                                             </a>
-                                                                        </li><li class="user-columns-best-answers">
+                                                                        </li>
+																		<li class="user-columns-best-answers">
                                                                             <a href="http://template.test/profile/root/best-answers/">
-                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
+                                                                                <i class="icon-graduation-cap"></i>{{ count($post->user->comments) }} Best Answers
                                                                             </a>
-                                                                        </li><li class="user-columns-points">
+                                                                        </li>
+																		<li class="user-columns-points">
                                                                             <a href="http://template.test/profile/root/points/">
                                                                                 <i class="icon-bucket"></i>0 Points
                                                                             </a>
-                                                                        </li></ul>
+                                                                        </li>
+																	</ul>
                                                                 </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
                                                             </div><!-- End post-inner -->
                                                         </div><!-- End post -->
-                                                    </div></div>		<ul class="question-vote question-mobile">
+                                                    </div>
+												</div>
+												<ul class="question-vote question-mobile">
                                                     <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
                                                     <li class="vote_result" itemprop="upvoteCount">2</li>
                                                     <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
@@ -463,12 +487,20 @@
                                             <div class="question-content question-content-first">
                                                 <header class="article-header">
                                                     <div class="question-header">
-                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">root</a>									<div class="post-meta">
-                                                            <span class="post-date">Asked:<span class="date-separator"></span> <a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" itemprop="url"><time class="entry-date published">April 19, 2018</time></a></span><span class="byline"><span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">Language</a></span></span>									</div>
+                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">{{$post->user->useable->firstName}}</a>
+														<div class="post-meta">
+                                                            <span class="post-date">Asked:
+																<span class="date-separator"></span>
+																<a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
+															</span>
+															<span class="byline">
+																<span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">{{$post->category->name}}</a></span>
+															</span>
+														</div>
                                                     </div>
                                                 </header>
                                                 <div>
-                                                    <h2 class="post-title"><a class="post-title" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" rel="bookmark">Is this statement, “i see him last night” can be understood as “I saw him last night”?</a></h2>							</div>
+                                                <h2 class="post-title"><a class="post-title" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" rel="bookmark">{{$post->title}}</a></h2>	</div>
                                             </div><!-- End question-content-first -->
                                             <div class="question-not-mobile question-image-vote question-vote-sticky">
                                                 <div class="">
@@ -483,559 +515,43 @@
                                             <div class="question-content question-content-second">
                                                 <div class="post-wrap-content">
                                                     <div class="question-content-text">
-                                                        <div class='all_not_signle_post_content'>													<p class="excerpt-question">In my local language (Bahasa Indonesia) there are no verb-2 or past tense form as time tracker. So, I often forget to use the past form of verb when speaking english.
-                                                                I saw him last night (correct)
-                                                                I see him last night ...</p>
-                                                        </div><!-- End all_not_signle_post_content -->								</div>
-                                                    <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="http://template.test/question-tag/english/">english</a><a href="http://template.test/question-tag/language/">language</a></div></div>							</div>
-                                                <div class="wpqa_error"></div>
-                                                <div class="wpqa_success"></div>
-                                                <footer class="question-footer">
-                                                    <ul class="footer-meta">
-                                                        <li class="best-answer-meta"><a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#comments"><i class="icon-comment"></i><span class='number discy_hide'>4</span> <span class='question-span'>4 Answers</span></a></li>
-                                                        <li class="view-stats-meta"><i class="icon-eye"></i>33 <span class='question-span'>Views</span></li>
-                                                    </ul>
-                                                    <a class="meta-answer meta-answer-a" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#respond">Answer</a>
-                                                </footer>
+                                                        <div class='all_not_signle_post_content'>
+                                                            <?php
+                                                            $html = $post->content ;
+                                                            preg_match('<(.*)>', $html, $match);
+                                                            $allez=$match[0];
+                                                            if(strlen($allez)<213)
+                                                            echo "<p class=\"excerpt-question\"> $allez </p>";
+                                                            else { $allez2=substr($allez,0,213)."...";
+															echo "<p class=\"excerpt-question\"> $allez2</p>";}
+                                                            ?>
+                                                        </div><!-- End all_not_signle_post_content -->
+													</div>
+														<div class="tagcloud">
+															<div class="question-tags"><i class="icon-tags"></i>
+                                                                <?php
+                                                                $tags =explode ( "," , $post->tags );
+                                                                foreach($tags as $tag)
+																echo "<a href=\"#\">$tag</a>"
+                                                                ?>
+															</div>
+														</div>
+												</div>
+												<div class="wpqa_error"></div>
+												<div class="wpqa_success"></div>
+												<footer class="question-footer">
+													<ul class="footer-meta">
+														<li class="best-answer-meta"><a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#comments"><i class="icon-comment"></i><span class='number discy_hide'></span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
+														<li class="view-stats-meta"><i class="icon-eye"></i>{{$post->views}} <span class='question-span'>Views</span></li>
+													</ul>
+													<a class="meta-answer meta-answer-a" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#respond">Answer</a>
+												</footer>
                                             </div><!-- End question-content-second -->
                                             <div class="clearfix"></div>
                                         </div><!-- End question-inner -->
                                     </div><!-- End single-inner-content -->
                                 </article><!-- End article -->
-                                <article id="post-120" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-120 question type-question status-publish hentry question-category-language question_tags-english">
-                                    <div class="single-inner-content">
-                                        <div class="question-inner">
-                                            <div class="question-image-vote">
-                                                <div class="author-image author-image-42"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
-                                                        <div class="post-section user-area user-area-columns_pop">
-                                                            <div class="post-inner"><div class="author-image author-image-70"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div><div class="user-content">
-                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://template.test/profile/root/">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                    <ul><li class="user-columns-questions">
-                                                                            <a href="http://template.test/profile/root/questions/">
-                                                                                <i class="icon-book-open"></i>21 Questions
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="user-columns-answers">
-                                                                            <a href="http://template.test/profile/root/answers/">
-                                                                                <i class="icon-comment"></i>0 Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-best-answers">
-                                                                            <a href="http://template.test/profile/root/best-answers/">
-                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-points">
-                                                                            <a href="http://template.test/profile/root/points/">
-                                                                                <i class="icon-bucket"></i>0 Points
-                                                                            </a>
-                                                                        </li></ul>
-                                                                </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                            </div><!-- End post-inner -->
-                                                        </div><!-- End post -->
-                                                    </div></div>		<ul class="question-vote question-mobile">
-                                                    <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                    <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                    <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                </ul>
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-first">
-                                                <header class="article-header">
-                                                    <div class="question-header">
-                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">root</a>									<div class="post-meta">
-                                                            <span class="post-date">Asked:<span class="date-separator"></span> <a href="http://template.test/question/how-do-native-speakers-tell-im-foreign-based-on-my-english-alone/" itemprop="url"><time class="entry-date published">April 19, 2018</time></a></span><span class="byline"><span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">Language</a></span></span>									</div>
-                                                    </div>
-                                                </header>
-                                                <div>
-                                                    <h2 class="post-title"><a class="post-title" href="http://template.test/question/how-do-native-speakers-tell-im-foreign-based-on-my-english-alone/" rel="bookmark">How do native speakers tell I’m foreign based on my English alone?</a></h2>							</div>
-                                            </div><!-- End question-content-first -->
-                                            <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                <div class="">
-                                                    <ul class="question-vote">
-                                                        <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                        <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                        <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                        <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                    </ul>
-                                                </div><!-- End question-sticky -->
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-second">
-                                                <div class="post-wrap-content">
-                                                    <div class="question-content-text">
-                                                        <div class='all_not_signle_post_content'>													<p class="excerpt-question">I’m a 19-year-old student from Malaysia. I’ve been introduced to the language at a very young age and I’m capable of conducting any type of conversation. However, some of my English-speaking friends on the internet didn’t take too long to ...</p>
-                                                        </div><!-- End all_not_signle_post_content -->								</div>
-                                                    <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="http://template.test/question-tag/english/">english</a></div></div>							</div>
-                                                <div class="wpqa_error"></div>
-                                                <div class="wpqa_success"></div>
-                                                <footer class="question-footer">
-                                                    <ul class="footer-meta">
-                                                        <li class="best-answer-meta"><a href="http://template.test/question/how-do-native-speakers-tell-im-foreign-based-on-my-english-alone/#comments"><i class="icon-comment"></i><span class='number discy_hide'>3</span> <span class='question-span'>3 Answers</span></a></li>
-                                                        <li class="view-stats-meta"><i class="icon-eye"></i>68 <span class='question-span'>Views</span></li>
-                                                    </ul>
-                                                    <a class="meta-answer meta-answer-a" href="http://template.test/question/how-do-native-speakers-tell-im-foreign-based-on-my-english-alone/#respond">Answer</a>
-                                                </footer>
-                                            </div><!-- End question-content-second -->
-                                            <div class="clearfix"></div>
-                                        </div><!-- End question-inner -->
-                                    </div><!-- End single-inner-content -->
-                                </article><!-- End article -->
-                                <article id="post-119" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-119 question type-question status-publish hentry question-category-language question_tags-british question_tags-english">
-                                    <div class="single-inner-content">
-                                        <div class="question-inner">
-                                            <div class="question-image-vote">
-                                                <div class="author-image author-image-42"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
-                                                        <div class="post-section user-area user-area-columns_pop">
-                                                            <div class="post-inner"><div class="author-image author-image-70"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div><div class="user-content">
-                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://template.test/profile/root/">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                    <ul><li class="user-columns-questions">
-                                                                            <a href="http://template.test/profile/root/questions/">
-                                                                                <i class="icon-book-open"></i>21 Questions
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="user-columns-answers">
-                                                                            <a href="http://template.test/profile/root/answers/">
-                                                                                <i class="icon-comment"></i>0 Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-best-answers">
-                                                                            <a href="http://template.test/profile/root/best-answers/">
-                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-points">
-                                                                            <a href="http://template.test/profile/root/points/">
-                                                                                <i class="icon-bucket"></i>0 Points
-                                                                            </a>
-                                                                        </li></ul>
-                                                                </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                            </div><!-- End post-inner -->
-                                                        </div><!-- End post -->
-                                                    </div></div>		<ul class="question-vote question-mobile">
-                                                    <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                    <li class="vote_result" itemprop="upvoteCount">4</li>
-                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                    <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                </ul>
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-first">
-                                                <header class="article-header">
-                                                    <div class="question-header">
-                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">root</a>									<div class="post-meta">
-                                                            <span class="post-date">Asked:<span class="date-separator"></span> <a href="http://template.test/question/why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/" itemprop="url"><time class="entry-date published">April 19, 2018</time></a></span><span class="byline"><span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">Language</a></span></span>									</div>
-                                                    </div>
-                                                </header>
-                                                <div>
-                                                    <h2 class="post-title"><a class="post-title" href="http://template.test/question/why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/" rel="bookmark">Why are the British confused about us calling bread rolls “biscuits” when they call bread rolls “puddings”?</a></h2>							</div>
-                                            </div><!-- End question-content-first -->
-                                            <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                <div class="">
-                                                    <ul class="question-vote">
-                                                        <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                        <li class="vote_result" itemprop="upvoteCount">4</li>
-                                                        <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                        <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                    </ul>
-                                                </div><!-- End question-sticky -->
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-second">
-                                                <div class="post-wrap-content">
-                                                    <div class="question-content-text">
-                                                        <div class='all_not_signle_post_content'>													<p class="excerpt-question">(Why I darest say, they darest not get offended when they so indeed have examples that violate their own use and nomenclature!) IE: pudding as a specific dessert, puddings as a general term for desserts. Calling something a Yorkshire pudding ...</p>
-                                                        </div><!-- End all_not_signle_post_content -->								</div>
-                                                    <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="http://template.test/question-tag/british/">british</a><a href="http://template.test/question-tag/english/">english</a></div></div>							</div>
-                                                <div class="wpqa_error"></div>
-                                                <div class="wpqa_success"></div>
-                                                <footer class="question-footer">
-                                                    <ul class="footer-meta">
-                                                        <li class="best-answer-meta meta-best-answer"><a href="http://template.test/question/why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/#comments"><i class="icon-comment"></i><span class='number discy_hide'>5</span> <span class='question-span'>5 Answers</span></a></li>
-                                                        <li class="view-stats-meta"><i class="icon-eye"></i>43 <span class='question-span'>Views</span></li>
-                                                    </ul>
-                                                    <a class="meta-answer meta-answer-a" href="http://template.test/question/why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/#respond">Answer</a>
-                                                </footer>
-                                            </div><!-- End question-content-second -->
-                                            <div class="clearfix"></div>
-                                        </div><!-- End question-inner -->
-                                    </div><!-- End single-inner-content -->
-                                </article><!-- End article -->
-                                <article id="post-117" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-117 question type-question status-publish hentry question-category-analytics question_tags-analytics question_tags-google">
-                                    <div class="single-inner-content">
-                                        <div class="question-inner">
-                                            <div class="question-image-vote">
-                                                <div class="author-image author-image-42"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
-                                                        <div class="post-section user-area user-area-columns_pop">
-                                                            <div class="post-inner"><div class="author-image author-image-70"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div><div class="user-content">
-                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://template.test/profile/root/">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                    <ul><li class="user-columns-questions">
-                                                                            <a href="http://template.test/profile/root/questions/">
-                                                                                <i class="icon-book-open"></i>21 Questions
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="user-columns-answers">
-                                                                            <a href="http://template.test/profile/root/answers/">
-                                                                                <i class="icon-comment"></i>0 Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-best-answers">
-                                                                            <a href="http://template.test/profile/root/best-answers/">
-                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-points">
-                                                                            <a href="http://template.test/profile/root/points/">
-                                                                                <i class="icon-bucket"></i>0 Points
-                                                                            </a>
-                                                                        </li></ul>
-                                                                </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                            </div><!-- End post-inner -->
-                                                        </div><!-- End post -->
-                                                    </div></div>		<ul class="question-vote question-mobile">
-                                                    <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                    <li class="vote_result" itemprop="upvoteCount">2</li>
-                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                    <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                </ul>
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-first">
-                                                <header class="article-header">
-                                                    <div class="question-header">
-                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">root</a>									<div class="post-meta">
-                                                            <span class="post-date">Asked:<span class="date-separator"></span> <a href="http://template.test/question/google-analytics-reads-like-a-seismic-chart-lately/" itemprop="url"><time class="entry-date published">April 19, 2018</time></a></span><span class="byline"><span class="post-cat">In: <a href="http://template.test/question-category/analytics/" rel="tag">Analytics</a></span></span>									</div>
-                                                    </div>
-                                                </header>
-                                                <div>
-                                                    <h2 class="post-title"><a class="post-title" href="http://template.test/question/google-analytics-reads-like-a-seismic-chart-lately/" rel="bookmark">Google Analytics reads like a seismic chart lately</a></h2>							</div>
-                                            </div><!-- End question-content-first -->
-                                            <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                <div class="">
-                                                    <ul class="question-vote">
-                                                        <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                        <li class="vote_result" itemprop="upvoteCount">2</li>
-                                                        <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                        <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                    </ul>
-                                                </div><!-- End question-sticky -->
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-second">
-                                                <div class="post-wrap-content">
-                                                    <div class="question-content-text">
-                                                        <div class='all_not_signle_post_content'>													<p class="excerpt-question">Anyone else seeing dramatic ranking shakeups lately? Thankfully, this client is the blue line, but that’s a serious drop and recovery.
-                                                                We don’t operate at all in the black hat world, so our links and content should be in good shape. ...</p>
-                                                        </div><!-- End all_not_signle_post_content -->								</div>
-                                                    <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="http://template.test/question-tag/analytics/">analytics</a><a href="http://template.test/question-tag/google/">google</a></div></div>							</div>
-                                                <div class="wpqa_error"></div>
-                                                <div class="wpqa_success"></div>
-                                                <footer class="question-footer">
-                                                    <ul class="footer-meta">
-                                                        <li class="best-answer-meta"><a href="http://template.test/question/google-analytics-reads-like-a-seismic-chart-lately/#comments"><i class="icon-comment"></i><span class='number discy_hide'>2</span> <span class='question-span'>2 Answers</span></a></li>
-                                                        <li class="view-stats-meta"><i class="icon-eye"></i>5 <span class='question-span'>Views</span></li>
-                                                    </ul>
-                                                    <a class="meta-answer meta-answer-a" href="http://template.test/question/google-analytics-reads-like-a-seismic-chart-lately/#respond">Answer</a>
-                                                </footer>
-                                            </div><!-- End question-content-second -->
-                                            <div class="clearfix"></div>
-                                        </div><!-- End question-inner -->
-                                    </div><!-- End single-inner-content -->
-                                </article><!-- End article -->
-                                <article id="post-116" class="article-question article-post clearfix question-answer-before question-no-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-116 question type-question status-publish hentry question-category-analytics question_tags-analytics question_tags-google">
-                                    <div class="single-inner-content">
-                                        <div class="question-inner">
-                                            <div class="question-image-vote">
-                                                <div class="author-image author-image-42"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
-                                                        <div class="post-section user-area user-area-columns_pop">
-                                                            <div class="post-inner"><div class="author-image author-image-70"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div><div class="user-content">
-                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://template.test/profile/root/">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                    <ul><li class="user-columns-questions">
-                                                                            <a href="http://template.test/profile/root/questions/">
-                                                                                <i class="icon-book-open"></i>21 Questions
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="user-columns-answers">
-                                                                            <a href="http://template.test/profile/root/answers/">
-                                                                                <i class="icon-comment"></i>0 Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-best-answers">
-                                                                            <a href="http://template.test/profile/root/best-answers/">
-                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-points">
-                                                                            <a href="http://template.test/profile/root/points/">
-                                                                                <i class="icon-bucket"></i>0 Points
-                                                                            </a>
-                                                                        </li></ul>
-                                                                </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                            </div><!-- End post-inner -->
-                                                        </div><!-- End post -->
-                                                    </div></div>		<ul class="question-vote question-mobile">
-                                                    <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                    <li class="vote_result" itemprop="upvoteCount">0</li>
-                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                    <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                </ul>
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-first">
-                                                <header class="article-header">
-                                                    <div class="question-header">
-                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">root</a>									<div class="post-meta">
-                                                            <span class="post-date">Asked:<span class="date-separator"></span> <a href="http://template.test/question/what-are-your-thoughts-on-google-analytics-vs-other-analytics-platforms/" itemprop="url"><time class="entry-date published">April 19, 2018</time></a></span><span class="byline"><span class="post-cat">In: <a href="http://template.test/question-category/analytics/" rel="tag">Analytics</a></span></span>									</div>
-                                                    </div>
-                                                </header>
-                                                <div>
-                                                    <h2 class="post-title"><a class="post-title" href="http://template.test/question/what-are-your-thoughts-on-google-analytics-vs-other-analytics-platforms/" rel="bookmark">What are your thoughts on Google Analytics vs other analytics platforms?</a></h2>							</div>
-                                            </div><!-- End question-content-first -->
-                                            <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                <div class="">
-                                                    <ul class="question-vote">
-                                                        <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                        <li class="vote_result" itemprop="upvoteCount">0</li>
-                                                        <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                        <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                    </ul>
-                                                </div><!-- End question-sticky -->
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-second">
-                                                <div class="post-wrap-content">
-                                                    <div class="question-content-text">
-                                                        <div class='all_not_signle_post_content'>													<p class="excerpt-question">Recently heard about Heap which seems pretty cool, but I’m not sure if it would really be valuable, or simply another tool that I need to check. We are not at the point of using HubSpot/Marketo yet so Heap’s free ...</p>
-                                                        </div><!-- End all_not_signle_post_content -->								</div>
-                                                    <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="http://template.test/question-tag/analytics/">analytics</a><a href="http://template.test/question-tag/google/">google</a></div></div>							</div>
-                                                <div class="wpqa_error"></div>
-                                                <div class="wpqa_success"></div>
-                                                <footer class="question-footer">
-                                                    <ul class="footer-meta">
-                                                        <li class="best-answer-meta"><a href="http://template.test/question/what-are-your-thoughts-on-google-analytics-vs-other-analytics-platforms/#comments"><i class="icon-comment"></i><span class='number discy_hide'>0</span> <span class='question-span'>0 Answers</span></a></li>
-                                                        <li class="view-stats-meta"><i class="icon-eye"></i>4 <span class='question-span'>Views</span></li>
-                                                    </ul>
-                                                    <a class="meta-answer meta-answer-a" href="http://template.test/question/what-are-your-thoughts-on-google-analytics-vs-other-analytics-platforms/#respond">Answer</a>
-                                                </footer>
-                                            </div><!-- End question-content-second -->
-                                            <div class="clearfix"></div>
-                                        </div><!-- End question-inner -->
-                                    </div><!-- End single-inner-content -->
-                                </article><!-- End article -->
-                                <article id="post-115" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-115 question type-question status-publish hentry question-category-company question_tags-company question_tags-interview">
-                                    <div class="single-inner-content">
-                                        <div class="question-inner">
-                                            <div class="question-image-vote">
-                                                <div class="author-image author-image-42"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
-                                                        <div class="post-section user-area user-area-columns_pop">
-                                                            <div class="post-inner"><div class="author-image author-image-70"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div><div class="user-content">
-                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://template.test/profile/root/">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                    <ul><li class="user-columns-questions">
-                                                                            <a href="http://template.test/profile/root/questions/">
-                                                                                <i class="icon-book-open"></i>21 Questions
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="user-columns-answers">
-                                                                            <a href="http://template.test/profile/root/answers/">
-                                                                                <i class="icon-comment"></i>0 Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-best-answers">
-                                                                            <a href="http://template.test/profile/root/best-answers/">
-                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-points">
-                                                                            <a href="http://template.test/profile/root/points/">
-                                                                                <i class="icon-bucket"></i>0 Points
-                                                                            </a>
-                                                                        </li></ul>
-                                                                </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                            </div><!-- End post-inner -->
-                                                        </div><!-- End post -->
-                                                    </div></div>		<ul class="question-vote question-mobile">
-                                                    <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                    <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                    <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                </ul>
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-first">
-                                                <header class="article-header">
-                                                    <div class="question-header">
-                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">root</a>									<div class="post-meta">
-                                                            <span class="post-date">Asked:<span class="date-separator"></span> <a href="http://template.test/question/what-is-a-nice-way-to-end-an-interview-that-is-clearly-going-badly/" itemprop="url"><time class="entry-date published">April 19, 2018</time></a></span><span class="byline"><span class="post-cat">In: <a href="http://template.test/question-category/company/" rel="tag">Company</a></span></span>									</div>
-                                                    </div>
-                                                </header>
-                                                <div>
-                                                    <h2 class="post-title"><a class="post-title" href="http://template.test/question/what-is-a-nice-way-to-end-an-interview-that-is-clearly-going-badly/" rel="bookmark">What is a nice way to end an interview that is clearly going badly?</a></h2>							</div>
-                                            </div><!-- End question-content-first -->
-                                            <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                <div class="">
-                                                    <ul class="question-vote">
-                                                        <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                        <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                        <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                        <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                    </ul>
-                                                </div><!-- End question-sticky -->
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-second">
-                                                <div class="post-wrap-content">
-                                                    <div class="question-content-text">
-                                                        <div class='all_not_signle_post_content'>													<p class="excerpt-question">As an interviewer, I occasionally conduct interviews that become painful as time goes on because the candidate is doing so poorly. I have the impression that, in these cases, the candidate internally knows they are not getting the job, and ...</p>
-                                                        </div><!-- End all_not_signle_post_content -->								</div>
-                                                    <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="http://template.test/question-tag/company/">company</a><a href="http://template.test/question-tag/interview/">interview</a></div></div>							</div>
-                                                <div class="wpqa_error"></div>
-                                                <div class="wpqa_success"></div>
-                                                <footer class="question-footer">
-                                                    <ul class="footer-meta">
-                                                        <li class="best-answer-meta meta-best-answer"><a href="http://template.test/question/what-is-a-nice-way-to-end-an-interview-that-is-clearly-going-badly/#comments"><i class="icon-comment"></i><span class='number discy_hide'>3</span> <span class='question-span'>3 Answers</span></a></li>
-                                                        <li class="view-stats-meta"><i class="icon-eye"></i>11 <span class='question-span'>Views</span></li>
-                                                    </ul>
-                                                    <a class="meta-answer meta-answer-a" href="http://template.test/question/what-is-a-nice-way-to-end-an-interview-that-is-clearly-going-badly/#respond">Answer</a>
-                                                </footer>
-                                            </div><!-- End question-content-second -->
-                                            <div class="clearfix"></div>
-                                        </div><!-- End question-inner -->
-                                    </div><!-- End single-inner-content -->
-                                </article><!-- End article -->
-                                <article id="post-114" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-114 question type-question status-publish hentry question-category-company question_tags-company question_tags-facebook">
-                                    <div class="single-inner-content">
-                                        <div class="question-inner">
-                                            <div class="question-image-vote">
-                                                <div class="author-image author-image-42"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
-                                                        <div class="post-section user-area user-area-columns_pop">
-                                                            <div class="post-inner"><div class="author-image author-image-70"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div><div class="user-content">
-                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://template.test/profile/root/">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                    <ul><li class="user-columns-questions">
-                                                                            <a href="http://template.test/profile/root/questions/">
-                                                                                <i class="icon-book-open"></i>21 Questions
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="user-columns-answers">
-                                                                            <a href="http://template.test/profile/root/answers/">
-                                                                                <i class="icon-comment"></i>0 Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-best-answers">
-                                                                            <a href="http://template.test/profile/root/best-answers/">
-                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-points">
-                                                                            <a href="http://template.test/profile/root/points/">
-                                                                                <i class="icon-bucket"></i>0 Points
-                                                                            </a>
-                                                                        </li></ul>
-                                                                </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                            </div><!-- End post-inner -->
-                                                        </div><!-- End post -->
-                                                    </div></div>		<ul class="question-vote question-mobile">
-                                                    <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                    <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                    <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                </ul>
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-first">
-                                                <header class="article-header">
-                                                    <div class="question-header">
-                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">root</a>									<div class="post-meta">
-                                                            <span class="post-date">Asked:<span class="date-separator"></span> <a href="http://template.test/question/does-google-force-employees-who-have-offers-from-facebook-to-leave-immediately/" itemprop="url"><time class="entry-date published">April 19, 2018</time></a></span><span class="byline"><span class="post-cat">In: <a href="http://template.test/question-category/company/" rel="tag">Company</a></span></span>									</div>
-                                                    </div>
-                                                </header>
-                                                <div>
-                                                    <h2 class="post-title"><a class="post-title" href="http://template.test/question/does-google-force-employees-who-have-offers-from-facebook-to-leave-immediately/" rel="bookmark">Does Google force employees who have offers from Facebook to leave immediately?</a></h2>							</div>
-                                            </div><!-- End question-content-first -->
-                                            <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                <div class="">
-                                                    <ul class="question-vote">
-                                                        <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                        <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                        <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                        <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                    </ul>
-                                                </div><!-- End question-sticky -->
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-second">
-                                                <div class="post-wrap-content">
-                                                    <div class="question-content-text">
-                                                        <div class='all_not_signle_post_content'>													<p class="excerpt-question">If a Google employee reveals that he or she intends to leave because they have *accepted*–not received–an offer from a talent competitor like Facebook, in some cases they will be “walked off” so that they will no longer have access ...</p>
-                                                        </div><!-- End all_not_signle_post_content -->								</div>
-                                                    <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="http://template.test/question-tag/company/">company</a><a href="http://template.test/question-tag/facebook/">facebook</a></div></div>							</div>
-                                                <div class="wpqa_error"></div>
-                                                <div class="wpqa_success"></div>
-                                                <footer class="question-footer">
-                                                    <ul class="footer-meta">
-                                                        <li class="best-answer-meta meta-best-answer"><a href="http://template.test/question/does-google-force-employees-who-have-offers-from-facebook-to-leave-immediately/#comments"><i class="icon-comment"></i><span class='number discy_hide'>3</span> <span class='question-span'>3 Answers</span></a></li>
-                                                        <li class="view-stats-meta"><i class="icon-eye"></i>28 <span class='question-span'>Views</span></li>
-                                                    </ul>
-                                                    <a class="meta-answer meta-answer-a" href="http://template.test/question/does-google-force-employees-who-have-offers-from-facebook-to-leave-immediately/#respond">Answer</a>
-                                                </footer>
-                                            </div><!-- End question-content-second -->
-                                            <div class="clearfix"></div>
-                                        </div><!-- End question-inner -->
-                                    </div><!-- End single-inner-content -->
-                                </article><!-- End article -->
-                                <article id="post-113" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-113 question type-question status-publish hentry question-category-language question_tags-french question_tags-language">
-                                    <div class="single-inner-content">
-                                        <div class="question-inner">
-                                            <div class="question-image-vote">
-                                                <div class="author-image author-image-42"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
-                                                        <div class="post-section user-area user-area-columns_pop">
-                                                            <div class="post-inner"><div class="author-image author-image-70"><a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div><div class="user-content">
-                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://template.test/profile/root/">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                    <ul><li class="user-columns-questions">
-                                                                            <a href="http://template.test/profile/root/questions/">
-                                                                                <i class="icon-book-open"></i>21 Questions
-                                                                            </a>
-                                                                        </li>
-                                                                        <li class="user-columns-answers">
-                                                                            <a href="http://template.test/profile/root/answers/">
-                                                                                <i class="icon-comment"></i>0 Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-best-answers">
-                                                                            <a href="http://template.test/profile/root/best-answers/">
-                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
-                                                                            </a>
-                                                                        </li><li class="user-columns-points">
-                                                                            <a href="http://template.test/profile/root/points/">
-                                                                                <i class="icon-bucket"></i>0 Points
-                                                                            </a>
-                                                                        </li></ul>
-                                                                </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                            </div><!-- End post-inner -->
-                                                        </div><!-- End post -->
-                                                    </div></div>		<ul class="question-vote question-mobile">
-                                                    <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                    <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                    <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                </ul>
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-first">
-                                                <header class="article-header">
-                                                    <div class="question-header">
-                                                        <a class="post-author" itemprop="url" href="http://template.test/profile/root/">root</a>									<div class="post-meta">
-                                                            <span class="post-date">Asked:<span class="date-separator"></span> <a href="http://template.test/question/is-there-an-english-equivalent-to-the-french-expression-il-faut-dabord-apprendre-a-marcher-avant-de-courir/" itemprop="url"><time class="entry-date published">April 19, 2018</time></a></span><span class="byline"><span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">Language</a></span></span>									</div>
-                                                    </div>
-                                                </header>
-                                                <div>
-                                                    <h2 class="post-title"><a class="post-title" href="http://template.test/question/is-there-an-english-equivalent-to-the-french-expression-il-faut-dabord-apprendre-a-marcher-avant-de-courir/" rel="bookmark">Is there an English equivalent to the French expression: “il faut d’abord apprendre à marcher avant de courir”?</a></h2>							</div>
-                                            </div><!-- End question-content-first -->
-                                            <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                <div class="">
-                                                    <ul class="question-vote">
-                                                        <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                        <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                        <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                        <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                    </ul>
-                                                </div><!-- End question-sticky -->
-                                            </div><!-- End question-image-vote -->
-                                            <div class="question-content question-content-second">
-                                                <div class="post-wrap-content">
-                                                    <div class="question-content-text">
-                                                        <div class='all_not_signle_post_content'>													<p class="excerpt-question">I know this means “one must learn to walk before running”, but is there a less literal translation that is perhaps more appealing to an English-speaking audience?
-                                                            </p>
-                                                        </div><!-- End all_not_signle_post_content -->								</div>
-                                                    <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="http://template.test/question-tag/french/">french</a><a href="http://template.test/question-tag/language/">language</a></div></div>							</div>
-                                                <div class="wpqa_error"></div>
-                                                <div class="wpqa_success"></div>
-                                                <footer class="question-footer">
-                                                    <ul class="footer-meta">
-                                                        <li class="best-answer-meta meta-best-answer"><a href="http://template.test/question/is-there-an-english-equivalent-to-the-french-expression-il-faut-dabord-apprendre-a-marcher-avant-de-courir/#comments"><i class="icon-comment"></i><span class='number discy_hide'>3</span> <span class='question-span'>3 Answers</span></a></li>
-                                                        <li class="view-stats-meta"><i class="icon-eye"></i>9 <span class='question-span'>Views</span></li>
-                                                    </ul>
-                                                    <a class="meta-answer meta-answer-a" href="http://template.test/question/is-there-an-english-equivalent-to-the-french-expression-il-faut-dabord-apprendre-a-marcher-avant-de-courir/#respond">Answer</a>
-                                                </footer>
-                                            </div><!-- End question-content-second -->
-                                            <div class="clearfix"></div>
-                                        </div><!-- End question-inner -->
-                                    </div><!-- End single-inner-content -->
-                                </article><!-- End article -->
+                                @endforeach
                             </div><!-- End post-articles -->
                             <script type="text/javascript">
                                 (function($) {

@@ -19,15 +19,16 @@ class CreatePostsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
-            $table->enum('Type',['Question','Experience','Service']);
+            $table->enum('type',['Question','Experience','Service']);
             $table->enum('space',['Public','Professors']);
-            $table->string('Title');
-            $table->text('Content');
-            $table->string('Tags');
-            $table->integer('Votes_up')->default(0);
-            $table->integer('Votes_down')->default(0);
-            $table->unsignedInteger('Views')->default(0);
-            $table->integer('Signals')->default(0);
+            $table->enum('state',['Close','Open'])->default('Open');
+            $table->string('title');
+            $table->text('content');
+            $table->string('tags');
+            $table->integer('votes_up')->default(0);
+            $table->integer('votes_down')->default(0);
+            $table->unsignedInteger('views')->default(0);
+            $table->integer('signals')->default(0);
             $table->timestamps();
         });
     }

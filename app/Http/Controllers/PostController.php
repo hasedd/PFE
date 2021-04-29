@@ -19,9 +19,12 @@ class PostController extends Controller
      */
     public function index()
     {
+        $posts = Post::all();
         return view('Posts.questions.Body',[
-            'categories'=>Category::all(),
+            'categories'=>Category::all(),'posts' => $posts
         ]);
+
+
     }
 
     /**
@@ -45,6 +48,7 @@ class PostController extends Controller
         $post=new Post();
         $post->type="Question";
         $post->space="Public";
+        $post->state="Open";
         $post->user_id= Auth::user()->id ;
         $cat=Category::where('name',$request->input('category'))->firstOrFail();
         $post->category_id=$cat->id ;
