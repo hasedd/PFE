@@ -1,4 +1,6 @@
-<div class="put-wrap-pop"></div>
+<div class="background-cover"></div>
+<div class="put-wrap-pop">
+</div>
 <div class="panel-pop panel-pop-login" id="wpqa-question" data-width="690">
     <i class="icon-cancel"></i>
     <div class="panel-pop-content">
@@ -7,26 +9,32 @@
             <div class="form-inputs clearfix">
                 <p>
                     <label for="question-title-451">Question Title<span class="required">*</span></label>
-                    <input name="title" id="question-title-451" class="the-title" type="text" value="" required>
+                    <input name="title" id="question-title-451" class="the-title" type="text" value="">
                     <i class="icon-chat"></i>
+
                     <span class="form-description">Please choose an appropriate title for the question so it can be answered easily.</span>
                 </p>
                 <div class="wpqa_category">
                     <label for="question-category-451">Category<span class="required">*</span></label>
                     <span class="styled-select">
-                    <select  name='category' id='question-category-451' class='postform' required>
+                    <select  name='category' id='question-category-451' class='postform' >
 	                    <option value='-1'>Select a Category</option>
 	                    @foreach($categories as $category)
-                        <option class="level-0" value={{$category->name}}>{{$category->name}}</option>
+                            <option class="level-0" value={{$category->name}}>{{$category->name}}</option>
                         @endforeach
+                    <!-- <option class="level-0" value="6">Communication</option>
+	                    <option class="level-0" value="7">Company</option>
+	                    <option class="level-0" value="20">Language</option>
+                        <option class="level-0" value="23">Management</option>
+                        <option class="level-0" value="26">Programmers</option>
+                        <option class="level-0" value="27">Programs</option>
+                        <option class="level-0" value="30">University</option> -->
                     </select>
-                    </span>
-                    <i class="icon-folder"></i>
+                    </span><i class="icon-folder"></i>
                     <span class="form-description">Please choose the appropriate section so the question can be searched easily.</span>
-                </div>
-                <p class="wpqa_tag">
+                </div><p class="wpqa_tag">
                     <label for="question_tags-451">Tags</label>
-                    <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="" data-seperator="," required>
+                    <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="" data-seperator=",">
                     <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, poll</span>.</span>
                 </p>
                 <!--<p class="wpqa_checkbox_p wpqa_checkbox_poll">
@@ -73,19 +81,15 @@
                         <input type="file" class="file" name="file" id="featured_image-451">
                         <i class="icon-camera"></i>
                         <div class="fakefile">
-                            <button type="button">Select file</button> <span>Browse</span>
+                            <button type="button">Select file</button>
+                            <span>Browse</span>
                         </div>
                     </div>
                     <div class="clearfix"></div>
-                </div>
-                <div class="wpqa_textarea">
-                    <label for="question-details-add-451">Details<span class="required">*</span></label>
-                    <div class="the-details the-textarea">
-                        <div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
-                            <div id="wp-question-details-add-451-editor-container" class="wp-editor-container">
-                                <div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div>
-                                <textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="content" id="question-details-add-451" required></textarea>
-                            </div>
+                </div><div class="wpqa_textarea">
+                    <label for="question-details-add-451">Details<span class="required">*</span></label><div class="the-details the-textarea"><div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
+
+                            <div id="wp-question-details-add-451-editor-container" class="wp-editor-container"><div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="content" id="question-details-add-451"></textarea></div>
                         </div>
 
                     </div>
@@ -95,13 +99,11 @@
                     <label for="remember_answer-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="remember_answer-451" class="remember_answer" name="remember_answer" value="on" checked='checked'></span>
                         <span class="wpqa_checkbox_span">Get notified by email when someone answers this question.</span>
-                    </label>
-                    </p>-->
-                <p class="wpqa_checkbox_p">
+                    </label>-->
+                </p><p class="wpqa_checkbox_p">
                     <label for="terms_active-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="terms_active-451" name="terms_active" value="on" ></span>
-                        <span class="wpqa_checkbox_span">By asking your question, you agree to the
-						<a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span>
+                        <span class="wpqa_checkbox_span">By asking your question, you agree to the <a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span>
                     </label>
                 </p>
             </div>
@@ -112,11 +114,10 @@
                 <span class="load_span"><span class="loader_2"></span></span>
             </p>
 
-        </form>
-    </div><!-- End panel-pop-content -->
+        </form>					</div><!-- End panel-pop-content -->
 </div><!-- End wpqa-question -->
 
-<div class="panel-pop panel-pop-not-login" id="wpqa-report">
+<div class="panel-pop panel-pop-login" id="wpqa-report">
     <i class="icon-cancel"></i>
     <div class="panel-pop-content">
         <p>Please briefly explain why you feel this answer should be reported.</p>
@@ -132,12 +133,10 @@
             </div>
             <p class="form-submit">
                 <span class="load_span"><span class="loader_2"></span></span>
-                <input type="hidden" id="wpqa_report_nonce" name="wpqa_report_nonce" value="bbbadc1ee4" />								<input type="submit" value="Report" class="button-default button-hide-click">
+                <input type="hidden" id="wpqa_report_nonce" name="wpqa_report_nonce" value="52e42f9a8a" />								<input type="submit" value="Report" class="button-default button-hide-click">
             </p>
             <input type="hidden" name="form_type" value="wpqa-report">
-            <input type="hidden" name="post_id" value="118">
+            <input type="hidden" name="post_id" value="64">
         </form>
     </div><!-- End panel-pop-content -->
 </div><!-- End wpqa-report -->
-
-<div id="wrap" class="wrap-not-login">

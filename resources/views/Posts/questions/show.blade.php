@@ -108,9 +108,9 @@ I see him last night ...">
                                 <div class="breadcrumb-left"><span class="crumbs">
 							<span itemscope itemtype="https://schema.org/BreadcrumbList">
 								<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-			<meta itemprop="position" content="1"><a itemprop="item" href="../../index.html" title="Home"><span itemprop="name"><i class="icon-home"></i>Home</span></a></span><span class="crumbs-span">/</span><span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-			<meta itemprop="position" content="2"><a itemprop="item" href="../../questions/index.html" title="Questions"><span itemprop="name">Questions</span></a></span><span class="crumbs-span">/</span><span class="current">Q 118</span></span>
-						</span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">									<div class="question-navigation">
+                                    <meta itemprop="position" content="1"><a itemprop="item" href="../../index.html" title="Home"><span itemprop="name"><i class="icon-home"></i>Home</span></a></span><span class="crumbs-span">/</span><span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                    <meta itemprop="position" content="2"><a itemprop="item" href="../../questions/index.html" title="Questions"><span itemprop="name">Questions</span></a></span><span class="crumbs-span">/</span><span class="current">Q 118</span></span>
+						            </span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">									<div class="question-navigation">
                                         <a class="nav-next" href="../why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/index.html">Next<i class="icon-right-open"></i></a>
                                         <a class="nav-previous" href="../is-there-an-english-equivalent-to-the-french-expression-il-faut-dabord-apprendre-a-marcher-avant-de-courir/index.html"><i class="icon-left-open"></i></a>
                                     </div><!-- End page-navigation -->
@@ -546,7 +546,12 @@ var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","c
 </script>
 <script type='text/javascript' src="{{asset('Dassets/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105')}}" id='thickbox-js'></script>
 <script type='text/javascript' src="{{asset('Dassets/wp-admin/js/media-upload.min.js?ver=5.7')}}" id='media-upload-js'></script>
-
+    <script type='text/javascript' src="{{asset('Dassets/wp-includes/js/tinymce/tinymce.min.js?ver=49110-20201110')}}" id='wp-tinymce-root-js'></script>
+    <script type='text/javascript' src="{{asset('Dassets/wp-includes/js/tinymce/plugins/compat3x/plugin.min.js?ver=49110-20201110')}}" id='wp-tinymce-js'></script>
+    <script type='text/javascript'>
+        tinymce.addI18n( 'en', {"Ok":"OK","Bullet list":"Bulleted list","Insert\/Edit code sample":"Insert\/edit code sample","Url":"URL","Spellcheck":"Check Spelling","Row properties":"Table row properties","Cell properties":"Table cell properties","Cols":"Columns","Paste row before":"Paste table row before","Paste row after":"Paste table row after","Cut row":"Cut table row","Copy row":"Copy table row","Merge cells":"Merge table cells","Split cell":"Split table cell","Paste is now in plain text mode. Contents will now be pasted as plain text until you toggle this option off.":"Paste is now in plain text mode. Contents will now be pasted as plain text until you toggle this option off.\n\nIf you\u2019re looking to paste rich content from Microsoft Word, try turning this option off. The editor will clean up text pasted from Word automatically.","Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help":"Rich Text Area. Press Alt-Shift-H for help.","You have unsaved changes are you sure you want to navigate away?":"The changes you made will be lost if you navigate away from this page.","Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X\/C\/V keyboard shortcuts instead.":"Your browser does not support direct access to the clipboard. Please use keyboard shortcuts or your browser\u2019s edit menu instead.","Edit|button":"Edit"});
+        tinymce.ScriptLoader.markDone( "{{asset('Dassets/wp-includes/js/tinymce/langs/en.js')}}" );
+    </script>
 		<script type="text/javascript">
 		tinyMCEPreInit = {
 			baseURL: "http://template.test/wp-includes/js/tinymce",

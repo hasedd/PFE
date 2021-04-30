@@ -47,6 +47,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 });
 
 
-
 Route::match(['POST','GET'],'/othercreate',[OtherController::class,'createOther'])
     ->name('createother');
