@@ -24,6 +24,7 @@ Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
 
+
 Route::MATCH('POST','/register/next', function () {
     return view('auth.register2');
 })->name('register2');
@@ -36,6 +37,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::get('/test', [PostController::class,'index']
     )->name('QuestionBody');
+
+    Route::get('/test/{id}', [PostController::class,'show']
+    )->name('Show_Question');
 
     Route::POST('/addQuestion',[PostController::class,'store'])
         ->name('Add_Question');

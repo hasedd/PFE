@@ -70,7 +70,10 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        return view('Posts.questions.show',[
+            'categories'=>Category::all(),'post'=>$post
+        ]);
     }
 
     /**
