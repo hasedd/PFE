@@ -1,4 +1,3 @@
-<div class="background-cover"></div>
 <div class="put-wrap-pop">
 </div>
 <div class="panel-pop panel-pop-login" id="wpqa-question" data-width="690">

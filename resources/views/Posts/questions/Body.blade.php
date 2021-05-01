@@ -5,7 +5,6 @@
                     </div>
                 </header>
                 @include('Posts.Question&report_form')
-
                 <div id="wrap" class="wrap-login">
                     <div class="main-content">
                         <div class="discy-inner-content menu_sidebar">
@@ -144,14 +143,7 @@
                                                                         <h2 class="post-title"><a class="post-title" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" rel="bookmark">{{$post->title}}</a></h2>	</div>
                                                                 </div><!-- End question-content-first -->
                                                                 <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                                    <div class="">
-                                                                        <ul class="question-vote">
-                                                                            <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                                            <li class="vote_result" itemprop="upvoteCount">2</li>
-                                                                            <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                                            <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                                        </ul>
-                                                                    </div><!-- End question-sticky -->
+                                                                    @livewire('vote',['post_id'=>$post->id,'votes'=>$post->votes_up-$post->votes_down])
                                                                 </div><!-- End question-image-vote -->
                                                                 <div class="question-content question-content-second">
                                                                     <div class="post-wrap-content">
@@ -196,7 +188,7 @@
                                             </div><!-- End post-articles -->
 											<a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>
 
-											
+
                                         </section><!-- End section -->
 
                                     </div><!-- End the-main-inner -->
