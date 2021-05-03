@@ -143,7 +143,7 @@
                                                                         <h2 class="post-title"><a class="post-title" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" rel="bookmark">{{$post->title}}</a></h2>	</div>
                                                                 </div><!-- End question-content-first -->
                                                                 <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                                    @livewire('vote',['post_id'=>$post->id,'votes'=>$post->votes_up-$post->votes_down])
+                                                                    @livewire('voteit',['post_id'=>$post->id])
                                                                 </div><!-- End question-image-vote -->
                                                                 <div class="question-content question-content-second">
                                                                     <div class="post-wrap-content">
