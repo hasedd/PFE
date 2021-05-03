@@ -1,0 +1,721 @@
+/* ---------------------- 
+Stylesheet Guide
+-------------------------
+
+GENERAL
+DASHBOARD
+JOBS
+JOB LISTING
+PREVIEW
+SINGLE JOB
+WIDGETS
+MEDIA QUERIES
+
+*/
+
+/* ================= GENERAL ================== */
+
+.job-manager-form fieldset label {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #101E36;
+}
+
+.job-manager-form fieldset {
+    margin: 0 0 1.75rem 0;
+    padding: 0;
+    border: none
+}
+
+.job-manager-form h2 {
+    padding-top: 1.75rem;
+    margin-top: 2.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.job-manager-form>fieldset:last-of-type {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 1.75rem;
+}
+
+.job-manager-form fieldset small.description {
+    font-style: italic;
+}
+
+.job-manager-form fieldset.fieldset-login_required {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+input[type="search"].select2-search__field {
+    height: auto;
+    padding: .4rem .7rem 0 .7rem !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    margin-right: 0.75rem;
+    font-size: 1rem;
+}
+
+.job_filters .showing_jobs {
+    display: none !important;
+}
+
+.featured-job-icon {
+    color: #F28900;
+}
+
+.field.account-sign-in .button {
+    padding: .25rem .5rem;
+    font-size: .75rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    vertical-align: top;
+}
+
+.field.account-sign-in .button:before {
+    display: none !important;
+}
+
+/* ================= DASHBOARD ================== */
+
+#job-manager-job-dashboard>p:first-of-type,
+body.scisco .job-manager-error,
+body.scisco .job-manager-message,
+body.scisco .job-manager-info {
+    position: relative;
+    padding: 1rem 1.5rem !important;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: .375rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border-left: .375rem solid rgba(0, 0, 0, 0.2);
+    background: #11cdef;
+    color: #fff;
+}
+
+#job-manager-job-dashboard table .applications,
+#job-manager-job-dashboard table .expires,
+#job-manager-job-dashboard table .filled {
+    text-align: left;
+}
+
+#job-manager-job-dashboard>p:first-of-type a,
+body.scisco .job-manager-error a,
+body.scisco .job-manager-message a,
+body.scisco .job-manager-info a {
+    color: #fff;
+}
+
+body.scisco .job-manager-message {
+    background: #0a48b3;
+}
+
+body.scisco .job-manager-error {
+    background: #D62828;
+}
+
+body.scisco .job-manager-error:before,
+body.scisco .job-manager-info:before,
+body.scisco .job-manager-message:before {
+    display: none;
+}
+
+#job-manager-job-dashboard {
+    overflow-x: auto;
+}
+
+/* ================= JOBS ================== */
+
+table.job-manager-jobs {
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+table.job-manager-jobs,
+table.job-manager-jobs th,
+table.job-manager-jobs td {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem
+}
+
+table.job-manager-jobs th {
+    color: #101E36;
+    text-transform: uppercase;
+}
+
+table.job-manager-jobs th,
+table.job-manager-jobs td {
+    padding: 10px 15px !important;
+}
+
+/* ================= JOB LISTING ================== */
+
+.job_filters {
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+    border-radius: 0.25rem;
+    margin-bottom: 2.5rem
+}
+
+.job_filters .row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.job_filters>.row:first-of-type {
+    margin-bottom: 20px
+}
+
+.job_filters [class*="col"] {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.job_filters .job_types {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.job_filters .job_types li {
+    margin: 0 1rem 0 0;
+    padding: 0;
+    float: none;
+    border: none
+}
+
+.scisco-job-filter-btn {
+    margin-left: auto;
+}
+
+.scisco-job-listings.job_listings {
+    border: none;
+    background: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+    margin: 0;
+}
+
+.job_listings>div>a {
+    display: flex;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.job_listings>div>a:hover h6 {
+    color: #062b6b;
+}
+
+.job_listings>div:last-child>a {
+    border-bottom: none
+}
+
+.scisco-job-listing-logo {
+    position: relative;
+    width: 60px;
+}
+
+.scisco-job-listing-logo img {
+    border-radius: 100%;
+}
+
+.scisco-job-listings .job_position_featured .scisco-job-listing-logo:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f005";
+    font-weight: 900;
+    color: #F28900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;
+    font-size:16px;
+}
+
+.scisco-job-listing-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.scisco-job-listing-position {
+    padding: 0 1rem;
+}
+
+.scisco-job-listing-position p {
+    color: #525f7f;
+    margin: 0;
+    font-size: 0.9rem
+}
+
+.scisco-job-listing-position h6 {
+    margin: 0;
+    transition: color 0.2s ease-in-out;
+    font-size:1.2rem;
+}
+
+.scisco-job-listing-meta {
+    margin-left: auto;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #525f7f;
+}
+
+.scisco-job-listing-meta ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.scisco-job-listing-meta .job-type {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+body.scisco div.job_listings .load_more_jobs {
+    padding: 0.85rem;
+    border: none;
+    font-weight: 700;
+    background: #0A48B3;
+    color: #fff !important;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease-in-out;
+    margin-top: 2.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+body.scisco div.job_listings .load_more_jobs:hover,
+body.scisco div.job_listings .load_more_jobs:focus {
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+    background: #0A48B3;
+    color: #fff;
+    border: none;
+}
+
+body.scisco div.job_listings .load_more_jobs.loading strong {
+    visibility: visible !important;
+}
+
+body.scisco div.job_listings .load_more_jobs.loading {
+    opacity: 0.5;
+}
+
+/* ================= PREVIEW ================== */
+
+.entry-content .job_listing_preview_title,
+.job_listing_preview_title {
+    padding: 0 0 2rem 0;
+    background: transparent;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.job_listing_preview {
+    padding: 0;
+    border: none;
+}
+
+.job_listing_preview_title h2 {
+    font-size: 1.5rem;
+}
+
+/* ================= SINGLE JOB ================== */
+
+body.scisco .single_job_listing {
+    background: transparent;
+    box-shadow: none;
+}
+
+body.scisco .scisco-single-job-wrapper {
+    background: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+    border-top: 0.3rem solid transparent;
+}
+
+body.scisco .single_job_listing .meta {
+    padding: 1rem 1.5rem;
+    margin: 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+body.scisco .single_job_listing .meta li {
+    margin: 0 0.75rem 0 0;
+    color: inherit;
+    border-radius: 0.25rem;
+    padding: 0;
+}
+
+body.scisco .single_job_listing .meta li.date-posted {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+body.scisco .single_job_listing .meta li.position-filled {
+    margin-left: 1rem;
+    margin-right: 0;
+    color: #D62828;
+    font-weight: 500;
+}
+
+body.scisco .single_job_listing .meta .job-type {
+    color: #fff;
+    background-color: #0A48B3;
+    font-weight: 500;
+    padding: 0.4rem 0.5rem;
+}
+
+.single_job_listing .meta .date-posted::before {
+    margin: 0 5px 0 0;
+}
+
+body.scisco .single_job_listing .meta .full-time {
+    background-color: #2dce89
+}
+
+body.scisco .single_job_listing .meta .part-time {
+    background-color: #F28900
+}
+
+body.scisco .single_job_listing .meta .temporary {
+    background-color: #D62828
+}
+
+body.scisco .single_job_listing .meta .freelance {
+    background-color: #11cdef
+}
+
+body.scisco .single_job_listing .meta .internship {
+    background-color: #0A48B3
+}
+
+.job-manager .full-time,
+.job-types .full-time,
+.job_listing .full-time {
+    color: #2dce89
+}
+
+.job-manager .part-time,
+.job-types .part-time,
+.job_listing .part-time {
+    color: #F28900
+}
+
+.job-manager .temporary,
+.job-types .temporary,
+.job_listing .temporary {
+    color: #D62828
+}
+
+.job-manager .freelance,
+.job-types .freelance,
+.job_listing .freelance {
+    color: #11cdef
+}
+
+.job-manager .internship,
+.job-types .internship,
+.job_listing .internship {
+    color: #0A48B3
+}
+
+body.scisco .scisco-single-job-wrapper.full-time {
+    border-color: #2dce89
+}
+
+body.scisco .scisco-single-job-wrapper.part-time {
+    border-color: #F28900
+}
+
+body.scisco .scisco-single-job-wrapper.temporary {
+    border-color: #D62828
+}
+
+body.scisco .scisco-single-job-wrapper.freelance {
+    border-color: #11cdef
+}
+
+body.scisco .scisco-single-job-wrapper.internship {
+    border-color: #0A48B3
+}
+
+p.company .tagline:before {
+    content: '- ';
+}
+
+.scisco-company-wrapper {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.scisco-company {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.scisco-company-logo {
+    width: 90px;
+    padding-right: 1rem;
+}
+
+.scisco-company-logo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.scisco-company-name {
+    align-self: center
+}
+
+.scisco-company-name h6 {
+    margin: 0;
+}
+
+.scisco-company-name p {
+    font-style: italic;
+    margin: 0;
+}
+
+.scisco-company-links {
+    margin-left: auto;
+    padding-left: 1.5rem;
+    font-size: 0.9rem
+}
+
+.scisco-company-links a {
+    margin-left: 0.75rem;
+}
+
+.scisco-company-links a.company_twitter:before {
+    font-family: 'Font Awesome 5 Brands';
+    content: "\f099";
+    font-weight: 900;
+    margin-right: 0.25rem;
+}
+
+.scisco-company-links a.website:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f0c1";
+    font-weight: 900;
+    margin-right: 0.25rem;
+}
+
+.scisco-company-video .scisco-iframe-wrapper {
+    margin: 1rem 0 0 0;
+}
+
+.single_job_listing .job_description {
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.job_description ol,
+.job_description ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0 0 1.25rem 0;
+}
+
+.job_description h1,
+.job_description h2,
+.job_description h3,
+.job_description h4,
+.job_description h5,
+.job_description h6,
+.job_description p {
+    margin-bottom: 1.25rem;
+}
+
+.job-manager-application-wrapper .application,
+.single_job_listing .application {
+    margin: 2rem 0 0 0;
+}
+
+.job-manager-application-wrapper .application .application_button,
+.single_job_listing .application .application_button {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    padding: .625rem 1.25rem;
+    transform: none !important;
+}
+
+.job-manager-application-wrapper .application .application_details,
+.single_job_listing .application .application_details {
+    clear: both;
+    border: none;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: none;
+    background: #11cdef;
+    border-radius: 0.25rem;
+    color: #fff;
+}
+
+.job-manager-application-wrapper .application .application_details p,
+.single_job_listing .application .application_details p,
+.job-manager-application-wrapper .application .application_details a,
+.single_job_listing .application .application_details a {
+    margin: 0;
+    color: #fff;
+}
+
+.job-manager-application-wrapper .application .application_details a,
+.single_job_listing .application .application_details a {
+    text-decoration: underline;
+}
+
+.job-manager-application-wrapper .application .application_details::before,
+.single_job_listing .application .application_details::before {
+    border-bottom: 10px solid #11cdef;
+}
+
+.job-manager-application-wrapper .application .application_details::after,
+.single_job_listing .application .application_details::after {
+    border-bottom: 9px solid #11cdef;
+}
+
+/* ================= WIDGETS ================== */
+
+.scisco-job-widget {
+    display: flex;
+}
+
+.rp4wp-related-job_listing>ul,
+ul.job_listings {
+    border-top: none;
+}
+
+.rp4wp-related-job_listing>ul li.job_listing,
+.rp4wp-related-job_listing>ul li.no_job_listings_found,
+ul.job_listings li.job_listing,
+ul.job_listings li.no_job_listings_found {
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+ul.job_listings li:last-child {
+    border-bottom: none;
+    margin:0;
+    padding: 0;
+}
+
+rp4wp-related-job_listing>ul li.job_listing a img.company_logo,
+.rp4wp-related-job_listing>ul li.no_job_listings_found a img.company_logo,
+ul.job_listings li.job_listing a img.company_logo,
+ul.job_listings li.no_job_listings_found a img.company_logo {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    left: auto;
+    float: none;
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.rp4wp-related-job_listing>ul li.job_listing a,
+.rp4wp-related-job_listing>ul li.no_job_listings_found a,
+ul.job_listings li.job_listing a,
+ul.job_listings li.no_job_listings_found a {
+
+    padding: 0;
+    position: relative;
+    line-height: inherit;
+    background: transparent !important;
+}
+
+.scisco-job-widget-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.scisco-job-widget-content ul li {
+    margin: 0 0.25rem 0 0;
+    padding: 0;
+    font-size: 0.85rem;
+}
+
+.scisco-job-widget-content ul li:before {
+    content: '- ';
+    color: #525f7f;
+}
+
+.scisco-job-widget-content ul li:first-child:before {
+    content: '';
+}
+
+.scisco-job-widget-content p {
+    font-size: 0.95rem;
+    margin: 0
+}
+
+ul.job_listings li.job_listing a img.company_logo,
+ul.job_listings li.no_job_listings_found a img.company_logo {
+    visibility: visible !important;
+}
+
+.scisco-job-widget-image {
+    min-width:51px
+}
+
+/* ================= MEDIA QUERIES ================== */
+
+@media only screen and (max-width: 767px) {
+    .scisco-job-filter-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .scisco-job-filter-btn .btn {
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .scisco-company {
+        flex-wrap: wrap;
+    }
+
+    .scisco-company-links {
+        width: 100%;
+        padding: 0;
+        text-align: right;
+    }
+
+    .job-manager-application-wrapper .application,
+    .single_job_listing .application,
+    .single_job_listing .job_description,
+    body.scisco .single_job_listing .meta,
+    .scisco-company-wrapper {
+        padding: 1rem;
+    }
+
+    .scisco-job-listing-logo {
+        display: none;
+    }
+
+    .scisco-job-listing-position {
+        padding-left: 0;
+    }
+}

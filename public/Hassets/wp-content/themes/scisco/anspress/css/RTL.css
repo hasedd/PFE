@@ -1,0 +1,558 @@
+/* ---------------------- 
+Stylesheet Guide
+-------------------------
+
+GENERAL
+FILTERS
+QUESTIONS
+PAGINATION
+ACTIVITIES
+FORM FIELDS
+BUTTONS
+SNACKBAR
+SELECTIZE
+CATEGORIES
+TAGS
+MODAL
+USER NAVIGATION
+USER PROFILE
+USER BOXES
+USER TABLE
+REPUTATIONS
+NOTIFICATIONS
+SINGLE QUESTION
+ANSWERS
+ANSWER FORM
+COMMENTS
+WIDGETS
+MEDIA QUERIES
+
+*/
+
+/* ================= GENERAL ================== */
+
+body.rtl #anspress .ap-content {
+    padding:0;
+}
+
+body.rtl #anspress #answer-form-c {
+    margin-right: 0;
+    margin-left: 50px
+}
+
+body.rtl #ap-user.ap-row {
+    margin: 0;
+    padding: 0;
+}
+
+body.rtl #anspress .mr-3,
+body.rtl #anspress .mx-3 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+body.rtl #anspress .ml-3 {
+    margin-right: 0.5rem !important;
+    margin-left: 0 !important;
+}
+
+body.rtl #anspress .mr-5,
+body.rtl #anspress .mx-5 {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+body.rtl #anspress .ml-5 {
+    margin-right: 0.5rem !important;
+    margin-left: 0 !important;
+}
+
+body.rtl .ap-notice {
+    border-right: 0.375rem solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+}
+
+body.rtl .ap-notice i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+body.rtl .ap-user-reputation {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+body.rtl .ap-mr-5,body.rtl .ap-mx-5 {
+    margin-left: 5px !important;
+    margin-right: 0 !important;
+}
+
+/* ================= FILTERS ================== */
+
+body.rtl .ap-list-head .row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+body.rtl .ap-list-head .row .col-6 {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+body.rtl #anspress .ap-dropdown-menu li.sub {
+    padding-right: 5px;
+    padding-left: 0;
+}
+
+body.rtl #anspress .ap-filters .ap-dropdown {
+    margin-right: 0.75rem;
+    padding-right: 0.5rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+}
+
+/* ================= QUESTIONS ================== */
+
+body.rtl #anspress .ap-questions .ap-avatar {
+    margin-left: 20px;
+    margin-right: 0
+}
+
+body.rtl .ap-questions-count,
+body.rtl #anspress .ap-questions-count {
+    float: right;
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+body.rtl #anspress .ap-questions-summery {
+    padding-left: 10px;
+    padding-right: 0;
+    margin-left: 130px;
+    margin-right: 65px
+}
+
+body.rtl #anspress .ap-questions .ap-display-meta-item {
+    margin-left: 0.75rem;
+    margin-right: 0;
+}
+
+body.rtl .question-categories a {
+    margin-left: 0.25rem;
+    margin-right: 0
+}
+
+body.rtl .scisco-question-counts {
+    text-align: left;
+}
+
+body.rtl #anspress .no-questions,
+body.rtl #anspress .ap-no-questions,
+body.rtl #anspress .ap-pending-notice,
+body.rtl #anspress .ap-no-permission-to-view {
+    text-align: right;
+    border-right: 0.375rem solid rgba(0, 0, 0, 0.2);
+    border-left: none
+}
+
+body.rtl #ap-single .scisco-question-meta,
+body.rtl .ap-sorting-tab {
+    margin-right: 70px;
+    margin-left: 50px;
+}
+
+/* ================= PAGINATION ================== */
+
+body.rtl .ap-pagination span,
+body.rtl .ap-pagination a {
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+
+/* ================= ACTIVITIES ================== */
+
+body.rtl .ap-activities p:last-of-type {
+    border-right: .375rem solid rgba(0, 0, 0, 0.2) !important;
+    border-left: none !important;
+}
+
+body.rtl .ap-activity-item>.ap-activity-avatar,
+body.rtl .ap-activity-item>.ap-activity-icon {
+    margin-right: -5px;
+    margin-left: 0;
+}
+
+body.rtl .ap-activity-item>.ap-activity-avatar img {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+body.rtl .ap-activity-item .ap-user-reputation {
+    margin: 0 0 0 0.25rem;
+}
+
+body.rtl .ap-activity-header>* {
+    margin-left: 0.25rem;
+    margin-right: 0;
+}
+
+body.rtl .ap-activity-content>.ap-activity-ref>a:before {
+    margin-left: 0.5rem;
+    margin-right: 0
+}
+
+body.rtl .ap-activity-same>.ap-activity-avatar {
+    margin-left: 0.8rem;
+    margin-right: 0;
+}
+
+.ap-activities::before {
+    right: 20px;
+    left:auto;
+}
+
+/* ================= FORM FIELDS ================== */
+
+body.rtl .ap-form-errors {
+    border-right: 0.375rem solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+}
+
+body.rtl .ap-form-control[type="checkbox"] {
+    margin: 0 0 0 0.25rem;
+}
+
+/* ================= BUTTONS ================== */
+
+body.rtl #ap-single .scisco-login-form {
+    margin-left: 50px;
+    margin-right: 70px
+}
+
+body.rtl #ap-ask-page .scisco-login-form {
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= SNACKBAR ================== */
+
+body.rtl .ap-snackbar {
+    border-right: 0.25rem solid rgba(0, 0, 0, 0.2) !important;
+    border-left: none !important;
+}
+
+/* ================= CATEGORIES ================== */
+
+body.rtl #anspress .ap-category-item-badges {
+    left: 0.5rem;
+    right: auto;
+}
+
+body.rtl #anspress .ap-ul-inline>li {
+    margin: 0 0 0.5rem 0.5rem;
+}
+
+/* ================= TAGS ================== */
+
+body.rtl .scisco-term-tag-box li {
+    margin: 0 0 0.5rem 0.5rem;
+    padding: 0;
+}
+
+body.rtl .scisco-term-tag-box li .badge .scisco-tag-count {
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+
+/* ================= MODAL ================== */
+
+body.rtl .ap-modal-close {
+    float: left;
+}
+
+/* ================= USER NAVIGATION ================== */
+
+body.rtl #scisco-user-menu-toggler i {
+    margin-right:0.3rem;
+    margin-left:0;
+}
+
+body.rtl #ap-user-nav .ap-tab-nav li>a>span {
+    margin: 0 auto 0 0;
+}
+
+/* ================= USER PROFILE ================== */
+
+body.rtl #cmb2-metabox-scisco_user_fields .cmb-repeatable-group .cmb-group-title {
+    padding: 10px 35px 10px 10px;
+}
+
+body.rtl #cmb2-metabox-scisco_user_fields .cmb-type-group .cmb-row .cmbhandle:before {
+    left:auto;
+    right: 0;
+}
+
+body.rtl #cmb2-metabox-scisco_user_fields button.dashicons-before.dashicons-no-alt.cmb-remove-group-row {
+    padding: 0px 10px 0px 0px;
+}
+
+body.rtl #scisco_user_fields .button-primary {
+    float: left
+}
+
+body.rtl .scisco-profile-submenu-item {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+}
+
+body.rtl .scisco-profile-submenu-inner a i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* ================= USER TABLE ================== */
+
+body.rtl .scisco-user-table-left {
+    border-left: none;
+}
+
+body.rtl .scisco-user-table-right {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 0;
+}
+
+/* ================= REPUTATIONS ================== */
+
+body.rtl .scisco-rep-item-points {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/* ================= NOTIFICATIONS ================== */
+
+body.rtl #anspress .ap-noti-item.not-seen:before {
+    left: 1rem;
+    right: auto;
+}
+
+body.rtl #anspress .ap-noti-icon {
+    float: right;
+}
+
+body.rtl #anspress .ap-noti-avatar {
+    float: right
+}
+
+body.rtl #anspress .ap-noti-rep {
+    float: right;
+}
+
+body.rtl #anspress .ap-noti-inner {
+    margin-right: 60px;
+    margin-left: 0;
+}
+
+body.rtl #scisco-notification-dropdown .ap-noti-inner {
+    padding-right: 0.75rem;
+    padding-left: 0;
+}
+
+body.rtl #scisco-notification-dropdown .ap-noti-icon {
+    float: right;
+}
+
+body.rtl .scisco-unread-icon {
+    left: 5px;
+    right: auto;
+}
+
+/* ================= SINGLE QUESTION ================== */
+
+body.rtl #ap-single .scisco-question-meta {
+    border-right: 0.325rem solid #0A48B3;
+    border-left: none;
+}
+
+body.rtl #ap-single .scisco-question-meta .ap-display-meta-item {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+body.rtl #ap-single .scisco-question-meta .ap-display-meta-item.subscribe {
+    margin-left: 0;
+    margin-right: auto
+}
+
+body.rtl .scisco-sq-metas-left>* {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+body.rtl .scisco-sq-metas-left>*:last-child {
+    margin-left: 0;
+}
+
+body.rtl .scisco-sq-metas-left .fas {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+body.rtl .scisco-sq-metas-comment-count {
+    margin-right: auto;
+    margin-left:0;
+}
+
+body.logged-in.rtl .scisco-sq-metas-right{
+    margin-right:1rem;
+    margin-left:0;
+}
+
+body.rtl .scisco-sq-metas-right .ap-btn-select {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+body.rtl #anspress .scisco-sq-metas-right .ap-dropdown-menu {
+    right: auto;
+    left: 0;
+}
+
+/* ================= ANSWERS ================== */
+
+body.rtl #anspress .ap-answers-label {
+    margin: 0 0 0 15px;
+}
+
+body.rtl #ap-answers-c .ap-answers-tab {
+    margin-right: auto;
+    margin-left: 0;
+
+}
+
+body.rtl .ap-all-answers {
+    margin: 2rem 0 auto;
+}
+
+/* ================= ANSWER FORM ================== */
+
+body.rtl #answer-form-c {
+    margin-left: 50px;
+    margin-right:0;
+}
+
+body.rtl #answer-form-c .ap-avatar {
+    right: auto;
+    left:auto;
+}
+
+/* ================= COMMENTS ================== */
+
+body.rtl .anspress .ap-comment-no-perm {
+    text-align: right;
+    border-right: 0.375rem solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+}
+
+body.rtl .anspress apcomment .comment-header a.ap-comment-author {
+    margin-left: 0.25rem;
+    margin-right: 0
+}
+
+body.rtl .anspress apcomment .comment-header a.ap-comment-time {
+    margin-right: 0.25rem;
+    margin-left: 0
+}
+
+body.rtl .anspress apcomment .ap-comment-actions {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+body.rtl .anspress apcomment .ap-comment-actions>a {
+    margin-right: 0.5rem;
+    margin-left: 0;
+}
+
+/* ================= WIDGETS ================== */
+
+body.rtl #anspress .ap-widget-title:before {
+    margin: 0px 0px 0px 10px;
+}
+
+/* ================= MEDIA QUERIES ================== */
+
+@media only screen and (max-width: 767px) {
+
+    body.rtl .ap-vote .net-vote-count {
+        padding: 0 0.4rem;
+    }
+
+    body.rtl .scisco-sq-metas-comment-count {
+        margin-right: 0;
+    }
+
+    body.rtl #answer-form-c {
+        margin-left: 0
+    }
+
+    body.rtl #ap-single .scisco-login-form {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body.rtl #ap-single .scisco-question-meta,
+    body.rtl .ap-sorting-tab {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+
+    body.ap-page-activities body.rtl #anspress,
+    body.rtl #ap-ask-page {
+        padding: 1.5rem;
+    }
+
+    body.rtl .ap-activities {
+        margin: 0
+    }
+
+    body.rtl .ap-activity-when {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    body.rtl .ap-activity-item>.ap-activity-avatar,
+    body.rtl .ap-activity-item>.ap-activity-icon {
+        margin-right: 0;
+    }
+
+    body.rtl #anspress .ap-category-subitems {
+        margin: 0 0 0.5rem 0;
+    }
+
+    body.rtl #anspress .ap-ul-inline>li {
+        margin: 0 0 0.5rem 0;
+    }
+
+    body.rtl #anspress .ap-sorting-tab .ap-ul-inline>li {
+        margin: 0;
+    }
+
+    body.rtl #ap-form-main {
+        padding: 1rem;
+    }
+
+    body.rtl .scisco-profile-submenu-item {
+        padding: 0.5rem 1rem;
+    }
+
+    body.rtl .scisco-user-table-left {
+        padding: 1rem;
+    }
+
+    body.rtl .scisco-user-table-right {
+        padding: 1rem;
+    }
+}

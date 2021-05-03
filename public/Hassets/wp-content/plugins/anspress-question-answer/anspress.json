@@ -1,0 +1,24 @@
+{
+  "doc_ignore" : [
+    "languages",
+    "templates",
+    "tests"
+    "lib/class-wp-async-task.php"
+  ],
+  "commit_ignore" : [
+    ".gitignore",
+    "Gruntfile.js",
+    "readme.txt",
+    "README.md",
+    "languages/**",
+    "tests/**",
+    "templates/css/fonts-demo/**",
+    "*.woff",
+    "*.ttf",
+    "*.eot",
+    "*.svg",
+    "*.map",
+    "*.json",
+    "*.yml"
+  ]
+}

@@ -1,0 +1,139 @@
+/* ---------------------- 
+Stylesheet Guide
+-------------------------
+
+GENERAL
+DASHBOARD
+JOB LISTING
+SINGLE JOB
+WIDGETS
+MEDIA QUERIES
+
+*/
+
+/* ================= GENERAL ================== */
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    margin-left: 0.75rem;
+    margin-right: 0;
+}
+
+/* ================= DASHBOARD ================== */
+
+#job-manager-job-dashboard>p:first-of-type,
+body.scisco .job-manager-error,
+body.scisco .job-manager-message,
+body.scisco .job-manager-info {
+    border-right: .375rem solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+}
+
+#job-manager-job-dashboard table .applications, #job-manager-job-dashboard table .expires, #job-manager-job-dashboard table .filled {
+    text-align: right;
+}
+
+/* ================= JOB LISTING ================== */
+
+.job_filters .job_types li {
+    margin: 0 0 0 1rem;
+}
+
+.scisco-job-filter-btn {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.scisco-job-listing-meta {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.scisco-job-listings .job_position_featured .scisco-job-listing-logo:before {
+    right:0;
+    left: auto;
+}
+
+/* ================= SINGLE JOB ================== */
+
+body.scisco .single_job_listing .meta li {
+    margin: 0 0 0 0.75rem;
+}
+
+body.scisco .single_job_listing .meta li.date-posted {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+body.scisco .single_job_listing .meta li.position-filled {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+.single_job_listing .meta .date-posted::before {
+    margin: 0 0 0 5px;
+}
+
+.scisco-company-logo {
+    padding-left: 1rem;
+    padding-right: 0;
+}
+
+.scisco-company-links {
+    margin-right: auto;
+    margin-left: 0;
+    padding-right: 1.5rem;
+    padding-left: 0;
+}
+
+.scisco-company-links a {
+    margin-right: 0.75rem;
+    margin-left: 0;
+}
+
+.scisco-company-links a.company_twitter:before,
+.scisco-company-links a.website:before {
+    display:none;
+}
+
+.scisco-company-links a.company_twitter:after {
+    font-family: 'Font Awesome 5 Brands';
+    content: "\f099";
+    font-weight: 900;
+    margin-left: 0.25rem;
+}
+
+.scisco-company-links a.website:after {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f0c1";
+    font-weight: 900;
+    margin-left: 0.25rem;
+}
+
+/* ================= WIDGETS ================== */
+
+rp4wp-related-job_listing>ul li.job_listing a img.company_logo,
+.rp4wp-related-job_listing>ul li.no_job_listings_found a img.company_logo,
+ul.job_listings li.job_listing a img.company_logo,
+ul.job_listings li.no_job_listings_found a img.company_logo {
+    margin-left: 0.75rem;
+    margin-right: 0;
+}
+
+/* ================= MEDIA QUERIES ================== */
+
+@media only screen and (max-width: 767px) {
+    .scisco-job-filter-btn {
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .scisco-company-links {
+        text-align: left;
+    }
+
+    .scisco-job-listing-position {
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,98 @@
+
+---Downloaded files---
+The import files for: Demo Import were successfully downloaded!
+Initial max execution time = 36000
+Files info:
+Site URL = http://rex.test
+Data file = C:\laragon\www\rex/wp-content/uploads/2021/04/demo-content-import-file_2021-04-08__11-34-35.xml
+Widget file = C:\laragon\www\rex/wp-content/uploads/2021/04/demo-widgets-import-file_2021-04-08__11-34-35.json
+Customizer file = C:\laragon\www\rex/wp-content/uploads/2021/04/demo-customizer-import-file_2021-04-08__11-34-35.dat
+Redux files:
+not defined!
+
+---ocdi/before_content_import---
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+
+
+------
+New AJAX call!
+[WARNING] Failed to import "Newsletter": Invalid post type mc4wp-form
+
+
+---Importing widgets---
+Main Sidebar : 
+
+Search - No Title - Widget already exists
+Recent Posts - No Title - Imported
+Categories - No Title - Imported
+Recent Comments - No Title - Imported
+Tag Cloud - Tags - Imported
+
+Jobs Sidebar : 
+
+Featured Jobs - Featured Jobs - Imported
+Recent Jobs - Recent Jobs - Imported
+
+Footer 1 : 
+
+Image - No Title - Imported
+Text - No Title - Imported
+
+Footer 2 : 
+
+Recent Posts - Latest Posts - Imported
+
+Footer 3 : 
+
+(AnsPress) Questions - Latest Questions - Imported
+
+Footer 4 : 
+
+(AnsPress) Search - No Title - Imported
+Tag Cloud - Categories - Imported
+
+(AnsPress) Sidebar : 
+
+(AnsPress) Categories - Categories - Imported
+(AnsPress) Questions - Most Answered - Imported
+(AnsPress) Questions - Unanswered - Imported
+(AnsPress) Search - No Title - Imported
+(AnsPress) Categories - Categories - Imported
+(AnsPress) Questions - Questions - Imported
+
+(AnsPress) Question Sidebar : 
+
+(AnsPress) Search - No Title - Imported
+(AnsPress) Categories - Categories - Imported
+(AnsPress) Questions - Newest Questions - Imported
+(AnsPress) Questions - Unanswered - Imported
+(AnsPress) Search - No Title - Imported
+(AnsPress) Categories - Categories - Imported
+(AnsPress) Questions - Recent Questions - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

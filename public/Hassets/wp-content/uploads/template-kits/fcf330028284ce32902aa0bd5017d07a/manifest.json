@@ -1,0 +1,234 @@
+{
+    "manifest_version": "1.0.9",
+    "title": "STEM School",
+    "page_builder": "elementor",
+    "kit_version": "2.0.1",
+    "templates": [
+        {
+            "name": "Home",
+            "screenshot": "screenshots\/home.jpg",
+            "source": "templates\/home-89dda6a6e8e6989bc5e830d60a44c102.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Home Pro",
+            "screenshot": "screenshots\/home-pro.jpg",
+            "source": "templates\/home-pro-6fd12f313683f1c42baac8ae24d7ebd5.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "About Us 1",
+            "screenshot": "screenshots\/about-us-1.jpg",
+            "source": "templates\/about-us-1-d8a36c1098e80fd1d39713132635d522.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "About Us 2",
+            "screenshot": "screenshots\/about-us-2.jpg",
+            "source": "templates\/about-us-2-b69c8967ec1db092c2c8b5e89609b9e0.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Courses",
+            "screenshot": "screenshots\/courses.jpg",
+            "source": "templates\/courses-be8c11f43d8d9ee30afb722ca7a644d5.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Couses Pro",
+            "screenshot": "screenshots\/couses-pro.jpg",
+            "source": "templates\/couses-pro-9099c1d7cb9bd83c6c989cce287108ea.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Couse Detail",
+            "screenshot": "screenshots\/couse-detail.jpg",
+            "source": "templates\/couse-detail-a23785579b8718f420cf046a9cc03f80.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Course Detail Pro",
+            "screenshot": "screenshots\/course-detail-pro.jpg",
+            "source": "templates\/course-detail-pro-ea87578e4f0dfafe28c2721a63618219.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "F.A.Q 1",
+            "screenshot": "screenshots\/f.a.q-1.jpg",
+            "source": "templates\/f.a.q-1-97f332a7322c8450b134eb97d2a35b31.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "F.A.Q 2",
+            "screenshot": "screenshots\/f.a.q-2.jpg",
+            "source": "templates\/f.a.q-2-967e911f145a9cfa3b7bfad6fdb745ad.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Career Paths",
+            "screenshot": "screenshots\/career-paths.jpg",
+            "source": "templates\/career-paths-146ffcd6a2054d3131edd656b61b4302.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Campus Tours",
+            "screenshot": "screenshots\/campus-tours.jpg",
+            "source": "templates\/campus-tours-b41ea73f84c10c6bcbc64f62ad437b25.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Campus",
+            "screenshot": "screenshots\/campus.jpg",
+            "source": "templates\/campus-45a9f71262d4920db82d4d3cf47f0edc.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Enrollment",
+            "screenshot": "screenshots\/enrollment.jpg",
+            "source": "templates\/enrollment-d1de02ba5fed0ef6a60a310f05d1487a.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Membership",
+            "screenshot": "screenshots\/membership.jpg",
+            "source": "templates\/membership-35e780b4df7d29eb923b20b8a41bab76.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        },
+        {
+            "name": "Contact Us 1",
+            "screenshot": "screenshots\/contact-us-1.jpg",
+            "source": "templates\/contact-us-1-76bc8ba2cc78d5ca36fe6dbfe9276930.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": true
+            },
+            "elementor_pro_required": true
+        },
+        {
+            "name": "Contact Us 2",
+            "screenshot": "screenshots\/contact-us-2.jpg",
+            "source": "templates\/contact-us-2-78ae62950c6231f963f76a10ea9553e3.json",
+            "preview_url": false,
+            "type": "section",
+            "metadata": {
+                "template_type": "section",
+                "elementor_pro_required": false
+            },
+            "elementor_pro_required": false
+        }
+    ],
+    "required_plugins": [
+        {
+            "name": "Elementor",
+            "version": "2.9.6",
+            "file": "elementor\/elementor.php",
+            "author": "Elementor.com"
+        },
+        {
+            "name": "Elementor Pro",
+            "version": "2.9.6",
+            "file": "elementor-pro\/elementor-pro.php",
+            "author": "Elementor.com"
+        }
+    ],
+    "required_css": [
+        {
+            "name": "Custom CSS",
+            "description": "These styles are added to the WordPress Customizer.",
+            "file": "css\/customizer.css"
+        }
+    ],
+    "images": []
+}

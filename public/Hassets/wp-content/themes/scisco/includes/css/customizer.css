@@ -1,0 +1,229 @@
+
+/* CONTROLS */
+.customize-control.customize-control-kirki-select,
+.customize-control.customize-control-kirki-radio-image,
+.customize-control.customize-control-kirki-toggle,
+.customize-control.customize-control-kirki-slider,
+.customize-control.customize-control-kirki-color,
+.customize-control.customize-control-kirki-number,
+.customize-control.customize-control-kirki-generic,
+.customize-control.customize-control-kirki-switch,
+.customize-control.customize-control-kirki-sortable,
+.customize-control.customize-control-kirki-image,
+.customize-control.customize-control-kirki-multicolor {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.customize-control.customize-control-kirki-dimensions,
+.customize-control.customize-control-kirki-background {
+  margin-bottom: 15px;
+}
+
+.control-section .customize-control:last-child, .control-section .customize-control.last-child {
+  padding: 0;
+  border: none;
+}
+
+.control-section .customize-control.first-child {
+  padding-top: 15px;
+}
+
+.customize-control-description {
+  margin-bottom: 10px;
+}
+
+.form-wrap p, p.description, p.help, span.description {
+  font-size: 12px;
+}
+
+/* COLORPICKER */
+
+#customize-controls .wp-color-result-text {
+  line-height: 2.54545455 !important;
+}
+
+#customize-controls .color-alpha {
+  height: 28px !important;
+}
+
+#customize-controls .customize-control-kirki-color .iris-picker.iris-border {
+  width: 255px !important;
+  max-width: 100% !important;
+}
+
+/* CUSTOM TITLE */
+#customize-controls .customize-control-subtitle {
+  margin-bottom: -1px;
+}
+
+#customize-controls .customize-control-subtitle h2.scisco-customizer-title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 -12px;
+  background: #fff;
+  padding: 20px 15px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#customize-controls .customize-control-subtitle h2.scisco-customizer-title:after {
+  font-family: 'Dashicons';
+  content: "\f347";
+  margin-left: auto;
+}
+
+#customize-controls .customize-control-subtitle h2.scisco-customizer-title:hover {
+  color: #0073aa;
+}
+
+#customize-controls .customize-control-subtitle h2.scisco-customizer-title.opened:after {
+  content: "\f343";
+}
+
+/* BACKGROUND CONTROL */
+
+#customize-controls .customize-control-kirki-background .background-wrapper {
+  padding: 10px 10px 15px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#customize-controls .customize-control-kirki-background h4 {
+  font-weight: normal;
+  margin: 5px 0;
+}
+
+/* DIMENTIONS CONTROL */
+
+#customize-controls .customize-control-kirki-dimensions .wrapper .control {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#customize-controls .customize-control-kirki-dimensions .wrapper .control > div {
+  width: 25%;
+  margin: 0 1px;
+}
+
+/* RADIO IMAGE CONTROL */
+
+#input_scisco_header_layout,
+#input_scisco_footer_layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 14px;
+  grid-row-gap: 7px;
+  margin-top: 5px;
+}
+
+
+.customize-control-kirki-radio-image input:checked + label img {
+  border: none;
+  background: #fff;
+}
+
+/* SELECTBOX */
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 34px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 32px;
+  right: 5px;
+}
+
+.select2-container .select2-selection--single {
+  height: 34px;
+}
+
+input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
+  padding: 0 8px;
+  line-height: 2;
+  min-height: 34px;
+}
+
+/* NUMBER FIELD */
+
+.customize-control-kirki-number .customize-control-content .quantity {
+  line-height: 30px;
+}
+
+/* TOGGLE CONTROL */
+
+.customize-control-kirki-toggle label {
+  padding-top: 5px;
+}
+
+.customize-control-kirki-toggle label .customize-control-title {
+  width: calc(100% - 45px);
+}
+
+/* INFO BOX */
+
+.scisco-customizer-info {
+  position: relative;
+  background: #3498db;
+  margin: 15px 0;
+  color: #fff !important;
+  padding: 15px 10px 15px 40px;
+}
+
+.scisco-customizer-info.msg-error {
+  background: #c0392b;
+}
+
+.scisco-customizer-info.msg-warning {
+  background: #f39c12;
+}
+
+.scisco-customizer-info.msg-success {
+  background: #1abc9c;
+}
+
+.scisco-customizer-info:before {
+  content: "i";
+  font-size: 18px;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Georgia, serif;
+}
+
+.scisco-customizer-info.msg-error:before {
+  content: "!";
+}

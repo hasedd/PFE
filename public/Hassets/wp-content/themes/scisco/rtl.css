@@ -1,0 +1,436 @@
+/* ---------------------- 
+Stylesheet Guide
+-------------------------
+
+GENERAL STYLES
+PAGE STRUCTURE
+AUTHOR BOX
+COMMENTS
+WIDGETS
+CONTACT FORM 7
+USER BOXES
+GUTENBERG
+FOOTER
+MASONRY
+SMART MENU
+BOOTSTRAP OVERRITES
+MEDIA QUERIES
+
+*/
+
+/* ================= GENERAL STYLES ================== */
+
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+    text-align: right;
+}
+
+dd {
+    margin-right: 0;
+}
+
+blockquote {
+    border-right: 5px solid #0A48B3;
+    border-left: none;
+}
+
+blockquote cite {
+    text-align: left;
+}
+
+caption {
+    text-align: right;
+}
+
+th {
+    text-align: inherit;
+}
+
+.highlighted-title:before {
+    margin: 0px 0px 0px 10px;
+}
+
+/* ================= PAGE STRUCTURE ================== */
+
+.scisco-login-links .nav-link.scisco-register-link {
+    border-left: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+ul.scisco-login-links .nav-item:last-child .nav-link {
+    padding-right:1rem;
+    padding-left:0;
+}
+
+.scisco-dropdown-alert:before {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+#scisco-woo-dropdown a.remove {
+    left: 0.35rem;
+    right: auto;
+}
+
+#scisco-woo-dropdown .woocommerce-mini-cart__buttons .button {
+    margin-left: 0.5rem;
+    margin-right: 0
+}
+
+span.scisco-title-count,
+span.scisco-title-rep {
+    margin: 0 0.75rem 0 0;
+}
+
+.scisco-post-date {
+    text-align: left;
+}
+
+.scisco-post-date i {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+.scisco-post-breadcrumb {
+    text-align: right;
+}
+
+#navbar-search-main .input-group-prepend {
+    right: 0;
+    left: auto;
+}
+
+#navbar-search-main .form-control {
+    padding-right: 40px;
+    padding-left: 0;
+}
+
+.scisco-meta .badge {
+    margin: 0 0 0.25rem 0.25rem;
+}
+
+/* ================= AUTHOR BOX ================== */
+
+.scisco-author-box {
+    border-right: 0.4rem solid #0A48B3;
+    border-left: none;
+}
+
+#scisco-users-reset {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/* ================= COMMENTS ================== */
+
+.scisco_comment_right_inner {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.scisco_comment_right_inner.scisco_no_avatar {
+    padding: 0px !important;
+}
+
+.scisco_commentlist .comment>.comment .scisco_comment {
+    padding-right: 40px;
+    padding-left: 0;
+}
+
+.scisco_commentlist .comment>.comment:before {
+    right: 5px;
+    left: auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.scisco_cancel {
+    float: left;
+}
+
+.scisco_comments_rss {
+    text-align: left;
+}
+
+.scisco_comments_rss .fas {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+/* ================= WIDGETS ================== */
+
+[class*="elementor-widget-wp-widget-"] ul li ul,
+.widget_nav_menu div ul li ul,
+.widget_categories ul li ul,
+.widget_pages ul li ul {
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+.widget_categories ul li span.badge {
+    left: 0;
+    right: auto;
+}
+
+.widget_categories ul li a {
+    padding-left:30px;
+    padding-right:0;
+}
+
+h5 .rsswidget:nth-child(2):before {
+    padding-left: 5px;
+    padding-right: 0;
+}
+
+.widget_rss ul li cite {
+    text-align: left;
+}
+
+#wp-calendar tfoot tr #prev {
+    text-align: right;
+}
+
+#wp-calendar tfoot tr #next {
+    text-align: left;
+}
+
+.tagcloud a,
+a[class^="tag"] {
+    margin-left: 0.4rem;
+    margin-right: 0;
+}
+
+.tagcloud .tag-link-count {
+    padding-right: 5px;
+    margin-right: 5px;
+    padding-left: 0;
+    margin-left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none
+}
+
+/* ================= USER BOXES ================== */
+
+.scisco-user-box-icon {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: none;
+}
+
+/* ================= CONTACT FORM 7 ================== */
+
+body.scisco .wpcf7 form .wpcf7-response-output {
+    border: none !important;
+    border-right: .375rem solid rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ================= GUTENBERG ================== */
+
+.wp-block-archives li ul,
+.wp-block-categories-list li ul {
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+.wp-block-categories-list li span {
+    left: 0;
+    right: auto;
+}
+
+/* ================= FOOTER ================== */
+
+#scisco-gototop {
+    left: 30px;
+    right: auto;
+}
+
+/* ================= MASONRY ================== */
+
+.scisco-column {
+    float: right;
+}
+
+.card-comments {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.card-masonry-sm .card-footer .avatar {
+    margin-left: 0.65rem;
+    margin-right: auto;
+}
+
+/* ================= SMART MENU ================== */
+
+.scisco-sm-skin>li>a {
+    padding: 15px 0 15px 20px;
+}
+
+.scisco-sm-skin>li>ul {
+    padding-right: 1.85rem;
+    padding-left: 0;
+}
+
+.scisco-sm-skin a .sub-arrow::before {
+    content: '\f053';
+}
+
+.scisco-sm-skin a.highlighted .sub-arrow {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+/* ================= BOOTSTRAP OVERRITES ================== */
+
+.card-footer .avatar {
+    margin-left: .7rem;
+    margin-right: 0;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-right: .5rem;
+    padding-left: 0;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    padding-left: .5rem;
+    padding-right: 0;
+}
+
+.input-group>.input-group-append>.btn,
+.input-group>.input-group-append>.input-group-text,
+.input-group>.input-group-prepend:not(:first-child)>.btn,
+.input-group>.input-group-prepend:not(:first-child)>.input-group-text,
+.input-group>.input-group-prepend:first-child>.btn:not(:first-child),
+.input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child),
+.input-group>.form-control:not(:last-child),
+.input-group>.custom-select:not(:last-child) {
+    border-radius: 0;
+}
+
+.pagination .fa-chevron-right:before {
+    content: "\f053";
+}
+
+.pagination .fa-chevron-left:before {
+    content: "\f054";
+}
+
+.custom-select {
+    padding: .625rem .75rem .625rem 1.75rem;
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%2332325d' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat left .75rem center/8px 10px;
+}
+
+.btn:not(:last-child) {
+    margin-left: .5rem;
+    margin-right: 0;
+}
+
+.ml-2, .mx-2 {
+    margin-right: .5rem !important;
+    margin-left: 0 !important;
+}
+
+.pr-0, .px-0 {
+    padding-left: 0 !important;
+}
+
+.dropdown-menu .dropdown-item > i, .dropdown-menu .dropdown-item > svg {
+    margin-left: .75rem;
+    margin-right: 0;
+}
+
+.dropdown-menu,.dropdown-item {
+    text-align: right;
+}
+
+.scisco-dropdown-alert::before {
+    display: none;
+}
+
+.dropdown .fa-long-arrow-alt-right {
+    transform:rotate(180deg)
+}
+
+.navbar-nav {
+    padding-right: 0;
+}
+
+.navbar-brand {
+    margin-left: 1rem;
+    margin-right: 0;
+}
+
+.scisco-post-date.ml-auto {
+    margin-left:0 !important;
+}
+
+.btn i:not(:last-child), .btn svg:not(:last-child) {
+    margin-left: .5rem;
+    margin-right: 0;
+}
+
+.form-check-inline .form-check-input {
+    margin-right: 0;
+    margin-left: .3125rem;
+}
+
+/* ================= MEDIA QUERIES ================== */
+
+@media only screen and (min-width: 768px) {
+    #scisco-topnav .navbar-nav {
+        margin-right: auto !important;
+        margin-left: 0 !important;
+    }
+    #scisco-topnav .navbar-nav.ml-md-0 {
+        margin-right: 1rem !important;
+    }
+    #scisco-navbar-user-icon {
+        margin:0 !important;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+.mr-sm-3, .mx-sm-3 {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+}
+
+@media only screen and (max-width: 1570px) {
+    #scisco-footer .scisco-icons {
+        padding-left: 50px;
+        padding-right: 0
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .scisco_comment_left {
+        display: none;
+    }
+
+    .scisco_comment_right_inner {
+        padding: 0;
+    }
+
+    #scisco-page-title.scisco-profile-header {
+        text-align: center;
+    }
+
+    #scisco-footer .scisco-icons {
+        padding-left: 0
+    }
+
+    #scisco-navbar-user-icon {
+        margin-right:auto !important;
+        margin-left:0 !important;
+    }
+}

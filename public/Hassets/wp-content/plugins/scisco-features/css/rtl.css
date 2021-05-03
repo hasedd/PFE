@@ -1,0 +1,149 @@
+.scisco-verified i {
+    right:0;
+    left: auto;
+}
+
+/* ================= CAROUSEL ================== */
+
+.scisco-carousel .slick-next {
+    border-radius: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.scisco-carousel .slick-prev {
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    right: auto;
+    left: 32px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+}
+
+/* jQuery UI Autocomplete */
+
+.ui-autocomplete {
+    right:0;
+    left: auto;
+}
+
+/* ================= SUBMIT FORM ================== */
+
+#front-end-post-edit-form ul.cmb2-checkbox-list li,
+#front-end-post-form ul.cmb2-checkbox-list li {
+    display: inline-block;
+    margin: 0px 0px 4px 2px;
+}
+
+#front-end-post-edit-form input[type="submit"],
+#front-end-post-form input[type="submit"] {
+    float: left;
+}
+
+
+/* Pending Posts */
+
+.scisco-delete-post-btn {
+    left:0;
+    right: auto;
+}
+
+.scisco-pending-img {
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+/* ================= USER FOLLOW ================== */
+
+.scisco-follow.btn:before,
+.scisco-unfollow.btn:before {
+    margin-left:0.25rem;
+    margin-right:0;
+}
+
+.scisco-header-breadcrumb .btn i {
+  margin-left:0.25rem;
+  margin-right:0
+}
+
+/* ================= FEP ================== */
+
+div.fep-filter {
+    padding-right: 0;
+    padding-left: 0.5rem;
+}
+
+div.fep-bulk-actions {
+    padding-left: 0;
+    padding-right: 0.5rem;
+}
+
+.fep-dropdown-info {
+    padding-right: 0.75rem;
+    padding-left: 0;
+}
+
+#fep-notification-bar {
+    left:0;
+    right: 1.5rem;
+    border-right: 0.25rem solid rgba(0, 0, 0, 0.2) !important;
+    border-left: none !important;
+}
+
+.fep-notification-bar .fep-notice-dismiss {
+    left: 10px;
+    right: auto;
+}
+
+.fep-wp-error {
+    text-align: right;
+}
+
+.scisco-fep-menu {
+    margin-right: auto;
+    margin-left:0;
+}
+
+#fep-menu {
+    left:0;
+    right: auto;
+}
+
+.fep-column.fep-column-fep-cb {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fep-column.fep-column-author {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+span.fep-unread-class {
+    left:0;
+    right: auto;
+}
+
+.fep-column.fep-column-block_unblock,
+.fep-column.fep-column-send_message {
+    text-align: left;
+}
+
+.fep-column.fep-column-name {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fep-button.fep-message-toggle-all {
+    left:0;
+    right: auto;
+}
+
+.fep-column.fep-column-avatar .fep-avatar-p .fep-avatar-2 {
+    transform: translateX(25%);
+}
+
+.fep-column.fep-column-avatar .fep-avatar-p .fep-avatar-1 {
+    transform: translateX(-25%);
+}

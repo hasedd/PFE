@@ -41,8 +41,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/test/{id}', [PostController::class,'show']
     )->name('Show_Question');
 
-    Route::POST('/addQuestion',[PostController::class,'store']
-    )->name('Add_Question');
+    Route::POST('/addQuestion',[PostController::class,'store'])
+        ->name('Add_Question');
 
     Route::POST('/addComment/{post_id}',[CommentController::class,'store']
     )->name('comments_form');

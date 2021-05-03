@@ -1,0 +1,3505 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+#: scisco/plugins/scisco-features/elementor.php:1
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/elementor.php:1
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#. Text in function
+#: scisco/comments.php:34
+msgid "%1$d %2$s for \"%3$s\""
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:494
+msgid "%1$s at %2$s"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:494
+msgid "(Edit)"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "1 Column"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "2 Column"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "2 Columns"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "3 Column"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "3 Column (v2)"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "3 Columns"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "4 Column"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "4 Columns"
+msgstr ""
+
+#. Text in echo
+#: scisco/404.php:7
+msgid "404 - Page not found!"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "5 Column"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "5 Columns"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "900x600 px"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/templates/header/sidenav.php:43
+msgid "ASK A QUESTION"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/anspress.php:1
+msgid "About"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "About Page Slug"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Active"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/anspress.php:1
+msgid "Activities"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Activities Page Slug"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Add Another Icon"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Add Border"
+msgstr ""
+
+#. Text in echo
+#: scisco/plugins/scisco-features/submit-form-page.php:4
+msgid "Add New Post"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Additional Menu Items"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "After"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/about.php:76
+msgid "Age"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Alignment"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "All font-sizes in the theme will scaled according to this value."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Allow only verified users the ability to submit post."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Alphabetical"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/templates/usersearch-template.php:21
+msgid "Alphabetical ASC"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/templates/usersearch-template.php:22
+msgid "Alphabetical DESC"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Amazon"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Android"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation 1"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation 2"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation 3"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation 4"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation 5"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation 6"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation 7"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation 8"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation Direction"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation Duration"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Animation Timing"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/question-list-item.php:42
+#: scisco/templates/userlist-template.php:156
+#: scisco/anspress/addons/user/following.php:140
+#: scisco/anspress/addons/user/followers.php:143
+msgid "Ans"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "AnsPress"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "AnsPress Question Answer"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/ask.php:57
+#: scisco/plugins/scisco-features/widgets/questions.php:156
+msgid "AnsPress plugin is required."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/about.php:23
+#: scisco/anspress/addons/user/menu-activity.php:21
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Answers"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Answers Box Color"
+msgstr ""
+
+#. Text in function
+#: scisco/job_manager/job-filters.php:44
+msgid "Any category"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Apple"
+msgstr ""
+
+#. Text in echo
+#: scisco/front-end-pm/box-message.php:48
+#: scisco/front-end-pm/box-announcement.php:44
+#: scisco/front-end-pm/directory.php:46
+msgid "Apply"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/form-coupon.php:37
+#: scisco/woocommerce/cart/cart.php:144
+msgid "Apply coupon"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "As default, users are redirected to the front page after login. You can enter a custom URL here."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Ascending"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Ask Button Style"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/ask.php:1
+msgid "Ask Question Form"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/anspress.php:1
+msgid "Ask question"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Author Box"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/cart/cart.php:123
+msgid "Available on backorder"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Avatar"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "BUY NOW"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Back"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Background"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Background Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Background Overlay Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Before"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Before Footer"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Behance"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/about.php:24
+msgid "Best Answers"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/myaccount/my-address.php:1
+msgid "Billing address"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Biographical Info"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/about.php:116
+msgid "Biography"
+msgstr ""
+
+#. Text in echo
+#: scisco/index.php:8
+#: scisco/includes/anspress.php:1
+#: scisco/includes/bs4breadcrumb.php:1
+#: scisco/includes/kirki.php:1
+msgid "Blog"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Blog Page Slug"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/menu-activity.php:24
+msgid "Blog Posts"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Blog Subtitle"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Blogger"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Body"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Border"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Border Radius"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Box"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Box Align"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Box Background Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Box Shadow"
+msgstr ""
+
+#. Text in echo
+#: scisco/front-end-pm/box-message.php:41
+#: scisco/front-end-pm/box-announcement.php:37
+#: scisco/front-end-pm/directory.php:39
+msgid "Bulk action"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Button"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Button Style"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Button Text"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Button URL"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Button Width"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Buttons"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "CMB2"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Categories"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Category"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Category Page Layout"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Center"
+msgstr ""
+
+#. Text in echo
+#: scisco/front-end-pm/box-content.php:10
+#: scisco/front-end-pm/directory.php:59
+msgid "Check/Uncheck all"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/fileselect-control.php:70
+msgid "Choose / Upload File"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/checkout/form-coupon.php:1
+msgid "Click here to enter your code"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Color 1"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Color 2"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Colors"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Columns"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Comment Count"
+msgstr ""
+
+#. Text in echo
+#: scisco/comments.php:8
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Comments"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Contact Form 7"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Content"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Content Here..."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Content Width"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/form-coupon.php:35
+#: scisco/woocommerce/cart/cart.php:141
+msgid "Coupon code"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Cover Image"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Credits"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Custom"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Custom Login Page Customizer"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Custom Login URL"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Custom Register URL"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Custom Timing"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Custom Title"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Danger"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Danger Button Background Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Danger Button Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Dark"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Darker"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Dashboard access"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Date"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Date of Birth"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/thankyou.php:49
+msgid "Date:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Default"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default Browser Font Size (px)"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default Button Background Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default Button Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default Cover Image"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default Shop Cover Image"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default Thumbnail Size for Masonry Layout"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default User Post Status"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default avatar"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Default avatar must be selected as \"Scisco Avatar\" (Go to Settings -> Discussion -> Default Avatar)"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Delicious"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Descending"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Destination URL"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Deviantart"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Digg"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Disable"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Disable Breadcrumb Menu"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Discord"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+msgid "Dismissible"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Display history"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Display name publicly as"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Dribbble"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Dropdown Menu"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Each row is a new icon."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Each row is a new menu item."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Ease"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Ease In"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Ease In Out"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Ease Out"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/my-address.php:46
+msgid "Edit"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/anspress.php:1
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Edit Profile"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Edit Profile Page Slug"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/elementor.php:1
+msgid "Elementor"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Email"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/form-login.php:80
+msgid "Email address"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/thankyou.php:55
+msgid "Email:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Enable"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Enable Additional Menu Items"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Enable Custom Avatar"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Enable Custom Cover Image"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Enable Lightbox"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Enable Live Search"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Enable Social Icons"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "End"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "English (United States)"
+msgstr ""
+
+#. Text in echo
+#: scisco/404.php:21
+#: scisco/search.php:123
+#: scisco/searchform.php:3
+#: scisco/templates/header/topnav.php:50
+msgid "Enter a keyword..."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/not-found.php:1
+msgid "Error 404"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Etsy"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Example; Follow me on Facebook"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Example; http://www.facebook.com"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Exclude posts by ID"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Exclude users by ID"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Facebook"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Featured Image"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Featured image can not edited after the post submission."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+#: scisco/anspress/addons/user/about.php:136
+msgid "Female"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "First Column."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "First Name"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Flickr"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Flip Diagonal Left"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Flip Diagonal Right"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Flip Down"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Flip Inverted Diagonal Left"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Flip Inverted Diagonal Right"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Flip Left"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Flip Right"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Flip Up"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/anspress.php:1
+msgid "Followers"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/anspress.php:1
+msgid "Following"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Font Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "FontAwesome Icon"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Footer"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Footer 1"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Footer 2"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Footer 3"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Footer 4"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Footer Layout"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "For the information, please read the help documentation."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Four Column"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Foursquare"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Fourth Column"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Freelance Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Front"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Front End PM"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Front-End Post Submission"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Full"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Full Time Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+#: scisco/anspress/addons/user/about.php:90
+msgid "Gender"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "General"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Github"
+msgstr ""
+
+#. Text in echo
+#: scisco/footer.php:40
+msgid "Go to Top"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/header/topnav.php:79
+msgid "Go to shop"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Google"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Guest User Text"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/checkout/form-coupon.php:1
+msgid "Have a coupon?"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Header"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/meta-boxes.php:1
+msgid "Header Cover Image"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Heading"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Heading & Label Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Heading 1"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Heading 2"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Heading 3"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Heading 4"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Heading 5"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Heading 6"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Heading Level"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Headings"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Height"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Height (rem)"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/scisco-features.php:1
+msgid "Hello"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Horizontal Align"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Hover"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Icon"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Icon Border Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Icon Box"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Icon Class"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Icon Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Icon Container Width"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Icon Padding"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Icon Position"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Icon Size"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Icon {#}"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Image Overlay"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Info"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Info Button Background Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Info Button Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Info Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Info Level"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Info Padding"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Instagram"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Internship Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Jobs Sidebar"
+msgstr ""
+
+#. Text in echo
+#: scisco/job_manager/job-filters.php:27
+msgid "Keywords"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Kirki"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Language"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Large"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Last Name"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Lastfm"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Layout"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Left"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Light"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Limit"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Limit WordPress dashboard access and remove admin bar for non-admins."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Linear"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Link"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Link Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Link Hover Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Link Target"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Link to"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Link:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Linkedin"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/notification/index.php:59
+#: scisco/anspress/addons/reputation/index.php:38
+msgid "Load More"
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/answers.php:26
+msgid "Load more answers"
+msgstr ""
+
+#. Text in echo
+#: scisco/job_manager/job-filters.php:30
+#: scisco/plugins/scisco-features/profile-fields.php:1
+#: scisco/anspress/addons/user/about.php:99
+msgid "Location"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Logged In User Menu"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/woocommerce/myaccount/form-login.php:29
+#: scisco/woocommerce/myaccount/form-login.php:48
+#: scisco/templates/header/topnav.php:218
+msgid "Login"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Login Link"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Login Text"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Logo Max. Width (%)"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Logo Top-Bottom Spacing (rem)"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Logo Width (Mobile Phones (px))"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/header/topnav.php:200
+msgid "Logout"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Lorem ipsum dolor..."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/login-signup.php:32
+msgid "Lost Password"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Lost Password Link"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Lost Password Text"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Lost Password URL"
+msgstr ""
+
+#. Text in function
+#: scisco/templates/header/topnav.php:218
+msgid "Lost Password?"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Lost Your Password?"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/form-login.php:54
+msgid "Lost your password?"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/myaccount/form-lost-password.php:29
+msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Main Menu"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Main Sidebar"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+#: scisco/anspress/addons/user/about.php:136
+msgid "Male"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Margin"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/notification/index.php:27
+msgid "Mark all as seen"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Masonry Thumbnail Size"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Maximum Width"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Maximum excerpt length"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Maximum number of posts"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Maximum number of questions"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Maximum number of the products."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Maximum number of users"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Maximum number of users per page"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Maximum title length"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Medium"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/userlist-template.php:140
+#: scisco/anspress/addons/user/following.php:124
+#: scisco/anspress/addons/user/followers.php:127
+#: scisco/anspress/addons/user/about.php:54
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:316
+msgid "Member since:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/front-end-pm/header.php:31
+#: scisco/woocommerce/myaccount/navigation.php:26
+#: scisco/anspress/addons/user/index.php:22
+msgid "Menu"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Menu Badge Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Menu Collapsible Behavior"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Menu Item"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Menu Item Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Menu Item Hover Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Menu Order"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Menu item..."
+msgstr ""
+
+#. Text in function
+#: scisco/front-end-pm/header.php:25
+msgid "Message box size: %1$s of %2$s"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/anspress.php:1
+msgid "Messages"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Messages Page Slug"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Minimum Height"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/thankyou.php:33
+msgid "My account"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/about.php:64
+msgid "Name"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Neutral"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "New Password"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "New Post"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "New Window"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "New post requires a content."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "New post requires a title."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "New user default role will be author. If you have existing users, you should change their role to author manually."
+msgstr ""
+
+#. Text in function
+#: scisco/comments.php:22
+msgid "Newer comments"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Newest"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Nickname"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "No"
+msgstr ""
+
+#. Text in function
+#: scisco/front-end-pm/box-content.php:45
+msgid "No %s found."
+msgstr ""
+
+#. Text in function
+#: scisco/front-end-pm/box-content.php:49
+msgid "No %s found. Try different filter."
+msgstr ""
+
+#. Text in function
+#: scisco/search.php:9
+msgid "No Results Found!"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/answers.php:43
+msgid "No answer posted by this user."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/category/no-category-found.php:13
+msgid "No category is set!"
+msgstr ""
+
+#. Text in function
+#: scisco/front-end-pm/box-message.php:1
+msgid "No messages found."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/notification/index.php:42
+msgid "No notification."
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/cart/mini-cart.php:79
+msgid "No products in the cart."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/widgets/widget-questions.php:26
+msgid "No questions found."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/tag/no-tags-found.php:14
+msgid "No tags is set!"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/userlist-template.php:192
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:360
+msgid "No users found!"
+msgstr ""
+
+#. Text in echo
+#: scisco/front-end-pm/directory.php:78
+msgid "No users found. Try different filter."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Non-logged In User Menu"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "None"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Normal"
+msgstr ""
+
+#. Text in echo
+#: scisco/plugins/scisco-features/widgets/masonry.php:273
+#: scisco/plugins/scisco-features/widgets/carousel.php:285
+msgid "Nothing was found!"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "OFF"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "ON"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Odnoklassniki"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Off"
+msgstr ""
+
+#. Text in function
+#: scisco/comments.php:19
+msgid "Older comments"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "On"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "One Click Demo Import"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "One Column + Sidebar"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Only Verified Users"
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/submit-post.php:1
+msgid "Only verified users can submit blog post."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Order"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Order By"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Order by"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/thankyou.php:44
+msgid "Order number:"
+msgstr ""
+
+#. Text in echo
+#: scisco/includes/woo-functions.php:77
+msgid "Out of Stock"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Overlay Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/elementor.php:1
+msgid "PHP"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Padding"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Page Sidebar"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+msgid "Pagination"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Part Time Color"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/form-login.php:40
+#: scisco/woocommerce/myaccount/form-login.php:87
+msgid "Password"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Password must be at least 8 characters in length and must include at least one upper case letter, one number, and one special character."
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/thankyou.php:31
+msgid "Pay"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/thankyou.php:67
+msgid "Payment method:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Pending"
+msgstr ""
+
+#. Text in echo
+#: scisco/plugins/scisco-features/submit-form-page.php:7
+msgid "Pending Posts"
+msgstr ""
+
+#. Text in function
+#: scisco/comments.php:28
+msgid "Pings&#47;Trackbacks"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Pinterest"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Placeholder Image"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/index.php:33
+msgid "Please login to view your profile"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Position"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Post Content"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Post Excerpt"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Post Title"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/scisco-features.php:1
+msgid "Post is deleted."
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/answer.php:33
+msgid "Posted %s"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Posts"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/cart/cart.php:36
+#: scisco/woocommerce/cart/cart.php:98
+msgid "Price"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Primary"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Primary Button Background Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Primary Button Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Primary Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Primary Font Color"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/cart/cart.php:35
+#: scisco/woocommerce/cart/cart.php:78
+msgid "Product"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Product Thumbnail Size"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Product layout"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/header/topnav.php:198
+msgid "Profile"
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/single-question.php:44
+#: scisco/includes/kirki.php:1
+msgid "Published"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/cart/cart.php:37
+#: scisco/woocommerce/cart/cart.php:104
+msgid "Quantity"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/userlist-template.php:152
+#: scisco/anspress/addons/user/following.php:136
+#: scisco/anspress/addons/user/followers.php:139
+msgid "Que"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/about.php:40
+#: scisco/anspress/addons/user/menu-activity.php:18
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Questions"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Questions Box Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Random"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Recommended avatar size is 150x150 px."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Redirection URL"
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/login-signup.php:12
+#: scisco/includes/kirki.php:1
+#: scisco/woocommerce/myaccount/form-login.php:64
+#: scisco/woocommerce/myaccount/form-login.php:97
+#: scisco/templates/header/topnav.php:218
+msgid "Register"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Register Link"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Register Text"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Registered Users"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Registration Date"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/templates/usersearch-template.php:23
+msgid "Registration Date ASC"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/templates/usersearch-template.php:24
+msgid "Registration Date DESC"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Related Products"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/single-product/related.php:26
+msgid "Related products"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/form-login.php:50
+msgid "Remember me"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Remove Icon"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Remove tags from question lists"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/cart/cart.php:123
+#: scisco/woocommerce/cart/mini-cart.php:42
+msgid "Remove this item"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/about.php:53
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Reputation"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/templates/usersearch-template.php:26
+msgid "Reputation ASC"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Reputation Box Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Reputation Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/templates/usersearch-template.php:27
+msgid "Reputation DESC"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/form-lost-password.php:38
+msgid "Reset password"
+msgstr ""
+
+#. Text in function
+#: scisco/search.php:9
+msgid "Result Found"
+msgstr ""
+
+#. Text in function
+#: scisco/search.php:9
+msgid "Results Found"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Resume"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Right"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Rotate"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Rotate Text"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "SVG Height"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "SVG Width"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Same Frame"
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/edit-profile.php:2
+msgid "Save Changes"
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/single-question.php:44
+msgid "Scheduled for"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/scisco-features.php:1
+msgid "Scisco"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+msgid "Scisco Alert"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/ask.php:1
+msgid "Scisco Ask Question Form"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Scisco Button"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/elementor.php:1
+msgid "Scisco Features"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Scisco Flip Box"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Scisco Icon Box"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+msgid "Scisco Masonry"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Scisco Post Carousel"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Scisco Questions"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Scisco Thumbnail"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Scisco User Carousel"
+msgstr ""
+
+#. Text in echo
+#: scisco/front-end-pm/box-announcement.php:14
+msgid "Search Announcements"
+msgstr ""
+
+#. Text in echo
+#: scisco/job_manager/job-filters.php:55
+msgid "Search Jobs"
+msgstr ""
+
+#. Text in echo
+#: scisco/front-end-pm/box-message.php:18
+msgid "Search Messages..."
+msgstr ""
+
+#. Text in function
+#: scisco/anspress.php:93
+#: scisco/search.php:29
+msgid "Search Results for:"
+msgstr ""
+
+#. Text in echo
+#: scisco/front-end-pm/directory.php:14
+msgid "Search Users"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/usersearch-template.php:13
+msgid "Search by name..."
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/product-searchform.php:25
+msgid "Search for:"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/product-searchform.php:27
+msgid "Search products..."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/search-form.php:17
+#: scisco/templates/header/topnav.php:47
+msgid "Search questions..."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/tag/tags.php:24
+msgid "Search tags..."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Second Column."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Secondary Font Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Security check failed."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Select Icon"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Select Icon:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Select a page"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Select the page which you have created using user directory page template."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/scisco-features.php:1
+msgid "Send Message"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Settings"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/myaccount/my-address.php:1
+msgid "Shipping address"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/woo-functions.php:94
+msgid "Shop Account"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Shop Account Page Slug"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Shop page show at most"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "Show only verified users"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Side Navigation"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Single Product Image Column Size in Percents"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Single Product Image Size"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Size"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Slack"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Small"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Snapchat"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Social Media Icons"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Social Media Sharing Buttons"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Solved Questions"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/usersearch-template.php:21
+#: scisco/templates/usersearch-template.php:22
+#: scisco/templates/usersearch-template.php:23
+#: scisco/templates/usersearch-template.php:24
+#: scisco/templates/usersearch-template.php:26
+#: scisco/templates/usersearch-template.php:27
+msgid "Sort by:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Soundcloud"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Start"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Statistic"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Stop Using Google CDN"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Style"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Sub Header Button Style"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/anspress.php:1
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Submit Post"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Submit Post Page Slug"
+msgstr ""
+
+#. Text in function
+#: scisco/comments.php:14
+msgid "Subscribe"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/meta-boxes.php:1
+msgid "Subtitle"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/meta-boxes.php:1
+msgid "Subtitle (Optional)"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/cart/mini-cart.php:71
+msgid "Subtotal"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Success"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Success Button Background Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Success Button Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Tagline"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Tags"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Taxonomy"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Temporary Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Text"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Text Align"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Text Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Thank you, your new post has been published."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "Thank you, your new post has been submitted and is pending review by a site administrator."
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/checkout/thankyou.php:39
+#: scisco/woocommerce/checkout/thankyou.php:83
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "The default font family of the theme is loaded via Google CDN."
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/myaccount/my-address.php:38
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "The maximum number of the posts which are displayed on user blog page."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Theme Settings"
+msgstr ""
+
+#. Text in echo
+#: scisco/job_manager/content-no-jobs-found.php:22
+msgid "There are currently no vacancies."
+msgstr ""
+
+#. Text in echo
+#: scisco/job_manager/content-no-jobs-found.php:20
+msgid "There are no listings matching your search."
+msgstr ""
+
+#. Text in echo
+#: scisco/plugins/scisco-features/widgets/questions.php:149
+msgid "There are no questions matching your query or you do not have permission to read them."
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/answers-activity.php:35
+msgid "There is no answer from the users you are following."
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/blog-activity.php:51
+msgid "There is no blog post from the users you are following."
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/questions-activity.php:33
+msgid "There is no question from the users you are following."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/post-form.php:1
+msgid "There was an error in the submission: %s"
+msgstr ""
+
+#. Text in echo
+#: scisco/plugins/scisco-features/submit-form-page.php:49
+msgid "There were no posts found."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "Third Column"
+msgstr ""
+
+#. Text in echo
+#: scisco/job_manager/content-single-job_listing.php:23
+msgid "This listing has expired."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "This page is added by the theme. To change other user page slugs, go to the plugin settings."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "This sidebar is displayed on WooCommerce pages."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "This sidebar is displayed on blog pages."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "This sidebar is displayed on jobs page."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "This sidebar is displayed on page-sidebar template."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "This sidebar is displayed on user directory."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/followers.php:175
+msgid "This user has no follower."
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/blog.php:43
+msgid "This user has no published post yet."
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/following.php:172
+msgid "This user is not following anyone."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "This widget field is displayed before theme footer. It is suitable for single ads."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/ask.php:1
+msgid "This widget has no setting."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "This will be the link target"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Three Column"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Three Columns"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Title"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Title Color"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Title HTML Tag"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Title Here..."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Title Source"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "Title here..."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "To allow everyone to publish post without admin approval, select \"published\"."
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "To exclude multiple posts, add comma between IDs."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Toggle"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Tooltip"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Tooltip:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Top Navigation"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Top-Bottom Spacing"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/cart/cart.php:38
+#: scisco/woocommerce/cart/cart.php:122
+msgid "Total"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/thankyou.php:61
+msgid "Total:"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Tumblr"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Twitch"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Twitter"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Two Column"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Two Columns"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Two Columns + Sidebar"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Typography"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/about.php:41
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Unanswered"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/thankyou.php:30
+msgid "Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/cart/cart.php:150
+msgid "Update cart"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Upload Image"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Use featured images for only post thumbnails"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "User Blog"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "User Blog Layout"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "User Directory"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "User Directory Sidebar"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "User Follow"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/verified-users.php:1
+msgid "User ID"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "User Profile"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/verified-users.php:1
+msgid "User verified Status Is Changed"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/form-login.php:73
+msgid "Username"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/form-lost-password.php:31
+msgid "Username or email"
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/form-login.php:36
+msgid "Username or email address"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Users Page"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "VIEW MORE"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "VK"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/verified-users.php:1
+msgid "Verified"
+msgstr ""
+
+#. Text in echo
+#: scisco/plugins/scisco-features/verified-users.php:65
+#: scisco/plugins/scisco-features/verified-users.php:66
+msgid "Verified User"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/verified-users.php:74
+msgid "Verified user"
+msgstr ""
+
+#. Text in echo
+#: scisco/plugins/scisco-features/verified-users.php:69
+msgid "Verify this user"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Vertical Align"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/header/topnav.php:113
+#: scisco/templates/header/topnav.php:176
+msgid "View All"
+msgstr ""
+
+#. Text in echo
+#: scisco/templates/authorbox-template.php:30
+msgid "View All Posts"
+msgstr ""
+
+#. Text in echo
+#: scisco/author.php:23
+#: scisco/templates/authorbox-template.php:26
+msgid "View Profile"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/addons/user/answer-item.php:43
+msgid "View Question"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Vimeo"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Vine"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/questions.php:1
+msgid "Voted"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/question-list-item.php:37
+msgid "Votes"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/includes/kirki.php:1
+msgid "WP Job Manager"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "WP Menu Icons"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "Warning"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Warning Button Background Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Warning Button Color"
+msgstr ""
+
+#. Text in echo
+#: scisco/job_manager/content-single-job_listing-company.php:36
+#: scisco/anspress/addons/user/about.php:107
+msgid "Website"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Website URL"
+msgstr ""
+
+#. Text in echo
+#: scisco/front-end-pm/header.php:19
+msgid "Welcome"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/templates/header/topnav.php:218
+msgid "Welcome, guest"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+msgid "Well done! You successfully read this important alert message."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Whatsapp"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "White"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Widget Title"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "Widget Title Border Color"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "Width"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/includes/kirki.php:1
+msgid "WooCommerce"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+msgid "WooCommerce Sidebar"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/answer-form.php:30
+msgid "Write your answer."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "Xing"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/masonry.php:1
+#: scisco/plugins/scisco-features/widgets/alert.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+#: scisco/plugins/scisco-features/widgets/carousel.php:1
+msgid "Yes"
+msgstr ""
+
+#. Text in function
+#: scisco/includes/functions.php:504
+#: scisco/plugins/scisco-features/profile-fields.php:1
+msgid "You Tube"
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/blog-activity.php:51
+#: scisco/anspress/addons/user/questions-activity.php:33
+#: scisco/anspress/addons/user/answers-activity.php:35
+msgid "You are not following anyone."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/meta-boxes.php:1
+msgid "You can change default cover image from theme settings."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+#: scisco/plugins/scisco-features/widgets/usercarousel.php:1
+msgid "You can find user IDs at the users page. To exclude multiple users, add comma between IDs."
+msgstr ""
+
+#. Text in echo
+#: scisco/404.php:18
+#: scisco/search.php:120
+msgid "You can search for the page you were looking for or"
+msgstr ""
+
+#. Text in echo
+#: scisco/anspress/ask.php:18
+#: scisco/plugins/scisco-features/widgets/ask.php:54
+msgid "You do not have permission to ask a question."
+msgstr ""
+
+#. Text in function
+#: scisco/front-end-pm/view-message.php:24
+msgid "You do not have permission to send reply to this message!"
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/addons/user/submit-post.php:1
+#: scisco/anspress/addons/user/edit-profile.php:2
+#: scisco/anspress/addons/user/activities.php:1
+#: scisco/anspress/addons/user/messages.php:2
+msgid "You do not have permission to view this page."
+msgstr ""
+
+#. Text in function
+#: scisco/front-end-pm/header.php:22
+msgid "You have %1$s and %2$s unread"
+msgstr ""
+
+#. Text in function
+#: scisco/templates/header/topnav.php:165
+msgid "You have no message."
+msgstr ""
+
+#. Text in function
+#: scisco/templates/header/topnav.php:165
+msgid "You have no unread message."
+msgstr ""
+
+#. Text in function
+#: scisco/templates/header/topnav.php:128
+msgid "You have no unseen notification."
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/myaccount/my-address.php:48
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/single-product/up-sells.php:27
+msgid "You may also like&hellip;"
+msgstr ""
+
+#. Text in function
+#: scisco/woocommerce/checkout/form-checkout.php:1
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#. Text in function
+#: scisco/includes/kirki.php:1
+msgid "You should enable \"Membership\" from WordPress Settings -> General."
+msgstr ""
+
+#. Text in function
+#: scisco/anspress/list-head.php:24
+msgid "Your %s unpublished. "
+msgstr ""
+
+#. Text in echo
+#: scisco/job_manager/job-filters.php:64
+msgid "Your browser does not support JavaScript, or it is disabled. JavaScript must be enabled in order to view listings."
+msgstr ""
+
+#. Text in echo
+#: scisco/woocommerce/checkout/form-checkout.php:52
+msgid "Your order"
+msgstr ""
+
+#. Text in function
+#: scisco/front-end-pm/box-content.php:45
+#: scisco/front-end-pm/box-content.php:49
+msgid "announcements"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/flip_box.php:1
+msgid "https://www.thememasters.club"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/button.php:1
+msgid "https://your-link.com"
+msgstr ""
+
+#. Text in function
+#: scisco/front-end-pm/box-content.php:45
+#: scisco/front-end-pm/box-content.php:49
+msgid "messages"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "p"
+msgstr ""
+
+#. Text in echo
+#: scisco/404.php:18
+#: scisco/search.php:120
+msgid "return home"
+msgstr ""
+
+#. Text in function
+#: scisco/plugins/scisco-features/widgets/iconbox.php:1
+msgid "span"
+msgstr ""

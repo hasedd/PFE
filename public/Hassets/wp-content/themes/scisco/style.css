@@ -1,0 +1,3026 @@
+/*
+Theme Name: Scisco
+Theme URI: https://1.envato.market/1k3gD
+Description: Questions And Answers WordPress Theme
+Author: Egemenerd
+Author URI: https://themeforest.net/user/egemenerd
+Version: 1.1
+License: Envato Market
+License URI: http://themeforest.net/licenses
+Tags: custom-menu,featured-images
+Text Domain: scisco
+Requires at least: 5.0
+Tested up to: 5.6
+Requires PHP: 7.0
+*/
+
+/* ---------------------- 
+Stylesheet Guide
+-------------------------
+
+GENERAL STYLES
+PAGE STRUCTURE
+AUTHOR BOX
+COMMENTS
+WIDGETS
+CONTACT FORM 7
+USER BOXES
+WORDPRESS
+RESPONSIVE IFRAME
+GUTENBERG
+ELEMENTOR
+FOOTER
+MASONRY
+MASONRY MEDIA QUERIES
+MEDIA QUERIES
+
+*/
+
+/* ================= GENERAL STYLES ================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #525f7f;
+    text-align: left;
+    background-color: #f5f5f5;
+    font-variant-ligatures: no-common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+abbr[title],
+abbr[data-original-title] {
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: 500;
+}
+
+dd {
+    margin-bottom: .5rem;
+    margin-left: 0;
+}
+
+blockquote {
+    border-left: 5px solid #0A48B3;
+    padding: 2.5rem 2rem;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 2.5rem 0;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+blockquote p {
+    font-weight: 500;
+}
+
+blockquote p:last-child {
+    margin: 0;
+}
+
+blockquote cite {
+    text-align: right;
+    display: block;
+    font-size:90%;
+}
+  
+blockquote cite br {
+    display: none
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+sup {
+    top: -.5em;
+}
+
+a {
+    color: #0A48B3;
+    text-decoration: none;
+    background-color: transparent;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #062b6b;
+    text-decoration: none;
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1em;
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+table {
+    margin: 2rem 0;
+    table-layout: auto;
+    /* Prevents HTML tables from becoming too wide */
+    width: 100%;
+}
+
+table:not([class]) {
+    border-collapse: collapse;
+}
+
+table:not([class]),
+table:not([class]) th,
+table:not([class]) td {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+table:not([class]) th,
+table:not([class]) td {
+    padding: 10px 15px;
+}
+
+caption {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #9AADC2;
+    text-align: left;
+    caption-side: bottom;
+}
+
+th {
+    text-align: inherit;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+textarea {
+    min-height: 140px;
+}
+
+button {
+    border-radius: 0;
+}
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+select {
+    word-wrap: normal;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+legend {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    line-height: inherit;
+    color: inherit;
+    white-space: normal;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    outline-offset: -2px;
+    -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+output {
+    display: inline-block;
+}
+
+summary {
+    display: list-item;
+    cursor: pointer;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 1.75rem;
+    margin-top: 0;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #101E36;
+}
+
+h1,
+.h1 {
+    font-size: 1.9rem;
+}
+
+h2,
+.h2 {
+    font-size: 1.7rem;
+}
+
+h3,
+.h3 {
+    font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+    font-size: 1.35rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.2rem;
+}
+
+h6,
+.h6 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1.75rem;
+    line-height: 1.7;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+}
+
+.highlighted-title {
+    display: flex;
+    align-items: center;
+}
+
+.highlighted-title:before {
+    content: '';
+    width: 20px;
+    min-width: 20px;
+    height: 3px;
+    background: #2dce89;
+    align-self: center;
+    margin: 0px 10px 0px 0px;
+}
+
+.container-fluid {
+    max-width: 1320px;
+}
+
+/* ================= PAGE STRUCTURE ================== */
+
+#scisco-topnav {
+    background-color: transparent;
+    position: relative;
+    z-index: 9;
+}
+
+.scisco-login-links .nav-link {
+    font-weight: 500;
+    line-height: 1;
+}
+
+ul.scisco-login-links .nav-item:last-child .nav-link {
+    padding-right: 0
+}
+
+.scisco-login-links .nav-link.scisco-register-link {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#scisco-profile-dropdown .avatar {
+    background: none;
+}
+
+#scisco-profile-dropdown .dropdown-item {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+#scisco-profile-dropdown .dropdown-item:last-of-type {
+    border-bottom: none;
+}
+
+#scisco-profile-dropdown .dropdown-item:hover,
+#scisco-profile-dropdown .dropdown-item:focus {
+    background: rgba(255, 255, 255, 0.05)
+}
+
+#scisco-header {
+    background-color: #0A48B3;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+#scisco-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.scisco-header-menu {
+    margin-bottom: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#scisco-cart-icon {
+    position: relative;
+}
+
+.scisco-dropdown-alert {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem
+}
+
+.scisco-dropdown-alert:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f05a";
+    font-weight: 900;
+    margin-right: 0.5rem;
+}
+
+#scisco-main-menu i.wpmi-icon {
+    min-width: 1.85rem;
+    margin: 0 !important;
+}
+
+#scisco-main-wrapper {
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+#scisco-main-wrapper.no-padding {
+    padding: 0 !important;
+}
+
+#scisco-mobile-logo-wrapper {
+    padding: 15px 0;
+    background-color: #172b4d;
+    display: none;
+    position: relative;
+    z-index: 9;
+}
+
+#scisco-mobile-logo-wrapper .navbar-brand img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+
+.sidenav-toggler.close-sidenav {
+    display: none;
+    color: #fff;
+    margin-bottom: 0;
+    background: #f5365c;
+    cursor: pointer;
+}
+
+.close-sidenav i {
+    line-height: 40px;
+    font-size: 16px;
+}
+
+#scisco-woo-dropdown ul.cart_list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    position: relative;
+    margin: 0;
+}
+
+#scisco-woo-dropdown a.remove {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.35rem;
+}
+
+#scisco-woo-dropdown .woocommerce-mini-cart__total {
+    margin: 0;
+    padding: 1rem;
+    color: #fff;
+}
+
+#scisco-woo-dropdown .woocommerce-mini-cart__buttons {
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+}
+
+#scisco-woo-dropdown .woocommerce-mini-cart__buttons .button {
+    margin-right: 0.5rem
+}
+
+#scisco-woo-dropdown .woocommerce-mini-cart__empty-message {
+    margin: 1rem;
+}
+
+#scisco-page-title {
+    position: relative;
+    padding: 4rem 0;
+    z-index: 2;
+}
+
+#scisco-page-title.scisco-profile-header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.scisco-ap-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.scisco-profile-thumbnail {
+    min-width: 125px;
+}
+
+.scisco-profile-thumbnail .avatar {
+    width: 105px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    background: none;
+}
+
+#scisco-page-title.scisco-profile-header .scisco-description {
+    margin-top: 0;
+}
+
+.scisco-profile-info {
+    width: 100%
+}
+
+#scisco-page-title h1 {
+    color: #fff;
+    margin: 0;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+#scisco-page-title a {
+    color: #fff;
+}
+
+span.scisco-title-count,
+span.scisco-title-rep {
+    font-size: 50%;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    margin: 0 0 0 0.75rem;
+    border-radius: 0.25rem;
+}
+
+span.scisco-title-rep {
+    color: #fff;
+    background: #F28900;
+}
+
+#scisco-page-title .scisco-description p,
+#scisco-page-title .scisco-description {
+    position: relative;
+    font-size: 1.15rem;
+    margin: 0;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.7;
+}
+
+.scisco-header-breadcrumb {
+    position: relative;
+    padding: 1.1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 2;
+}
+
+.scisco-post-date {
+    text-align: right;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem
+}
+
+.scisco-post-date:empty {
+    display: none;
+}
+
+.scisco-post-date i {
+    margin-right: 0.5rem;
+}
+
+.scisco-post-breadcrumb {
+    text-align: left;
+}
+
+#navbar-search-main .input-group {
+    border-radius: 2rem;
+    padding: 0 0.5rem;
+    box-shadow: none;
+}
+
+#navbar-search-main .input-group-prepend {
+    position: absolute;
+    height: 100%;
+    width: 35px;
+    top: 0;
+    left: 0;
+    margin: 0;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#navbar-search-main .form-control {
+    padding-left: 40px;
+    z-index: 1
+}
+
+.scisco-featured-img img {
+    border-radius: 0.4rem;
+    margin-bottom: 2.25rem;
+}
+
+.scisco-404 {
+    padding: 4rem;
+    background: #fff;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+    border-radius: 0.375rem;
+}
+
+.scisco-meta {
+    margin-top: 0.5rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.scisco-meta>div {
+    display: block;
+}
+
+.scisco-meta .badge {
+    margin: 0 0.25rem 0.25rem 0;
+}
+
+.scisco-content-wrapper {
+    padding: 2.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+    background: #fff;
+}
+
+.scisco-content-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ================= AUTHOR BOX ================== */
+
+.scisco-author-box {
+    padding: 2.5rem;
+    margin-top: 3rem;
+    border-left: 0.4rem solid #0A48B3;
+    background: #fff;
+    display: flex;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+}
+
+.scisco-author-box-left {
+    min-width: 100px
+}
+
+.scisco-author-box-left .avatar {
+    width: 70px;
+    height: 70px;
+}
+
+.scisco-author-box-right h3 {
+    margin-bottom: 1rem
+}
+
+.scisco-author-box-right p {
+    margin: 0;
+}
+
+.scisco-author-desc {
+    margin-bottom: 1.75rem;
+}
+
+#scisco-user-search-form {
+    position: relative;
+    padding: 1.5rem;
+    border: none;
+    margin-bottom: 2.5rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+}
+
+#scisco-user-search-form [class*="col"] {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#scisco-user-search-form .form-row {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.scisco-users-orderby,
+.scisco-users-order {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.scisco-users-orderby {
+    margin-top: 0.25rem;
+}
+
+.scisco-form-check-title {
+    padding-right: 0.75rem;
+    font-weight: 500;
+    color: #101E36;
+}
+
+#scisco-users-reset {
+    margin-left: auto;
+    font-weight: 500;
+}
+
+.scisco-users-wrapper {
+    border: none;
+    background: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+}
+
+.scisco-users-wrapper .scisco-question-wrapper:last-child {
+    border-bottom: none;
+}
+
+.scisco-users-pager {
+    margin-top: 2rem;
+}
+
+/* ================= COMMENTS ================== */
+
+#scisco-comments-wrapper {
+    margin-top: 3rem;
+    padding: 2.5rem;
+    border-radius: 0.4rem;
+    border-top: 0.4rem solid #0A48B3;
+    background: #fff;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15)
+}
+
+.scisco_comments_block,
+.scisco_comment_form {
+    position: relative;
+    display: block;
+}
+
+.scisco_comments_block h3.scisco-title-with-border {
+    margin-bottom: 4rem;
+}
+
+.scisco_commentlist .comment-respond {
+    margin: 0px 0px 40px 0px;
+    list-style: none;
+    padding: 0;
+}
+
+.scisco_comment {
+    position: relative;
+    display: table;
+    width: 100%;
+    margin-bottom: 2.25rem;
+    padding-bottom: 0.25rem;
+    table-layout: fixed;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.scisco_comment_inner {
+    display: table-row;
+}
+
+.scisco_comment_left,
+.scisco_comment_right {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.scisco_comment_left {
+    width: 60px;
+}
+
+.scisco_comment_left img {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+.scisco_comment_right {
+    width: 100%;
+}
+
+.scisco_comment_right_inner {
+    padding-left: 20px;
+    position: relative;
+}
+
+.scisco_comment_right_inner.scisco_no_avatar {
+    padding: 0px !important;
+}
+
+.scisco_commentlist,
+.scisco_comments_block .children {
+    margin: 0px;
+    padding: 0px;
+}
+
+.scisco_commentlist {
+    margin-top: 50px;
+}
+
+.scisco_comments_block .children li {
+    position: relative;
+}
+
+.scisco_commentlist .comment>.comment {
+    position: relative;
+}
+
+.scisco_commentlist .comment>.comment .scisco_comment {
+    padding-left: 40px;
+}
+
+.scisco_commentlist .comment>.comment:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f3e5";
+    text-indent: 0em;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    margin: 0px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    z-index: 1;
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+}
+
+.scisco_comment_text {
+    margin: 0px;
+    display: block;
+    font-style: normal;
+}
+
+.scisco_cancel {
+    float: right;
+}
+
+.scisco_cancel a,
+.scisco_cancel a:hover {
+    vertical-align: top;
+    color: #fff;
+    background: #D62828;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    transition: box-shadow 0.15s ease;
+    letter-spacing: 0.025em;
+    font-size: 0.8rem;
+}
+
+.scisco_cancel a:hover {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+#respond form {
+    margin-bottom: 0px;
+}
+
+p.logged-in-as {
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.scisco-pager.comments-pager {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.scisco-pager.comments-pager a {
+    padding: 10px 15px;
+}
+
+.scisco_comments pre {
+    padding: 0px;
+}
+
+.scisco_comments_rss {
+    text-align: right;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.scisco_comments_rss .fas {
+    margin-right: 5px;
+}
+
+p.form-submit {
+    margin-bottom: 0px;
+}
+
+.scisco_fn {
+    font-weight: 700;
+    margin-bottom: 0;
+    display: block;
+    font-style: normal;
+    line-height: 1.3;
+}
+
+.scisco_comment_links {
+    display: inline-block;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.875rem;
+    margin-bottom: 1.75rem;
+    line-height: 1;
+}
+
+.scisco_comment_links a {
+    color: inherit;
+}
+
+/* ================= WIDGETS ================== */
+
+.scisco-widget,
+.widget_mc4wp_form_widget {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 60px;
+    vertical-align: bottom;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.scisco-footer-logo {
+    width: 220px;
+}
+
+.scisco-widget .textwidget p,
+.widget_mc4wp_form_widget p {
+    font-size: 0.95rem
+}
+
+.scisco-widget a:not([class]),
+.scisco-widget .rsswidget {
+    color: inherit;
+    font-weight: 500;
+}
+
+.scisco-widget a:not([class]):hover,
+.scisco-widget .rsswidget:hover {
+    color: #062b6b;
+}
+
+.scisco-widget .textwidget p:last-child {
+    margin: 0
+}
+
+#scisco-footer .scisco-widget,
+#scisco-footer .widget_mc4wp_form_widget {
+    margin-bottom: 60px;
+}
+
+#scisco-footer .btn {
+    color: #fff;
+}
+
+#scisco-footer .scisco-widget.widget_media_image {
+    margin-bottom: 30px;
+}
+
+.widget_mc4wp_form_widget label {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.scisco-widget h6:empty {
+    display: none;
+}
+
+.scisco-widget h6 {
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.scisco-widget img {
+    max-width: 100%;
+    height: auto;
+}
+
+#scisco-footer .scisco-widget:last-child,
+#scisco-footer .widget_mc4wp_form_widget:last-child,
+.scisco-widget:last-child {
+    margin-bottom: 0px !important;
+}
+
+[class*="elementor-widget-wp-widget-"] ul,
+.widget_recent_entries ul,
+.widget_categories ul,
+.widget_recent_comments ul,
+.widget_pages ul,
+.widget_meta ul,
+.widget_archive ul,
+.widget_archives ul,
+.widget_recent-posts ul,
+.widget_rss ul,
+#recentcomments {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+}
+
+[class*="elementor-widget-wp-widget-"] ul>li,
+.widget_recent_entries ul li,
+.widget_categories ul li,
+.widget_recent_comments ul li,
+.widget_pages ul li,
+.widget_meta ul li,
+.widget_archive ul li,
+.widget_archives ul li,
+.widget_recent-posts ul li,
+.widget_rss ul li,
+.recentcomments {
+    position: relative;
+    padding: 0px 0px 12px 0px;
+    margin: 0px 0px 12px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#scisco-footer .widget_recent_entries ul li,
+#scisco-footer .widget_categories ul li,
+#scisco-footer .widget_recent_comments ul li,
+#scisco-footer .widget_pages ul li,
+#scisco-footer .widget_meta ul li,
+#scisco-footer .widget_archive ul li,
+#scisco-footer .widget_archives ul li,
+#scisco-footer .widget_recent-posts ul li,
+#scisco-footer .widget_rss ul li,
+#scisco-footer .recentcomments {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.recentcomments a {
+    font-size: 1rem;
+    text-transform: none;
+}
+
+.recentcomments,
+.recentcomments a.url {
+    font-size: 0.85rem;
+}
+
+[class*="elementor-widget-wp-widget-"] ul li li,
+.widget_recent_entries ul li li,
+.widget_categories ul li li,
+.widget_pages ul li li,
+.widget_archive ul li li,
+.widget_archives ul li li {
+    border: none !important;
+}
+
+[class*="elementor-widget-wp-widget-"] ul li:last-child,
+.widget_recent_entries ul li:last-child,
+.widget_categories ul li:last-child,
+.widget_recent_comments ul li:last-child,
+.widget_pages ul li:last-child,
+.widget_meta ul li:last-child,
+.widget_archive ul li:last-child,
+.widget_archives ul li:last-child,
+.widget_recent-posts ul li:last-child,
+.widget_rss ul li:last-child,
+.recentcomments:last-child {
+    padding: 0px;
+    margin: 0px;
+    border: none !important;
+}
+
+.widget_recent_comments ul li a {
+    display: inline-block;
+}
+
+.widget_recent_comments ul li span {
+    position: relative;
+    display: inline-block;
+}
+
+[class*="elementor-widget-wp-widget-"] ul li ul,
+.widget_categories ul li ul,
+.widget_pages ul li ul {
+    padding-left: 10px;
+}
+
+[class*="elementor-widget-wp-widget-"] ul ul,
+.widget_categories ul ul,
+.widget_pages ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+}
+
+[class*="elementor-widget-wp-widget-"] ul.children li,
+.widget_categories ul.children li,
+.widget_pages ul.children li {
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.widget_categories ul li {
+    position: relative;
+}
+
+.widget_categories ul li a {
+    padding-right: 30px
+}
+
+.widget_search.scisco-widget,
+.widget_display_search.scisco-widget,
+.widget_product_search.scisco-widget,
+.widget_calendar.scisco-widget {
+    padding: 0px;
+    border: none;
+}
+
+.widget_recent_entries ul li span.post-date {
+    display: block;
+    margin: 0.2rem 0 0 0;
+    position: relative;
+    font-size: 0.85rem;
+}
+
+.widget_categories ul li span.badge {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1;
+    font-size: 0.7rem;
+    min-width: 24px;
+    padding: 0;
+    line-height: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.widget_categories ul.children li span.badge,
+#scisco-footer .widget_categories ul.children li span.badge {
+    background: none;
+    border: none
+}
+
+.widget_rss div,
+.widget_rss .rss-date,
+.widget_rss cite {
+    font-size: 0.875rem;
+}
+
+.widget_rss ul li .rssSummary {
+    margin-bottom: 15px;
+}
+
+.widget_rss ul li .rss-date {
+    margin-bottom: 15px;
+    display: block;
+    position: relative;
+}
+
+.widget_rss a {
+    font-weight: 700;
+}
+
+.rss-widget-icon {
+    display: none;
+}
+
+h5 .rsswidget:nth-child(2):before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f143";
+    text-indent: 0em;
+    text-align: center;
+    font-style: normal;
+    padding-right: 5px;
+    font-weight: 700;
+}
+
+.widget_rss ul li cite {
+    text-align: right;
+    display: block;
+}
+
+.widget_nav_menu .scisco-widget-menu > li:first-child > a {
+    padding-top:0;
+}
+
+.widget_nav_menu .scisco-widget-menu > li:last-child > a {
+    padding-bottom:0;
+}
+
+.widget_nav_menu .scisco-widget-menu > li > ul > li:first-child > a {
+    padding-top:0;
+}
+
+#recentcomments a {
+    display: block !important;
+}
+
+.widget_media_image.scisco-widget {
+    margin-bottom: 30px;
+}
+
+/* calendar widget */
+
+#wp-calendar {
+    width: 100%;
+    margin: 0px;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+#wp-calendar th {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#wp-calendar tbody td,
+#wp-calendar th {
+    padding: 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#wp-calendar caption {
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    color: inherit;
+    background: rgba(0, 0, 0, 0.05);
+    margin-top: -1px
+}
+
+#wp-calendar thead th {
+    font-weight: 700;
+    padding: 10px 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#wp-calendar tbody td {
+    position: relative;
+    padding: 5px 0;
+    text-align: center;
+}
+
+#wp-calendar tbody td#today {
+    font-weight: 700;
+}
+
+#wp-calendar tbody td#today:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+}
+
+#wp-calendar tbody td a {
+    display: block;
+}
+
+#wp-calendar tfoot tr td {
+    border: 0 !important;
+    padding: 0 !important;
+}
+
+#wp-calendar tfoot tr a {
+    display: block;
+    padding: 15px 20px;
+    font-weight: 500;
+}
+
+#wp-calendar tfoot tr #prev {
+    text-align: left;
+}
+
+#wp-calendar tfoot tr #next {
+    text-align: right;
+}
+
+.wp-calendar-nav {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding-top: 10px
+}
+
+#scisco-footer #wp-calendar tbody td,
+#scisco-footer #wp-calendar th {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#scisco-footer #wp-calendar caption {
+    border-color:rgba(255, 255, 255, 0.08);
+}
+
+.tagcloud {
+    position: relative;
+    display: flex;
+    margin-bottom: -0.4rem;
+    flex-wrap: wrap;
+}
+
+.tagcloud:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tagcloud a,
+a[class^="tag"] {
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+    color: inherit;
+    font-size: 0.85rem !important;
+    border-radius: 0.25rem;
+    background: #fff;
+    font-weight: 500;
+}
+
+.tagcloud a:hover,
+a[class^="tag"]:hover {
+    text-decoration: none;
+    color: #062b6b;
+}
+
+.tagcloud .tag-link-count {
+    padding-left: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    font-weight: 700;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ================= USER BOXES ================== */
+
+.scisco-user-boxes {
+    margin-bottom: 2rem;
+}
+
+.scisco-user-boxes .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.scisco-user-boxes .col-12 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.scisco-user-box {
+    display: flex;
+    padding: 0;
+    border-radius: 0.25rem;
+    color: #fff;
+    align-items: stretch;
+    overflow: hidden;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.3)
+}
+
+.scisco-user-box-info {
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    padding: 1rem;
+}
+
+.scisco-user-box-info>span:first-child {
+    font-weight: 700;
+}
+
+.scisco-user-box-info>span:last-child {
+    font-size: 0.9rem;
+}
+
+.scisco-user-box-icon {
+    min-width: 65px;
+    font-size: 24px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.scisco-user-box.box-success {
+    background-color: #2dce89;
+}
+
+.scisco-user-box.box-danger {
+    background-color: #D62828;
+}
+
+.scisco-user-box.box-warning {
+    background-color: #F28900;
+}
+
+.icon-box-title,
+.icon-box-info {
+    margin: 0;
+}
+
+/* ================= CONTACT FORM 7 ================== */
+
+body.scisco .wpcf7-form-control-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+body.scisco .wpcf7 form .wpcf7-response-output {
+    border: none !important;
+    margin: 2rem 0 0 0;
+    box-shadow: none;
+    background: #11cdef;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: .375rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border-left: .375rem solid rgba(0, 0, 0, 0.2) !important;
+}
+
+body.scisco .wpcf7 form.sent .wpcf7-response-output {
+    background: #2dce89;
+}
+
+body.scisco .wpcf7 form.failed .wpcf7-response-output,
+body.scisco .wpcf7 form.aborted .wpcf7-response-output {
+    background: #D62828;
+}
+
+body.scisco .wpcf7 form.spam .wpcf7-response-output {
+    background: #F28900;
+}
+
+body.scisco .wpcf7 form.invalid .wpcf7-response-output,
+body.scisco .wpcf7 form.unaccepted .wpcf7-response-output {
+    background: #F28900;
+}
+
+body.scisco span.wpcf7-not-valid-tip {
+    margin-bottom: 25px;
+    margin-top: 5px;
+    font-size: 0.875rem;
+}
+
+body.scisco span.wpcf7-not-valid-tip {
+    border: 1px solid transparent;
+    color: #D62828;
+    font-size: 0.8rem;
+    margin: 0.25rem 0 0 0 !important;
+    height: 100%;
+    width: 100%;
+    line-height: 1.5rem;
+}
+
+body.scisco .wpcf7-recaptcha {
+    margin-bottom: 30px;
+}
+
+body.scisco .grecaptcha-badge {
+    z-index: 9 !important;
+}
+
+body.scisco .wpcf7-form label {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+body.scisco .wpcf7-form .row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+body.scisco .wpcf7-form [class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+body.scisco .wpcf7-form p {
+    margin-bottom: 1.5rem;
+}
+
+body.scisco .wpcf7-form>p:last-of-type {
+    margin: 0;
+}
+
+/* ================= WORDPRESS ================== */
+
+p:empty {
+    display:none;
+}
+
+body.scisco .alignleft {
+    float: left;
+    margin: 0 1.75rem 1.75rem 0;
+}
+
+body.scisco .alignright {
+    float: right;
+    margin: 0 0 1.75rem 1.75rem;
+}
+
+body.scisco .aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.75rem;
+}
+
+body.scisco .alignnone {
+    margin-bottom: 1.75rem;
+}
+
+body.scisco img.aligncenter {
+    display: block;
+    margin-bottom:0;
+}
+
+body.scisco img.alignnone {
+    float: none;
+    margin-bottom:0;
+}
+
+body.scisco .caption-image .alignleft,
+body.scisco .caption-image .alignright {
+    float: none !important;
+}
+
+body.scisco img.size-full,
+body.scisco img.size-large,
+body.scisco img.header-image,
+body.scisco img.wp-post-image,
+body.scisco img.alignnone,
+body.scisco img.alignright,
+body.scisco img.aligncenter,
+body.scisco img.alignleft {
+    max-width: 100%;
+    height: auto;
+}
+
+body.scisco .wp-caption {
+    max-width: 100% !important;
+    text-align: center;
+}
+
+body.scisco .wp-caption img {
+    max-width: 100% !important;
+    height: auto;
+    margin: 0px;
+    vertical-align: bottom;
+}
+
+body.scisco .wp-caption-text {
+    margin: 0px;
+    padding-top: 10px;
+    font-size: 1rem;
+    font-style:italic;
+}
+
+body.scisco .gallery-caption {
+    font-weight: 700;
+}
+
+body.scisco .bypostauthor {
+    font-weight: normal;
+}
+
+body.scisco .form-allowed-tags {
+    font-size: 80%;
+}
+
+body.scisco .post-password-form label {
+    margin: 0px;
+}
+
+body.scisco .post-password-form p:first-of-type {
+    padding: 1rem 1.5rem;
+    color: #fff;
+    background-color: #D62828;
+    border-color: #D62828;
+    border-radius: 0.35rem;
+    border-left: 0.35rem solid rgba(0, 0, 0, 0.2);
+}
+
+div.sticky .card {
+    border-top: 0.375rem solid #0A48B3;
+}
+
+body.scisco .scisco-page-links {
+    display: flex;
+    clear: both;
+    font-weight: 500;
+    line-height: 1;
+    margin: 1rem 0 3rem 0;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+body.scisco .scisco-page-links a {
+    display: inline-block;
+}
+
+body.scisco .scisco-page-links>a>span,
+body.scisco .scisco-page-links>span {
+    position: relative;
+    height: 40px;
+    margin: 0 4px;
+    min-width: 40px;
+    line-height: 38px;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    box-shadow: none;
+    border-radius: 46px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.scisco .scisco-page-links>span,
+body.scisco .scisco-page-links>a>span:hover {
+    background: #0A48B3;
+    color: #fff;
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+body.scisco .wp-switch-editor {
+    height: 30px;
+}
+
+body.scisco #wp-link input[type="text"] {
+    display: inline-block;
+}
+
+body.scisco #wp-link #wp-link-submit {
+    height: auto;
+}
+
+/* Text meant only for screen readers. */
+
+body.scisco .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+body.scisco .screen-reader-text:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #000;
+    display: block;
+    font-size: 0.925rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+.media-frame input[type="color"],
+.media-frame input[type="date"],
+.media-frame input[type="datetime-local"],
+.media-frame input[type="datetime"],
+.media-frame input[type="email"],
+.media-frame input[type="month"],
+.media-frame input[type="number"],
+.media-frame input[type="password"],
+.media-frame input[type="search"],
+.media-frame input[type="tel"],
+.media-frame input[type="text"],
+.media-frame input[type="time"],
+.media-frame input[type="url"],
+.media-frame input[type="week"],
+.media-frame select,
+.media-frame textarea {
+    height: auto !important;
+}
+
+.scisco-edit-post-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.scisco-edit-post-link .alert {
+    width: 100%;
+}
+
+.scisco-edit-post-link i {
+    font-size: 90%
+}
+
+body.page .scisco-content-wrapper > p:last-of-type > .alignright {
+    clear:both;
+    margin-top:1.75rem
+}
+
+/* ================= RESPONSIVE IFRAME ================== */
+
+.scisco-iframe-wrapper {
+    display: block;
+    margin: 0 0 2rem 0;
+}
+
+.scisco-iframe-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+}
+
+.scisco-iframe-video.nomargin {
+    margin: 0px;
+}
+
+.scisco-iframe-video iframe,
+.scisco-iframe-video object,
+.scisco-iframe-video embed,
+.scisco-iframe-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+iframe,
+object,
+embed,
+video {
+    max-width: 100%;
+}
+
+/* ================= GUTENBERG ================== */
+
+
+body.scisco .alignfull,
+body.scisco .alignwide,
+body.scisco .aligncenter,
+body.scisco .wp-block-cover-image.alignwide {
+    max-width: 100%;
+    height: auto;
+    clear: both;
+}
+
+body.scisco .wp-block-cover-image.alignfull {
+    width: auto;
+}
+
+body.scisco .wp-block-media-text,
+body.scisco .wp-block-embed,
+body.scisco .wp-block-image,
+body.scisco .wp-block-gallery,
+body.scisco .wp-block-cover,
+body.scisco .wp-block-audio,
+body.scisco .wp-block-code,
+body.scisco .wp-block-button,
+body.scisco .wp-block-video,
+body.scisco .wp-block-verse,
+body.scisco .wp-block-preformatted,
+body.scisco .wp-block-latest-comments,
+body.scisco .wp-block-calendar,
+body.scisco .wp-block-categories,
+body.scisco .wp-block-search,
+body.scisco .wp-block-tag-cloud,
+body.scisco .wp-block-rss,
+body.scisco .wp-block-pullquote,
+body.scisco .wp-block-archives-dropdown,
+body.scisco .wp-block-table {
+    margin-bottom: 1.75rem;
+}
+
+.wp-block-cover-image.alignleft,
+.wp-block-cover-image.alignright,
+.wp-block-cover.alignleft,
+.wp-block-cover.alignright,
+.wp-block-cover,
+.wp-block-cover-image {
+    height: auto;
+    color: #fff;
+}
+
+.wp-block-image figcaption {
+    text-align: center;
+    font-style: italic;
+    margin-bottom:0;
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+    padding: 2rem;
+}
+
+.wp-block-media-text .wp-block-media-text__content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.wp-block-audio audio {
+    width: 100%;
+}
+
+.wp-block-columns {
+    margin: 0 -20px;
+}
+
+.wp-block-column {
+    padding: 0 20px;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+    padding: 15px 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.wp-block-gallery a {
+    opacity: 1;
+    -webkit-transition: opacity 0.15s linear;
+    -moz-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+}
+
+.wp-block-gallery a:hover,
+.wp-block-gallery a:focus {
+    opacity: 0.8;
+}
+
+.wp-block-cover-image-text {
+    font-weight: 700;
+}
+
+.wp-block-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 0 0 40px 0;
+}
+
+.wp-block-video iframe,
+.wp-block-video object,
+.wp-block-video embed,
+.wp-block-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.wp-block-table table,
+table.wp-block-table {
+    border-collapse: collapse;
+    margin:0;
+}
+
+.wp-block-table table,
+.wp-block-table table th,
+.wp-block-table table td,
+table.wp-block-table,
+table.wp-block-table th,
+table.wp-block-table td {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-table table th,
+.wp-block-table table td,
+table.wp-block-table th,
+table.wp-block-table td {
+    padding: 10px 15px;
+}
+
+.wp-block-table.is-style-stripes {
+    border:none;
+}
+
+.wp-block-table.is-style-stripes tbody tr {
+    background-color: #fafafa;
+}
+
+.wp-block-archives,
+.wp-block-categories-list,
+.wp-block-latest-posts {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem 0;
+    vertical-align: bottom;
+}
+
+.wp-block-archives li a,
+.wp-block-categories-list li a,
+.wp-block-latest-posts li a {
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    line-height: 1.5;
+}
+
+.wp-block-archives li,
+.wp-block-categories-list li,
+.wp-block-latest-posts li {
+    position: relative;
+    padding: 0px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-categories-list li li {
+    border: none
+}
+
+.wp-block-archives li:last-child,
+.wp-block-categories-list li:last-child,
+.wp-block-latest-posts li:last-child {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+.wp-block-archives li ul,
+.wp-block-categories-list li ul {
+    padding-left: 15px;
+}
+
+.wp-block-archives ul,
+.wp-block-categories-list ul {
+    padding-top: 0px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    list-style: none;
+}
+
+.wp-block-categories-list li span {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    line-height: 1;
+}
+
+.wp-block-latest-comments {
+    padding: 0px;
+}
+
+.wp-block-latest-comments li {
+    padding: 0px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-latest-comments__comment-excerpt p {
+    margin: 15px 0 0 0;
+}
+
+.wp-block-latest-comments li:last-child {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+.wp-block-latest-comments__comment,
+.wp-block-latest-comments__comment-excerpt p {
+    font-size: 1rem;
+}
+
+.wp-block-quote.is-large,
+.wp-block-quote.is-style-large {
+    margin: 3rem 0;
+    padding: 2.5rem 2rem;
+}
+
+.wp-block-quote.is-large p,
+.wp-block-quote.is-style-large p {
+    font-size: 1.15rem;
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.wp-block-pullquote {
+    padding: 0;
+    border: none;
+    background: none;
+    border-radius: 5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.wp-block-pullquote blockquote {
+    border: none;
+    margin: 0;
+}
+
+.wp-block-pullquote.has-background blockquote {
+    background: none;
+}
+
+.wp-block-pullquote p {
+    font-size: 1.5rem !important;
+    line-height: 1.8;
+}
+
+.wp-block-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wp-block-rss {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+}
+
+.wp-block-rss li {
+    position: relative;
+    padding: 0px 0px 12px 0px;
+    margin: 0px 0px 12px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-rss li:last-child {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.wp-block-button.is-style-squared .wp-block-button__link {
+    border-radius: 0
+}
+
+/* ================= ELEMENTOR ================== */
+
+body.scisco .elementor-widget .alert {
+    margin: 0;
+}
+
+body.scisco .elementor-testimonial-wrapper .elementor-testimonial-content {
+    margin-bottom: 20px
+}
+
+body.scisco .elementor-testimonial-wrapper .elementor-testimonial-content hr {
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.scisco .elementor-icon {
+    vertical-align: bottom;
+}
+
+/* TABS */
+
+body.scisco .elementor-widget-tabs .elementor-tab-content {
+    padding: 2rem 1.5rem;
+}
+
+body.scisco .elementor-widget-tabs .elementor-tab-desktop-title {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+body.scisco .elementor-widget-tabs .elementor-tab-content p:last-child {
+    margin-bottom: 0px;
+}
+
+/* ================= FOOTER ================== */
+
+#scisco-footer {
+    background-color: #101e36;
+}
+
+#scisco-footer,
+#scisco-footer p,
+#scisco-footer a,
+#scisco-footer .tagcloud a,
+#scisco-footer a[class^="tag"] {
+    color: #9AADC2;
+}
+
+#scisco-footer h1,
+#scisco-footer h2,
+#scisco-footer h3,
+#scisco-footer h4,
+#scisco-footer h5,
+#scisco-footer h6,
+#scisco-footer a:hover,
+#scisco-footer .tagcloud a:hover,
+#scisco-footer a[class^="tag"]:hover {
+    color: #fff;
+}
+
+#scisco-footer .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+#scisco-footer .form-control:focus {
+    border-color: #0A48B3;
+}
+
+#scisco-footer .input-group {
+    box-shadow: none
+}
+
+#scisco-footer .tagcloud a,
+#scisco-footer a[class^="tag"],
+#scisco-footer .tagcloud .tag-link-count {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: transparent;
+}
+
+#footer-widgets {
+    position: relative;
+    padding: 7rem 0;
+    margin-top: 5px;
+}
+
+#footer-widgets:before {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    background-image: linear-gradient(120deg, #0A48B3, #11CDEF, #2DCE89);
+    content: '';
+    z-index: 1;
+}
+
+#footer-widgets:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    content: '';
+    z-index: 1;
+}
+
+#scisco-footer .footer-logo {
+    max-width: 240px !important;
+}
+
+#scisco-footer-bottom {
+    padding: 1.5rem 0;
+}
+
+#scisco-footer-bottom p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+#scisco-footer .scisco-icons a,
+#scisco-footer .scisco-icons a:hover {
+    color: #fff;
+}
+
+.scisco-ads-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scisco-footer-ads {
+    margin-bottom: 5rem;
+}
+
+.scisco-footer-ads a {
+    display: block;
+}
+
+.scisco-footer-ads img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+#scisco-user-icons {
+    margin-top: 1.5rem;
+}
+
+.scisco-icons {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.scisco-icons li {
+    margin: 0 0 0 0.5rem;
+    padding: 0;
+}
+
+.scisco-icons a {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.scisco-icons a:hover {
+    transform: scale(0.9);
+    color: #fff;
+}
+
+.scisco-icons li a.btn-facebook {
+    background: #3b5998;
+}
+
+.scisco-icons li a.btn-twitter,
+.scisco-icons li a.btn-email {
+    background: #1da1f2;
+}
+
+.scisco-icons li a.btn-reddit {
+    background: #ff4500;
+}
+
+.scisco-icons li a.btn-hackernews {
+    background: #ff4000;
+}
+
+.scisco-icons li a.btn-google {
+    background: #ea4335;
+}
+
+.scisco-icons li a.btn-linkedin-in {
+    background: #0077b5;
+}
+
+.scisco-icons li a.btn-instagram {
+    background: #e1306c;
+}
+
+.scisco-icons li a.btn-vimeo-v {
+    background: #1ab7ea;
+}
+
+.scisco-icons li a.btn-youtube {
+    background: #ff0000;
+}
+
+.scisco-icons li a.btn-apple {
+    background: #161925;
+}
+
+.scisco-icons li a.btn-android {
+    background: #a4c639;
+}
+
+.scisco-icons li a.btn-flickr {
+    background: #ff0084;
+}
+
+.scisco-icons li a.btn-pinterest {
+    background: #bd081c;
+}
+
+.scisco-icons li a.btn-vk {
+    background: #45668e;
+}
+
+.scisco-icons li a.btn-snapchat-ghost {
+    background: #fffc00;
+}
+
+.scisco-icons li a.btn-tumblr {
+    background: #35465c;
+}
+
+.scisco-icons li a.btn-twitch {
+    background: #6441a5;
+}
+
+.scisco-icons li a.btn-vine {
+    background: #00b488;
+}
+
+.scisco-icons li a.btn-foursquare {
+    background: #f94877;
+}
+
+.scisco-icons li a.btn-soundcloud {
+    background: #ff8800;
+}
+
+.scisco-icons li a.btn-odnoklassniki {
+    background: #ed812b;
+}
+
+.scisco-icons li a.btn-xing {
+    background: #026466;
+}
+
+.scisco-icons li a.btn-amazon {
+    background: #ff9900;
+}
+
+.scisco-icons li a.btn-pocket {
+    background: #ef4056;
+}
+
+.scisco-icons li a.btn-behance {
+    background: #1769ff;
+}
+
+.scisco-icons li a.btn-behance {
+    background: #f57d00;
+}
+
+.scisco-icons li a.btn-delicious {
+    background: #3399ff;
+}
+
+.scisco-icons li a.btn-deviantart {
+    background: #05cc47;
+}
+
+.scisco-icons li a.btn-digg {
+    background: #005be2;
+}
+
+.scisco-icons li a.btn-discord {
+    background: #7289da;
+}
+
+.scisco-icons li a.btn-dribbble {
+    background: #ea4c89;
+}
+
+.scisco-icons li a.btn-etsy {
+    background: #d5641c;
+}
+
+.scisco-icons li a.btn-github {
+    background: #4078c0;
+}
+
+.scisco-icons li a.btn-lastfm {
+    background: #d51007;
+}
+
+.scisco-icons li a.btn-medium {
+    background: #00ab6c;
+}
+
+.scisco-icons li a.btn-slack {
+    background: #6ecadc;
+}
+
+.scisco-icons li a.btn-whatsapp {
+    background: #075e54;
+}
+
+#scisco-footer .badge-white {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+#scisco-gototop {
+    position: fixed;
+    right: 30px;
+    bottom: 17px;
+    z-index: 9;
+}
+
+#scisco-gototop i {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background: #0A48B3;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+}
+
+#scisco-gototop.visible i {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+#scisco-gototop.visible:hover i,
+#scisco-gototop:hover i {
+    transform: scale(0.9);
+}
+
+/* ================= MASONRY ================== */
+
+.scisco-column {
+    float: left;
+}
+
+.size-1of1 {
+    width: 100%;
+}
+
+.size-1of2 {
+    width: 50%;
+}
+
+.size-1of3 {
+    width: 33.333%;
+}
+
+.size-1of4 {
+    width: 25%;
+}
+
+.size-1of5 {
+    width: 20%;
+}
+
+.scisco-masonry-grid,
+.scisco-masonry-grid2 {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0px -20px;
+    min-width: 100%;
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+}
+
+.scisco-masonry-grid>div,
+.scisco-masonry-grid2>div {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.scisco-masonry-grid .card-masonry,
+.scisco-masonry-grid2 .card-masonry {
+    padding: 0px 20px;
+    margin-bottom: 40px;
+}
+
+.scisco-masonry-grid.small-grid,
+.scisco-masonry-grid2.small-grid {
+    margin: 0px -15px;
+}
+
+.scisco-masonry-grid.small-grid .card-masonry,
+.scisco-masonry-grid2.small-grid .card-masonry {
+    padding: 0px 15px;
+    margin-bottom: 30px;
+}
+
+.scisco-one-column[data-columns]::before {
+    content: '1 .scisco-column.size-1of1';
+}
+
+.scisco-two-columns[data-columns]::before {
+    content: '2 .scisco-column.size-1of2';
+}
+
+.scisco-three-columns[data-columns]::before {
+    content: '3 .scisco-column.size-1of3';
+}
+
+.scisco-four-columns[data-columns]::before {
+    content: '4 .scisco-column.size-1of4';
+}
+
+.scisco-five-columns[data-columns]::before {
+    content: '5 .scisco-column.size-1of5';
+}
+
+.scisco-one-column[data-columns]::before,
+.scisco-two-columns[data-columns]::before,
+.scisco-three-columns[data-columns]::before,
+.scisco-four-columns[data-columns]::before,
+.scisco-five-columns[data-columns]::before {
+    visibility: hidden;
+}
+
+.card-masonry-sm .card-body,
+.related.products .card-body,
+.small-grid .card-body {
+    padding: 1.75rem 1.25rem;
+}
+
+.card-masonry-sm .card-body p {
+    font-size: 0.9rem;
+}
+
+.card-masonry-sm .card-footer,
+.related.products .card-footer,
+.small-grid .card-footer {
+    padding: 0.85rem 1.25rem;
+}
+
+.scisco-carousel .card-title {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.card-avatar>a {
+    display: flex;
+}
+
+.card-meta div {
+    line-height: 1.5;
+    font-size: 0.8rem;
+}
+
+.card-meta div a,
+.card-comments a {
+    color: inherit;
+}
+
+.card-meta div a:hover,
+.card-comments a:hover {
+    color: #062b6b;
+}
+
+.card-meta div.card-meta-author {
+    text-transform: uppercase;
+}
+
+.card-comments {
+    margin-left: auto;
+    font-size: 0.9rem;
+}
+
+.card-masonry-sm .card-meta div {
+    font-size: 0.75rem;
+}
+
+.card-masonry-sm .card-title {
+    margin-bottom: 0.5rem;
+}
+
+.card-masonry-sm .card-footer .avatar {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.65rem;
+}
+
+/* ================= MASONRY MEDIA QUERIES ================== */
+
+@media screen and (min-width: 1200px) {
+    .scisco-two-columns[data-columns]::before {
+        content: '2 .scisco-column.size-1of2';
+    }
+
+    .scisco-three-columns[data-columns]::before {
+        content: '3 .scisco-column.size-1of3';
+    }
+
+    .scisco-four-columns[data-columns]::before {
+        content: '4 .scisco-column.size-1of4';
+    }
+
+    .scisco-five-columns[data-columns]::before {
+        content: '5 .scisco-column.size-1of5';
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .scisco-five-columns[data-columns]::before {
+        content: '4 .scisco-column.size-1of4';
+    }
+
+    .scisco-four-columns[data-columns]::before {
+        content: '3 .scisco-column.size-1of3';
+    }
+
+    .scisco-three-columns[data-columns]::before,
+    .scisco-two-columns[data-columns]::before {
+        content: '2 .scisco-column.size-1of2';
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .scisco-five-columns[data-columns]::before {
+        content: '3 .scisco-column.size-1of3';
+    }
+
+    .scisco-four-columns[data-columns]::before {
+        content: '2 .scisco-column.size-1of2';
+    }
+
+    .scisco-three-columns[data-columns]::before,
+    .scisco-two-columns[data-columns]::before {
+        content: '1 .scisco-column.size-1of1';
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .scisco-five-columns[data-columns]::before {
+        content: '2 .scisco-column.size-1of2';
+    }
+
+    .scisco-four-columns[data-columns]::before,
+    .scisco-three-columns[data-columns]::before,
+    .scisco-two-columns[data-columns]::before {
+        content: '1 .scisco-column.size-1of1';
+    }
+}
+
+/* ================= MEDIA QUERIES ================== */
+
+@media only screen and (max-width: 1570px) {
+    #scisco-footer .scisco-icons {
+        padding-right: 50px
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+
+    #scisco-mobile-logo-wrapper {
+        display: block;
+    }
+
+    .sidenav-header {
+        display: none;
+    }
+
+    .sidenav-toggler.close-sidenav {
+        justify-content: center;
+        display: flex;
+    }
+
+    #scisco-main-wrapper,
+    #footer-widgets {
+        padding: 4rem 0;
+    }
+
+    .scisco-footer-ads {
+        margin-bottom: 4rem;
+    }
+
+    legend {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+
+}
+
+@media only screen and (max-width: 991px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body.scisco .elementor-widget-tabs .elementor-tab-content {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .scisco_comment_left {
+        display: none;
+    }
+
+    .scisco_comment_right_inner {
+        padding: 0;
+    }
+
+    .scisco-ap-title {
+        justify-content: center;
+    }
+
+    #scisco-page-title .scisco-profile-header-right .scisco-description {
+        margin-top: 0.25rem;
+    }
+
+    #scisco-page-title.scisco-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .scisco-profile-thumbnail .avatar {
+        margin-bottom: 0.75rem
+    }
+
+    #scisco-gototop,
+    #scisco-gototop i {
+        display: none !important;
+    }
+
+    #scisco-footer .scisco-icons {
+        padding-right: 0
+    }
+
+    #scisco-footer-bottom p {
+        text-align: center;
+    }
+
+    #scisco-footer .scisco-icons {
+        justify-content: center;
+    }
+
+    #scisco-footer .scisco-icons li {
+        margin: 0 0.25rem;
+    }
+
+    #scisco-footer-bottom {
+        padding: 1.75rem 0;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    html {
+        font-size: 14px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    .scisco-content-wrapper,
+    .scisco-author-box,
+    #scisco-comments-wrapper {
+        padding: 1.5rem;
+    }
+
+    .scisco-author-box-left {
+        min-width: 70px
+    }
+
+    .scisco-author-box-left .avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .scisco-author-box {
+        padding: 2rem 1.5rem
+    }
+
+    #scisco-main-wrapper,
+    #footer-widgets {
+        padding: 3rem 0;
+    }
+
+    .scisco-footer-ads {
+        margin-bottom: 3rem;
+    }
+
+    #scisco-page-title .scisco-description p,
+    #scisco-page-title .scisco-description {
+        font-size: 1rem;
+    }
+
+    .scisco-profile-thumbnail .avatar {
+        width: 90px;
+    }
+
+    .scisco-users-orderby {
+        margin-top: 0.75rem;
+    }
+
+    #scisco-user-search-form .form-check.form-check-inline {
+        width: 100%
+    }
+
+    .card-body {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .card-footer {
+        padding: 0.8rem 1.25rem;
+    }
+
+    .tab-content {
+        padding: 1.5rem
+    }
+
+    .nav-tabs .nav-link {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .nav-tabs .nav-item {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-tabs .nav-link {
+        background: #fff;
+        border-radius: 0;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #fff;
+        box-shadow: none !important;
+        background: #0A48B3
+    }
+}
