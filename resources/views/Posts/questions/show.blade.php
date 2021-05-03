@@ -1,101 +1,8 @@
-<!DOCTYPE html>
-<html lang="en-US" class="no-js no-svg">
-
-<!-- Mirrored from template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Apr 2021 22:57:51 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>Is this statement, “i see him last night” can be understood as “I saw him last night”? &#8211; Template</title>
-<meta name='robots' content='max-image-preview:large' />
-<link rel='dns-prefetch' href='//www.google.com' />
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="Template &raquo; Feed" href="http://template.test/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Template &raquo; Comments Feed" href="http://template.test/comments/feed/" />
-<link rel="alternate" type="application/rss+xml" title="Template &raquo; Is this statement, “i see him last night” can be understood as “I saw him last night”? Comments Feed" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/feed/" />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/template.test\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7"}};
-			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<link rel='stylesheet' id='dashicons-css'  href="{{asset('Dassets/wp-includes/css/dashicons.min.css?ver=5.7')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='admin-bar-css'  href="{{asset('Dassets/wp-includes/css/admin-bar.min.css?ver=5.7')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='wp-block-library-css'  href="{{asset('Dassets/wp-includes/css/dist/block-library/style.min.css?ver=5.7')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='wpqa-custom-css-css'  href="{{asset('Dassets/wp-content/plugins/WPQA/assets/css/custom.css?ver=4.4.4')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='contact-form-7-css'  href="{{asset('Dassets/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-entypo-css'  href="{{asset('Dassets/wp-content/themes/discy/css/entypo/entypo.css?ver=5.7')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='prettyPhoto-css'  href="{{asset('Dassets/wp-content/themes/discy/css/prettyPhoto.css?ver=5.7')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-font-awesome-css'  href="{{asset('Dassets/wp-content/themes/discy/css/fontawesome/css/fontawesome-all.min.css?ver=5.7')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-main-style-css'  href="{{asset('Dassets/wp-content/themes/discy/style.css')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-fonts-css'  href='//fonts.googleapis.com/css?family=%27Open+Sans%3A100%2C100i%2C200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%7CRoboto%3A100%2C100i%2C200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i%26amp%3Bsubset%3Dcyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext%2Clatin-ext%2Cvietnamese%26amp%3Bdisplay%3Dswap&#038;ver=4.4.4' type='text/css' media='all' />
-<link rel='stylesheet' id='discy-basic-css-css'  href="{{asset('Dassets/wp-content/themes/discy/css/basic.css?ver=4.4.4')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-main-css-css'  href="{{asset('Dassets/wp-content/themes/discy/css/main.css?ver=4.4.4')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-vars-css-css'  href="{{asset('Dassets/wp-content/themes/discy/css/vars.css?ver=4.4.4')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-responsive-css'  href="{{asset('Dassets/wp-content/themes/discy/css/responsive.css?ver=4.4.4')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-skin-default-css'  href="{{asset('Dassets/wp-content/themes/discy/css/skins/skins.css?ver=4.4.4')}}" type='text/css' media='all' />
-<link rel='stylesheet' id='discy-custom-css-css'  href="{{asset('Dassets/wp-content/themes/discy/css/custom.css?ver=4.4.4')}}" type='text/css' media='all' />
-<script type='text/javascript' src="{{asset('Dassets/wp-includes/js/jquery/jquery.min.js?ver=3.5.1')}}" id='jquery-core-js'></script>
-<script type='text/javascript' src="{{asset('Dassets/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2')}}" id='jquery-migrate-js'></script>
-<link rel="https://api.w.org/" href="http://template.test/wp-json/" /><link rel="alternate" type="application/json" href="http://template.test/wp-json/wp/v2/question/118" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://template.test/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://template.test/wp-includes/wlwmanifest.xml" />
-<meta name="generator" content="WordPress 5.7" />
-<link rel="canonical" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" />
-<link rel='shortlink' href="{{asset('Dassets/?p=118')}}" />
-<link rel="alternate" type="application/json+oembed" href="http://template.test/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F" />
-<link rel="alternate" type="text/xml+oembed" href="http://template.test/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F&#038;format=xml" />
-<link rel="shortcut icon" href="https://2code.info/demo/themes/Discy/Main/wp-content/themes/discy/images/favicon.png" type="image/x-icon">
-<meta name="theme-color" content="#2d6ff7">
-			<meta name="msapplication-navbutton-color" content="#2d6ff7">
-			<meta name="apple-mobile-web-app-capable" content="yes">
-			<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta property="og:site_name" content="Template">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Is this statement, “i see him last night” can be understood as “I saw him last night”?">
-<meta name="twitter:title" content="Is this statement, “i see him last night” can be understood as “I saw him last night”?">
-<meta name="description" content="In my local language (Bahasa Indonesia) there are no verb-2 or past tense form as time tracker. So, I often forget to use the past form of verb when speaking english.
-
-I saw him last night (correct)
-
-I see him last night ...">
-<meta property="og:description" content="In my local language (Bahasa Indonesia) there are no verb-2 or past tense form as time tracker. So, I often forget to use the past form of verb when speaking english.
-
-I saw him last night (correct)
-
-I see him last night ...">
-<meta name="twitter:description" content="In my local language (Bahasa Indonesia) there are no verb-2 or past tense form as time tracker. So, I often forget to use the past form of verb when speaking english.
-
-I saw him last night (correct)
-
-I see him last night ...">
-<meta name='keywords' content=''>
-<meta property="og:url" content="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/">
-<meta property="og:image" content="http://template.test/wp-content/uploads/2019/05/screenshot.png">
-<meta name="twitter:image" content="http://template.test/wp-content/uploads/2019/05/screenshot.png">
-<style type="text/css" media="print">#wpadminbar { display:none; }</style>
-	<style type="text/css" media="screen">
-	html { margin-top: 32px !important; }
-	* html body { margin-top: 32px !important; }
-	@media screen and ( max-width: 782px ) {
-		html { margin-top: 46px !important; }
-		* html body { margin-top: 46px !important; }
-	}
-</style>
-</head>
-<body class="question-template-default single single-question postid-118 page-with-breadcrumbs single_page single_page_no main_for_all active-lightbox discy-not-boxed" itemscope itemtype="https://schema.org/QAPage">
+<x-app-layout>
+    <header class="bg-gray-light shadow">
+        <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
+        </div>
+    </header>
     @include('Posts.Question&report_form')
     <!--                     --------------- header---------------                            -->
 
@@ -120,26 +27,26 @@ I see him last night ...">
                                     <div class="clearfix"></div>
                                 </div><!-- End breadcrumb-right --></div><!-- End breadcrumbs-wrap --></div><!-- End breadcrumbs -->						<div class="clearfix"></div>		<div class="post-articles question-articles">
                             <article id="post-118" class="article-question article-post clearfix question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                                <div class="question-sticky-ribbon"><div>Pinned</div></div>
+                                <div class="question-sticky-ribbon"><div>{{$post->state}}</div></div>
                                 <div class="single-inner-content">
                                     <div class="question-inner">
                                         <div class="question-image-vote">
                                             <div class="author-image author-image-42"><a href="../../profile/root/index.html"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&amp;d=mm&amp;r=g'></span></a><div class="author-image-pop-2">
                                                     <div class="post-section user-area user-area-columns_pop">
                                                         <div class="post-inner"><div class="author-image author-image-70"><a href="../../profile/root/index.html"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&amp;d=mm&amp;r=g'></span></a></div><div class="user-content">
-                                                                <div class="user-inner"><div class="user-data-columns"><h4><a href="../../profile/root/index.html">root</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
+                                                                <div class="user-inner"><div class="user-data-columns"><h4><a href="../../profile/root/index.html">{{$post->user->username}}</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
                                                                 <ul><li class="user-columns-questions">
                                                                         <a href="../../profile/root/questions/index.html">
-                                                                            <i class="icon-book-open"></i>21 Questions
+                                                                            <i class="icon-book-open"></i>{{ count($post->user->posts) }} Posts
                                                                         </a>
                                                                     </li>
                                                                     <li class="user-columns-answers">
                                                                         <a href="../../profile/root/answers/index.html">
-                                                                            <i class="icon-comment"></i>0 Answers
+                                                                            <i class="icon-comment"></i>{{ count($post->user->comments) }} Answers
                                                                         </a>
                                                                     </li><li class="user-columns-best-answers">
                                                                         <a href="../../profile/root/best-answers/index.html">
-                                                                            <i class="icon-graduation-cap"></i>0 Best Answers
+                                                                            <i class="icon-graduation-cap"></i>{{ count($post->user->comments) }} Best Answers
                                                                         </a>
                                                                     </li><li class="user-columns-points">
                                                                         <a href="../../profile/root/points/index.html">
@@ -159,40 +66,40 @@ I see him last night ...">
                                         <div class="question-content question-content-first">
                                             <header class="article-header">
                                                 <div class="question-header">
-                                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="../../profile/root/index.html"><span itemprop="name">root</span></a></span>									<div class="post-meta">
-										<span class="post-date">Asked:<span class="date-separator"></span> <a href="index.html" itemprop="url"><time class="entry-date published">April 19, 2018</time></a><span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span>
-				<span class="discy_hide" itemprop="datePublished" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span></span><span class="byline"><span class="post-cat">In: <a href="../../question-category/language/index.html" rel="tag">Language</a></span></span>									</div>
+                                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="../../profile/root/index.html"><span itemprop="name">{{$post->user->useable->firstName}}</span></a></span>									<div class="post-meta">
+										<span class="post-date">Asked:<span class="date-separator"></span> <a href="index.html" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a><span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span>
+				<span class="discy_hide" itemprop="datePublished" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span></span><span class="byline"><span class="post-cat">In: <a href="../../question-category/language/index.html" rel="tag">{{$post->category->name}}</a></span></span>									</div>
                                                 </div>
                                             </header>
                                             <div itemprop="name">
-                                                <h1 class="post-title">Is this statement, “i see him last night” can be understood as “I saw him last night”?</h1>							</div>
+                                                <h1 class="post-title">{{$post->title}}</h1>							</div>
                                         </div><!-- End question-content-first -->
                                         <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                            <div class="">
-                                                <ul class="question-vote">
-                                                    <li class="question-vote-up"><a href="#" id="question_vote_up-118" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                    <li class="vote_result" itemprop="upvoteCount">2</li>
-                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                    <li class="question-vote-down"><a href="#" id="question_vote_down-118" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                </ul>
-                                            </div><!-- End question-sticky -->
+
+                                            <ul class="question-vote">
+                                                <li class="question-vote-up"><a href="#" id="question_vote_up-118" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_allow" title="Like"><i class="icon-up-dir"></i></a></li>
+                                                <li class="vote_result" itemprop="upvoteCount">{{$post->votes_up-$post->votes_down}}</li>
+                                                <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
+                                                <li class="question-vote-down"><a href="#" id="question_vote_down-118" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
+                                            </ul>
+                                            <!-- End question-sticky -->
                                         </div><!-- End question-image-vote -->
                                         <div class="question-content question-content-second">
                                             <div class="wpqa_error"></div>
                                             <div class="wpqa_success"></div>
                                             <div class="post-wrap-content">
                                                 <div class="question-content-text">
-                                                    <div class='all_signle_post_content'>												<div class="content-text" itemprop="text">
-                                                            <p>In my local language (Bahasa Indonesia) there are no verb-2 or past tense form as time tracker. So, I often forget to use the past form of verb when speaking english.</p>
-                                                            <p>I saw him last night (correct)</p>
-                                                            <p>I see him last night (incorrect)</p>
-                                                            <p>But i think both has the same meaning and are understandable,</p>
-                                                            <p>Isn’t it?</p>
-                                                        </div>
-
+                                                    <div class='all_signle_post_content'>
+                                                        {!! $post->content !!}
                                                         <div class="clearfix"></div>
-                                                        <div></div></div><!-- End all_signle_post_content -->								</div>
-                                                <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i><a href="../../question-tag/english/index.html">english</a><a href="../../question-tag/language/index.html">language</a></div></div>							</div>
+                                                    </div><!-- End all_signle_post_content -->								</div>
+                                                <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i>
+                                                        <?php
+                                                        $tags =explode ( "," , $post->tags );
+                                                        foreach($tags as $tag)
+                                                            echo "<a href=\"#\">$tag</a>"
+                                                        ?>
+                                                    </div></div>							</div>
                                             <footer class="question-footer">
                                                 <ul class="footer-meta">
                                                     <li class="best-answer-meta"><a href="index.html#comments"><i class="icon-comment"></i><span itemprop="answerCount" class='number discy_hide'>4</span> <span class='question-span'>4 Answers</span></a></li>
@@ -221,7 +128,25 @@ I see him last night ...">
                                                 <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Is+this+statement%2C+%E2%80%9Ci+see+him+last+night%E2%80%9D+can+be+understood+as+%E2%80%9CI+saw+him+last+night%E2%80%9D%3F%20-%20http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F"><i class="fab fa-whatsapp"></i></a></li>
                                             </ul>
                                         </div><!-- End post-share -->
-                                        <ul class="question-link-list"><li class="report_activated"><a class="report_q" href="index.html"><i class="icon-attention"></i>Report</a></li></ul>							<div class="clearfix"></div>
+                                        <ul class="question-link-list">
+                                            <?php
+                                            if(\Illuminate\Support\Facades\Auth::user()->id != $post->user->id )
+                                                echo  "<li class='report_activated'><a class='report_q' href='index.html'><i class='icon-attention'></i>Report</a></li>" ;
+                                            else {
+                                                $edit="<li><a href='#'><i class='icon-pencil'></i>Edit</a></li>";
+                                                $deleteroute=route('delete_post',[$post->id]);
+
+                                                $delete="<li><a class='question-delete' href=$deleteroute data-method='delete'/><i class='icon-trash'></i>Delete</a></li>";
+                                                echo $edit.$delete ;
+
+
+                                            }
+
+
+
+
+
+                                            ?></ul> 							<div class="clearfix"></div>
                                     </div><!-- End question-bottom -->
                                 </div><!-- End single-inner-content -->
                                 <div class="question-adv-comments question-has-comments">
@@ -302,10 +227,11 @@ I see him last night ...">
                                     </div><!-- End post -->
 
                                     <div id="respond-all">	<div id="respond" class="comment-respond">
-                                            <div class="button-default show-answer-form">Leave an answer</div><h3 class="section-title comment-form-hide">Leave an answer<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></div></h3><form action="http://template.test/wp-comments-post.php" method="post" id="commentform" class="post-section comment-form comment-form-hide answers-form" novalidate><div class="wpqa_form">
-                                                    <label for="featured_image">Featured image</label>
+                                            <div class="button-default show-answer-form">Leave an answer</div><h3 class="section-title comment-form-hide">Leave an answer<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></div></h3><form action="{{route('comments_form',[$post->id])}}" method="post" id="commentform" class="post-section comment-form comment-form-hide answers-form" novalidate><div class="wpqa_form">
+                                                    @csrf
+                                                    <label for="featured_image">Featured file</label>
                                                     <div class="fileinputs">
-                                                        <input type="file" name="featured_image" id="featured_image">
+                                                        <input type="file" name="file" id="featured_image">
                                                         <div class="fakefile">
                                                             <button type="button">Select file</button>
                                                             <span>Browse</span>
@@ -318,10 +244,10 @@ I see him last night ...">
                                                         <div id="wp-comment-editor-container" class="wp-editor-container"><div id="qt_comment_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" cols="40" name="comment" id="comment"></textarea></div>
                                                     </div>
 
-                                                </div><div class="form-input"><input type="text" name="author" value="" id="comment_name" aria-required="true" placeholder="Your Name"><i class="icon-user"></i></div>
-                                                <div class="form-input form-input-last"><input type="email" name="email" value="" id="comment_email" aria-required="true" placeholder="Email"><i class="icon-mail"></i></div>
-                                                <div class="form-input form-input-full"><input type="url" name="url" value="" id="comment_url" placeholder="URL"><i class="icon-link"></i></div>
-                                                <p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+                                                </div>
+
+
+
                                                 <p class="form-submit"><input name="submit" type="submit" id="submit" class="button-default button-hide-click" value="Submit" /><span class="clearfix"></span><span class="load_span"><span class="loader_2"></span></span> <input type='hidden' name='comment_post_ID' value='118' id='comment_post_ID' />
                                                     <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
                                                 </p></form>	</div><!-- #respond -->
@@ -338,18 +264,18 @@ I see him last night ...">
 
 
                     <!--             ----------------------SideBar---------------------         -->
-                        @include('Posts.sidebar')
-                    <!-- End sidebar -->
+                @include('Posts.sidebar')
+                <!-- End sidebar -->
                 </main><!-- End discy-site-content -->
 
                 <!--        --------------------NavBar-------------------------           -->
-                        @include(('Posts.navbar'))
+                @include(('Posts.navbar'))
             </div><!-- End the-main-container -->
         </div><!-- End discy-inner-content -->
     </div><!-- End main-content -->
 
     <!--                   --------- FOOTER---------                           -->
-</div><!-- End wrap -->
+    </div><!-- End wrap -->
 
 
 
@@ -673,7 +599,4 @@ tinymce.ScriptLoader.markDone( "{{asset('Dassets/wp-includes/js/tinymce/langs/en
 			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
 		}());
 	</script>
-</body>
-
-<!-- Mirrored from template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Apr 2021 22:58:21 GMT -->
-</html>
+</x-app-layout>

@@ -17,7 +17,7 @@ class Voteit extends Component
 
     public function render()
     {
-        $this->Votes = Vote::where('post_id',$this->post_id)->where('user_id',Auth()->user()->id)->where('vote',1)->count()-Vote::where('post_id',$this->post_id)->where('user_id',Auth()->user()->id)->where('vote',-1)->count();
+        $this->Votes = Vote::where('post_id',$this->post_id)->where('vote',1)->count()-Vote::where('post_id',$this->post_id)->where('vote',-1)->count();
         return view('livewire.voteit');
     }
 
