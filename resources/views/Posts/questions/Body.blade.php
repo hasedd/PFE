@@ -16,25 +16,25 @@
                                                 <div class="wrap-tabs">
                                                     <div class="menu-tabs">
                                                         <ul class="menu flex menu-tabs-desktop">
-                                                            <li <?php if($i==2) echo "class='active-tab'" ?> >
+                                                            <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
                                                                 <a href="{{route('Most_recent')}}">
                                                                     Recent Questions						</a>
                                                             </li>
 
 
-                                                            <li <?php if($i==5) echo "class='active-tab'" ?> >
+                                                            <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
                                                                 <a href="{{route('answered')}}">
-                                                                    Answers						</a>
+                                                                    Answered						</a>
                                                             </li>
-                                                            <li  <?php if($i==3) echo "class='active-tab'" ?> >
+                                                            <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
                                                                 <a href="{{route('Most_visited')}}">
                                                                     Most Visited						</a>
                                                             </li>
-                                                            <li <?php if($i==4) echo "class='active-tab'" ?> >
+                                                            <li class="ml-5 <?php if($i==4) echo "ml-3 active-tab" ?> ">
                                                                 <a href="{{route('Most_Voted')}}">
                                                                     Most Voted						</a>
                                                             </li>
-                                                            <li <?php if($i==6) echo "class='active-tab'" ?> >
+                                                            <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
                                                                 <a href="{{route('Not_answered')}}">
                                                                     No Answers						</a>
                                                             </li>

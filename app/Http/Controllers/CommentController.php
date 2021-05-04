@@ -43,11 +43,12 @@ class CommentController extends Controller
     public function store(Request $request,$post_id)
     {
         //dd("Welcome  in CommentController ");
-        $comment=new Comment();
+        $comment = new Comment();
         $comment->post_id=$post_id;
         $comment->user_id= Auth::user()->id ;
         $comment->Content=$request->input('comment');
         $comment->save();
+
         if (isset($_FILES) && !empty($_FILES['file']['name'])) {
 
             $comment->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
