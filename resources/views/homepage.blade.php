@@ -113,7 +113,7 @@
         /* ]]> */
     </script>
     <script type='text/javascript' src="{{asset('Hassets/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.12.1')}}" id='jquery-ui-autocomplete-js'></script>
-    
+
     <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/scisco-features/js/autocomplete.js?ver=1.0')}}" id='scisco-autocomplete-js'></script>
     <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/scisco-features/js/post-delete.js?ver=1.0')}}" id='scisco-post-delete-js'></script>
     <script type='text/javascript' id='scisco-shape-dividers-js-extra'>
@@ -122,14 +122,12 @@
         /* ]]> */
     </script>
     <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/scisco-features/js/shape-divider.js?ver=1.0')}}" id='scisco-shape-dividers-js'></script>
-    <link rel="https://api.w.org/" href="http://rex.test/wp-json/" /><link rel="alternate" type="application/json" href="http://rex.test/wp-json/wp/v2/pages/77" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://rex.test/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{{asset("Hassets/wp-includes/wlwmanifest.xml")}}" />
     <meta name="generator" content="WordPress 5.7.1" />
     <meta name="generator" content="WooCommerce 5.1.0" />
     <link rel="canonical" href="http://rex.test/" />
     <link rel='shortlink' href='http://rex.test/' />
-    <link rel="alternate" type="application/json+oembed" href="http://rex.test/wp-json/oembed/1.0/embed?url=http%3A%2F%2Frex.test%2F" />
-    <link rel="alternate" type="text/xml+oembed" href="http://rex.test/wp-json/oembed/1.0/embed?url=http%3A%2F%2Frex.test%2F&#038;format=xml" />
+
     <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
     <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style id="kirki-inline-styles">.sidenav .navbar-brand{padding-top:3rem;padding-bottom:3rem;}#scisco-mobile-logo-wrapper .navbar-brand img{max-width:150px;}body, p,.anspress{font-family:Roboto;font-weight:400;line-height:1.7;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:Roboto;font-weight:700;line-height:1.4;}.progress-label span,.ap-vote a:hover,#ap-answers-c .ap-answers-tab>li a:hover,#ap-answers-c .ap-answers-tab li.active a,.nav-tabs .nav-link:hover,.nav-tabs .nav-link.active,#ap-user-nav .ap-tab-nav li > a:hover,#ap-user-nav .ap-tab-nav li > a > i,.scisco-profile-submenu-item:hover,.scisco-profile-submenu-item i{color:#1c3334;}#anspress .ap-questions .ap-post-status,#anspress .ap-questions .featured-question,.ap-activity-item>.ap-activity-icon i,.ap-activity-when,.ap-modal-header,#ap-user-nav .ap-tab-nav li.active,.scisco-rep-item-icon i,#anspress .ap-noti-icon,#scisco-notification-dropdown .ap-noti-icon,.scisco-profile-submenu-item.active:hover,.scisco-profile-submenu-item.active,#scisco-gototop i,.featherlight-close-icon,.featherlight-next,.featherlight-previous,body.scisco.woocommerce nav.woocommerce-pagination ul li span.current,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.woocommerce-MyAccount-navigation,body.scisco .job-manager-message,.scisco-carousel .slick-prev,.scisco-carousel .slick-next{background:#1c3334;}.page-item.active .page-link,.badge-primary,.badge-primary[href]:hover, .badge-primary[href]:focus,.progress-bar,.list-group-item.active,body.scisco .scisco-page-links>span,body.scisco .scisco-page-links>a>span:hover,.ap-notice,.ap-pagination span,.ap-btn,.ap-btn:hover,.ap-btn.active,#cmb2-metabox-scisco_user_fields button.button-secondary,#cmb2-metabox-scisco_user_fields button.button-secondary:hover,.fep-button.fep-message-toggle-all,.fep-pagination-li.active .fep-pagination-span,.fep-pagination-li .fep-pagination-a:hover{background-color:#1c3334;}blockquote,textarea:focus,input[type=text]:focus,input[type=password]:focus,input[type=email]:focus,input[type=number]:focus,input[type=tel]:focus,input[type=date]:focus,input[type=search]:focus,.form-control:focus,.page-item.active .page-link,.list-group-item.active,.custom-select:focus,.ap-pagination span,.ap-btn,.ap-btn:hover,.ap-btn.active,.scisco-login-form,.selectize-input.focus,#cmb2-metabox-scisco_user_fields button.button-secondary,#cmb2-metabox-scisco_user_fields button.button-secondary:hover,#ap-single .scisco-question-meta,.fep-button.fep-message-toggle-all,.fep-pagination-li.active .fep-pagination-span,.fep-pagination-li .fep-pagination-a:hover,.scisco-author-box,body.scisco.woocommerce nav.woocommerce-pagination ul li span.current,#scisco-footer .form-control:focus,#scisco-comments-wrapper{border-color:#1c3334;}.featherlight-loading .featherlight-content{border-left-color:#1c3334;}a{color:#ffffff;}a:hover,.scisco-widget a:not([class]):hover,.tagcloud a:hover,a[class^="tag"]:hover,.ap-widget-pos a:hover,.ap-widget-inner a:hover,.card-meta div a:hover,.card-comments a:hover,.job_listings > div > a:hover h6{color:#062b6b;}#anspress .ap-widget-title:before,.highlighted-title:before{background:#2dce89;}input[type="submit"]:not(.slick-arrow),input[type="button"]:not(.slick-arrow),button[type="submit"],.button,.btn-primary,input[type="submit"]:not(.slick-arrow):hover,input[type="button"]:not(.slick-arrow):hover,button[type="submit"]:hover,.button:hover,.btn-primary:hover,input[type="submit"]:not(.slick-arrow):focus,input[type="button"]:not(.slick-arrow):focus,button[type="submit"]:focus,.button:hover,.btn-primary:focus,.btn-primary:disabled,.btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.show>.btn-primary.dropdown-toggle{color:#ffffff;border-color:#da7b93;}input[type="submit"]:not(.slick-arrow),input[type="button"]:not(.slick-arrow),button[type="submit"],.button,.btn-primary,input[type="submit"]:not(.slick-arrow):hover,input[type="button"]:not(.slick-arrow):hover,button[type="submit"]:hover,.button:hover,.btn-primary:hover,input[type="submit"]:not(.slick-arrow):focus,input[type="button"]:not(.slick-arrow):focus,button[type="submit"]:focus,.button:hover,.btn-primary:focus,.btn-primary:disabled,.btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.show>.btn-primary.dropdown-toggle,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button,.woocommerce #respond input#submit.alt,.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce input.button.alt,.woocommerce a.added_to_cart,.woocommerce #respond input#submit:hover,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button:hover,.woocommerce #respond input#submit.alt:hover,.woocommerce a.button.alt:hover,.woocommerce button.button.alt:hover,.woocommerce input.button.alt:hover,.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover{background-color:#da7b93;}.btn-default,.btn-default:hover,.btn-default:focus,.btn-default:disabled,.btn-default:active,.btn-default:not(:disabled):not(.disabled):active,.btn-default:not(:disabled):not(.disabled).active,.show>.btn-default.dropdown-toggle{color:#ffffff;background-color:#172b4d;border-color:#172b4d;}.btn-success,.btn-success:hover,.btn-success:focus,.btn-success:disabled,.btn-success:active,.btn-success:not(:disabled):not(.disabled):active,.btn-success:not(:disabled):not(.disabled).active,.show>.btn-success.dropdown-toggle{color:#ffffff;background-color:#da7b93;border-color:#da7b93;}.btn-info,.btn-info:hover,.btn-info:focus,.btn-info:disabled,.btn-info:active,.btn-info:not(:disabled):not(.disabled):active,.btn-info:not(:disabled):not(.disabled).active,.show>.btn-info.dropdown-toggle{color:#ffffff;background-color:#11cdef;border-color:#11cdef;}.btn-warning,.btn-warning:hover,.btn-warning:focus,.btn-warning:disabled,.btn-warning:active,.btn-warning:not(:disabled):not(.disabled):active,.btn-warning:not(:disabled):not(.disabled).active,.show>.btn-warning.dropdown-toggle{color:#ffffff;background-color:#F28900;border-color:#F28900;}.btn-danger,.btn-danger:hover,.btn-danger:focus,.btn-danger:disabled,.btn-danger:active,.btn-danger:not(:disabled):not(.disabled):active,.btn-danger:not(:disabled):not(.disabled).active,.show>.btn-danger.dropdown-toggle{color:#ffffff;background-color:#D62828;border-color:#D62828;}#scisco-topnav.navbar-dark .navbar-nav .nav-link{color:#ffffff;}#scisco-topnav.navbar-dark .navbar-nav .nav-link:hover{color:rgba(255, 255, 255, 0.7);}.scisco-dark-dropdown.dropdown-menu,.ui-menu{background:#1c3334;}#scisco-notification-dropdown .ap-noti-date{color:#9AADC2;}.scisco-dark-dropdown.dropdown-menu a,.scisco-dark-dropdown.dropdown-menu a:hover,.ui-menu .ui-menu-item,.ui-menu .ui-menu-item:hover{color:#ffffff;}#scisco-header{background-color:#1c3334;}#scisco-page-title h1, #scisco-page-title p,#scisco-page-title a, #scisco-page-title .scisco-description, .breadcrumb-dark .breadcrumb-item a,.breadcrumb-dark .breadcrumb-item a:hover,.breadcrumb-dark .breadcrumb-item + .breadcrumb-item::before,.breadcrumb-dark .breadcrumb-item.active,.woocommerce .woocommerce-breadcrumb a{color:#ffffff;}.sidenav.navbar, #scisco-mobile-logo-wrapper{background-color:#1c3334;}.scisco-sm-skin a{color:#9aadc2;}.scisco-sm-skin .current-menu-item a,.scisco-sm-skin a:hover,.scisco-sm-skin a:focus,.scisco-sm-skin a:active{color:#ffffff;}.scisco-rep-item-points span,span.scisco-title-rep,#scisco-notification-dropdown .ap-noti-rep,.scisco-user-box.box-warning,#anspress .ap-noti-rep,.ap-user-reputation,.ap-activity-item .ap-user-reputation{background:#F28900;}#ap-user-nav .ap-tab-nav li > a > span{background-color:#2dce89;}#anspress .ap-category-item .ap-cat-img-c .ap-category-icon{font-size:65px;width:65px;height:65px;}body.scisco .single_job_listing .meta .full-time{background-color:#2dce89;}.job-manager .full-time,.job-types .full-time,.job_listing .full-time{color:#2dce89;}body.scisco .scisco-single-job-wrapper.full-time{border-color:#2dce89;}body.scisco .single_job_listing .meta .part-time{background-color:#F28900;}.job-manager .part-time,.job-types .part-time,.job_listing .part-time{color:#F28900;}body.scisco .scisco-single-job-wrapper.part-time{border-color:#F28900;}body.scisco .single_job_listing .meta .temporary{background-color:#D62828;}.job-manager .temporary,.job-types .temporary,.job_listing .temporary{color:#D62828;}body.scisco .scisco-single-job-wrapper.temporary{border-color:#D62828;}body.scisco .single_job_listing .meta .freelance{background-color:#11cdef;}.job-manager .freelance,.job-types .freelance,.job_listing .freelance{color:#11cdef;}body.scisco .scisco-single-job-wrapper.freelance{border-color:#11cdef;}body.scisco .single_job_listing .meta .internship{background-color:#0A48B3;}.job-manager .internship,.job-types .internship,.job_listing .internship{color:#0A48B3;}body.scisco .scisco-single-job-wrapper.internship{border-color:#0A48B3;}#scisco-footer{background:#1c3334;background-color:#1c3334;background-repeat:no-repeat;background-position:center bottom;background-attachment:scroll;-webkit-background-size:contain;-moz-background-size:contain;-ms-background-size:contain;-o-background-size:contain;background-size:contain;}#scisco-footer,#scisco-footer p,#scisco-footer a,#scisco-footer .tagcloud a,#scisco-footer a[class^="tag"]{color:#9aadc2;}#scisco-footer h1,#scisco-footer h2,#scisco-footer h3,#scisco-footer h4,#scisco-footer h5,#scisco-footer h6,#scisco-footer a:hover,#scisco-footer .tagcloud a:hover,#scisco-footer a[class^="tag"]:hover{color:#FFFFFF;}/* cyrillic-ext */
         @font-face {
@@ -137,7 +135,7 @@
             font-style: normal;
             font-weight: 400;
             font-display: swap;
-            src: url(http://rex.test/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu72xMKTU1Kvnz.woff) format('woff');
+            src: url({{asset("Hassets/wp-content/fonts/roboto/KFOmCnqEu92Fr1Mu72xMKTU1Kvnz")}}.woff) format('woff');
             unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
         }
         /* cyrillic */
@@ -227,7 +225,7 @@
             font-style: normal;
             font-weight: 700;
             font-display: swap;
-            src: url(http://rex.test/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfBxc-AMP6lbBP.woff) format('woff');
+            src: url({{asset("Hassets/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfBxc-AMP6lbBP")}}.woff) format('woff');
             unicode-range: U+0370-03FF;
         }
         /* vietnamese */
@@ -236,7 +234,7 @@
             font-style: normal;
             font-weight: 700;
             font-display: swap;
-            src: url(http://rex.test/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfCxc-AMP6lbBP.woff) format('woff');
+            src: url({{("Hassets/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfCxc-AMP6lbBP")}}.woff) format('woff');
             unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
         }
         /* latin-ext */
@@ -245,7 +243,7 @@
             font-style: normal;
             font-weight: 700;
             font-display: swap;
-            src: url(http://rex.test/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfChc-AMP6lbBP.woff) format('woff');
+            src: url({{asset("Hassets/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfChc-AMP6lbBP")}}.woff) format('woff');
             unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
         }
         /* latin */
@@ -254,13 +252,117 @@
             font-style: normal;
             font-weight: 700;
             font-display: swap;
-            src: url(http://rex.test/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfBBc-AMP6lQ.woff) format('woff');
+            src: url({{asset("Hassets/wp-content/fonts/roboto/KFOlCnqEu92Fr1MmWUlfBBc-AMP6lQ")}}.woff) format('woff');
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }</style></head>
+        }</style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    @livewireStyles
+
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
+</head>
 <body class="home page-template page-template-page_template_1 page-template-page_template_1-php page page-id-77 theme-scisco woocommerce-no-js scisco elementor-default elementor-kit-9999 elementor-page elementor-page-77">
 
+<div class="min-h-screen bg-gray-100">
+    <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+        <!-- Primary Navigation Menu -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="{{ route('dashboard') }}">
+                            <x-jet-application-mark class="block h-9 w-auto" />
+                        </a>
+                    </div>
 
-<div class="main-content" id="panel">
+                    <!-- Navigation Links -->
+
+                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                                {{ __('Dashboard') }}
+                            </x-jet-nav-link>
+                        </div>
+                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <x-jet-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
+                                {{ __('Home') }}
+                            </x-jet-nav-link>
+                        </div>
+                    @auth()
+                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <x-jet-nav-link href="{{ route('QuestionBody') }}" :active="request()->routeIs('QuestionBody')">
+                                {{ __('Questions') }}
+                            </x-jet-nav-link>
+                        </div>
+                    @endauth
+                </div>
+
+                <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <!-- Settings Dropdown -->
+                        <div class="ml-3 relative">
+                            @auth()
+                            <x-jet-dropdown align="right" width="48">
+                                <x-slot name="trigger">
+                                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                                        <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                            <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                                        </button>
+                                    @else
+                                        <span class="inline-flex rounded-md">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                        {{ Auth::user()->name }}
+
+                                        <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                </span>
+                                    @endif
+                                </x-slot>
+
+                                <x-slot name="content">
+                                    <!-- Account Management -->
+                                    <div class="block px-4 py-2 text-xs text-gray-400">
+                                        {{ __('Manage Account') }}
+                                    </div>
+
+                                    <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                        {{ __('Profile') }}
+                                    </x-jet-dropdown-link>
+
+                                    @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                                        <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
+                                            {{ __('API Tokens') }}
+                                        </x-jet-dropdown-link>
+                                    @endif
+
+                                    <div class="border-t border-gray-100"></div>
+
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+
+                                        <x-jet-dropdown-link href="{{ route('logout') }}"
+                                                             onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                            {{ __('Log Out') }}
+                                        </x-jet-dropdown-link>
+                                    </form>
+                                </x-slot>
+                            </x-jet-dropdown>
+                            @endauth
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <div class="main-content" id="panel">
     <main id="scisco-main-wrapper" class="no-padding">
         <div data-elementor-type="wp-page" data-elementor-id="77" class="elementor elementor-77" data-elementor-settings="[]">
             <div class="elementor-section-wrap">
@@ -1135,6 +1237,7 @@ your questions by connecting you with the people who should be able to help you.
 </div>
 <div id="scisco-gototop" data-toggle="tooltip" data-placement="top" title="Go to Top">
     <i class="fas fa-arrow-up"></i>
+</div>
 </div>
 <script type="text/javascript">
     (function () {
