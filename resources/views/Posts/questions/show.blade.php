@@ -227,7 +227,7 @@
                                     </div><!-- End post -->
 
                                     <div id="respond-all">	<div id="respond" class="comment-respond">
-                                            <div class="button-default show-answer-form">Leave an answer</div><h3 class="section-title comment-form-hide">Leave an answer<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></div></h3><form action="{{route('comments_form',[$post->id])}}" method="post" id="commentform" class="post-section comment-form comment-form-hide answers-form" novalidate><div class="wpqa_form">
+                                            <div class="button-default show-answer-form">Leave an answer</div><h3 class="section-title comment-form-hide">Leave an answer<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></div></h3><form action="{{route('comments_form',[$post->id])}}" method="post" id="commentform" class="post-section comment-form comment-form-hide answers-form" enctype="multipart/form-data" novalidate><div class="wpqa_form">
                                                     @csrf
                                                     <label for="featured_image">Featured file</label>
                                                     <div class="fileinputs">

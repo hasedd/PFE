@@ -1,10 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Comment;
-
 use App\Models\File;
 
 use Illuminate\Http\Request;
@@ -49,18 +47,19 @@ class CommentController extends Controller
         $comment->Content=$request->input('comment');
         $comment->save();
 
-        if (isset($_FILES) && !empty($_FILES['file']['name'])) {
+        if (isset($_FILES)  && !empty($_FILES['file']['name'])
+        )  {
 
             $comment->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
             $infosfichier = pathinfo($_FILES['file']['name']);
             $extension_upload = $infosfichier['extension'];
             $filname = $comment->id . $comment->title . "." . $extension_upload;
-            move_uploaded_file($_FILES['file']['tmp_name'], base_path('\public\files/') . $filname);
+            move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
         }
         $comment->post->state="Close";
         $comment->post->save();
 
-        return redirect('Show_Question',[$comment->post->id]);
+        return redirect()->route('Show_Question',[$comment->post->id]);
 
 
 
