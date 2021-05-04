@@ -113,7 +113,7 @@
         /* ]]> */
     </script>
     <script type='text/javascript' src="{{asset('Hassets/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.12.1')}}" id='jquery-ui-autocomplete-js'></script>
-    
+
     <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/scisco-features/js/autocomplete.js?ver=1.0')}}" id='scisco-autocomplete-js'></script>
     <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/scisco-features/js/post-delete.js?ver=1.0')}}" id='scisco-post-delete-js'></script>
     <script type='text/javascript' id='scisco-shape-dividers-js-extra'>

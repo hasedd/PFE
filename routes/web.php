@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OtherController ;
+use App\Http\Controllers\CommentController ;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,8 +51,17 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/DeletePost/{id}',[PostController::class,'destroy']
     )->name('delete_post');
 
-    Route::get('/mostAnswered', [PostController::class,'MostAnswer']
-    )->name('Most_answered');
+    Route::get('/mostRecent', [PostController::class,'MostRecent']
+    )->name('Most_recent');
+    Route::get('/Answered', [PostController::class,'Answered']
+    )->name('answered');
+    Route::get('/NotAnswered', [PostController::class,'NAnswered']
+    )->name('Not_answered');
+    Route::get('/mostVisited', [PostController::class,'MostVisited']
+    )->name('Most_visited');
+    Route::get('/mostVoted', [PostController::class,'MVoted']
+    )->name('Most_Voted');
+
 
 });
 
