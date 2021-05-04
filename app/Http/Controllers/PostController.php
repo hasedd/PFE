@@ -56,15 +56,15 @@ class PostController extends Controller
         $post->content = $request->input('content');
         $post->tags = $request->input('tags');
         $post->save();
-        if (isset($_FILES) && !empty($_FILES['file']['name'])) {
+       if (isset($_FILES) && !empty($_FILES['file']['name'])) {
 
             $post->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
             $infosfichier = pathinfo($_FILES['file']['name']);
             $extension_upload = $infosfichier['extension'];
             $filname = $post->id . $post->title . "." . $extension_upload;
-            move_uploaded_file($_FILES['file']['tmp_name'], base_path('\public\files/') . $filname);
+            move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
         }
-        return redirect(route('Show_Question'));
+        return redirect()->route('QuestionBody');
     }
 
     /**
