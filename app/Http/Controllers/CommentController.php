@@ -48,10 +48,18 @@ class CommentController extends Controller
         $comment->user_id= Auth::user()->id ;
         $comment->Content=$request->input('comment');
         $comment->save();
-        if(isset($_FILES) ) {
-            $comment->file()->create(['name'=>$_FILES['file']['name'],'type'=>$_FILES['file']['type'],'size'=>$_FILES['file']['size']]);
+        if (isset($_FILES) && !empty($_FILES['file']['name'])) {
 
+            $comment->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
+            $infosfichier = pathinfo($_FILES['file']['name']);
+            $extension_upload = $infosfichier['extension'];
+            $filname = $comment->id . $comment->title . "." . $extension_upload;
+            move_uploaded_file($_FILES['file']['tmp_name'], base_path('\public\files/') . $filname);
         }
+        $comment->post->state="Close";
+        $comment->post->save();
+
+        return redirect('Show_Question',[$comment->post->id]);
 
 
 

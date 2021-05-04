@@ -16,32 +16,26 @@
                                                 <div class="wrap-tabs">
                                                     <div class="menu-tabs">
                                                         <ul class="menu flex menu-tabs-desktop">
-                                                            <li class='active-tab'>
-                                                                <a href="http://template.test/?show=recent-questions">
+                                                            <li <?php if($i==2) echo "class='active-tab'" ?> >
+                                                                <a href="{{route('Most_recent')}}">
                                                                     Recent Questions						</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="http://template.test/?show=most-answered">
-                                                                    Most Answered						</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="http://template.test/?show=question-bump">
-                                                                    Bump Question						</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="http://template.test/?show=answers">
+
+
+                                                            <li <?php if($i==5) echo "class='active-tab'" ?> >
+                                                                <a href="{{route('answered')}}">
                                                                     Answers						</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="http://template.test/?show=most-visited">
+                                                            <li  <?php if($i==3) echo "class='active-tab'" ?> >
+                                                                <a href="{{route('Most_visited')}}">
                                                                     Most Visited						</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="http://template.test/?show=most-voted">
+                                                            <li <?php if($i==4) echo "class='active-tab'" ?> >
+                                                                <a href="{{route('Most_Voted')}}">
                                                                     Most Voted						</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="http://template.test/?show=no-answers">
+                                                            <li <?php if($i==6) echo "class='active-tab'" ?> >
+                                                                <a href="{{route('Not_answered')}}">
                                                                     No Answers						</a>
                                                             </li>
                                                         </ul>
@@ -140,7 +134,7 @@
                                                                         </div>
                                                                     </header>
                                                                     <div>
-                                                                        <h2 class="post-title"><a class="post-title" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" rel="bookmark">{{$post->title}}</a></h2>	</div>
+                                                                        <h2 class="post-title"><a class="post-title" href="{{route('Show_Question',[$post->id])}}" rel="bookmark">{{$post->title}}</a></h2>	</div>
                                                                 </div><!-- End question-content-first -->
                                                                 <div class="question-not-mobile question-image-vote question-vote-sticky">
                                                                     @livewire('voteit',['post_id'=>$post->id])
@@ -177,7 +171,7 @@
                                                                             <li class="best-answer-meta"><a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#comments"><i class="icon-comment"></i><span class='number discy_hide'></span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
                                                                             <li class="view-stats-meta"><i class="icon-eye"></i>{{$post->views}} <span class='question-span'>Views</span></li>
                                                                         </ul>
-                                                                        <a class="meta-answer meta-answer-a" href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#respond">Answer</a>
+                                                                        <a class="meta-answer meta-answer-a" href="{{route('Show_Question',[$post->id])}}">Answer</a>
                                                                     </footer>
                                                                 </div><!-- End question-content-second -->
                                                                 <div class="clearfix"></div>
