@@ -47,7 +47,7 @@
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required { visibility: visible; }
     </style>
-    <link rel="stylesheet" href="http://rex.test/wp-includes/css/ft/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset("Hassets/wp-includes/css/ft/css/font-awesome.min.css")}}">
     <link rel='stylesheet' id='wp-job-manager-job-listings-css'  href="{{asset('Hassets/wp-content/plugins/wp-job-manager/assets/dist/css/job-listings.css?ver=d866e43503c5e047c6b0be0a9557cf8e')}}" type='text/css' media='all' />
     <link rel='stylesheet' id='dashicons-css'  href="{{asset('Hassets/wp-includes/css/dashicons.min.css?ver=5.7.1')}}" type='text/css' media='all' />
     <link rel='stylesheet' id='wpmi-icons-css'  href="{{asset('Hassets/wp-content/plugins/wp-menu-icons/assets/css/wpmi.css?ver=2.0.5')}}" type='text/css' media='all' />
@@ -80,7 +80,7 @@
     <link rel='stylesheet' id='elementor-icons-fa-brands-css'  href="{{asset('Hassets/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.1')}}" type='text/css' media='all' />
     <script type='text/javascript' src="{{asset('Hassets/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=7.4.4')}}" id='wp-polyfill-js'></script>
 <script type='text/javascript' id='wp-polyfill-js-after'>
-( 'fetch' in window ) || document.write( '<script src="http://rex.test/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="http://rex.test/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="http://rex.test/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="http://rex.test/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="http://rex.test/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="http://rex.test/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="http://rex.test/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
+( 'fetch' in window ) || document.write( '<script src="{{asset("Hassets/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0")}}"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="{{("Hassets/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0")}}"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="{{asset("Hassets/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0")}}"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="{{asset("Hassets/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4")}}"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="{{("Hassets/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12")}}"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="{{asset("Hassets/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2")}}"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="{{asset("Hassets/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4")}}"></scr' + 'ipt>' );
 </script>
 <script type='text/javascript' src="{{asset('Hassets/wp-includes/js/dist/hooks.min.js?ver=50e23bed88bcb9e6e14023e9961698c1')}}" id='wp-hooks-js'></script>
     <script type='text/javascript' src="{{asset('Hassets/wp-includes/js/dist/i18n.min.js?ver=db9a9a37da262883343e941c3731bc67')}}" id='wp-i18n-js'></script>
@@ -123,7 +123,7 @@
     </script>
     <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/scisco-features/js/shape-divider.js?ver=1.0')}}" id='scisco-shape-dividers-js'></script>
     <link rel="https://api.w.org/" href="http://rex.test/wp-json/" /><link rel="alternate" type="application/json" href="http://rex.test/wp-json/wp/v2/pages/77" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://rex.test/xmlrpc.php?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://rex.test/wp-includes/wlwmanifest.xml" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{{asset("Hassets/wp-includes/wlwmanifest.xml")}}" />
     <meta name="generator" content="WordPress 5.7.1" />
     <meta name="generator" content="WooCommerce 5.1.0" />
     <link rel="canonical" href="http://rex.test/" />
@@ -904,7 +904,7 @@ your questions by connecting you with the people who should be able to help you.
                                                     <div class="card-masonry card-masonry-sm">
                                                         <div class="card">
                                                             <a class="card-featured-img" href="http://rex.test/2019/01/23/the-top-5-marketing-tips/">
-                                                                <img class="card-img-top" src="http://rex.test/wp-content/uploads/2020/11/6-900x600.jpg" alt="The Top 5 Marketing Tips" />
+                                                                <img class="card-img-top" src="{{asset("Hassets/wp-content/uploads/2020/11/6-900x600.jpg")}}" alt="The Top 5 Marketing Tips" />
                                                             </a>
                                                             <div class="card-body">
                                                                 <h5 class="card-title"><a href="http://rex.test/2019/01/23/the-top-5-marketing-tips/">The Top 5 Marketing Tips</a></h5>
@@ -925,7 +925,7 @@ your questions by connecting you with the people who should be able to help you.
                                                     <div class="card-masonry card-masonry-sm">
                                                         <div class="card">
                                                             <a class="card-featured-img" href="http://rex.test/2019/01/27/gdpr-misconceptions-explained/">
-                                                                <img class="card-img-top" src="http://rex.test/wp-content/uploads/2020/11/7-900x600.jpg" alt="GDPR Misconceptions Explained" />
+                                                                <img class="card-img-top" src="{{asset("Hassets/wp-content/uploads/2020/11/7-900x600.jpg")}}" alt="GDPR Misconceptions Explained" />
                                                             </a>
                                                             <div class="card-body">
                                                                 <h5 class="card-title"><a href="http://rex.test/2019/01/27/gdpr-misconceptions-explained/">GDPR Misconceptions Explained</a></h5>
@@ -1036,7 +1036,7 @@ your questions by connecting you with the people who should be able to help you.
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 col-lg-6 col-xl-3 mb-5 mb-xl-0">
-                        <div id="media_image-1" class="widget_media_image scisco-widget"><img width="500" height="121" src="http://rex.test/wp-content/uploads/2020/12/footer-logo.png" class="image wp-image-452 scisco-footer-logo attachment-full size-full" alt="scisco" loading="lazy" style="max-width: 100%; height: auto;" srcset="http://rex.test/wp-content/uploads/2020/12/footer-logo.png 500w, http://rex.test/wp-content/uploads/2020/12/footer-logo-300x73.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></div><div id="text-2" class="widget_text scisco-widget">			<div class="textwidget"><p>Lorem ipsum dolor sit amet, libero adipiscing elit. Donec et lacus ut quam ullamcorper aliquet id et sem. Neque tincidunt, ac pulvinar metus.</p>
+                        <div id="media_image-1" class="widget_media_image scisco-widget"><img width="500" height="121" src="{{asset("Hassets/wp-content/uploads/2020/12/footer-logo.png")}}" class="image wp-image-452 scisco-footer-logo attachment-full size-full" alt="scisco" loading="lazy" style="max-width: 100%; height: auto;" sizes="(max-width: 500px) 100vw, 500px" /></div><div id="text-2" class="widget_text scisco-widget">			<div class="textwidget"><p>Lorem ipsum dolor sit amet, libero adipiscing elit. Donec et lacus ut quam ullamcorper aliquet id et sem. Neque tincidunt, ac pulvinar metus.</p>
                                 <p><a class="btn btn-primary" style="margin-top: 5px;" href="https://wordpress-288344-1596643.cloudwaysapps.com/contact">Contact Us</a></p>
                             </div>
                         </div></div>
@@ -1184,7 +1184,7 @@ your questions by connecting you with the people who should be able to help you.
 <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.1.4')}}" id='share-link-js'></script>
 <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6')}}" id='swiper-js'></script>
 <script type='text/javascript' id='elementor-frontend-js-before'>
-    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false,"isImprovedAssetsLoading":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1199,"xl":1440,"xxl":1600},"version":"3.1.4","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"a11y_improvements":true,"landing-pages":true},"urls":{"assets":"http:\/\/rex.test\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":77,"title":"Scisco%20%E2%80%93%20Question%20%26%20Answer%20WordPress%20Theme","excerpt":"","featuredImage":false}};
+    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false,"isImprovedAssetsLoading":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1199,"xl":1440,"xxl":1600},"version":"3.1.4","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"a11y_improvements":true,"landing-pages":true},"urls":{"assets":"{{asset("Hassets/wp-content/plugins/elementor/assets/")}}"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":77,"title":"Scisco%20%E2%80%93%20Question%20%26%20Answer%20WordPress%20Theme","excerpt":"","featuredImage":false}};
 </script>
 <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.1.4')}}" id='elementor-frontend-js'></script>
 <script type='text/javascript' src="{{asset('Hassets/wp-content/plugins/elementor/assets/js/preloaded-elements-handlers.min.js?ver=3.1.4')}}" id='preloaded-elements-handlers-js'></script>
