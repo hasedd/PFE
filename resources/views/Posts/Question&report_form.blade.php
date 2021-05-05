@@ -13,6 +13,7 @@
 
                     <span class="form-description">Please choose an appropriate title for the question so it can be answered easily.</span>
                 </p>
+                <br>
                 <div class="wpqa_category">
                     <label for="question-category-451">Category<span class="required">*</span></label>
                     <span class="styled-select">
@@ -36,6 +37,7 @@
                     <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="" data-seperator=",">
                     <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, poll</span>.</span>
                 </p>
+                <br>
                 <!--<p class="wpqa_checkbox_p wpqa_checkbox_poll">
                     <label for="question_poll-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="question_poll-451" class="question_poll" value="on" name="question_poll"></span>
@@ -105,6 +107,7 @@
                         <span class="wpqa_checkbox_span">By asking your question, you agree to the <a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span>
                     </label>
                 </p>
+                <br>
             </div>
 
             <p class="form-submit"><input type="hidden" name="question_popup" value="popup"><input type="hidden" name="form_type" value="add_question">

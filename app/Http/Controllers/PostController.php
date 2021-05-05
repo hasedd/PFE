@@ -19,11 +19,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at','desc')->get();
         return view('Posts.questions.Body', [
-            'categories' => Category::all(), 'posts' => $posts , 'i'=>2
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>2
         ]);
-
 
     }
 
@@ -56,12 +56,10 @@ class PostController extends Controller
         $post->content = $request->input('content');
         $post->tags = $request->input('tags');
         $post->save();
-       if (isset($_FILES) && !empty($_FILES['file']['name'])) {
-
+        if (isset($_FILES) && !empty($_FILES['file']['name'])) {
+            $_FILES['file']['name']=str_replace(' ','_',$_FILES['file']['name']) ;
             $post->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
-            $infosfichier = pathinfo($_FILES['file']['name']);
-            $extension_upload = $infosfichier['extension'];
-            $filname = $post->id . $post->title . "." . $extension_upload;
+            $filname = $post->id . $post->file->id. $_FILES['file']['name'];
             move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
         }
         return redirect()->route('QuestionBody');
@@ -79,13 +77,6 @@ class PostController extends Controller
         return view('Posts.questions.show', [
             'categories' => Category::all(), 'post' => $post,
             'comments' => $post->comments,
-        ]);
-    }
-    public function MostRecent(){
-        $posts = Post::orderBy('created_at')->get() ;
-        return view('Posts.questions.Body', [
-            'categories' => Category::all(), 'posts' => $posts,
-            'i'=>2
         ]);
     }
 
@@ -127,7 +118,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+           $post = Post::find($id)->firstOrFail();
+        return view('Posts.questions.edit',['categories'=>Category::all(),'post'=>$post]);
     }
 
     /**

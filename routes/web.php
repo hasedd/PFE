@@ -25,6 +25,15 @@ Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
 
+Route::get('/contact', function () {
+    return view('Contact_us');
+})->name('contact');
+
+Route::get('/about', function () {
+    return view('About_us');
+})->name('about');
+
+
 
 Route::MATCH('POST','/register/next', function () {
     return view('auth.register2');
@@ -42,6 +51,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/test/{id}', [PostController::class,'show']
     )->name('Show_Question');
 
+    Route::get('/test/{id}/edit', [PostController::class,'edit']
+        )->name('edit');
+
     Route::POST('/addQuestion',[PostController::class,'store'])
         ->name('Add_Question');
 
@@ -51,8 +63,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/DeletePost/{id}',[PostController::class,'destroy']
     )->name('delete_post');
 
-    Route::get('/mostRecent', [PostController::class,'MostRecent']
-    )->name('Most_recent');
     Route::get('/Answered', [PostController::class,'Answered']
     )->name('answered');
     Route::get('/NotAnswered', [PostController::class,'NAnswered']
@@ -68,3 +78,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
 Route::match(['POST','GET'],'/othercreate',[OtherController::class,'createOther'])
     ->name('createother');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

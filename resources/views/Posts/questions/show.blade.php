@@ -56,13 +56,15 @@
                                                             </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="../../profile/root/index.html">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
                                                         </div><!-- End post-inner -->
                                                     </div><!-- End post -->
-                                                </div></div>		<ul class="question-vote question-mobile">
-                                                <li class="question-vote-up"><a href="#" id="question_vote_up-118" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                <li class="vote_result" itemprop="upvoteCount">2</li>
-                                                <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                <li class="question-vote-down"><a href="#" id="question_vote_down-118" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                            </ul>
-                                        </div><!-- End question-image-vote -->
+                                                </div>
+                                                    </div>
+                                                        <ul class="question-vote question-mobile">
+                                                            <li class="question-vote-up"><a href="#" id="question_vote_up-118" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_allow" title="Like"><i class="icon-up-dir"></i></a></li>
+                                                            <li class="vote_result" itemprop="upvoteCount">2</li>
+                                                            <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
+                                                            <li class="question-vote-down"><a href="#" id="question_vote_down-118" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
+                                                        </ul>
+                                                    </div><!-- End question-image-vote -->
                                         <div class="question-content question-content-first">
                                             <header class="article-header">
                                                 <div class="question-header">
@@ -75,13 +77,7 @@
                                                 <h1 class="post-title">{{$post->title}}</h1>							</div>
                                         </div><!-- End question-content-first -->
                                         <div class="question-not-mobile question-image-vote question-vote-sticky">
-
-                                            <ul class="question-vote">
-                                                <li class="question-vote-up"><a href="#" id="question_vote_up-118" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                <li class="vote_result" itemprop="upvoteCount">{{$post->votes_up-$post->votes_down}}</li>
-                                                <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                <li class="question-vote-down"><a href="#" id="question_vote_down-118" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                            </ul>
+                                            @livewire('voteit',['post_id'=>$post->id,'var'=>0])
                                             <!-- End question-sticky -->
                                         </div><!-- End question-image-vote -->
                                         <div class="question-content question-content-second">
@@ -91,6 +87,14 @@
                                                 <div class="question-content-text">
                                                     <div class='all_signle_post_content'>
                                                         {!! $post->content !!}
+
+                                                        @if($post->file != null)
+                                                            <div class='featured_image_question'>
+                                                                <a href="public/files/ana.jpg" >
+                                                                    <embed alt="{{$post->file->name}} " width='500' height='500' src="{{asset('files/'. $post->id . $post->file->id . $post->file->name)}}">
+                                                                </a>
+                                                            </div>
+                                                        @endif
                                                         <div class="clearfix"></div>
                                                     </div><!-- End all_signle_post_content -->								</div>
                                                 <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i>
@@ -133,13 +137,12 @@
                                             if(\Illuminate\Support\Facades\Auth::user()->id != $post->user->id )
                                                 echo  "<li class='report_activated'><a class='report_q' href='index.html'><i class='icon-attention'></i>Report</a></li>" ;
                                             else {
-                                                $edit="<li><a href='#'><i class='icon-pencil'></i>Edit</a></li>";
+                                                $editroute=route('edit',[$post->id]);
+                                                $edit="<li><a href=$editroute ><i class='icon-pencil'></i>Edit</a></li>";
                                                 $deleteroute=route('delete_post',[$post->id]);
 
                                                 $delete="<li><a class='question-delete' href=$deleteroute data-method='delete'/><i class='icon-trash'></i>Delete</a></li>";
                                                 echo $edit.$delete ;
-
-
                                             }
 
 
@@ -165,62 +168,88 @@
                                                 <div class="clearfix"></div>
                                             </div><!-- End answers-tabs -->
                                             <ol class="commentlist clearfix">
-                                                <li class="comment even thread-even depth-1  " itemscope itemtype="https://schema.org/Answer" itemprop="suggestedAnswer" id="li-comment-64">
-                                                    <div id="comment-64" class="comment-body clearfix">
-                                                        <div class="comment-text">
-                                                            <div class="author-image author-image-42"><a title="" href="https://2code.info/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='' title='' width='42' height='42' srcset='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 1x, http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 2x' src='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&amp;d=mm&amp;r=g'></span></a></div>                <div class="author clearfix">
-                                                                <div class="comment-meta">
-                                                                    <div class="comment-author">
-                    		<span itemprop="author" itemscope itemtype="http://schema.org/Person">	                    			<a itemprop="url" href="https://2code.info/">
-	                    		<span itemprop="name">John Peter</span>	                        		</a>
-	                        	</span>                    	</div>
-                                                                    <a href="index.html#comment-64" class="comment-date" itemprop='url'>
-                                                                        <span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:52+00:00">2018-04-19T02:00:52+00:00</span>Added an answer on April 19, 2018 at 2:00 am</span>	                    	</a>
-                                                                </div><!-- End comment-meta -->
-                                                            </div><!-- End author -->
-                                                            <div class="text">
-
-                                                                <div itemprop='text'>
-                                                                    <p>Yes, I understand it. I hear a lot of this incorrect grammar from my wife. I would expect that the person that spoke this was possibly Chinese. In Chinese there are no tenses or plurals. No he or she pronouns. The context tells all. So it might have been a direct translation from Chinese.</p>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                                <div class="clearfix"></div>
-                                                                <div class="wpqa_error"></div>
-                                                                <ul class="question-vote answer-vote answer-vote-dislike">
-                                                                    <li><a href="#" id="comment_vote_up-64" data-type="comment" data-vote-type="up" class="wpqa_vote comment_vote_up vote_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                                    <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                                    <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                                    <li class="dislike_answers"><a href="#" id="comment_vote_down-64" data-type="comment" data-vote-type="down" class="wpqa_vote comment_vote_down vote_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                                </ul>
-                                                                <ul class="comment-reply comment-reply-main">
-                                                                    <li><a rel="nofollow" class="comment-reply-link wpqa-reply-link" href="index.html#respond" data-id="64" data-post_id="118" aria-label="Reply to John Peter"><i class="icon-reply"></i>Reply</a></li>                	    	<li class="comment-share question-share question-share-2">
-                                                                        <i class="icon-share"></i>
-                                                                        Share			<div class="post-share">
-                                                                            <span><i class="icon-share"></i><span>Share</span></span>
-                                                                            <ul>
-                                                                                <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-64&amp;t=Yes%2C+I+understand+it.+I+hear+a+lot+of+this+incorrect+grammar+from+my+wife.+I+would+expect+that+the+person+that+spoke+this+was+possibly+Chinese.+In+Chinese+there"><i class="icon-facebook"></i>Share on <span>Facebook</span></a></li>
-                                                                                <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Yes%2C+I+understand+it.+I+hear+a+lot+of+this+incorrect+grammar+from+my+wife.+I+would+expect+that+the+person+that+spoke+this+was+possibly+Chinese.+In+Chinese+there&amp;url=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-64"><i class="icon-twitter"></i>Share on Twitter</a></li>
-                                                                                <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-64&amp;title=Yes%2C+I+understand+it.+I+hear+a+lot+of+this+incorrect+grammar+from+my+wife.+I+would+expect+that+the+person+that+spoke+this+was+possibly+Chinese.+In+Chinese+there"><i class="icon-linkedin"></i>Share on LinkedIn</a></li>
-                                                                                <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Yes%2C+I+understand+it.+I+hear+a+lot+of+this+incorrect+grammar+from+my+wife.+I+would+expect+that+the+person+that+spoke+this+was+possibly+Chinese.+In+Chinese+there%20-%20http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-64"><i class="fab fa-whatsapp"></i>Share on WhatsApp</a></li>
-                                                                            </ul>
-                                                                        </div><!-- End post-share -->
-                                                                    </li>
-                                                                    <li class="clearfix last-item-answers"></li>
-                                                                </ul>
-                                                                <ul class="comment-reply comment-list-links">
-                                                                    <li class="question-list-details comment-list-details">
-                                                                        <i class="icon-dot-3"></i>
-                                                                        <ul>
-                                                                            <li class="report_activated"><a class="report_c" href="index.html"><i class="icon-attention"></i>Report</a></li>
+                                                @foreach($comments as $comment)
+                                                    <div x-data="{ isShowing: false }">
+                                                        <li class="comment even thread-even depth-1  " itemscope itemtype="https://schema.org/Answer" itemprop="suggestedAnswer" id="li-comment-64">
+                                                            <div id="comment-64" class="comment-body clearfix">
+                                                                <div class="comment-text">
+                                                                    <div class="author-image author-image-42"><a title="" href="https://2code.info/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='' title='' width='42' height='42' srcset='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 1x, http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 2x' src='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&amp;d=mm&amp;r=g'></span></a></div>
+                                                                    <div class="author clearfix">
+                                                                        <div class="comment-meta">
+                                                                            <div class="comment-author">
+                                                                                <span itemprop="author" itemscope itemtype="http://schema.org/Person">	                    			<a itemprop="url" href="https://2code.info/">
+                                                                                    <span itemprop="name">{{$comment->user->username}}</span>	                        		</a>
+                                                                                </span>
+                                                                            </div>
+                                                                            <a href="index.html#comment-64" class="comment-date" itemprop='url'>
+                                                                                <span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:52+00:00">2018-04-19T02:00:52+00:00</span>Added an answer on April 19, 2018 at 2:00 am</span>
+                                                                            </a>
+                                                                        </div><!-- End comment-meta -->
+                                                                    </div><!-- End author -->
+                                                                    <div class="text">
+                                                                        <div itemprop='text'>
+                                                                            <p>Yes, I understand it. I hear a lot of this incorrect grammar from my wife. I would expect that the person that spoke this was possibly Chinese. In Chinese there are no tenses or plurals. No he or she pronouns. The context tells all. So it might have been a direct translation from Chinese.</p>
+                                                                        </div>
+                                                                        <div class="clearfix"></div>
+                                                                        <div class="clearfix"></div>
+                                                                        <div class="wpqa_error"></div>
+                                                                        @livewire('voteit',['post_id'=>$comment->id,'var'=>1])
+                                                                        <ul class="comment-reply comment-reply-main">
+                                                                            <li><a @click="isShowing = true" rel="nofollow" class="comment-reply-link wpqa-reply-link" href="javascript:void(0)" data-id="64" data-post_id="118" aria-label="Reply to John Peter"><i class="icon-reply"></i>Reply</a></li>
+                                                                            <li class="comment-share question-share question-share-2"><i class="icon-share"></i>Share
+                                                                                <div class="post-share">
+                                                                                    <span>  <i class="icon-share"></i><span>Share</span>    </span>
+                                                                                    <ul>
+                                                                                        <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-64&amp;t=Yes%2C+I+understand+it.+I+hear+a+lot+of+this+incorrect+grammar+from+my+wife.+I+would+expect+that+the+person+that+spoke+this+was+possibly+Chinese.+In+Chinese+there"><i class="icon-facebook"></i>Share on <span>Facebook</span></a></li>
+                                                                                        <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Yes%2C+I+understand+it.+I+hear+a+lot+of+this+incorrect+grammar+from+my+wife.+I+would+expect+that+the+person+that+spoke+this+was+possibly+Chinese.+In+Chinese+there&amp;url=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-64"><i class="icon-twitter"></i>Share on Twitter</a></li>
+                                                                                        <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-64&amp;title=Yes%2C+I+understand+it.+I+hear+a+lot+of+this+incorrect+grammar+from+my+wife.+I+would+expect+that+the+person+that+spoke+this+was+possibly+Chinese.+In+Chinese+there"><i class="icon-linkedin"></i>Share on LinkedIn</a></li>
+                                                                                        <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Yes%2C+I+understand+it.+I+hear+a+lot+of+this+incorrect+grammar+from+my+wife.+I+would+expect+that+the+person+that+spoke+this+was+possibly+Chinese.+In+Chinese+there%20-%20http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-64"><i class="fab fa-whatsapp"></i>Share on WhatsApp</a></li>
+                                                                                    </ul>
+                                                                                </div><!-- End post-share -->
+                                                                            </li>
+                                                                            <li class="clearfix last-item-answers"></li>
                                                                         </ul>
-                                                                    </li>
-                                                                    <li class="clearfix last-item-answers"></li>
-                                                                </ul>
-                                                            </div><!-- End text -->
-                                                            <div class="clearfix"></div>
-                                                        </div><!-- End comment-text -->
-                                                    </div><!-- End comment-body -->
-
+                                                                        <ul class="comment-reply comment-list-links">
+                                                                            <li class="question-list-details comment-list-details">
+                                                                                <i class="icon-dot-3"></i>
+                                                                                <ul>
+                                                                                    <li class="report_activated"><a class="report_c" href="index.html"><i class="icon-attention"></i>Report</a></li>
+                                                                                </ul>
+                                                                            </li>
+                                                                            <li class="clearfix last-item-answers"></li>
+                                                                        </ul>
+                                                                    </div><!-- End text -->
+                                                                    <div class="clearfix"></div>
+                                                                </div><!-- End comment-text -->
+                                                                <div  x-show="isShowing" >
+                                                                    <div id="respond" class="comment-respond wpqa_hide" style="display: block;" >
+                                                                        <h3 class="section-title">Reply to John Peter
+                                                                            <div class="wpqa-cancel-link cancel-comment-reply">
+                                                                                <a rel="nofollow" id="cancel-comment-reply-link" href="javascript:void(0)" @click="isShowing = false">Cancel reply.</a>
+                                                                            </div>
+                                                                        </h3>
+                                                                        <form action="http://localhost/wordpress/wp-comments-post.php" method="post" id="commentform" class="post-section comment-form answers-form">
+                                                                            <p class="comment-login">Logged in as<a class="comment-login-login" href="http://localhost/wordpress/profile/ismail_sg/"><i class="icon-user"></i>ismail_sg</a>
+                                                                                <a class="comment-login-logout" href="http://localhost/wordpress/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F&amp;_wpnonce=53d440ee98" title="Log out of this account"><i class="icon-logout"></i>Log out</a>
+                                                                            </p>
+                                                                            <div class="wpqa_error"></div>
+                                                                            <div class="form-input form-textarea form-comment-normal">
+                                                                                <textarea name="comment" aria-required="true" placeholder="Reply"></textarea>
+                                                                                <i class="icon-pencil"></i>	</div>
+                                                                            <div class="clearfix"></div>
+                                                                            <p class="form-submit">
+                                                                                <input name="submit" type="submit" id="submit" class="button-default button-hide-click" value="Submit">
+                                                                                <span class="clearfix"></span>
+                                                                                <span class="load_span"><span class="loader_2"></span></span>
+                                                                                <input type="hidden" name="comment_post_ID" value="118" id="comment_post_ID">
+                                                                                <input type="hidden" name="comment_parent" id="comment_parent" value="64">
+                                                                            </p>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- End comment-body -->
+                                                    </div>
+                                                @endforeach
                                             </ol><!-- End commentlist -->
                                             <div class="clearfix"></div>
                                         </div><!-- End post-inner -->

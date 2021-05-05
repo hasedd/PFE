@@ -266,14 +266,14 @@
 </head>
 <body class="home page-template page-template-page_template_1 page-template-page_template_1-php page page-id-77 theme-scisco woocommerce-no-js scisco elementor-default elementor-kit-9999 elementor-page elementor-page-77">
 
-<div class="min-h-screen bg-gray-100">
-    <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<div class="py-4" style="background-color:#376E6F"></div>
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100  py-3">
         <!-- Primary Navigation Menu -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
+        <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8" >
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <!-- Logo -->
-                    <div class="flex-shrink-0 flex items-center">
+                    <div class="flex-shrink-0 flex items-center px-5">
                         <a href="{{ route('dashboard') }}">
                             <x-jet-application-mark class="block h-9 w-auto" />
                         </a>
@@ -281,16 +281,16 @@
 
                     <!-- Navigation Links -->
 
-                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                            <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                                {{ __('Dashboard') }}
-                            </x-jet-nav-link>
-                        </div>
-                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                            <x-jet-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
-                                {{ __('Home') }}
-                            </x-jet-nav-link>
-                        </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('homepage') }}" :active="request()->routeIs('homepage')">
+                            {{ __('Home') }}
+                        </x-jet-nav-link>
+                     </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-jet-nav-link>
+                    </div>
                     @auth()
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <x-jet-nav-link href="{{ route('QuestionBody') }}" :active="request()->routeIs('QuestionBody')">
@@ -298,11 +298,37 @@
                             </x-jet-nav-link>
                         </div>
                     @endauth
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+                            {{ __('Contact Us') }}
+                        </x-jet-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('about') }}" :active="request()->routeIs('about')">
+                            {{ __('About Us') }}
+                        </x-jet-nav-link>
+                    </div>
                 </div>
 
-                <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="hidden sm:flex sm:items-center sm:ml-6 pr-5">
+                    @guest()
+                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <x-jet-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
+                                {{ __('Log in') }}
+                            </x-jet-nav-link>
+                        </div>
+                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <x-jet-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
+                                {{ __('Register') }}
+                            </x-jet-nav-link>
+                        </div>
+                    @endguest
                         <!-- Settings Dropdown -->
                         <div class="ml-3 relative">
+
+
+
+
                             @auth()
                             <x-jet-dropdown align="right" width="48">
                                 <x-slot name="trigger">
@@ -361,7 +387,6 @@
 
     </nav>
 
-
     <div class="main-content" id="panel">
     <main id="scisco-main-wrapper" class="no-padding">
         <div data-elementor-type="wp-page" data-elementor-id="77" class="elementor elementor-77" data-elementor-settings="[]">
@@ -385,7 +410,7 @@
                                                 <div class="elementor-element elementor-element-d474384 elementor-invisible elementor-widget elementor-widget-button" data-id="d474384" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;}" data-widget_type="button.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-button-wrapper">
-                                                            <a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-float" role="button">
+                                                            <a href="{{route('dashboard')}}" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-float" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">Learn More</span>
 		</span>
@@ -400,7 +425,7 @@
                                                 <div class="elementor-element elementor-element-9a956cb elementor-invisible elementor-widget elementor-widget-button" data-id="9a956cb" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInUp&quot;}" data-widget_type="button.default">
                                                     <div class="elementor-widget-container">
                                                         <div class="elementor-button-wrapper">
-                                                            <a href="#" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-float" role="button">
+                                                            <a href="{{route('about')}}" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-float" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">About Us</span>
 		</span>
@@ -439,7 +464,7 @@
                                                         <div class="scisco-flip-card-back-icon">
                                                         </div>
                                                         <h4 class="scisco-flip-card-back-title">Get Help<br>From Professionals</h4><div class="scisco-flip-card-back-content">You can find answers to various questions from different categories on askNprovide You may ask questions on any topic but will need to register to do so. You can also browse through questions in selected categories of your choice and read all the questions and answers posted by other people.</div>						<div class="scisco-btn-wrapper">
-                                                            <a class="scisco-btn-lg " href="https://wordpress-288344-1596643.cloudwaysapps.com/questions/ask/"  target="_blank"  rel="nofollow">
+                                                            <a class="scisco-btn-lg " href="{{route('QuestionBody')}}"  target="_blank"  rel="nofollow">
                                                                 ASK A QUESTION							</a>
                                                         </div>
                                                     </div>
@@ -477,7 +502,7 @@
                                                         <div class="scisco-flip-card-back-icon">
                                                         </div>
                                                         <h4 class="scisco-flip-card-back-title">Give Up/Down<br>Vote To Answers</h4><div class="scisco-flip-card-back-content">If you think an answer can be usefull and needs to be viewed give it a vote UP or a vote DOWN if not.</div>						<div class="scisco-btn-wrapper">
-                                                            <a class="scisco-btn-sm " href="https://wordpress-288344-1596643.cloudwaysapps.com/questions/"  target="_blank"  rel="nofollow">
+                                                            <a class="scisco-btn-sm " href="{{route('QuestionBody')}}"  target="_blank"  rel="nofollow">
                                                                 VIEW QUESTIONS							</a>
                                                         </div>
                                                     </div>
@@ -549,7 +574,7 @@
                                                         <div class="scisco-flip-card-back-icon">
                                                         </div>
                                                         <h4 class="scisco-flip-card-back-title">Share<br>Your Knowledge</h4><div class="scisco-flip-card-back-content">If you have answers to questions you read on askNprovide, don't hesitate to provide it in order to help people.</div>						<div class="scisco-btn-wrapper">
-                                                            <a class="scisco-btn-md " href="https://wordpress-288344-1596643.cloudwaysapps.com/questions/"  target="_blank"  rel="nofollow">
+                                                            <a class="scisco-btn-md " href="{{route('QuestionBody')}}"  target="_blank"  rel="nofollow">
                                                                 VIEW QUESTIONS							</a>
                                                         </div>
                                                     </div>
@@ -1085,8 +1110,8 @@ your questions by connecting you with the people who should be able to help you.
                                         <div class="elementor-counter">
                                             <div class="elementor-counter-number-wrapper">
                                                 <span class="elementor-counter-number-prefix"></span>
-                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="1" data-from-value="500" data-delimiter=",">500</span>
-                                                <span class="elementor-counter-number-suffix">M+</span>
+                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="5" data-from-value="75" data-delimiter=",">500</span>
+                                                <span class="elementor-counter-number-suffix">k+</span>
                                             </div>
                                             <div class="elementor-counter-title">professionals  answering and providing services</div>
                                         </div>
@@ -1101,7 +1126,7 @@ your questions by connecting you with the people who should be able to help you.
                                         <div class="elementor-counter">
                                             <div class="elementor-counter-number-wrapper">
                                                 <span class="elementor-counter-number-prefix"></span>
-                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="280" data-from-value="0" data-delimiter=",">0</span>
+                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="3" data-from-value="50" data-delimiter=",">0</span>
                                                 <span class="elementor-counter-number-suffix">k+</span>
                                             </div>
                                             <div class="elementor-counter-title">times a user found answers to his questions</div>
@@ -1117,8 +1142,8 @@ your questions by connecting you with the people who should be able to help you.
                                         <div class="elementor-counter">
                                             <div class="elementor-counter-number-wrapper">
                                                 <span class="elementor-counter-number-prefix"></span>
-                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="1400" data-from-value="0" data-delimiter=",">0</span>
-                                                <span class="elementor-counter-number-suffix">+</span>
+                                                <span class="elementor-counter-number" data-duration="2000" data-to-value="1" data-from-value="25" data-delimiter=",">0</span>
+                                                <span class="elementor-counter-number-suffix">k+</span>
                                             </div>
                                             <div class="elementor-counter-title">experiences shared​</div>
                                         </div>

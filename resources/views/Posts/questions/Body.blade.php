@@ -17,7 +17,7 @@
                                                     <div class="menu-tabs">
                                                         <ul class="menu flex menu-tabs-desktop">
                                                             <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
-                                                                <a href="{{route('Most_recent')}}">
+                                                                <a href="{{route('QuestionBody')}}">
                                                                     Recent Questions						</a>
                                                             </li>
 
@@ -127,17 +127,17 @@
 																<span class="date-separator"></span>
 																<a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
 															</span>
-                                                                                <span class="byline">
+                                                                 <span class="byline">
 																<span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">{{$post->category->name}}</a></span>
 															</span>
                                                                             </div>
                                                                         </div>
                                                                     </header>
                                                                     <div>
-                                                                        <h2 class="post-title"><a class="post-title" href="{{route('Show_Question',[$post->id])}}" rel="bookmark">{{$post->title}}</a></h2>	</div>
-                                                                </div><!-- End question-content-first -->
+                                                                        <h2 class="post-title"><a class="post-title" href="{{route('Show_Question',[$post->id])}}" rel="bookmark">{{$post->title}}</a></h2>    </div>
+                                                                    </div>
                                                                 <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                                    @livewire('voteit',['post_id'=>$post->id])
+                                                                    @livewire('voteit',['post_id'=>$post->id,'var'=>0])
                                                                 </div><!-- End question-image-vote -->
                                                                 <div class="question-content question-content-second">
                                                                     <div class="post-wrap-content">
@@ -152,6 +152,9 @@
                                                                                 else { $allez2=substr($allez,0,213)."...";
                                                                                     echo "<p class=\"excerpt-question\"> $allez2</p>";}
                                                                                 ?>
+                                                                                    @if($post->file != null)
+                                                                                        <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('Show_Question',[$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
+                                                                                    @endif
                                                                             </div><!-- End all_not_signle_post_content -->
                                                                         </div>
                                                                         <div class="tagcloud">
