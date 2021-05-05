@@ -80,6 +80,3 @@ Route::match(['POST','GET'],'/othercreate',[OtherController::class,'createOther'
     ->name('createother');
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
