@@ -175,6 +175,9 @@
                                                                 <div class="comment-text">
                                                                     <div class="author-image author-image-42"><a title="" href="https://2code.info/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='' title='' width='42' height='42' srcset='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 1x, http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 2x' src='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&amp;d=mm&amp;r=g'></span></a></div>
                                                                     <div class="author clearfix">
+                                                                        @if($comment->isBestAnswer == 1)
+                                                                            <div class="best-answer">Best answer</div>
+                                                                        @endif
                                                                         <div class="comment-meta">
                                                                             <div class="comment-author">
                                                                                 <span itemprop="author" itemscope itemtype="http://schema.org/Person">	                    			<a itemprop="url" href="https://2code.info/">
@@ -193,12 +196,7 @@
                                                                         <div class="clearfix"></div>
                                                                         <div class="clearfix"></div>
                                                                         <div class="wpqa_error"></div>
-                                                                        <ul class="question-vote answer-vote answer-vote-dislike">
-                                                                            <li><a href="#" id="comment_vote_up-64" data-type="comment" data-vote-type="up" class="wpqa_vote comment_vote_up vote_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                                            <li class="vote_result" itemprop="upvoteCount">3</li>
-                                                                            <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                                            <li class="dislike_answers"><a href="#" id="comment_vote_down-64" data-type="comment" data-vote-type="down" class="wpqa_vote comment_vote_down vote_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                                        </ul>
+                                                                        @livewire('likeit',['post_id'=>$comment->id])
                                                                         <ul class="comment-reply comment-reply-main">
                                                                             <li><a @click="isShowing = true" rel="nofollow" class="comment-reply-link wpqa-reply-link" href="javascript:void(0)" data-id="64" data-post_id="118" aria-label="Reply to John Peter"><i class="icon-reply"></i>Reply</a></li>
                                                                             <li class="comment-share question-share question-share-2"><i class="icon-share"></i>Share
@@ -212,6 +210,22 @@
                                                                                     </ul>
                                                                                 </div><!-- End post-share -->
                                                                             </li>
+                                                                            @if($post->user->id==Auth()->user()->id)
+                                                                                @if($comment->isBestAnswer == 0 && $bestAnswer == null)
+                                                                                    <li>
+                                                                                        <a class="best_answer_a" data-nonce="83eb375ef7" href="{{route('select_b_a',[$comment->id])}}" title="Select as best answer">
+                                                                                            <i class="icon-check"></i>Select as best answer
+                                                                                        </a>
+                                                                                    </li>
+                                                                                @endif
+                                                                                @if( $bestAnswer != null &&  $comment->id == $bestAnswer->id )
+                                                                                    <li>
+                                                                                        <a class="best_answer_re" data-nonce="83eb375ef7" href="{{route('cancel_b_a',[$comment->id])}}" title="Cancel the best answer">
+                                                                                            <i class="icon-cancel"></i>Cancel the best answer
+                                                                                        </a>
+                                                                                    </li>
+                                                                                @endif
+                                                                            @endif
                                                                             <li class="clearfix last-item-answers"></li>
                                                                         </ul>
                                                                         <ul class="comment-reply comment-list-links">

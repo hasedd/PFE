@@ -114,4 +114,18 @@ class CommentController extends Controller
     {
 //
     }
+    public function select_best_answer($id){
+        $theBest = Comment::find($id);
+        $theBest->isBestAnswer = 1 ;
+        $theBest->save() ;
+        return redirect()->back();
+
+    }
+    public function cancel_best_answer($id){
+        $theBest = Comment::find($id);
+        $theBest->isBestAnswer = 0 ;
+        $theBest->save() ;
+        return redirect()->back();
+
+    }
 }

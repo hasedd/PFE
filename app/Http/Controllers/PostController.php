@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Comment;
 use App\Models\File;
 use App\Models\Vote;
 use Illuminate\Http\Request;
@@ -76,7 +77,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         return view('Posts.questions.show', [
             'categories' => Category::all(), 'post' => $post,
-            'comments' => $post->comments,
+            'comments' => $post->comments,'bestAnswer' => Comment::where('isBestAnswer',1)->first(),
         ]);
     }
 
