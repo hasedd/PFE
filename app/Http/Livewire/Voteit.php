@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Post;
 use Livewire\Component;
 use App\Models\Vote;
 
@@ -19,9 +20,9 @@ class Voteit extends Component
 
     public function render()
     {
-        if($this->var == 0) {
             $this->Votes = Vote::where('post_id', $this->post_id)->where('vote', 1)->count() - Vote::where('post_id', $this->post_id)->where('vote', -1)->count();
-        }
+            $post = Post::find($this->post_id);
+            $post->votes = $this->Votes;
         return view('livewire.voteit');
     }
 

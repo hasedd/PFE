@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Comment;
 use App\Models\File;
+use App\Models\View;
 use App\Models\Vote;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -145,5 +146,17 @@ class PostController extends Controller
     {
         Post::find($id)->delete();
         return  redirect()->route('QuestionBody');
+    }
+
+    public function addview($post_id){
+
+        $post = Post::find($post_id)->firstOrFail();
+        $test = View::where('post_id',$post_id)->where('user_id',Auth()->user()->id)->count();
+        if($test == 0) {
+            $vote = View::create(['post_id' => $post_id, 'user_id' => Auth()->user()->id, 'view' => 1]);
+            $post->views++;
+            $post->save();
+        }
+        return redirect()->route('Show_Question',['id'=>$post->id]);
     }
 }

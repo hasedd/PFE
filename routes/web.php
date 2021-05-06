@@ -51,6 +51,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/test/{id}', [PostController::class,'show']
     )->name('Show_Question');
 
+    Route::get('/add_view/{post_id}', [PostController::class,'addview']
+    )->name('addview');
+
     Route::get('/test/{id}/edit', [PostController::class,'edit']
         )->name('edit');
 
@@ -76,6 +79,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     )->name('select_b_a');
     Route::get('/best_answer_canceled/{id}',[CommentController::class,'cancel_best_answer']
     )->name('cancel_b_a');
+
 
 
 });

@@ -16,7 +16,8 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')
+                ->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->enum('type',['Question','Experience','Service']);
@@ -25,8 +26,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('tags');
-            $table->integer('votes_up')->default(0);
-            $table->integer('votes_down')->default(0);
+            $table->integer('votes')->default(0);
             $table->unsignedInteger('views')->default(0);
             $table->integer('signals')->default(0);
             $table->timestamps();
