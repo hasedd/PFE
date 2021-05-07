@@ -16,7 +16,7 @@
 							<span itemscope itemtype="https://schema.org/BreadcrumbList">
 								<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                                     <meta itemprop="position" content="1"><a itemprop="item" href="../../index.html" title="Home"><span itemprop="name"><i class="icon-home"></i>Home</span></a></span><span class="crumbs-span">/</span><span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                                    <meta itemprop="position" content="2"><a itemprop="item" href="../../questions/index.html" title="Questions"><span itemprop="name">Questions</span></a></span><span class="crumbs-span">/</span><span class="current">Q 118</span></span>
+                                    <meta itemprop="position" content="2"><a itemprop="item" href="../../questions/index.html" title="Questions"><span itemprop="name">Questions</span></a></span><span class="crumbs-span">/</span><span class="current">Q {{$post->id}}</span></span>
 						            </span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">									<div class="question-navigation">
                                         <a class="nav-next" href="../why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/index.html">Next<i class="icon-right-open"></i></a>
                                         <a class="nav-previous" href="../is-there-an-english-equivalent-to-the-french-expression-il-faut-dabord-apprendre-a-marcher-avant-de-courir/index.html"><i class="icon-left-open"></i></a>
@@ -31,9 +31,9 @@
                                 <div class="single-inner-content">
                                     <div class="question-inner">
                                         <div class="question-image-vote">
-                                            <div class="author-image author-image-42"><a href="../../profile/root/index.html"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&amp;d=mm&amp;r=g'></span></a><div class="author-image-pop-2">
+                                            <div class="author-image author-image-42"><a href="../../profile/root/index.html"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' src="{{ Auth::user()->profile_photo_url }}"></span></a><div class="author-image-pop-2">
                                                     <div class="post-section user-area user-area-columns_pop">
-                                                        <div class="post-inner"><div class="author-image author-image-70"><a href="../../profile/root/index.html"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&amp;d=mm&amp;r=g'></span></a></div><div class="user-content">
+                                                        <div class="post-inner"><div class="author-image author-image-70"><a href="../../profile/root/index.html"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' src="{{ Auth::user()->profile_photo_url }}"></span></a></div><div class="user-content">
                                                                 <div class="user-inner"><div class="user-data-columns"><h4><a href="../../profile/root/index.html">{{$post->user->username}}</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
                                                                 <ul><li class="user-columns-questions">
                                                                         <a href="../../profile/root/questions/index.html">
@@ -106,8 +106,8 @@
                                                     </div></div>							</div>
                                             <footer class="question-footer">
                                                 <ul class="footer-meta">
-                                                    <li class="best-answer-meta"><a href="index.html#comments"><i class="icon-comment"></i><span itemprop="answerCount" class='number discy_hide'>4</span> <span class='question-span'>4 Answers</span></a></li>
-                                                    <li class="view-stats-meta"><i class="icon-eye"></i>33 <span class='question-span'>Views</span></li>
+                                                    <li class="best-answer-meta"><a href="index.html#comments"><i class="icon-comment"></i><span itemprop="answerCount" class='number discy_hide'>4</span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
+                                                    <li class="view-stats-meta"><i class="icon-eye"></i>{{$post->views}} <span class='question-span'>Views</span></li>
                                                     <li class="question-followers question-followers-no-link">
                                                         <i class="icon-users"></i>
                                                         <span>4</span> Followers											</li>
@@ -173,7 +173,7 @@
                                                         <li class="comment even thread-even depth-1  " itemscope itemtype="https://schema.org/Answer" itemprop="suggestedAnswer" id="li-comment-64">
                                                             <div id="comment-64" class="comment-body clearfix">
                                                                 <div class="comment-text">
-                                                                    <div class="author-image author-image-42"><a title="" href="https://2code.info/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='' title='' width='42' height='42' srcset='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 1x, http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 2x' src='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&amp;d=mm&amp;r=g'></span></a></div>
+                                                                    <div class="author-image author-image-42"><a title="" href="https://2code.info/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='' title='' width='42' height='42' src="{{ Auth::user()->profile_photo_url }}"></span></a></div>
                                                                     <div class="author clearfix">
                                                                         @if($comment->isBestAnswer == 1)
                                                                             <div class="best-answer">Best answer</div>

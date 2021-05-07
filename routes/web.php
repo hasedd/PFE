@@ -51,6 +51,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/test/{id}', [PostController::class,'show']
     )->name('Show_Question');
 
+    Route::get('/user/{id}/profile', [PostController::class,'userprofile']
+    )->name('userprofile');
+
     Route::get('/add_view/{post_id}', [PostController::class,'addview']
     )->name('addview');
 
@@ -68,15 +71,19 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::get('/Answered', [PostController::class,'Answered']
     )->name('answered');
+
     Route::get('/NotAnswered', [PostController::class,'NAnswered']
     )->name('Not_answered');
+
     Route::get('/mostVisited', [PostController::class,'MostVisited']
     )->name('Most_visited');
+
     Route::get('/mostVoted', [PostController::class,'MVoted']
     )->name('Most_Voted');
 
     Route::get('/best_answer_selected/{id}',[CommentController::class,'select_best_answer']
     )->name('select_b_a');
+
     Route::get('/best_answer_canceled/{id}',[CommentController::class,'cancel_best_answer']
     )->name('cancel_b_a');
 

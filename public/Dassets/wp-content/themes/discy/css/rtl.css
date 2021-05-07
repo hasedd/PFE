@@ -22,7 +22,7 @@
 /*   19 - Panel pop                */
 /*   20 - Forms                    */
 /*   21 - Profile setting          */
-/*   22 - Points & 
+/*   22 - Points &
           Badges sections          */
 /*   23 - Categories               */
 /*   24 - Tags                     */
@@ -2835,9 +2835,7 @@ article.post .post-img.post-img-0 {
 	display: -ms-flex;
 	display: -webkit-flex;
 	display: flex;
-	background-image: -webkit-gradient(linear, right bottom, right top, color-stop(0, #373940), color-stop(0.5, #494B52));
-	background-image: -webkit-linear-gradient(center bottom, #373940 0%, #494B52 50%);
-	background-image: -moz-linear-gradient(center bottom, #373940 0%, #494B52 50%);
+	background-image: -webkit-gradient(linear, right bottom, right top, color-stop(0, #1C3334), color-stop(0.5, #da7b93));
 	background-image: -o-linear-gradient(bottom, #373940 0%, #494B52 50%);
 	background-image: -ms-linear-gradient(top, #373940 0%,#494B52 50%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#373940', endColorstr='#494B52',GradientType=0 );
@@ -5331,7 +5329,7 @@ ul.question-vote.answer-vote li.dislike_answers i {
 }
 .question-sticky-ribbon div:before,.question-sticky-ribbon div:after {
 	content: "";
-	border-top:   3px solid #6e8900;   
+	border-top:   3px solid #6e8900;
 	border-right:  3px solid transparent;
 	border-left: 3px solid transparent;
 	position:absolute;

@@ -72,10 +72,10 @@
                                                                 <div class="question-image-vote">
                                                                     <div class="author-image author-image-42">
                                                                         <a href="http://template.test/profile/root/">
-                                                                            <span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a><div class="author-image-pop-2">
+                                                                            <span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' src="{{ $post->user->profile_photo_url }}"></span></a><div class="author-image-pop-2">
                                                                             <div class="post-section user-area user-area-columns_pop">
                                                                                 <div class="post-inner"><div class="author-image author-image-70">
-                                                                                        <a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></span></a></div>
+                                                                                        <a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' src="{{ $post->user->profile_photo_url }}"></span></a></div>
                                                                                     <div class="user-content">
                                                                                         <div class="user-inner">
                                                                                             <div class="user-data-columns">
@@ -113,7 +113,8 @@
                                                                     </div>
                                                                     <ul class="question-vote question-mobile">
                                                                         <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                                        <li class="vote_result" itemprop="upvoteCount">2</li>
+                                                                        <li class="vote_result" itemprop="upvoteCount">
+                                                                            {{$post->votes}}</li>
                                                                         <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
                                                                         <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
                                                                     </ul>
@@ -141,6 +142,7 @@
                                                                     @livewire('voteit',['post_id'=>$post->id,'var'=>0])
                                                                 </div><!-- End question-image-vote -->
                                                                 <div class="question-content question-content-second">
+                                                                    <div class="post-wrap-content">
                                                                     <div class="post-wrap-content">
                                                                         <div class="question-content-text">
                                                                             <div class='all_not_signle_post_content'>

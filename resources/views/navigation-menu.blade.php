@@ -22,6 +22,11 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('QuestionBody') }}" :active="request()->routeIs('QuestionBody')">
+                        {{ __('Questions') }}
+                    </x-jet-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
                         {{ __('Contact Us') }}
                     </x-jet-nav-link>
@@ -31,11 +36,7 @@
                         {{ __('About Us') }}
                     </x-jet-nav-link>
                 </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('QuestionBody') }}" :active="request()->routeIs('QuestionBody')">
-                        {{ __('Questions') }}
-                    </x-jet-nav-link>
-                </div>
+
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -116,7 +117,7 @@
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                            <x-jet-dropdown-link href="{{ route('userprofile',Auth()->user()->id) }}">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
 

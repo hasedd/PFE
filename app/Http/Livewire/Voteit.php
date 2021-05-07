@@ -23,6 +23,7 @@ class Voteit extends Component
             $this->Votes = Vote::where('post_id', $this->post_id)->where('vote', 1)->count() - Vote::where('post_id', $this->post_id)->where('vote', -1)->count();
             $post = Post::find($this->post_id);
             $post->votes = $this->Votes;
+            $post->save();
         return view('livewire.voteit');
     }
 

@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Comment;
 use App\Models\File;
+use App\Models\User;
 use App\Models\View;
 use App\Models\Vote;
 use Illuminate\Http\Request;
@@ -47,6 +48,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
         $post = new Post();
         $post->type = "Question";
         $post->space = "Public";
@@ -64,6 +66,9 @@ class PostController extends Controller
             $filname = $post->id . $post->file->id. $_FILES['file']['name'];
             move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
         }
+
+        Auth()->user()->points += 5;
+        Auth()->user()->save();
         return redirect()->route('QuestionBody');
     }
 
@@ -150,13 +155,23 @@ class PostController extends Controller
 
     public function addview($post_id){
 
-        $post = Post::find($post_id)->firstOrFail();
+        $post = Post::findOrFail($post_id);
         $test = View::where('post_id',$post_id)->where('user_id',Auth()->user()->id)->count();
         if($test == 0) {
             $vote = View::create(['post_id' => $post_id, 'user_id' => Auth()->user()->id, 'view' => 1]);
             $post->views++;
             $post->save();
         }
-        return redirect()->route('Show_Question',['id'=>$post->id]);
+        return redirect()->route('Show_Question',['id'=>$post_id]);
+    }
+
+    public function userprofile($id){
+
+        $user = User::findOrfail($id);
+        $questions = Post::where('user_id',Auth()->user()->id)->where('type','question')->count();
+        $banswers = Comment::where('user_id',Auth()->user()->id)->where('isBestAnswer',true)->count();
+        $answers = Comment::where('user_id',Auth()->user()->id)->count();
+        return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
+            'questions'=>$questions,'banswers'=>$banswers,'answers'=>$answers]);
     }
 }

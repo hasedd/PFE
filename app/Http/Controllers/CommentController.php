@@ -5,6 +5,7 @@ use App\Models\Category;
 use App\Models\Comment;
 use App\Models\File;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -58,6 +59,9 @@ class CommentController extends Controller
         }
         $comment->post->state="Close";
         $comment->post->save();
+
+        Auth()->user()->points += 1;
+        Auth()->user()->save();
 
         return redirect()->route('Show_Question',[$comment->post->id]);
 
@@ -115,16 +119,23 @@ class CommentController extends Controller
 //
     }
     public function select_best_answer($id){
+
         $theBest = Comment::find($id);
         $theBest->isBestAnswer = 1 ;
         $theBest->save() ;
-        return redirect()->back();
+        $user = User::find($theBest->user_id);
+        $user->points += 20;
+        $user->save();
 
+        return redirect()->back();
     }
     public function cancel_best_answer($id){
         $theBest = Comment::find($id);
         $theBest->isBestAnswer = 0 ;
         $theBest->save() ;
+        $user = User::find($theBest->user_id);
+        $user->points -= 20;
+        $user->save();
         return redirect()->back();
 
     }
