@@ -96,7 +96,7 @@ class PostController extends Controller
     }
 
     public function MVoted(){
-        $posts = Post::join('votes','posts.id','=','votes.post_id')->select('posts.*')->orderBy('votes.vote','desc')->get();
+        $posts = Post::orderBy('votes','desc')->get();
         return view('Posts.questions.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>4
@@ -190,10 +190,91 @@ class PostController extends Controller
     public function userprofile($id){
 
         $user = User::findOrfail($id);
-        $questions = Post::where('user_id',Auth()->user()->id)->where('type','question')->count();
-        $banswers = Comment::where('user_id',Auth()->user()->id)->where('isBestAnswer',true)->count();
-        $answers = Comment::where('user_id',Auth()->user()->id)->count();
+        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
+        $questions = Post::where('user_id',$id)->where('type','question')->get();
+        $services= Post::where('user_id',$id)->where('type','service')->get();
+        $experiences = Post::where('user_id',$id)->where('type','experience')->get();
+
+        $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
+        $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->get();
+        $answers = Comment::where('user_id',$id)->count();
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
-            'questions'=>$questions,'banswers'=>$banswers,'answers'=>$answers]);
+            'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
+            'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>0]);
+    }
+    public function userQuestions($id) {
+
+        $user = User::findOrfail($id);
+        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
+        $questions = Post::where('user_id',$id)->where('type','question')->get();
+        $services= Post::where('user_id',$id)->where('type','service')->get();
+        $experiences = Post::where('user_id',$id)->where('type','experience')->get();
+
+        $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
+        $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->get();
+        $answers = Comment::where('user_id',$id)->count();
+        return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
+            'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
+            'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>1]);
+    }
+    public function userbAnswers($id) {
+
+        $user = User::findOrfail($id);
+        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
+        $questions = Post::where('user_id',$id)->where('type','question')->get();
+        $services= Post::where('user_id',$id)->where('type','service')->get();
+        $experiences = Post::where('user_id',$id)->where('type','experience')->get();
+
+        $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
+        $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->get();
+        $answers = Comment::where('user_id',$id)->count();
+        return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
+            'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
+            'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>2]);
+    }
+    public function userServices($id) {
+
+        $user = User::findOrfail($id);
+        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
+        $questions = Post::where('user_id',$id)->where('type','question')->get();
+        $services= Post::where('user_id',$id)->where('type','service')->get();
+        $experiences = Post::where('user_id',$id)->where('type','experience')->get();
+
+        $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
+        $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->get();
+        $answers = Comment::where('user_id',$id)->count();
+        return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
+            'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
+            'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>3]);
+    }
+    public function userExperiences($id) {
+
+        $user = User::findOrfail($id);
+        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
+        $questions = Post::where('user_id',$id)->where('type','question')->get();
+        $services= Post::where('user_id',$id)->where('type','service')->get();
+        $experiences = Post::where('user_id',$id)->where('type','experience')->get();
+
+        $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
+        $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->get();
+        $answers = Comment::where('user_id',$id)->count();
+        return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
+            'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
+            'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>4]);
     }
 }

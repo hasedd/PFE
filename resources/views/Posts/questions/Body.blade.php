@@ -162,7 +162,7 @@
                                                                                     echo "<p class=\"excerpt-question\"> $allez2</p>";}
                                                                                 ?>
                                                                                     @if($post->file != null)
-                                                                                        <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('Show_Question',[$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
+                                                                                        <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
                                                                                     @endif
                                                                             </div><!-- End all_not_signle_post_content -->
                                                                         </div>
@@ -183,7 +183,7 @@
                                                                             <li class="best-answer-meta"><a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#comments"><i class="icon-comment"></i><span class='number discy_hide'></span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
                                                                             <li class="view-stats-meta"><i class="icon-eye"></i>{{$post->views}} <span class='question-span'>Views</span></li>
                                                                         </ul>
-                                                                        <a class="meta-answer meta-answer-a" href="{{route('Show_Question',[$post->id])}}">Answer</a>
+                                                                        <a class="meta-answer meta-answer-a" href="{{route('addview',['post_id'=>$post->id])}}">Answer</a>
                                                                     </footer>
                                                                 </div><!-- End question-content-second -->
                                                                 <div class="clearfix"></div>

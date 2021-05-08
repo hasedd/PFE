@@ -62,6 +62,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::get('/user/{id}/profile', [PostController::class,'userprofile']
     )->name('userprofile');
+    Route::get('/user/{id}/question', [PostController::class,'userQuestions']
+    )->name('user_questions');
+    Route::get('/user/{id}/services', [PostController::class,'userServices']
+    )->name('user_services');
+    Route::get('/user/{id}/b_answers', [PostController::class,'userbAnswers']
+    )->name('user_bAnswers');
+    Route::get('/user/{id}/questions', [PostController::class,'userExperiences']
+    )->name('user_experiences');
+
 
 
 
