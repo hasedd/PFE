@@ -36,32 +36,40 @@
                                                     <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
                                                         <img class="h-10 w-10 rounded-full object-cover" src="{{ $post->user->profile_photo_url }}" alt="{{ $post->user->username }}" />
                                                     </button>
-                                                </a>                                                <div class="author-image-pop-2">
+                                                </a>
+                                                <div class="author-image-pop-2">
                                                     <div class="post-section user-area user-area-columns_pop">
-                                                        <div class="post-inner"><div class="author-image author-image-70">
-                                                                <a href="http://template.test/profile/root/"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
+                                                        <div class="post-inner">
+                                                            <div class="author-image author-image-70">
+                                                                <a href="{{route('userprofile',[$post->user->id])}}"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
                                                             </div>
                                                             <div class="user-content">
-                                                                <div class="user-inner"><div class="user-data-columns"><h4><a href="../../profile/root/index.html">{{$post->user->username}}</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                <ul><li class="user-columns-questions">
-                                                                        <a href="../../profile/root/questions/index.html">
-                                                                            <i class="icon-book-open"></i>{{ count($post->user->posts) }} Posts
+                                                                <div class="user-inner">
+                                                                    <div class="user-data-columns">
+                                                                        <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- End user-content -->
+                                                            <div class="user-columns-data">
+                                                                <ul>
+                                                                    <li class="user-columns-questions">
+                                                                        <a href="{{route('user_questions',[$post->user->id])}}">
+                                                                            <i class="icon-book-open"></i>{{ count($post->user->posts) }} Questions
                                                                         </a>
                                                                     </li>
-                                                                    <li class="user-columns-answers">
-                                                                        <a href="../../profile/root/answers/index.html">
-                                                                            <i class="icon-comment"></i>{{ count($post->user->comments) }} Answers
+
+                                                                    <li class="user-columns-best-answers">
+                                                                        <a href="{{route('user_questions',[$post->user->id])}}">
+                                                                            <i class="icon-graduation-cap"></i>{{ count($post->user->comments->where('isBestAnswer',true)) }} Best Answers
                                                                         </a>
-                                                                    </li><li class="user-columns-best-answers">
-                                                                        <a href="../../profile/root/best-answers/index.html">
-                                                                            <i class="icon-graduation-cap"></i>{{ count($post->user->comments) }} Best Answers
+                                                                    </li>
+                                                                    <li class="user-columns-points">
+                                                                        <a href="{{route('userprofile',[$post->user->id])}}">
+                                                                            <i class="icon-bucket"></i>{{$post->user->points}} Points
                                                                         </a>
-                                                                    </li><li class="user-columns-points">
-                                                                        <a href="../../profile/root/points/index.html">
-                                                                            <i class="icon-bucket"></i>{{$post->user->points}}
-                                                                        </a>
-                                                                    </li></ul>
-                                                            </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="../../profile/root/index.html">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
                                                         </div><!-- End post-inner -->
                                                     </div><!-- End post -->
                                                 </div>
@@ -324,7 +332,8 @@
                                                                                                 </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://localhost/wordpress/profile/ismail_sg/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
                                                                                             </div><!-- End post-inner -->
                                                                                         </div><!-- End post -->
-                                                                                    </div></div>                <div class="author clearfix">
+                                                                                    </div>
+                                                                                </div>                <div class="author clearfix">
                                                                                     <div class="comment-meta">
                                                                                         <div class="comment-author">
                     		<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">	                    			<a itemprop="url" href="http://localhost/wordpress/profile/ismail_sg/">

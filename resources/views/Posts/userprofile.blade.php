@@ -721,6 +721,100 @@
 								</div><!-- End user-follower -->
 							</div><!-- End user-area-content -->
                         @endif
+                        @if($i==2)
+                        <div id="section-best-answers" class="page-content commentslist section-page-div">
+                            <ol class="commentlist clearfix">
+                                @forelse($banswers as $banswer )
+
+
+
+
+                                <li class="comment byuser comment-author-ismail_sg bypostauthor even thread-even depth-1 comment-with-title comment-with-title-1 comment-best-answer " id="li-comment-79">
+                                    <div id="comment-79" class="comment-body clearfix">
+                                        <div class="comment-question-title"><header class="article-header"><div class="question-header"><div class="post-meta"><span class="post-date">Asked:<span class="date-separator"></span> <a href="{{route('Show_Question',[$banswer->post->id])}}" itemprop="url"><time class="entry-date published"><a>{{$banswer->post->created_at}}</time></a></span><span class="byline"><span class="post-cat">In: <a href="{{route('Show_Question',[$banswer->post->id])}}" rel="tag">{{$banswer->post->category->name}}</a></span></span></div></div></header>
+                                            <div class="clearfix"></div>
+                                            <h2 class="post-title"><a class="post-title" href="http://localhost/wordpress/question/hhhg/" rel="bookmark">{!! $banswer->post->content !!}</a></h2></div>	            <div class="comment-text">
+                                            <div class="author-image author-image-42"><a href="http://localhost/wordpress/profile/ismail_sg/"><span class="author-image-span"><img class="avatar avatar-42 photo" alt="" title="" width="42" height="42" srcset="http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g 1x, http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g 2x" src="http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g"></span></a><div class="author-image-pop-2">
+                                                    <div class="post-section user-area user-area-columns_pop">
+                                                        <div class="post-inner"><div class="author-image author-image-70"><a href="http://localhost/wordpress/profile/ismail_sg/"><span class="author-image-span"><img class="avatar avatar-70 photo" alt="ismail_sg" title="ismail_sg" width="70" height="70" srcset="http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g 1x, http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g 2x" src="http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g"></span></a></div><div class="user-content">
+                                                                <div class="user-inner"><div class="user-data-columns"><h4><a href="http://localhost/wordpress/profile/ismail_sg/">ismail_sg</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
+                                                                <ul><li class="user-columns-questions">
+                                                                        <a href="http://localhost/wordpress/profile/ismail_sg/questions/">
+                                                                            <i class="icon-book-open"></i>26 Questions
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="user-columns-answers">
+                                                                        <a href="http://localhost/wordpress/profile/ismail_sg/answers/">
+                                                                            <i class="icon-comment"></i>3 Answers
+                                                                        </a>
+                                                                    </li><li class="user-columns-best-answers">
+                                                                        <a href="http://localhost/wordpress/profile/ismail_sg/best-answers/">
+                                                                            <i class="icon-graduation-cap"></i>1 Best Answer
+                                                                        </a>
+                                                                    </li><li class="user-columns-points">
+                                                                        <a href="http://localhost/wordpress/profile/ismail_sg/points/">
+                                                                            <i class="icon-bucket"></i>9 Points
+                                                                        </a>
+                                                                    </li></ul>
+                                                            </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://localhost/wordpress/profile/ismail_sg/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
+                                                        </div><!-- End post-inner -->
+                                                    </div><!-- End post -->
+                                                </div></div>	                <div class="author clearfix">
+                                                <div class="comment-meta">
+                                                    <div class="comment-author">
+                                                        <a href="http://localhost/wordpress/profile/ismail_sg/">
+                                                            ismail_sg		                        		</a>
+                                                    </div>
+                                                    <a href="http://localhost/wordpress/question/hhhg/#comment-79" class="comment-date" itemprop="url">
+                                                        Added an answer on {{$banswer->created_at}}		                        </a>
+                                                </div><!-- End comment-meta -->
+                                            </div><!-- End author -->
+                                            <div class="text">
+
+                                                <div>
+                                                    <p class="less_answer_text wpqa_hide">{{route('Show_Question',[$banswer->post->id])}}</p>
+                                                    <div class="full_answer_text"><p>{!! $banswer->Content !!}</p>
+
+                                                        <a class="read_less_answer wpqa_hide" href="#">See less</a>
+                                                    </div>	                	</div>
+                                                <div class="clearfix"></div>
+                                                <div class="clearfix"></div>
+                                                <div class="wpqa_error"></div>
+                                                <ul class="comment-reply comment-reply-main">
+                                                    <li class="comment-share question-share question-share-2">
+                                                        <i class="icon-share"></i>
+                                                        Share			<div class="post-share">
+                                                            <span><i class="icon-share"></i><span>Share</span></span>
+                                                            <ul>
+                                                                <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fhhhg%2F%23comment-79&amp;t=I%27m+the+best+%26nbsp%3B"><i class="icon-facebook"></i>Share on <span>Facebook</span></a></li>
+                                                                <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=I%27m+the+best+%26nbsp%3B&amp;url=http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fhhhg%2F%23comment-79"><i class="icon-twitter"></i>Share on Twitter</a></li>
+                                                                <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fhhhg%2F%23comment-79&amp;title=I%27m+the+best+%26nbsp%3B"><i class="icon-linkedin"></i>Share on LinkedIn</a></li>
+                                                                <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=I%27m+the+best+%26nbsp%3B - http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fhhhg%2F%23comment-79"><i class="fab fa-whatsapp"></i>Share on WhatsApp</a></li>
+                                                            </ul>
+                                                        </div><!-- End post-share -->
+                                                    </li>
+                                                    <li class="clearfix last-item-answers"></li>
+                                                </ul>
+                                                <ul class="comment-reply comment-list-links">
+                                                    <li class="question-list-details comment-list-details">
+                                                        <i class="icon-dot-3"></i>
+                                                        <ul>
+                                                           <li><a class="delete-comment delete-answer" href="{{route('delete_comment',[$banswer->id])}}"><i class="icon-trash"></i>Delete</a></li>				               		</ul>
+                                                    </li>
+                                                    <li class="clearfix last-item-answers"></li>
+                                                </ul>
+                                            </div><!-- End text -->
+                                            <div class="clearfix"></div>
+                                        </div><!-- End comment-text -->
+                                    </div><!-- End comment-body -->
+                                </li>
+
+                                @empty
+                                    <div class="alert-message warning"><i class="icon-flag"></i><p>There are no best answers yet.</p></div>
+                                @endforelse
+                            </ol>
+                        </div>
+                        @endif
 						</div><!-- End the-main-inner -->
 
                     <div class="hide-main-inner"></div>
