@@ -9,12 +9,13 @@ use App\Models\File;
 class Reply extends Model
 {
     use HasFactory;
+
     public function  comment(){
         return $this->belongsTo(Comment::class);
     }
-
-    public function file()
+    public function user()
     {
-        return $this->morphOne(File::class,'fileable');
+        return $this->belongsTo(User::class);
     }
+
 }

@@ -4,6 +4,8 @@ use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OtherController ;
 use App\Http\Controllers\CommentController ;
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\ReplyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,29 +47,28 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/test', [PostController::class,'index']
+    Route::get('/Questions', [PostController::class,'index']
     )->name('QuestionBody');
-
-    Route::get('/test/{id}', [PostController::class,'show']
+    Route::get('/Questions/{id}', [PostController::class,'show']
     )->name('Show_Question');
+    Route::POST('/Questions/add',[PostController::class,'store'])
+        ->name('Add_Question');
+    Route::get('/add_view/{post_id}', [PostController::class,'addview']
+    )->name('addview');
+    Route::get('/Questions/{id}/edit', [PostController::class,'edit']
+    )->name('edit_post');
+    Route::get('/DeletePost/{id}',[PostController::class,'destroy']
+    )->name('delete_post');
 
     Route::get('/user/{id}/profile', [PostController::class,'userprofile']
     )->name('userprofile');
 
-    Route::get('/add_view/{post_id}', [PostController::class,'addview']
-    )->name('addview');
 
-    Route::get('/test/{id}/edit', [PostController::class,'edit']
-        )->name('edit');
-
-    Route::POST('/addQuestion',[PostController::class,'store'])
-        ->name('Add_Question');
 
     Route::POST('/addComment/{post_id}',[CommentController::class,'store']
     )->name('comments_form');
-
-    Route::get('/DeletePost/{id}',[PostController::class,'destroy']
-    )->name('delete_post');
+    Route::get('/DeleteComment/{id}',[CommentController::class,'destroy']
+    )->name('delete_comment');
 
     Route::get('/Answered', [PostController::class,'Answered']
     )->name('answered');
@@ -87,8 +88,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     Route::get('/best_answer_canceled/{id}',[CommentController::class,'cancel_best_answer']
     )->name('cancel_b_a');
 
+    Route::POST('/addReply/{id}',[ReplyController::class,'store'])
+        ->name('Add_Reply');
+    Route::get('/DeleteReply/{id}',[ReplyController::class,'destroy']
+    )->name('delete_reply');
 
-
+    Route::POST('/updateQuestion/{id}',[PostController::class,'update'])
+        ->name('update_question');
+    Route::get('/DeleteFile/{id}',[FileController::class,'destroy']
+    )->name('delete_file');
 });
 
 

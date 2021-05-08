@@ -71,11 +71,17 @@
                                                             <div class="question-inner">
                                                                 <div class="question-image-vote">
                                                                     <div class="author-image author-image-42">
-                                                                        <a href="http://template.test/profile/root/">
-                                                                            <span class="author-image-span"><img class='avatar avatar-42 photo' alt='root' title='root' width='42' height='42' src="{{ $post->user->profile_photo_url }}"></span></a><div class="author-image-pop-2">
+                                                                        <a href="{{ route('userprofile',$post->user->id) }}">
+                                                                            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                                                                <img class="h-10 w-10 rounded-full object-cover" src="{{ $post->user->profile_photo_url }}" alt="{{ $post->user->username }}" />
+                                                                            </button>
+                                                                        </a>
+                                                                        <div class="author-image-pop-2">
                                                                             <div class="post-section user-area user-area-columns_pop">
-                                                                                <div class="post-inner"><div class="author-image author-image-70">
-                                                                                        <a href="http://template.test/profile/root/"><span class="author-image-span"><img class='avatar avatar-70 photo' alt='root' title='root' width='70' height='70' src="{{ $post->user->profile_photo_url }}"></span></a></div>
+                                                                                    <div class="post-inner">
+                                                                                        <div class="author-image author-image-70">
+                                                                                             <a href="http://template.test/profile/root/"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
+                                                                                        </div>
                                                                                     <div class="user-content">
                                                                                         <div class="user-inner">
                                                                                             <div class="user-data-columns">
@@ -182,13 +188,12 @@
                                                                 </div><!-- End question-content-second -->
                                                                 <div class="clearfix"></div>
                                                             </div><!-- End question-inner -->
+															</div>
                                                         </div><!-- End single-inner-content -->
                                                     </article><!-- End article -->
                                                 @endforeach
                                             </div><!-- End post-articles -->
 											<a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>
-
-
                                         </section><!-- End section -->
 
                                     </div><!-- End the-main-inner -->

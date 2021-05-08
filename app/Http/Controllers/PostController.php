@@ -83,7 +83,7 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         return view('Posts.questions.show', [
             'categories' => Category::all(), 'post' => $post,
-            'comments' => $post->comments,'bestAnswer' => Comment::where('isBestAnswer',1)->first(),
+            'comments' => $post->comments,'bestAnswer' => Comment::where('post_id',$id)->where('isBestAnswer',1)->first(),
         ]);
     }
 
@@ -125,7 +125,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-           $post = Post::find($id)->firstOrFail();
+           $post = Post::find($id);
         return view('Posts.questions.edit',['categories'=>Category::all(),'post'=>$post]);
     }
 
@@ -138,7 +138,26 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post=Post::find($id);
+        $categ=$request->input('category');
+
+        $cat = Category::where('name', $categ)->firstOrFail();
+        $post->category_id = $cat->id;
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+
+        $post->tags = $request->input('tags');
+
+
+        $post->save();
+        if (isset($_FILES) && !empty($_FILES['file']['name']))  {
+            $_FILES['file']['name']=str_replace(' ','_',$_FILES['file']['name']) ;
+            $post->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
+            $filname = $post->id . $post->file->id. $_FILES['file']['name'];
+            move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
+        }
+
+        return redirect()->route('QuestionBody');
     }
 
     /**
@@ -149,7 +168,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        Post::find($id)->delete();
+        $post = Post::find($id);
+        if($post->file != null )
+            $post->file->delete();
+        $post->delete();
         return  redirect()->route('QuestionBody');
     }
 

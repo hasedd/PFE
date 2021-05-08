@@ -22,8 +22,6 @@ class CreateRepliesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->text('Content');
-            $table->integer('Votes_up')->default(0);
-            $table->integer('Votes_down')->default(0);
             $table->timestamps();
         });
     }

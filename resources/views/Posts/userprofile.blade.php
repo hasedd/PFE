@@ -439,9 +439,11 @@
                 <div class='wpqa-cover-content'>
                     <div class='post-section user-area user-advanced user-cover'>
                         <div class='post-inner'>
-                            <div class='user-head-area'>
-                                <div class="author-image author-image-84"><a href="{{route('userprofile',['id'=>$user->id])}}"><span class="author-image-span"><img class='avatar avatar-84 photo' alt='' title='' width='84' height='99'  src="{{ $user->profile_photo_url }}"></span></a></div>
-                            </div>
+                            <a href="{{ route('userprofile',$user->id) }}">
+                                <button class="mx-5 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                    <img class="h-16 w-15 rounded-full object-cover" src="{{ $user->profile_photo_url }}" alt="{{ $user->username }}" />
+                                </button>
+                            </a>
                             <div class='user-content'>
                                 <div class='user-inner'>
                                     <h4><a href="{{route('userprofile',['id'=>$user->id])}}">{{$user->username}}</a></h4></div>

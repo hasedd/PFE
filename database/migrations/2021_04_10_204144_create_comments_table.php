@@ -23,8 +23,7 @@ class CreateCommentsTable extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->text('Content');
             $table->boolean('isBestAnswer')->default(false);
-            $table->integer('Votes_up')->default(0);
-            $table->integer('Votes_down')->default(0);
+            $table->integer('votes')->default(0);
             $table->timestamps();
 
         });

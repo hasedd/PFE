@@ -19,8 +19,6 @@ class CommentController extends Controller
     public function index()
     {
 
-
-
     }
 
     /**
@@ -48,25 +46,17 @@ class CommentController extends Controller
         $comment->Content=$request->input('comment');
         $comment->save();
 
-        if (isset($_FILES)  && !empty($_FILES['file']['name'])
-        )  {
-
+        if (isset($_FILES)  && !empty($_FILES['file']['name']))
+        {
             $comment->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
-            $infosfichier = pathinfo($_FILES['file']['name']);
-            $extension_upload = $infosfichier['extension'];
-            $filname = $comment->id . $comment->title . "." . $extension_upload;
+            $filname = $comment->id . $comment->file->id. $_FILES['file']['name'];
             move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
         }
-        $comment->post->state="Close";
-        $comment->post->save();
 
         Auth()->user()->points += 1;
         Auth()->user()->save();
 
         return redirect()->route('Show_Question',[$comment->post->id]);
-
-
-
 
     }
 
@@ -116,23 +106,32 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-//
+        $comment = Comment::find($id);
+        if($comment->file != null )
+            $comment->file->delete();
+        $post_id=$comment->post->id ;
+        $comment->delete();
+        return  redirect()->route('Show_Question',[$post_id]);
+
     }
     public function select_best_answer($id){
 
         $theBest = Comment::find($id);
         $theBest->isBestAnswer = 1 ;
         $theBest->save() ;
+        $theBest->post->state="Close";
+        $theBest->post->save();
         $user = User::find($theBest->user_id);
         $user->points += 20;
         $user->save();
-
         return redirect()->back();
     }
     public function cancel_best_answer($id){
         $theBest = Comment::find($id);
         $theBest->isBestAnswer = 0 ;
         $theBest->save() ;
+        $theBest->post->state="Open";
+        $theBest->post->save();
         $user = User::find($theBest->user_id);
         $user->points -= 20;
         $user->save();

@@ -88,12 +88,12 @@
                             <div class="breadcrumb-left"><span class="crumbs">
 							<span itemscope itemtype="https://schema.org/BreadcrumbList">
 								<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-			<meta itemprop="position" content="1"><a itemprop="item" href="http://template.test/" title="Home"><span itemprop="name"><i class="icon-home"></i>Home</span></a></span><span class="crumbs-span">/</span><span class="current">Edit question</span></span>
+			<meta itemprop="position" content="1"><a itemprop="item" href="{{route('QuestionBody')}}" title="Home"><span itemprop="name"><i class="icon-home"></i>Questions</span></a></span><span class="crumbs-span">/</span><span class="current">Edit question</span></span>
 						</span></div><!-- End breadcrumb-left --><div class="breadcrumb-right"><div class="clearfix"></div>
                             </div><!-- End breadcrumb-right --></div><!-- End breadcrumbs-wrap --></div><!-- End breadcrumbs -->						<div class="clearfix"></div><div class='wpqa-templates wpqa-edit-question-template'>
 
 
-                        <form class="form-post wpqa_form" action="{{route('Add_Question')}}" method="post" enctype="multipart/form-data">
+                        <form class="form-post wpqa_form" action="{{route('update_question',['id'=>$post->id])}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-inputs clearfix">
                                 <p>
@@ -106,8 +106,9 @@
                                 <div class="wpqa_category">
                                     <label for="question-category-451">Category<span class="required">*</span></label>
                                     <span class="styled-select">
-                    <select  name='category' id='question-category-451' class='postform' >
-	                    <option value='-0'>{{$post->category->name}}</option>
+                    <select  name='category' id='question-category-451' value="{{$post->category->name}}" class='postform' >
+
+	                   @foreach($categories as $category ) <option value={{$category->name}}>{{$category->name}}</option>  @endforeach
 
                     </select>
                     </span><i class="icon-folder"></i>
@@ -117,23 +118,33 @@
                                     <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="{{$post->tags}}" data-seperator=",">
                                     <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, poll</span>.</span>
                                 </p>
-                                <div class="question-multiple-upload question-upload-featured">
-                                    <label for="featured_image-451">Add file</label>
+
+                                @if($post->file != null )
+                                    <span class="wpqa-delete-image-span"><img alt="{{$post->file->name}} "  src="{{asset('files/'. $post->id . $post->file->id . $post->file->name)}}" width="250" height="250"></span>
                                     <div class="clearfix"></div>
-                                    <div class="fileinputs">
-                                        <input type="file" class="file" name="file" id="featured_image-451" value="{{$post->file}}">
-                                        <i class="icon-camera"></i>
-                                        <div class="fakefile">
-                                            <button type="button">Select file</button>
-                                            <span>Browse</span>
+                                    <a class="button-default wpqa-remove-image" data-name="_thumbnail_id" data-type="post_meta" data-id="281" data-image="282" data-nonce="7fcbd8d21c" href="{{route('delete_file',[$post->id])}}">Delete</a>
+                                    <div class="loader_2 loader_4"></div>
+                                @else
+
+                                    <div class="question-multiple-upload question-upload-featured">
+                                        <label for="featured_image-451">Add file</label>
+                                        <div class="clearfix"></div>
+                                        <div class="fileinputs">
+                                            <input type="file" class="file" name="file" id="featured_image-451" value="{{$post->file}}">
+                                            <i class="icon-camera"></i>
+                                            <div class="fakefile">
+                                                <button type="button">Select file</button>
+                                                <span>Browse</span>
+                                            </div>
                                         </div>
+                                        <div class="clearfix"></div>
                                     </div>
-                                    <div class="clearfix"></div>
-                                </div><div class="wpqa_textarea">
+                                @endif
+                                <div class="wpqa_textarea">
                                     <label for="question-details-add-451">Details<span class="required">*</span></label><div class="the-details the-textarea"><div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
 
                                             <div id="wp-question-details-add-451-editor-container" class="wp-editor-container"><div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div>
-                                                <textarea rows="10" cols="40" name="content">{{$post->content}}</textarea></div>
+                                                <textarea rows="10" cols="40" name="content">{!! $post->content !!}</textarea></div>
                                         </div>
 
                                     </div>
