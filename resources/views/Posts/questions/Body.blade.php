@@ -62,7 +62,7 @@
                                         <section>
                                             <h2 class="screen-reader-text">Discy Latest Questions</h2>
                                             <div class="post-articles question-articles">
-                                                @foreach($posts as $post)
+                                                @forelse($posts as $post)
                                                     <article id="post-118" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language">
                                                         <div class="question-sticky-ribbon">
                                                             <div>{{$post->state}}</div>
@@ -80,39 +80,35 @@
                                                                             <div class="post-section user-area user-area-columns_pop">
                                                                                     <div class="post-inner">
                                                                                         <div class="author-image author-image-70">
-                                                                                             <a href="http://template.test/profile/root/"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
+                                                                                             <a href="{{route('userprofile',[$post->user->id])}}"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
                                                                                         </div>
                                                                                     <div class="user-content">
                                                                                         <div class="user-inner">
                                                                                             <div class="user-data-columns">
-                                                                                                <h4><a href="http://template.test/profile/root/">{{$post->user->username}}</a></h4>
+                                                                                                <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div><!-- End user-content -->
                                                                                     <div class="user-columns-data">
                                                                                         <ul>
                                                                                             <li class="user-columns-questions">
-                                                                                                <a href="http://template.test/profile/root/questions/">
-                                                                                                    <i class="icon-book-open"></i>{{ count($post->user->posts) }} Posts
+                                                                                                <a href="{{route('user_questions',[$post->user->id])}}">
+                                                                                                    <i class="icon-book-open"></i>{{ count($post->user->posts) }} Questions
                                                                                                 </a>
                                                                                             </li>
-                                                                                            <li class="user-columns-answers">
-                                                                                                <a href="http://template.test/profile/root/answers/">
-                                                                                                    <i class="icon-comment"></i>{{ count($post->user->comments) }} Answers
-                                                                                                </a>
-                                                                                            </li>
+
                                                                                             <li class="user-columns-best-answers">
-                                                                                                <a href="http://template.test/profile/root/best-answers/">
-                                                                                                    <i class="icon-graduation-cap"></i>{{ count($post->user->comments) }} Best Answers
+                                                                                                <a href="{{route('user_questions',[$post->user->id])}}">
+                                                                                                    <i class="icon-graduation-cap"></i>{{ count($post->user->comments->where('isBestAnswer',true)) }} Best Answers
                                                                                                 </a>
                                                                                             </li>
                                                                                             <li class="user-columns-points">
-                                                                                                <a href="http://template.test/profile/root/points/">
-                                                                                                    <i class="icon-bucket"></i>0 Points
+                                                                                                <a href="{{route('userprofile',[$post->user->id])}}">
+                                                                                                    <i class="icon-bucket"></i>{{$post->user->points}} Points
                                                                                                 </a>
                                                                                             </li>
                                                                                         </ul>
-                                                                                    </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
+                                                                                    </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
                                                                                 </div><!-- End post-inner -->
                                                                             </div><!-- End post -->
                                                                         </div>
@@ -128,7 +124,7 @@
                                                                 <div class="question-content question-content-first">
                                                                     <header class="article-header">
                                                                         <div class="question-header">
-                                                                            <a class="post-author" itemprop="url" href="http://template.test/profile/root/">{{$post->user->useable->firstName}}</a>
+                                                                            <a class="post-author" itemprop="url" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->useable->firstName}}</a>
                                                                             <div class="post-meta">
                                                             <span class="post-date">Asked:
 																<span class="date-separator"></span>
@@ -180,7 +176,7 @@
                                                                     <div class="wpqa_success"></div>
                                                                     <footer class="question-footer">
                                                                         <ul class="footer-meta">
-                                                                            <li class="best-answer-meta"><a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#comments"><i class="icon-comment"></i><span class='number discy_hide'></span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
+                                                                            <li class="best-answer-meta"><a href="{{route('addview',['post_id'=>$post->id])}}"><i class="icon-comment"></i><span class='number discy_hide'></span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
                                                                             <li class="view-stats-meta"><i class="icon-eye"></i>{{$post->views}} <span class='question-span'>Views</span></li>
                                                                         </ul>
                                                                         <a class="meta-answer meta-answer-a" href="{{route('addview',['post_id'=>$post->id])}}">Answer</a>
@@ -191,9 +187,12 @@
 															</div>
                                                         </div><!-- End single-inner-content -->
                                                     </article><!-- End article -->
-                                                @endforeach
+                                                @empty
+                                                    <center><p class="no-comments">No  questions here </p></center>
+                                                @endforelse
                                             </div><!-- End post-articles -->
-											<a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>
+											<!-- <a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>-->
+                                            <center><p class="no-comments">No more questions</p></center>
                                         </section><!-- End section -->
 
                                     </div><!-- End the-main-inner -->
