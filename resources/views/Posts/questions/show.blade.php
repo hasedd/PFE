@@ -41,7 +41,11 @@
                                                     <div class="post-section user-area user-area-columns_pop">
                                                         <div class="post-inner">
                                                             <div class="author-image author-image-70">
-                                                                <a href="{{route('userprofile',[$post->user->id])}}"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
+                                                                <a href="{{route('userprofile',[$post->user->id])}}">
+                                                                    <span>
+                                                                        <img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}">
+                                                                    </span>
+                                                                </a>
                                                             </div>
                                                             <div class="user-content">
                                                                 <div class="user-inner">
@@ -69,7 +73,8 @@
                                                                         </a>
                                                                     </li>
                                                                 </ul>
-                                                            </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
+                                                            </div><!-- End user-columns-data -->
+                                                            <div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
                                                         </div><!-- End post-inner -->
                                                     </div><!-- End post -->
                                                 </div>
@@ -84,9 +89,11 @@
                                         <div class="question-content question-content-first">
                                             <header class="article-header">
                                                 <div class="question-header">
-                                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="../../profile/root/index.html"><span itemprop="name">{{$post->user->useable->firstName}}</span></a></span>									<div class="post-meta">
-										<span class="post-date">Asked:<span class="date-separator"></span> <a href="index.html" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a><span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span>
-				<span class="discy_hide" itemprop="datePublished" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span></span><span class="byline"><span class="post-cat">In: <a href="../../question-category/language/index.html" rel="tag">{{$post->category->name}}</a></span></span>									</div>
+                                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="../../profile/root/index.html"><span itemprop="name">{{$post->user->useable->firstName}}</span></a></span>
+                                                    <div class="post-meta">
+                                                        <span class="post-date">Asked:<span class="date-separator"></span> <a href="index.html" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a><span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span>
+                                                        <span class="discy_hide" itemprop="datePublished" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span></span><span class="byline"><span class="post-cat">In: <a href="../../question-category/language/index.html" rel="tag">{{$post->category->name}}</a></span></span>
+                                                    </div>
                                                 </div>
                                             </header>
                                             <div itemprop="name">
@@ -189,7 +196,57 @@
                                                         <li class="comment even thread-even depth-1  " itemscope itemtype="https://schema.org/Answer" itemprop="suggestedAnswer" id="li-comment-64">
                                                             <div id="comment-64" class="comment-body clearfix">
                                                                 <div class="comment-text">
-                                                                    <div class="author-image author-image-42"><a title="" href="https://2code.info/"><span class="author-image-span"><img class='avatar avatar-42 photo' alt='' title='' width='42' height='42' srcset='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 1x, http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&d=mm&r=g 2x' src='http://1.gravatar.com/avatar/d31ecd0df621802323fefbc2ca97d89e?s=96&amp;d=mm&amp;r=g'></span></a></div>
+
+
+                                                                    <div class="author-image author-image-42">
+                                                                        <a href="{{ route('userprofile',$comment->user->id) }}">
+                                                                            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                                                                <img class="h-10 w-10 rounded-full object-cover" src="{{ $comment->user->profile_photo_url }}" alt="{{ $comment->user->username }}" />
+                                                                            </button>
+                                                                        </a>
+                                                                        <div class="author-image-pop-2">
+                                                                            <div class="post-section user-area user-area-columns_pop">
+                                                                                <div class="post-inner">
+                                                                                    <div class="author-image author-image-70">
+                                                                                        <a href="{{route('userprofile',[$comment->user->id])}}">
+                                                                                            <span>
+                                                                                                <img  alt='root' title='root'  src="{{ $comment->user->profile_photo_url }}">
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </div>
+                                                                                    <div class="user-content">
+                                                                                        <div class="user-inner">
+                                                                                            <div class="user-data-columns">
+                                                                                                <h4><a href="{{route('userprofile',[$comment->user->id])}}">{{$comment->user->username}}</a></h4>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div><!-- End user-content -->
+                                                                                    <div class="user-columns-data">
+                                                                                        <ul>
+                                                                                            <li class="user-columns-questions">
+                                                                                                <a href="{{route('user_questions',[$comment->user->id])}}">
+                                                                                                    <i class="icon-book-open"></i>{{ count($comment->user->posts) }} Questions
+                                                                                                </a>
+                                                                                            </li>
+
+                                                                                            <li class="user-columns-best-answers">
+                                                                                                <a href="{{route('user_questions',[$comment->user->id])}}">
+                                                                                                    <i class="icon-graduation-cap"></i>{{ count($comment->user->comments->where('isBestAnswer',true)) }} Best Answers
+                                                                                                </a>
+                                                                                            </li>
+                                                                                            <li class="user-columns-points">
+                                                                                                <a href="{{route('userprofile',[$comment->user->id])}}">
+                                                                                                    <i class="icon-bucket"></i>{{$comment->user->points}} Points
+                                                                                                </a>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </div><!-- End user-columns-data -->
+                                                                                    <div class="user-follow-profile"><a href="{{route('userprofile',[$comment->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
+                                                                                </div><!-- End post-inner -->
+                                                                            </div><!-- End post -->
+                                                                        </div>
+                                                                    </div>
+
                                                                     <div class="author clearfix">
                                                                         @if($comment->isBestAnswer == 1)
                                                                             <div class="best-answer">Best answer</div>
@@ -303,55 +360,23 @@
                                                                     <li class="comment byuser comment-author-ismail_sg bypostauthor even depth-2  " itemscope="" itemtype="https://schema.org/Comment" id="li-comment-76">
                                                                         <div id="comment-76" class="comment-body clearfix">
                                                                             <div class="comment-text">
-                                                                                <div class="author-image author-image-42"><a href="http://localhost/wordpress/profile/ismail_sg/"><span class="author-image-span"><img class="avatar avatar-42 photo" alt="" title="" width="42" height="42" srcset="http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g 1x, http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g 2x" src="http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g"></span></a>
-                                                                                    <div class="author-image-pop-2">
-                                                                                        <div class="post-section user-area user-area-columns_pop">
-                                                                                            <div class="post-inner">
-                                                                                                <div class="author-image author-image-70"><a href="http://localhost/wordpress/profile/ismail_sg/"><span class="author-image-span"><img class="avatar avatar-70 photo" alt="ismail_sg" title="ismail_sg" width="70" height="70" srcset="http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g 1x, http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g 2x" src="http://0.gravatar.com/avatar/03a70fbb88ee358472fe427092886a68?s=96&amp;d=mm&amp;r=g"></span></a>
-                                                                                                </div>
-                                                                                                <div class="user-content">
-                                                                                                    <div class="user-inner"><div class="user-data-columns"><h4><a href="http://localhost/wordpress/profile/ismail_sg/">ismail_sg</a></h4></div></div></div><!-- End user-content --><div class="user-columns-data">
-                                                                                                    <ul><li class="user-columns-questions">
-                                                                                                            <a href="http://localhost/wordpress/profile/ismail_sg/questions/">
-                                                                                                                <i class="icon-book-open"></i>26 Questions
-                                                                                                            </a>
-                                                                                                        </li>
-                                                                                                        <li class="user-columns-answers">
-                                                                                                            <a href="http://localhost/wordpress/profile/ismail_sg/answers/">
-                                                                                                                <i class="icon-comment"></i>2 Answers
-                                                                                                            </a>
-                                                                                                        </li><li class="user-columns-best-answers">
-                                                                                                            <a href="http://localhost/wordpress/profile/ismail_sg/best-answers/">
-                                                                                                                <i class="icon-graduation-cap"></i>0 Best Answers
-                                                                                                            </a>
-                                                                                                        </li><li class="user-columns-points">
-                                                                                                            <a href="http://localhost/wordpress/profile/ismail_sg/points/">
-                                                                                                                <i class="icon-bucket"></i>9 Points
-                                                                                                            </a>
-                                                                                                        </li></ul>
-                                                                                                </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://localhost/wordpress/profile/ismail_sg/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                                                            </div><!-- End post-inner -->
-                                                                                        </div><!-- End post -->
-                                                                                    </div>
-                                                                                </div>                <div class="author clearfix">
+                                                                                <div class="author">
                                                                                     <div class="comment-meta">
-                                                                                        <div class="comment-author">
-                    		<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">	                    			<a itemprop="url" href="http://localhost/wordpress/profile/ismail_sg/">
-	                    		<span itemprop="name">{{$reply->user->username}}</span>	                        		</a>
-	                        	</span>                    	</div>
-                                                                                        <a href="http://localhost/wordpress/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/#comment-76" class="comment-date" itemprop="url">
-                                                                                            <span class="discy_hide" itemprop="dateCreated" datetime="2021-05-06T02:50:48+00:00">2021-05-06T02:50:48+00:00</span>Replied to answer on {{$reply->created_at}}	                    	</a>
+                                                                                        <header class="article-header">
+                                                                                            <div class="question-header">
+                                                                                                <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="../../profile/root/index.html"><span itemprop="name">{{$reply->user->username}}</span></a></span>
+                                                                                                <div class="post-meta">
+                                                                                                    <span class="discy_hide" itemprop="dateCreated" datetime="2021-05-06T02:50:48+00:00">2021-05-06T02:50:48+00:00</span>Replied to answer on {{$reply->created_at}}
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </header>
                                                                                     </div><!-- End comment-meta -->
                                                                                 </div><!-- End author -->
                                                                                 <div class="text">
-
                                                                                     <div itemprop="text">
-                                                                                        <p>{{$reply->Content}}</p>
+                                                                                        <p>{{"@".$reply->comment->user->username." ".$reply->Content}}</p>
                                                                                     </div>
-                                                                                    <div class="clearfix"></div>
-                                                                                    <div class="clearfix"></div>
                                                                                     <div class="wpqa_error"></div>
-
                                                                                     <ul class="comment-reply comment-reply-main">
                                                                                         <?php
                                                                                         if($reply->user->id==Auth()->user()->id )
@@ -362,29 +387,8 @@
                                                                                             echo $delete ;
                                                                                         }
                                                                                         ?>
-                                                                                        <li class="comment-share question-share question-share-2">
-                                                                                            <i class="icon-share"></i>
-                                                                                            Share			<div class="post-share">
-                                                                                                <span><i class="icon-share"></i><span>Share</span></span>
-                                                                                                <ul>
-                                                                                                    <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-76&amp;t=Hi"><i class="icon-facebook"></i>Share on <span>Facebook</span></a></li>
-                                                                                                    <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Hi&amp;url=http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-76"><i class="icon-twitter"></i>Share on Twitter</a></li>
-                                                                                                    <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-76&amp;title=Hi"><i class="icon-linkedin"></i>Share on LinkedIn</a></li>
-                                                                                                    <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Hi - http%3A%2F%2Flocalhost%2Fwordpress%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F%23comment-76"><i class="fab fa-whatsapp"></i>Share on WhatsApp</a></li>
-                                                                                                </ul>
-                                                                                            </div><!-- End post-share -->
-                                                                                        </li>
-                                                                                        <li class="clearfix last-item-answers"></li>
                                                                                     </ul>
-                                                                                    <ul class="comment-reply comment-list-links">
-                                                                                        <li class="question-list-details comment-list-details">
-                                                                                            <i class="icon-dot-3"></i>
-                                                                                            <ul>
-                                                                                                <li class="report_activated"><a class="report_c" href="76"><i class="icon-attention"></i>Report</a></li>
-                                                                                            </ul>
-                                                                                        </li>
-                                                                                        <li class="clearfix last-item-answers"></li>
-                                                                                    </ul>
+
                                                                                 </div><!-- End text -->
                                                                                 <div class="clearfix"></div>
                                                                             </div><!-- End comment-text -->

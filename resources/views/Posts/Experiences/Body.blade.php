@@ -18,11 +18,7 @@
                                             <ul class="menu flex menu-tabs-desktop">
                                                 <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
                                                     <a href="{{route('QuestionBody')}}">
-                                                        Recent Questions						</a>
-                                                </li>
-                                                <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
-                                                    <a href="{{route('answered')}}">
-                                                        Answered						</a>
+                                                        Recent Posts						</a>
                                                 </li>
                                                 <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
                                                     <a href="{{route('Most_visited')}}">
@@ -32,26 +28,15 @@
                                                     <a href="{{route('Most_Voted')}}">
                                                         Most Voted						</a>
                                                 </li>
+                                                <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
+                                                    <a href="{{route('answered')}}">
+                                                        Expriences						</a>
+                                                </li>
                                                 <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
                                                     <a href="{{route('Not_answered')}}">
-                                                        No Answers						</a>
+                                                        Services						</a>
                                                 </li>
                                             </ul>
-                                            <div class="discy_hide mobile-tabs"><span class="styled-select"><select class="home_categories">					<option selected='selected' value="http://template.test/?show=recent-questions">
-				Recent Questions					</option>
-									<option value="http://template.test/?show=most-answered">
-				Most Answered					</option>
-									<option value="http://template.test/?show=question-bump">
-				Bump Question					</option>
-									<option value="http://template.test/?show=answers">
-				Answers					</option>
-									<option value="http://template.test/?show=most-visited">
-				Most Visited					</option>
-									<option value="http://template.test/?show=most-voted">
-				Most Voted					</option>
-									<option value="http://template.test/?show=no-answers">
-				No Answers					</option>
-				</select></span></div>
                                         </div><!-- End menu-tabs -->
                                     </div><!-- End wrap-tabs -->
                                 </div><!-- End col9 -->
@@ -64,7 +49,7 @@
                                         <article id="post-46" class="article-post article-post-only clearfix post-46 post type-post status-publish format-standard has-post-thumbnail hentry category-work">
                                             <div class="single-inner-content">
                                                 <header class="article-header">
-                                                    <div class="post-meta">
+                                                    <div class="post-meta" style="text-align: center">
                                                         <span class="post-date">On:<span class="date-separator"></span>
                                                             <time class="entry-date published">April 18, 2018</time>
                                                         </span>
@@ -76,13 +61,16 @@
                                                         </span>
                                                         <span class="post-views">Views: 21</span>
                                                     </div>
-                                                    <h2 class="post-title">
-                                                        <a class="post-title" href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" rel="bookmark">Highlighting what’s important about questions &#038; Answers on Discy Community!</a>
+                                                    <h2 class="post-title" style="text-align: center">
+                                                        <a class="post-title" href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" rel="bookmark">{{$post->title}}</a>
                                                     </h2>
-                                                        <a class="post-author" rel="author" href="http://template.test/profile/root/">root</a>
+                                                    <div style="text-align: center;">
+                                                           <a class="post-author"  rel="author" href="http://template.test/profile/root/">{{$post->user->name}}</a>
+                                                    </div>
+
                                                     <figure class="featured-image post-img">
                                                         <a href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" title="Highlighting what’s important about questions &#038; Answers on Discy Community!" rel="bookmark">
-                                                            <img alt='Highlighting what’s important about questions &#038; Answers on Discy Community!' width='629' height='420' src='http://template.test/wp-content/uploads/2018/04/team-7-629x420.jpg'>
+                                                            <img class="rounded" alt='Highlighting what’s important about questions &#038; Answers on Discy Community!' width='629' height='420' src='http://template.test/wp-content/uploads/2018/04/team-7-629x420.jpg'>
                                                         </a>
                                                     </figure>
                                                 </header>
@@ -93,19 +81,23 @@
                                                     </div>
                                                 </div>
 
+
                                                 <footer>
-                                                    <a class="post-read-more" href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" rel="bookmark" title="Read Highlighting what’s important about questions &#038; Answers on Discy Community!">Read more</a>
-                                                    <div class="post-share">
-                                                        <span><i class="icon-share"></i><span>Share This Article</span></span>
-                                                        <ul>
-                                                            <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;t=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-facebook"></i><span>Facebook</span></a></li>
-                                                            <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="icon-twitter"></i></a></li>
-                                                            <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;title=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-linkedin"></i></a></li>
-                                                            <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21 - http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="fab fa-whatsapp"></i></a></li>
-                                                        </ul>
-                                                    </div><!-- End post-share -->
+                                                    <div style="text-align: center">
+                                                        <a class="post-read-more" href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" rel="bookmark" title="Read Highlighting what’s important about questions &#038; Answers on Discy Community!">Read more</a>
+                                                        <div class="post-share">
+                                                            <span><i class="icon-share"></i><span>Share This Article</span></span>
+                                                            <ul>
+                                                                <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;t=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-facebook"></i><span>Facebook</span></a></li>
+                                                                <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="icon-twitter"></i></a></li>
+                                                                <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;title=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-linkedin"></i></a></li>
+                                                                <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21 - http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="fab fa-whatsapp"></i></a></li>
+                                                            </ul>
+                                                        </div><!-- End post-share -->
+                                                    </div>
                                                 </footer>
-                                            </div><!-- End single-inner-content -->
+
+                                </div><!-- End single-inner-content -->
                                         </article><!-- End article -->
                                     @endforeach
                                 </div><!-- End post-articles -->

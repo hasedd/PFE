@@ -44,10 +44,28 @@ class CreateNewUser implements CreatesNewUsers
         }*/
 
         if ($input['type']=='Student' ){
-            $type = Student::where('email',$input['email'])->first();
+            if(!strpos("@edu.uiz.ac.ma",$input['email']))
+            {  $type=null ;
+                $message = ('Please enter the email given to you by your school');
+                throw ValidationException::withMessages([
+                    'notfound' => [$message],]) ;
+                return redirect()->back()->withErrors(['notfound' => $message]);
+            }
+            else
+                $type = Student::where('email',$input['email'])->first();
         }
         else if ($input['type']=='Teacher'){
-            $type = Teacher::where('email',$input['email'])->first();
+            if(!strpos("@uiz.ac.ma",$input['email']))
+            {
+                $type=null ;
+                $message = ('Please enter the email given to you by the school you teach in');
+                throw ValidationException::withMessages([
+                    'notfound' => [$message],]) ;
+                return redirect()->back()->withErrors(['notfound' => $message]);
+
+            }
+            else
+                $type = Teacher::where('email',$input['email'])->first();
         }
         else if ($input['type']=='Other'){
             $type=Other::where('email',$input['email'])->first();
