@@ -47,6 +47,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
         return view('dashboard');
     })->name('dashboard');
 
+    Route::get('/posts', [PostController::class,'indexox']
+    )->name('postsBody');
     Route::get('/Questions', [PostController::class,'index']
     )->name('QuestionBody');
     Route::get('/Questions/{id}', [PostController::class,'show']

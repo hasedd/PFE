@@ -29,6 +29,15 @@ class PostController extends Controller
         ]);
 
     }
+    public function indexox()
+    {
+        $posts = Post::orderBy('created_at','desc')->get();
+        return view('Posts.Experiences.Body', [
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>2
+        ]);
+
+    }
 
     /**
      * Show the form for creating a new resource.
