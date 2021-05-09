@@ -78,10 +78,17 @@
                                                                 <h4 style="color: #1C3334"><a href="http://template.test/profile/james/"><b>{{$user->username}}</b><div style="color: #6b003e; font-size:12px;  ">{{"\" ".$user->type." \""}}</div></a></h4>
                                                             </div>
                                                         </div><!-- End user-content -->
-                                                        @if( Auth()->user()->id == $user->id )
-                                                            <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">Follow</button>
+                                                        <?php
+                                                            if(App\Models\Follow::where('follows',Auth()->user()->id)->where('followed',$user->id)->count())
+                                                               $follow = "UnFollow";
+                                                            else $follow = "Follow"
+                                                        ?>
+                                                        @if( Auth()->user()->id != $user->id )
+                                                            <a href="{{route('follow',['id'=>$user->id])}}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">{{$follow}}</a>
+                                                        @else
+                                                            <div class="pb-9"></div>
                                                         @endif
-                                                        <div class="clearfix"></div>
+                                                            <div class="clearfix"></div>
                                                     </div><!-- End post-inner -->
                                                 </div><!-- End post -->
                                             </div>

@@ -108,6 +108,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
         ->name('update_question');
     Route::get('/DeleteFile/{id}',[FileController::class,'destroy']
     )->name('delete_file');
+    Route::get('/follow/{id}',[PostController::class,'follow']
+    )->name('follow');
 });
 
 

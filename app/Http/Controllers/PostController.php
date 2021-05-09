@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Follow;
 use App\Models\Post;
 use App\Models\Comment;
 use App\Models\File;
@@ -46,6 +47,17 @@ class PostController extends Controller
             'i'=>2
         ]);
 
+    }
+    public function follow($id)
+    {
+        $test = Follow::where('follows',Auth()->user()->id)->where('followed',$id)->count();
+        if ($test == 0) {
+            Follow::create(['follows' => Auth()->user()->id, 'followed' => $id]);
+        }else
+        {
+            Follow::where('follows',Auth()->user()->id)->where('followed',$id)->first()->delete();
+        }
+        return redirect()->back();
     }
 
     /**
@@ -208,6 +220,8 @@ class PostController extends Controller
     public function userprofile($id){
 
         $user = User::findOrfail($id);
+        $followers = Follow::where('followed',$id)->get();
+        $following = Follow::where('follows',$id)->get();
         $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
         $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
         $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
@@ -221,11 +235,13 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>0]);
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>0,'followers'=>$followers,'following'=>$following]);
     }
     public function userQuestions($id) {
 
         $user = User::findOrfail($id);
+        $followers = Follow::where('followed',$id)->get();
+        $following = Follow::where('follows',$id)->get();
         $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
         $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
         $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
@@ -239,11 +255,13 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>1]);
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>1,'followers'=>$followers,'following'=>$following]);
     }
     public function userbAnswers($id) {
 
         $user = User::findOrfail($id);
+        $followers = Follow::where('followed',$id)->get();
+        $following = Follow::where('follows',$id)->get();
         $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
         $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
         $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
@@ -257,11 +275,13 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>2]);
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>2,'followers'=>$followers,'following'=>$following]);
     }
     public function userServices($id) {
 
         $user = User::findOrfail($id);
+        $followers = Follow::where('followed',$id)->get();
+        $following = Follow::where('follows',$id)->get();
         $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
         $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
         $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
@@ -275,11 +295,13 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>3]);
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>3,'followers'=>$followers,'following'=>$following]);
     }
     public function userExperiences($id) {
 
         $user = User::findOrfail($id);
+        $followers = Follow::where('followed',$id)->get();
+        $following = Follow::where('follows',$id)->get();
         $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
         $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
         $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
@@ -293,6 +315,6 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>4]);
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>4,'followers'=>$followers,'following'=>$following]);
     }
 }

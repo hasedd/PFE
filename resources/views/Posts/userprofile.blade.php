@@ -454,8 +454,8 @@
                             <i class='icon-dot-3'></i>
                             <ul class='question-link-list'><li class='edit-profile-cover'><a href={{route('profile.show')}}><i class='icon-cog'></i>Edit profile</a></li></ul>
                         </div>
-                        <div class='wpqa-cover-buttons wpqa-cover-followers'><i class='icon-users'></i><span class='cover-count follow-cover-count'>0</span>Followers</div>
-                        <div><a class='wpqa-cover-buttons wpqa-cover-questions' href='http://template.test/profile/root/questions/'><i class='icon-book-open'></i><span class='cover-count'>24</span>Questions</a></div>
+                        <div class='wpqa-cover-buttons wpqa-cover-followers'><i class='icon-users'></i><span class='cover-count follow-cover-count'>{{count($followers)}}</span>Followers</div>
+                        <div><a class='wpqa-cover-buttons wpqa-cover-questions' href='{{route('user_questions',[Auth()->user()->id])}}'><i class='icon-book-open'></i><span class='cover-count'>{{$nbr_questions}}</span>Questions</a></div>
 
                     </div>
                 </div>
@@ -700,21 +700,27 @@
 									<ul class="row">
 										<li class="col col6 user-followers">
 											<div>
-												<a href="http://template.test/profile/root/followers/"></a>
 												<h4><i class="icon-users"></i>Followers</h4>
 												<div>
-													<img class="avatar avatar-29 photo" alt="" title="" srcset="http://1.gravatar.com/avatar/a2e75fe335a398d32998724289bcb7c2?s=96&amp;d=mm&amp;r=g 1x, http://1.gravatar.com/avatar/a2e75fe335a398d32998724289bcb7c2?s=96&amp;d=mm&amp;r=g 2x" src="http://1.gravatar.com/avatar/a2e75fe335a398d32998724289bcb7c2?s=96&amp;d=mm&amp;r=g" width="29" height="29">
-													<span>User doesn&#039;t have any followers yet.</span>
-												</div>
+                                                    @forelse($followers as $follower)
+                                                        <?php $user =  App\Models\User::where('id',$follower->follows)->first()?>
+                                                        <a href="{{ route('userprofile',$user->id) }}"><img class="avatar avatar-29 photo" alt="" title="" src="{{$user->profile_photo_url}}" width="29" height="29"></a>
+                                                    @empty
+                                                        <span>User doesn&#039;t have any followers yet.</span>
+												    @endforelse
+                                                </div>
 											</div>
 										</li>
 										<li class="col col6 user-following">
 											<div>
-												<a href="http://template.test/profile/root/following/"></a>
 												<h4><i class="icon-users"></i>Following</h4>
 												<div>
-																			<span>
-											User doesn&#039;t follow anyone.									</span>
+                                                    @forelse($following as $following)
+                                                        <?php $user =  App\Models\User::where('id',$following->followed)->first()?>
+                                                        <a href="{{ route('userprofile',$user->id) }}"><img class="" alt="" title="" src="{{$user->profile_photo_url}}" width="29" height="29"></a>
+                                                    @empty
+														<span>User doesn&#039;t follow anyone.</span>
+                                                    @endforelse
 												</div>
 											</div>
 										</li>
