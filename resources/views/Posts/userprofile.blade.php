@@ -437,11 +437,11 @@
             <div class='cover-opacity'></div>
             <div class='wpqa-cover-inner the-main-container'>
                 <div class='wpqa-cover-content'>
-                    <div class='post-section user-area user-advanced user-cover'>
+                    <div class='user-area user-advanced user-cover'>
                         <div class='post-inner'>
                             <a href="{{ route('userprofile',$user->id) }}">
-                                <button class="mx-5 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
-                                    <img class="h-16 w-15 rounded-full object-cover" src="{{ $user->profile_photo_url }}" alt="{{ $user->username }}" />
+                                <button class="mx-10 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                    <img class="h-16 w-16 rounded-full object-cover" src="{{ $user->profile_photo_url }}" alt="{{ $user->username }}" />
                                 </button>
                             </a>
                             <div class='user-content'>
@@ -478,7 +478,8 @@
 								<div class="clearfix"></div>
 								<div class="wrap-tabs">
 									<div class="menu-tabs">
-										<ul class="menu flex menu-tabs-desktop"> 	<li <?php if($i==0) echo "class='active-tab'"; ?>  >  <a href="{{route('userprofile',[\Illuminate\Support\Facades\Auth::user()->id])}}">
+										<ul class="menu flex menu-tabs-desktop">
+                                            <li <?php if($i==0) echo "class='active-tab'"; ?>  >  <a href="{{route('userprofile',[\Illuminate\Support\Facades\Auth::user()->id])}}">
 													About	</a></li>
 											<li <?php if($i==1) echo "class='active-tab'"; ?> >
 												<a href="{{route('user_questions',[\Illuminate\Support\Facades\Auth::user()->id])}}">

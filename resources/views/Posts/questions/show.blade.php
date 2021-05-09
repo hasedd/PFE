@@ -263,7 +263,7 @@
                                                                         </div><!-- End comment-meta -->
                                                                     </div><!-- End author -->
                                                                     <div class="text">
-                                                                        <div itemprop='text'>
+                                                                        <div itemprop='text' style="color : #0a0c0d ; font-size: 18px; font-family: Candara">
                                                                             {!! $comment->Content !!}
                                                                         </div>
                                                                         @if($comment->file != null)
@@ -374,7 +374,7 @@
                                                                                 </div><!-- End author -->
                                                                                 <div class="text">
                                                                                     <div itemprop="text">
-                                                                                        <p>{{"@".$reply->comment->user->username." ".$reply->Content}}</p>
+                                                                                        {{"@".$reply->comment->user->username." ".$reply->Content}}
                                                                                     </div>
                                                                                     <div class="wpqa_error"></div>
                                                                                     <ul class="comment-reply comment-reply-main">

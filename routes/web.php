@@ -21,8 +21,6 @@ Route::get('/welcome', function () {
     return view('welcome');
 })->name('welcome');
 
-
-
 Route::get('/', function () {
     return view('homepage');
 })->name('homepage');
@@ -35,11 +33,11 @@ Route::get('/about', function () {
     return view('About_us');
 })->name('about');
 
-
-
 Route::MATCH('POST','/register/next', function () {
     return view('auth.register2');
 })->name('register2');
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
@@ -47,6 +45,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
         return view('dashboard');
     })->name('dashboard');
 
+    Route::get('/users', [PostController::class,'users']
+    )->name('users');
     Route::get('/posts', [PostController::class,'indexox']
     )->name('postsBody');
     Route::get('/Questions', [PostController::class,'index']

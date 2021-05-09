@@ -27,6 +27,7 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input)
     {
+        $tp='Expert';
         if ($input['type']=='Student'|| $input['type']=='Teacher'  ) {
             Validator::make($input, [
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -53,6 +54,7 @@ class CreateNewUser implements CreatesNewUsers
             }
             else
                 $type = Student::where('email',$input['email'])->first();
+                $tp = 'Student';
         }
         else if ($input['type']=='Teacher'){
             if(!strpos("@uiz.ac.ma",$input['email']))
@@ -66,16 +68,17 @@ class CreateNewUser implements CreatesNewUsers
             }
             else
                 $type = Teacher::where('email',$input['email'])->first();
+            $tp = 'Teacher';
         }
         else if ($input['type']=='Other'){
             $type=Other::where('email',$input['email'])->first();
-            $type->user()->create(['username'=>$type->lastName.".".$type->firstName,'name'=>$type->firstName,'email'=>$type->email,'password'=>Hash::make($input['password'])]);
+            $type->user()->create(['username'=>$type->lastName.".".$type->firstName,'name'=>$type->firstName,'type'=>'Expert','email'=>$type->email,'password'=>Hash::make($input['password'])]);
             return $type->user;
         }
         else $type=null;
         if ($type!=null){
 
-            $type->user()->create(['username'=>$type->lastName.".".$type->firstName,'name'=>$type->firstName,'email'=>$type->email,'password'=>Hash::make($input['password'])]);
+            $type->user()->create(['username'=>$type->lastName.".".$type->firstName,'name'=>$type->firstName,'type'=>$tp,'email'=>$type->email,'password'=>Hash::make($input['password'])]);
             return $type->user;
         }else {
             $message = __('No '.$input['type'].' with this email');

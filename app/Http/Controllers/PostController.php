@@ -38,6 +38,15 @@ class PostController extends Controller
         ]);
 
     }
+    public function users()
+    {
+        $users = User::orderBy('name','desc')->get();
+        return view('Posts.users', [
+            'categories' => Category::all(), 'users' => $users,
+            'i'=>2
+        ]);
+
+    }
 
     /**
      * Show the form for creating a new resource.

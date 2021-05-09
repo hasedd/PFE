@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->morphs('useable');
             $table->string('username');
+            $table->enum('type',['Expert','Student','Teacher'])->nullable();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
