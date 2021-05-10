@@ -46,17 +46,21 @@ class CommentController extends Controller
         $comment->Content=$request->input('comment');
         $comment->save();
 
-        if (isset($_FILES)  && !empty($_FILES['file']['name']))
-        {
-            $comment->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
-            $filname = $comment->id . $comment->file->id. $_FILES['file']['name'];
-            move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
+        $nbr_files=count($_FILES['file']['type']);
+        if($nbr_files > 0) {
+            for($i=0;$i<$nbr_files;$i++) {
+                if (isset($_FILES) && !empty($_FILES['file']['name'][$i])) {
+                    $_FILES['file']['name'][$i] = str_replace(' ', '_', $_FILES['file']['name'][$i]);
+                    $comment->files()->create(['name' => $_FILES['file']['name'][$i], 'type' => $_FILES['file']['type'][$i], 'size' => $_FILES['file']['size'][$i]]);
+                    $filname = $comment->id . $_FILES['file']['name'][$i];
+                    move_uploaded_file($_FILES['file']['tmp_name'][$i], base_path('/public/files/') . $filname);
+                }
+            }
         }
-
         Auth()->user()->points += 1;
         Auth()->user()->save();
 
-        return redirect()->route('Show_Question',[$comment->post->id]);
+        return redirect()->back();
 
     }
 
@@ -111,7 +115,7 @@ class CommentController extends Controller
             $comment->file->delete();
         $post_id=$comment->post->id ;
         $comment->delete();
-        return  redirect()->route('Show_Question',[$post_id]);
+        return  redirect()->back();
 
     }
     public function select_best_answer($id){

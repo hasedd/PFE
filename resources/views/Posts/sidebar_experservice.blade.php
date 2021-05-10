@@ -6,27 +6,27 @@
     <h3 class="screen-reader-text">Sidebar</h3>
     <div class="inner-sidebar">
         <div class="widget widget_ask">
-            <a target="_self" href="http://template.test/add-question/" class="button-default wpqa-question">Ask A Question</a>
+            <a target="_self" href="http://template.test/add-question/" class="button-default wpqa-question">Share Experience & Service</a>
         </div>
         <section id="stats-widget-7" class="widget-no-divider widget stats-widget"><h3 class='screen-reader-text'>Stats</h3>
             <div class="widget-wrap">
                 <ul class="stats-inner">
                     <li class="stats-questions">
                         <div>
-                            <span class="stats-text">Questions</span>
-                            <span class="stats-value"><?php $nbr=\App\Models\Post::where('type','Question')->count(); echo $nbr;?></span>
+                            <span class="stats-text">Experiences</span>
+                            <span class="stats-value"><?php $nbr=\App\Models\Post::where('type','Experience')->count(); echo $nbr;?></span>
                         </div>
                     </li>
                     <li class="stats-answers">
                         <div>
-                            <span class="stats-text">Answers</span>
-                            <span class="stats-value"><?php $nbr=0;  $posts=\App\Models\Post::where('type','Question')->get(); foreach ($posts as $post) $nbr+=$post->comments->count(); echo $nbr ;?></span>
+                            <span class="stats-text">Services</span>
+                            <span class="stats-value"><?php $nbr=\App\Models\Post::where('type','Services')->count(); echo $nbr;?></span>
                         </div>
                     </li>
                     <li class="stats-best_answers">
                         <div>
-                            <span class="stats-text">Best Answers</span>
-                            <span class="stats-value"><?php $nbr=\App\Models\Post::where('state','Close')->count(); echo $nbr;?></span>
+                            <span class="stats-text">Comments</span>
+                            <span class="stats-value"><?php $nbr=0;  $posts=\App\Models\Post::where('type','Service')->orWhere('type','Experience')->get(); foreach ($posts as $post) $nbr+=$post->comments->count(); echo $nbr ;?></span>
                         </div>
                     </li>
                     <li class="stats-users">
@@ -41,8 +41,8 @@
         <div class='widget tabs-wrap widget-tabs'>
             <div class="widget-title widget-title-tabs">
                 <ul class="tabs tabstabs-widget-4">
-                    <li class="tab"><a href="#">Popular</a></li>
-                    <li class="tab current"><a href="#">Answers</a></li>
+                    <li class="tab"><a href="#">Popular Ser</a></li>
+                    <li class="tab current"><a href="#">Popular Exp</a></li>
 
                 </ul>
                 <div class="clearfix"></div>
@@ -54,7 +54,7 @@
 
                                 <?php
 
-                                $posts = \App\Models\Post::where('type','Question')->orderBy('votes','desc')->take(3)->get();
+                                $posts = \App\Models\Post::where('type','Service')->orderBy('votes','desc')->take(3)->get();
                                 foreach( $posts as $post  ) {
                                     $html = $post->content ;
                                     preg_match('<(.*)>', $html, $match);
@@ -66,7 +66,7 @@
                                     $route=route('Show_Question',[$post->id]);
                                     $answers=$post->comments->count();
 
-                                    echo "<li class='widget-posts-text widget-no-img'><span class='span-icon'><a href=$route><img class='avatar avatar-20 photo' alt='root' title='root' width='20' height='20' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></a></span><div><h3><a href=$route  title='How to approach applying for a job at a company owned by a friend?' rel='bookmark'>$allez2</a></h3><ul class='widget-post-meta'><li><a class='post-meta-comment' href=$route ><i class='icon-comment'></i>$answers Answers</a></li></ul></div>";
+                                    echo "<li class='widget-posts-text widget-no-img'><span class='span-icon'><a href=$route><img class='avatar avatar-20 photo' alt='root' title='root' width='20' height='20' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></a></span><div><h3><a href=$route  title='How to approach applying for a job at a company owned by a friend?' rel='bookmark'>$allez2</a></h3><ul class='widget-post-meta'><li><a class='post-meta-comment' href=$route ><i class='icon-comment'></i>$answers Comments</a></li></ul></div>";
                                 }
                                 ?>
 
@@ -74,32 +74,26 @@
                     </div></div><div class='tab-inner-wrap tab-inner-wraptabs-widget-4'>		<div class="user-notifications user-profile-area">
                         <div>
                             <ul>
-                                <li>
-															<span class="span-icon">
-									<img class='avatar avatar-25 photo' alt='Martin Hope' title='Martin Hope' width='25' height='25' srcset='http://0.gravatar.com/avatar/cd684380902071de157a7354f605e411?s=96&d=mm&r=g 1x, http://0.gravatar.com/avatar/cd684380902071de157a7354f605e411?s=96&d=mm&r=g 2x' src='http://0.gravatar.com/avatar/cd684380902071de157a7354f605e411?s=96&d=mm&r=g'>								</span>
-                                    <div>
-                                        Martin Hope added an answer <span class="question-title"><a href="http://template.test/question/why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/#comment-72">They might be as confused as to why you keep&hellip;</a></span>
-                                        <span class="notifications-date">April 19, 2018 at 2:07 am</span>
-                                    </div>
-                                </li>
-                                <li>
-															<span class="span-icon">
-									<img class='avatar avatar-25 photo' alt='Marko Smith' title='Marko Smith' width='25' height='25' srcset='http://1.gravatar.com/avatar/14d56909719579f79b7caf5588b506c3?s=96&d=mm&r=g 1x, http://1.gravatar.com/avatar/14d56909719579f79b7caf5588b506c3?s=96&d=mm&r=g 2x' src='http://1.gravatar.com/avatar/14d56909719579f79b7caf5588b506c3?s=96&d=mm&r=g'>								</span>
-                                    <div>
-                                        Marko Smith added an answer <span class="question-title"><a href="http://template.test/question/why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/#comment-71">I have never heard a British person EVER call a&hellip;</a></span>
-                                        <span class="notifications-date">April 19, 2018 at 2:07 am</span>
-                                    </div>
-                                </li>
-                                <li>
-															<span class="span-icon">
-									<img class='avatar avatar-25 photo' alt='Barry Carter' title='Barry Carter' width='25' height='25' srcset='http://0.gravatar.com/avatar/31e9281c4993509a092dfbf5fe843321?s=96&d=mm&r=g 1x, http://0.gravatar.com/avatar/31e9281c4993509a092dfbf5fe843321?s=96&d=mm&r=g 2x' src='http://0.gravatar.com/avatar/31e9281c4993509a092dfbf5fe843321?s=96&d=mm&r=g'>								</span>
-                                    <div>
-                                        Barry Carter added an answer <span class="question-title"><a href="http://template.test/question/why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/#comment-70">Calling a bread roll a “biscuit” really takes the biscuit.&hellip;</a></span>
-                                        <span class="notifications-date">April 19, 2018 at 2:07 am</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+
+                                <?php
+
+                                $posts = \App\Models\Post::where('type','Experience')->orderBy('votes','desc')->take(3)->get();
+                                foreach( $posts as $post  ) {
+                                    $html = $post->content ;
+                                    preg_match('<(.*)>', $html, $match);
+                                    $allez=$match[0];
+                                    if(strlen($allez) < 50 )
+                                        $allez2=$allez;
+                                    else
+                                        $allez2=substr($allez,0,50)."...";
+                                    $route=route('Show_Question',[$post->id]);
+                                    $answers=$post->comments->count();
+
+                                    echo "<li class='widget-posts-text widget-no-img'><span class='span-icon'><a href=$route><img class='avatar avatar-20 photo' alt='root' title='root' width='20' height='20' srcset='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 1x, http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g 2x' src='http://2.gravatar.com/avatar/eec3a616e54e25bb4c28e3f7d9380092?s=96&d=mm&r=g'></a></span><div><h3><a href=$route  title='How to approach applying for a job at a company owned by a friend?' rel='bookmark'>$allez2</a></h3><ul class='widget-post-meta'><li><a class='post-meta-comment' href=$route ><i class='icon-comment'></i>$answers  Comments</a></li></ul></div>";
+                                }
+                                ?>
+
+                            </ul></div>
                     </div>
                 </div>					<script type='text/javascript'>
                     jQuery(document).ready(function(){
@@ -112,7 +106,7 @@
             <?php
 
             use App\Models\Post;
-            $posts=Post::select('tags')->where('type','Question')->groupBy('tags')->get();
+            $posts=Post::select('tags')->where('type','Service')->orWhere('type','Experience')->groupBy('tags')->get();
             foreach ($posts as $post) {
                 $tags =explode ( "," , $post->tags );
                 foreach($tags as $tag)

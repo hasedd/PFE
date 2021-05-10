@@ -20,13 +20,13 @@ class ReplyController extends Controller
         $reply->save();
         $comment=Comment::find($comment_id);
         $id=$comment->post->id;
-        return redirect()->route('Show_Question',[$id]);
+        return redirect()->back();
     }
     public function destroy($id) {
         $reply=Reply::find($id);
         $id=$reply->comment->post->id;
         $reply->delete();
-        return redirect()->route('Show_Question',[$id]);
+        return redirect()->back();
 
     }
 

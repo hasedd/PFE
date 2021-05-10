@@ -16,172 +16,111 @@
 							<span itemscope itemtype="https://schema.org/BreadcrumbList">
 								<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 
-                                    <meta itemprop="position" content="2"><a itemprop="item" href="{{route('QuestionBody')}}" title="Questions"><span itemprop="name">Questions</span></a></span><span class="crumbs-span">/</span><span class="current">Q {{$post->id}}</span></span>
+                                    <meta itemprop="position" content="2"><a itemprop="item" href="{{route('postsBody')}}" title="Questions"><span itemprop="name">Posts</span></a></span><span class="crumbs-span">/</span><span class="current">Post {{$post->id}}</span></span>
 						            </span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">									<div class="question-navigation">
-                                        <a class="nav-next" href="../why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/index.html">Next<i class="icon-right-open"></i></a>
-                                        <a class="nav-previous" href="../is-there-an-english-equivalent-to-the-french-expression-il-faut-dabord-apprendre-a-marcher-avant-de-courir/index.html"><i class="icon-left-open"></i></a>
+
                                     </div><!-- End page-navigation -->
                                     <div class="question-stats">
-                                        <span class="question-stats-process"><i class="icon-flash"></i>In Process</span>
+                                        <span class="question-stats-process"><i class="icon-flash"></i>{{$post->type}}</span>
                                     </div><!-- End question-stats -->
                                     <div class="clearfix"></div>
                                 </div><!-- End breadcrumb-right --></div><!-- End breadcrumbs-wrap --></div><!-- End breadcrumbs -->						<div class="clearfix"></div>		<div class="post-articles question-articles">
                             <article id="post-118" class="article-question article-post clearfix question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                                <div class="question-sticky-ribbon"><div>{{$post->state}}</div></div>
-                                <div class="single-inner-content">
-                                    <div class="question-inner">
-                                        <div class="question-image-vote">
-                                            <div class="author-image author-image-42">
-                                                <a href="{{ route('userprofile',$post->user->id) }}">
-                                                    <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
-                                                        <img class="h-10 w-10 rounded-full object-cover" src="{{ $post->user->profile_photo_url }}" alt="{{ $post->user->username }}" />
-                                                    </button>
-                                                </a>
-                                                <div class="author-image-pop-2">
-                                                    <div class="post-section user-area user-area-columns_pop">
-                                                        <div class="post-inner">
-                                                            <div class="author-image author-image-70">
-                                                                <a href="{{route('userprofile',[$post->user->id])}}">
-                                                                    <span>
-                                                                        <img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}">
-                                                                    </span>
-                                                                </a>
-                                                            </div>
-                                                            <div class="user-content">
-                                                                <div class="user-inner">
-                                                                    <div class="user-data-columns">
-                                                                        <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
-                                                                    </div>
-                                                                </div>
-                                                            </div><!-- End user-content -->
-                                                            <div class="user-columns-data">
-                                                                <ul>
-                                                                    <li class="user-columns-questions">
-                                                                        <a href="{{route('user_questions',[$post->user->id])}}">
-                                                                            <i class="icon-book-open"></i>{{ count($post->user->posts) }} Questions
-                                                                        </a>
-                                                                    </li>
-
-                                                                    <li class="user-columns-best-answers">
-                                                                        <a href="{{route('user_bAnswers',[$post->user->id])}}">
-                                                                            <i class="icon-graduation-cap"></i>{{ count($post->user->comments->where('isBestAnswer',true)) }} Best Answers
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="user-columns-points">
-                                                                        <a href="{{route('userprofile',[$post->user->id])}}">
-                                                                            <i class="icon-bucket"></i>{{$post->user->points}} Points
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div><!-- End user-columns-data -->
-                                                            <div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                        </div><!-- End post-inner -->
-                                                    </div><!-- End post -->
-                                                </div>
+                                <article id="post-46" class="article-post article-post-only clearfix post-46 post type-post status-publish format-standard has-post-thumbnail hentry category-work">
+                                    <div class="single-inner-content">
+                                        <header class="article-header">
+                                            <div class="post-meta" style="text-align: center">
+                                                        <span class="post-date">On:<span class="date-separator"></span>
+                                                            <time class="entry-date published">{{$post->created_at}}</time>
+                                                        </span>
+                                                <span class="byline">
+                                                            <span class="post-cat">Posted in <a href="" rel="category tag">{{$post->category->name}}</a></span>
+                                                        </span>
+                                                <span class="post-comment">
+					                                            Comments: <a href="{{route('addview',[$post->id])}}"><?php echo $post->comments->count() ?></a>
+                                                        </span>
+                                                <span class="post-views">Views: {{ $post->views }} </span>
                                             </div>
-                                            <ul class="question-vote question-mobile">
-                                                <li class="question-vote-up"><a href="#" id="question_vote_up-118" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                <li class="vote_result" itemprop="upvoteCount">2</li>
-                                                <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                <li class="question-vote-down"><a href="#" id="question_vote_down-118" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                            </ul>
-                                        </div><!-- End question-image-vote -->
-                                        <div class="question-content question-content-first">
-                                            <header class="article-header">
-                                                <div class="question-header">
-                                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="{{ route('userprofile',$post->user->id) }}"><span itemprop="name">{{$post->user->useable->firstName}}</span></a></span>
-                                                    <div class="post-meta">
-                                                        <span class="post-date">Asked:<span class="date-separator"></span> <a href="index.html" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a><span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span>
-                                                        <span class="discy_hide" itemprop="datePublished" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span></span><span class="byline"><span class="post-cat">In: <a href="../../question-category/language/index.html" rel="tag">{{$post->category->name}}</a></span></span>
+
+                                            <center><div itemprop="name">
+                                               <h1 class="post-title">{{$post->title}}</h1>							</div></center>
+                                            <div style="text-align: center;">
+                                                <a class="post-author"  rel="author" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->name}}</a>
+                                            </div>
+
+                                            @if($post->files != null)
+                                                @foreach($post->files as $file)
+                                                    <div class='featured_image_question'>
+
+                                                        <embed alt="{{$file->name}} " width='500' height='500' src="{{asset('files/'. $post->id . $file->name)}}">
+
                                                     </div>
+                                                @endforeach
+                                            @endif
+
+
+
+
+                                        </header>
+
+                                        <div class="post-wrap-content post-content ">
+                                            <div class="post-content-text">
+
+                                                <div class="all_not_signle_post_content">
+                                                    {!! $post->content !!}
                                                 </div>
-                                            </header>
-                                            <div itemprop="name">
-                                                <h1 class="post-title">{{$post->title}}</h1>							</div>
-                                        </div><!-- End question-content-first -->
-                                        <div class="question-not-mobile question-image-vote question-vote-sticky">
+
+                                            </div>
+
                                             @livewire('voteit',['post_id'=>$post->id,'var'=>0])
-                                            <!-- End question-sticky -->
-                                        </div><!-- End question-image-vote -->
-                                        <div class="question-content question-content-second">
-                                            <div class="wpqa_error"></div>
-                                            <div class="wpqa_success"></div>
-                                            <div class="post-wrap-content">
-                                                <div class="question-content-text">
-                                                    <div class='all_signle_post_content'>
-                                                        {!! $post->content !!}
+                                        </div>
+                                        <div class="tagcloud">
+                                            <div class="question-tags"><i class="icon-tags"></i>
+                                                <?php
+                                                $tags =explode ( "," , $post->tags );
+                                                foreach($tags as $tag)
+                                                    echo "<a href=\"#\">$tag</a>"
+                                                ?>
+                                            </div>
+                                        </div>
 
-                                                        @if($post->files != null)
-                                                            @foreach($post->files as $file)
-                                                            <div class='featured_image_question'>
+                                        <footer>
+                                            <div style="text-align: center">
+                                                <?php
+                                                if(\Illuminate\Support\Facades\Auth::user()->id != $post->user->id )
+                                                    echo  "<a class='report_q' href='index.html'><i class='icon-attention'></i>Report</a>" ;
+                                                else {
+                                                    $editroute=route('edit_post',[$post->id]);
+                                                    $deleteroute=route('delete_post',[$post->id]);
+                                                    $edit="<a class='post-read-more' href=$editroute ><i class='icon-pencil'></i> Edit</a>";
+                                                    $delete="<a class='post-read-more' href=$deleteroute data-method='delete'/><i class='icon-trash'></i> Delete</a>";
+                                                    echo $edit.$delete;
+                                                }
 
-                                                                    <embed alt="{{$file->name}} " width='500' height='500' src="{{asset('files/'. $post->id . $file->name)}}">
-
-                                                            </div>
-                                                            @endforeach
-                                                        @endif
-                                                        <div class="clearfix"></div>
-                                                    </div><!-- End all_signle_post_content -->								</div>
-                                                <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i>
-                                                        <?php
-                                                        $tags =explode ( "," , $post->tags );
-                                                        foreach($tags as $tag)
-                                                            echo "<a href=\"#\">$tag</a>"
-                                                        ?>
-                                                    </div></div>							</div>
-                                            <footer class="question-footer">
-                                                <ul class="footer-meta">
-                                                    <li class="best-answer-meta"><a href="index.html#comments"><i class="icon-comment"></i><span itemprop="answerCount" class='number discy_hide'>4</span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
-                                                    <li class="view-stats-meta"><i class="icon-eye"></i>{{$post->views}} <span class='question-span'>Views</span></li>
-                                                    <li class="question-followers question-followers-no-link">
-                                                        <i class="icon-users"></i>
-                                                        <span>4</span> Followers											</li>
-                                                    <li class="question-favorites question-favorites-no-link">
-                                                        <div class="small_loader loader_2"></div>
-                                                        <i class="icon-star"></i>
-                                                        <span>4</span>
-                                                    </li>
-                                                </ul>
-                                                <a class="meta-answer meta-answer-a" href="javascript:void(0)">Answer</a>
-                                            </footer>
-                                        </div><!-- End question-content-second -->
-                                        <div class="clearfix"></div>
-                                    </div><!-- End question-inner -->
-                                    <div class="question-bottom">
-                                        <div class="post-share">
-                                            <span><i class="icon-share"></i><span>Share</span></span>
-                                            <ul>
-                                                <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F&amp;t=Is+this+statement%2C+%E2%80%9Ci+see+him+last+night%E2%80%9D+can+be+understood+as+%E2%80%9CI+saw+him+last+night%E2%80%9D%3F"><i class="icon-facebook"></i></a></li>
-                                                <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Is+this+statement%2C+%E2%80%9Ci+see+him+last+night%E2%80%9D+can+be+understood+as+%E2%80%9CI+saw+him+last+night%E2%80%9D%3F&amp;url=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F"><i class="icon-twitter"></i></a></li>
-                                                <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F&amp;title=Is+this+statement%2C+%E2%80%9Ci+see+him+last+night%E2%80%9D+can+be+understood+as+%E2%80%9CI+saw+him+last+night%E2%80%9D%3F"><i class="icon-linkedin"></i></a></li>
-                                                <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Is+this+statement%2C+%E2%80%9Ci+see+him+last+night%E2%80%9D+can+be+understood+as+%E2%80%9CI+saw+him+last+night%E2%80%9D%3F%20-%20http%3A%2F%2Ftemplate.test%2Fquestion%2Fis-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night%2F"><i class="fab fa-whatsapp"></i></a></li>
-                                            </ul>
-                                        </div><!-- End post-share -->
-                                        <ul class="question-link-list">
-                                            <?php
-                                            if(\Illuminate\Support\Facades\Auth::user()->id != $post->user->id )
-                                                echo  "<li class='report_activated'><a class='report_q' href='index.html'><i class='icon-attention'></i>Report</a></li>" ;
-                                            else {
-                                                $editroute=route('edit_post',[$post->id]);
-                                                $edit="<li><a href=$editroute ><i class='icon-pencil'></i>Edit</a></li>";
-                                                $deleteroute=route('delete_post',[$post->id]);
-
-                                                $delete="<li><a class='question-delete' href=$deleteroute data-method='delete'/><i class='icon-trash'></i>Delete</a></li>";
-                                                echo $edit.$delete ;
-                                            }
+                                                ?>
 
 
+                                                <div class="post-share">
+                                                    <span><i class="icon-share"></i><span>Share This Article</span></span>
+                                                    <ul>
+                                                        <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;t=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-facebook"></i><span>Facebook</span></a></li>
+                                                        <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="icon-twitter"></i></a></li>
+                                                        <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;title=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-linkedin"></i></a></li>
+                                                        <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21 - http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="fab fa-whatsapp"></i></a></li>
+                                                    </ul>
+                                                </div><!-- End post-share -->
 
+                                            </div>
+                                        </footer>
 
-
-                                            ?></ul> 							<div class="clearfix"></div>
-                                    </div><!-- End question-bottom -->
-                                </div><!-- End single-inner-content -->
+                                    </div><!-- End single-inner-content -->
+                                </article><!-- End article -->
+                                <!-- End single-inner-content -->
                                 <div class="question-adv-comments question-has-comments">
                                     <div id="comments" class="post-section">
                                         <div class="post-inner">
                                             <div class="answers-tabs">
-                                                <h3 class="section-title"><span>{{count($post->comments)}} Answers</span></h3>
+                                                <h3 class="section-title"><span>{{count($post->comments)}} Comments</span></h3>
                                                 <div class="answers-tabs-inner">
 
                                                 </div><!-- End answers-tabs-inner -->
@@ -227,7 +166,7 @@
                                                                                             </li>
 
                                                                                             <li class="user-columns-best-answers">
-                                                                                                <a href="{{route('user_bAnswers',[$comment->user->id])}}">
+                                                                                                <a href="{{route('user_questions',[$comment->user->id])}}">
                                                                                                     <i class="icon-graduation-cap"></i>{{ count($comment->user->comments->where('isBestAnswer',true)) }} Best Answers
                                                                                                 </a>
                                                                                             </li>
@@ -246,7 +185,7 @@
 
                                                                     <div class="author clearfix">
                                                                         @if($comment->isBestAnswer == 1)
-                                                                            <div class="best-answer">Best answer</div>
+                                                                            <div class="best-answer">Best Comment</div>
                                                                         @endif
                                                                         <div class="comment-meta">
                                                                             <div class="comment-author">
@@ -255,7 +194,7 @@
                                                                                 </span>
                                                                             </div>
                                                                             <a href="index.html#comment-64" class="comment-date" itemprop='url'>
-                                                                                <span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:52+00:00">2018-04-19T02:00:52+00:00</span>Added an answer on {{$comment->created_at}}</span>
+                                                                                <span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:52+00:00">2018-04-19T02:00:52+00:00</span>Added a post on {{$comment->created_at}}</span>
                                                                             </a>
                                                                         </div><!-- End comment-meta -->
                                                                     </div><!-- End author -->
@@ -263,15 +202,15 @@
                                                                         <div itemprop='text' style="color : #0a0c0d ; font-size: 18px; font-family: Candara">
                                                                             {!! $comment->Content !!}
                                                                         </div>
-                                                                               @if($comment->files != null)
-                                                                               @foreach($comment->files as $file)
+                                                                        @if($comment->files != null)
+                                                                            @foreach($comment->files as $file)
                                                                                 <div class='featured_image_question'>
 
                                                                                     <embed alt="{{$file->name}} " width='300' height='300' src="{{asset('files/'. $comment->id . $file->name)}}">
 
                                                                                 </div>
                                                                             @endforeach
-                                                                                @endif
+                                                                        @endif
                                                                         <div class="clearfix"></div>
                                                                         <div class="clearfix"></div>
                                                                         <div class="wpqa_error"></div>
@@ -301,14 +240,14 @@
                                                                                 @if($comment->isBestAnswer == 0 && $bestAnswer == null)
                                                                                     <li>
                                                                                         <a class="best_answer_a" data-nonce="83eb375ef7" href="{{route('select_b_a',[$comment->id])}}" title="Select as best answer">
-                                                                                            <i class="icon-check"></i>Select as best answer
+                                                                                            <i class="icon-check"></i>Select as best comment
                                                                                         </a>
                                                                                     </li>
                                                                                 @endif
                                                                                 @if( $bestAnswer != null &&  $comment->id == $bestAnswer->id )
                                                                                     <li>
                                                                                         <a class="best_answer_re" data-nonce="83eb375ef7" href="{{route('cancel_b_a',[$comment->id])}}" title="Cancel the best answer">
-                                                                                            <i class="icon-cancel"></i>Cancel the best answer
+                                                                                            <i class="icon-cancel"></i>Cancel the best post
                                                                                         </a>
                                                                                     </li>
                                                                                 @endif
@@ -365,7 +304,7 @@
                                                                                             <div class="question-header">
                                                                                                 <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="{{ route('userprofile',$reply->user->id) }}"><span itemprop="name">{{$reply->user->username}}</span></a></span>
                                                                                                 <div class="post-meta">
-                                                                                                    <span class="discy_hide" itemprop="dateCreated" datetime="2021-05-06T02:50:48+00:00">2021-05-06T02:50:48+00:00</span>Replied to answer on {{$reply->created_at}}
+                                                                                                    <span class="discy_hide" itemprop="dateCreated" datetime="2021-05-06T02:50:48+00:00">2021-05-06T02:50:48+00:00</span>Replied to post on {{$reply->created_at}}
                                                                                                 </div>
                                                                                             </div>
                                                                                         </header>
@@ -404,7 +343,7 @@
                                     </div><!-- End post -->
 
                                     <div id="respond-all">	<div id="respond" class="comment-respond">
-                                            <div class="button-default show-answer-form">Leave  an answer</div><h3 class="section-title comment-form-hide">Leave an answer<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></div></h3><form action="{{route('comments_form',[$post->id])}}" method="post" id="commentform" class="post-section comment-form comment-form-hide answers-form" enctype="multipart/form-data" novalidate><div class="wpqa_form">
+                                            <div class="button-default show-answer-form">Leave  a Comment</div><h3 class="section-title comment-form-hide">Leave a comment<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></div></h3><form action="{{route('comments_form',[$post->id])}}" method="post" id="commentform" class="post-section comment-form comment-form-hide answers-form" enctype="multipart/form-data" novalidate><div class="wpqa_form">
                                                     @csrf
                                                     <label for="featured_image">Featured file</label>
                                                     <div class="fileinputs">
@@ -441,7 +380,7 @@
 
 
                     <!--             ----------------------SideBar---------------------         -->
-                @include('Posts.sidebar')
+                 @include('Posts.sidebar_experservice')
                 <!-- End sidebar -->
                 </main><!-- End discy-site-content -->
 
