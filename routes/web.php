@@ -49,8 +49,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     )->name('users');
     Route::get('/posts', [PostController::class,'indexox']
     )->name('postsBody');
+    Route::get('/posts/professors', [PostController::class,'indexProfessorP']
+    )->name('postsProfessors');
     Route::get('/Questions', [PostController::class,'index']
     )->name('QuestionBody');
+    Route::get('/Questions/professors', [PostController::class,'indexProfessorQ']
+    )->name('QuestionProfessors');
     Route::get('/Questions/{id}', [PostController::class,'show']
     )->name('Show_Question');
 
@@ -59,8 +63,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::POST('/Questions/add',[PostController::class,'store'])
         ->name('Add_Question');
+    Route::POST('/Questions/add/private',[PostController::class,'storeinprivate'])
+        ->name('Add_privateQuestion');
     Route::POST('/Post/add',[PostController::class,'storePost'])
         ->name('Add_Post');
+    Route::POST('/Post/add/private',[PostController::class,'storePostinprivate'])
+        ->name('Add_privatePost');
     Route::get('/add_view/{post_id}', [PostController::class,'addview']
     )->name('addview');
     Route::get('/Questions$Posts/{id}/edit', [PostController::class,'edit']
@@ -89,28 +97,48 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
 
     Route::get('/AnsweredQuestions', [PostController::class,'Answered']
     )->name('answered');
+    Route::get('/AnsweredQuestions/professors', [PostController::class,'AnsweredPrivate']
+    )->name('answered_p');
 
     Route::get('/NotAnsweredQuestions', [PostController::class,'NAnswered']
     )->name('Not_answered');
+    Route::get('/NotAnsweredQuestions/private', [PostController::class,'NAnsweredPrivate']
+    )->name('Not_answered_p');
 
     Route::get('/mostVisitedQuestions', [PostController::class,'MostVisited']
     )->name('Most_visited');
 
+    Route::get('/mostVisitedQuestions/professors', [PostController::class,'MostVisitedPrivate']
+    )->name('Most_visited_p');
+
     Route::get('/mostVisitedPosts', [PostController::class,'MostVisited1']
     )->name('VisitedPosts');
 
+    Route::get('/mostVisitedPosts/professors', [PostController::class,'MostVisited1Private']
+    )->name('VisitedPosts_p');
+
+
+
     Route::get('/mostVotedQuestions', [PostController::class,'MVoted']
     )->name('Most_Voted');
+    Route::get('/mostVotedQuestions/professors', [PostController::class,'MVotedPrivate']
+    )->name('Most_Voted_p');
 
     Route::get('/mostVotedPosts', [PostController::class,'MVoted1']
     )->name('VotedPosts');
+    Route::get('/mostVotedPosts/professors', [PostController::class,'MVoted1Private']
+    )->name('VotedPosts_p');
 
     Route::get('/Experiences', [PostController::class,'Experiences']
     )->name('experiences');
+    Route::get('/Experiences/professors', [PostController::class,'ExperiencesPrivate']
+    )->name('experiences_p');
 
     Route::get('/Services', [PostController::class,'Services']
     )->name('services');
 
+    Route::get('/Services/professors', [PostController::class,'ServicesPrivate']
+    )->name('services_p');
 
     Route::get('/best_answer_selected/{id}',[CommentController::class,'select_best_answer']
     )->name('select_b_a');
