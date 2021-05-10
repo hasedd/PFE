@@ -110,11 +110,16 @@ class PostController extends Controller
         $post->content = $request->input('content');
         $post->tags = $request->input('tags');
         $post->save();
-        if (isset($_FILES) && !empty($_FILES['file']['name'])) {
-            $_FILES['file']['name']=str_replace(' ','_',$_FILES['file']['name']) ;
-            $post->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
-            $filname = $post->id . $post->file->id. $_FILES['file']['name'];
-            move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
+        $nbr_files=count($_FILES['file']['type']);
+        if($nbr_files > 0) {
+            for($i=0;$i<$nbr_files;$i++) {
+                if (isset($_FILES) && !empty($_FILES['file']['name'][$i])) {
+                    $_FILES['file']['name'][$i] = str_replace(' ', '_', $_FILES['file']['name'][$i]);
+                    $post->files()->create(['name' => $_FILES['file']['name'][$i], 'type' => $_FILES['file']['type'][$i], 'size' => $_FILES['file']['size'][$i]]);
+                    $filname = $post->id . $_FILES['file']['name'][$i];
+                    move_uploaded_file($_FILES['file']['tmp_name'][$i], base_path('/public/files/') . $filname);
+                }
+            }
         }
 
         Auth()->user()->points += 5;
@@ -247,8 +252,9 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post=Post::find($id);
-        if($post->type!='Question');
+        if($post->type!='Question')
         $post->type=$request->input('type');
+        else $post->type='Question';
         $categ=$request->input('category');
 
         $cat = Category::where('name', $categ)->firstOrFail();
@@ -260,11 +266,16 @@ class PostController extends Controller
 
 
         $post->save();
-        if (isset($_FILES) && !empty($_FILES['file']['name']))  {
-            $_FILES['file']['name']=str_replace(' ','_',$_FILES['file']['name']) ;
-            $post->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
-            $filname = $post->id . $post->file->id. $_FILES['file']['name'];
-            move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
+        $nbr_files=count($_FILES['file']['type']);
+        if($nbr_files > 0) {
+            for($i=0;$i<$nbr_files;$i++) {
+                if (isset($_FILES) && !empty($_FILES['file']['name'][$i])) {
+                    $_FILES['file']['name'][$i] = str_replace(' ', '_', $_FILES['file']['name'][$i]);
+                    $post->files()->create(['name' => $_FILES['file']['name'][$i], 'type' => $_FILES['file']['type'][$i], 'size' => $_FILES['file']['size'][$i]]);
+                    $filname = $post->id . $_FILES['file']['name'][$i];
+                    move_uploaded_file($_FILES['file']['tmp_name'][$i], base_path('/public/files/') . $filname);
+                }
+            }
         }
        if($post->type=="Question")
         return redirect()->route('QuestionBody');

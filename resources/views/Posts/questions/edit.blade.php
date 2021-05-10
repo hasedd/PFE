@@ -153,18 +153,28 @@
                                     <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, </span>.</span>
                                 </p>
 
-                                @if($post->file != null )
-                                    <span class="wpqa-delete-image-span"><img alt="{{$post->file->name}} "  src="{{asset('files/'. $post->id . $post->file->id . $post->file->name)}}" width="250" height="250"></span>
+                                @if($post->files != null && count($post->files)>0)
+                                    <ul>
+                                    @foreach($post->files as $file)
+                                  <li>
+                                    <span class="wpqa-delete-image-span"><img alt="{{$file->name}} "  src="{{asset('files/'. $post->id . $file->name)}}" width="100" height="100"></span>
                                     <div class="clearfix"></div>
-                                    <a class="button-default wpqa-remove-image" data-name="_thumbnail_id" data-type="post_meta" data-id="281" data-image="282" data-nonce="7fcbd8d21c" href="{{route('delete_file',[$post->id])}}">Delete</a>
-                                    <div class="loader_2 loader_4"></div>
+                                        <a class="button-default wpqa-remove-image" data-name="_thumbnail_id" data-type="post_meta" data-id="281" data-image="282" data-nonce="7fcbd8d21c" href="{{route('delete_file',[$file->id])}}">Delete</a>
+                                    <div class="loader_2 loader_4">
+                                    </div>
+
+                                  </li>
+                                        @endforeach
+                                     </ul>
+
+
                                 @else
 
                                     <div class="question-multiple-upload question-upload-featured">
-                                        <label for="featured_image-451">Add file</label>
+                                        <label for="featured_image-451">Add files</label>
                                         <div class="clearfix"></div>
                                         <div class="fileinputs">
-                                            <input type="file" class="file" name="file" id="featured_image-451" value="{{$post->file}}">
+                                            <input type="file" class="file" name="file[]" id="featured_image-451" value="{{$post->file}}" multiple>
                                             <i class="icon-camera"></i>
                                             <div class="fakefile">
                                                 <button type="button">Select file</button>
@@ -197,7 +207,11 @@
 
                             <p class="form-submit"><input type="hidden" name="question_popup" value="popup"><input type="hidden" name="form_type" value="add_question">
                                 <input type="hidden" name="wpqa_add_question_nonce" value="468aff96d4">
+                                @if($post->type=='Question')
                                 <input type="submit" value="Edit Your Question" class="button-default button-hide-click">
+                                @else
+                                    <input type="submit" value="Edit Your Post" class="button-default button-hide-click">
+                                @endif
                                 <span class="load_span"><span class="loader_2"></span></span>
                             </p>
 

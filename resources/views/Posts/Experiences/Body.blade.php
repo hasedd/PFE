@@ -86,9 +86,10 @@
                                                             else { $allez2=substr($allez,0,213)."...";
                                                                 echo "<p class=\"excerpt-question\"> $allez2</p>";}
                                                             ?>
-                                                                @if($post->files != null && $post->files->count()==1  )
+                                                                @if($post->files != null && $post->files->count()==1 )
                                                                     <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
-                                                                @else
+                                                                @endif
+                                                                @if ($post->files != null && $post->files->count()>1)
                                                                     <h5 style="text-decoration: blink;"> This question is supported by a files. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check them</b></u></a> </h5>
                                                                 @endif
                                                         </div>
