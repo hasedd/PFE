@@ -98,7 +98,7 @@
                                                                                             </li>
 
                                                                                             <li class="user-columns-best-answers">
-                                                                                                <a href="{{route('user_questions',[$post->user->id])}}">
+                                                                                                <a href="{{route('user_bAnswers',[$post->user->id])}}">
                                                                                                     <i class="icon-graduation-cap"></i>{{ count($post->user->comments->where('isBestAnswer',true)) }} Best Answers
                                                                                                 </a>
                                                                                             </li>
@@ -157,8 +157,10 @@
                                                                                 else { $allez2=substr($allez,0,213)."...";
                                                                                     echo "<p class=\"excerpt-question\"> $allez2</p>";}
                                                                                 ?>
-                                                                                    @if($post->file != null)
+                                                                                    @if($post->files != null && $post->files->count()==1  )
                                                                                         <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
+                                                                                    @else
+                                                                                        <h5 style="text-decoration: blink;"> This question is supported by a files. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check them</b></u></a> </h5>
                                                                                     @endif
                                                                             </div><!-- End all_not_signle_post_content -->
                                                                         </div>
@@ -188,11 +190,14 @@
                                                         </div><!-- End single-inner-content -->
                                                     </article><!-- End article -->
                                                 @empty
-                                                    <center><p class="no-comments">No  questions here </p></center>
+
+                                                    <center><p class="no-comments">No  questions Yet </p></center>
                                                 @endforelse
                                             </div><!-- End post-articles -->
 											<!-- <a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>-->
+                                            @if(count($posts)!=0)
                                             <center><p class="no-comments">No more questions</p></center>
+                                            @endif
                                         </section><!-- End section -->
 
                                     </div><!-- End the-main-inner -->

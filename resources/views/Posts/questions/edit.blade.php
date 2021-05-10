@@ -11,6 +11,7 @@
     <link rel='dns-prefetch' href='//s.w.org' />
     <link rel="alternate" type="application/rss+xml" title="Template &raquo; Feed" href="http://template.test/feed/" />
     <link rel="alternate" type="application/rss+xml" title="Template &raquo; Comments Feed" href="http://template.test/comments/feed/" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
     <script type="text/javascript">
         window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/template.test\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7"}};
         !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -88,14 +89,45 @@
                             <div class="breadcrumb-left"><span class="crumbs">
 							<span itemscope itemtype="https://schema.org/BreadcrumbList">
 								<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                 @if($post->type=="Question" )
 			<meta itemprop="position" content="1"><a itemprop="item" href="{{route('QuestionBody')}}" title="Home"><span itemprop="name"><i class="icon-home"></i>Questions</span></a></span><span class="crumbs-span">/</span><span class="current">Edit question</span></span>
+                                    @else
+                                        <meta itemprop="position" content="1"><a itemprop="item" href="{{route('postsBody')}}" title="Home"><span itemprop="name"><i class="icon-home"></i>Posts</span></a></span><span class="crumbs-span">/</span><span class="current">Edit post</span></span>
+                                @endif
 						</span></div><!-- End breadcrumb-left --><div class="breadcrumb-right"><div class="clearfix"></div>
                             </div><!-- End breadcrumb-right --></div><!-- End breadcrumbs-wrap --></div><!-- End breadcrumbs -->						<div class="clearfix"></div><div class='wpqa-templates wpqa-edit-question-template'>
 
 
                         <form class="form-post wpqa_form" action="{{route('update_question',['id'=>$post->id])}}" method="post" enctype="multipart/form-data">
                             @csrf
+
                             <div class="form-inputs clearfix">
+                            @if($post->type=="Experience" || $post->type=="Service" )
+                                    <div x-data="{ isShowing: false }">
+                                        <p>
+                                            <label>Post Type<span class="required">*</span></label>
+
+                                        <div >
+                                            <label style="margin-bottom: 12px ; cursor: pointer; position: relative ; margin-bottom: 12px ; padding-left: 150px" for="Sr">Service<span></span></label>
+                                            <input @click="isShowing = false" name="type"  type="radio" id="Sr" value="Service" <?php echo ($post->type=='Service')?'checked':'' ?> >
+
+                                            <label style="margin-bottom: 12px ; cursor: pointer; position: relative ; margin-bottom: 12px ; padding-left: 35px" for="Ex">Experience<span></span></label>
+                                            <input @click="isShowing = true" name="type"  type="radio" id="Ex" value="Experience" <?php echo ($post->type=='Experience')?'checked':'' ?>>
+                                        </div>
+
+                                        <span class="form-description">Please choose a type.</span>
+                                        </p>
+                                        <p>
+                                            <label x-show="!isShowing" for="question-title-451">Service Title<span class="required">*</span></label>
+                                            <label x-show="isShowing" for="question-title-451">Experience Title<span class="required">*</span></label>
+                                            <input name="title" id="question-title-451" class="the-title" type="text" value="{{$post->title}}">
+                                            <i class="icon-chat"></i>
+
+                                            <span class="form-description">Please choose an appropriate title for the post.</span>
+                                        </p>
+                                    </div>
+                                @endif
+                                @if($post->type=='Question')
                                 <p>
                                     <label for="question-title-451">Question Title<span class="required">*</span></label>
                                     <input name="title" id="question-title-451" class="the-title" type="text" value="{{$post->title}}">
@@ -103,6 +135,8 @@
 
                                     <span class="form-description">Please choose an appropriate title for the question so it can be answered easily.</span>
                                 </p>
+                                @endif
+
                                 <div class="wpqa_category">
                                     <label for="question-category-451">Category<span class="required">*</span></label>
                                     <span class="styled-select">
@@ -112,11 +146,11 @@
 
                     </select>
                     </span><i class="icon-folder"></i>
-                                    <span class="form-description">Please choose the appropriate section so the question can be searched easily.</span>
+                                    <span class="form-description">Please choose the appropriate section.</span>
                                 </div><p class="wpqa_tag">
                                     <label for="question_tags-451">Tags</label>
                                     <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="{{$post->tags}}" data-seperator=",">
-                                    <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, poll</span>.</span>
+                                    <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, </span>.</span>
                                 </p>
 
                                 @if($post->file != null )
@@ -153,8 +187,11 @@
                                 </p><p class="wpqa_checkbox_p">
                                     <label for="terms_active-451">
                                         <span class="wpqa_checkbox"><input type="checkbox" id="terms_active-451" name="terms_active" value="on" ></span>
+                                        @if($post->type=="Question")
                                         <span class="wpqa_checkbox_span">By asking your question, you agree to the <a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span>
-                                    </label>
+                                     @else
+                                            <span class="wpqa_checkbox_span">By sharing your post, you agree to the <a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span></label>
+                                @endif
                                 </p>
                             </div>
 
@@ -198,6 +235,7 @@
 <script type='text/javascript' id='lodash-js-after'>
     window.lodash = _.noConflict();
 </script>
+<script > </script>
 <script type='text/javascript' src="{{asset('Dassets/wp-includes/js/dist/url.min.js?ver=0ac7e0472c46121366e7ce07244be1ac')}}" id='wp-url-js'></script>
 <script type='text/javascript' id='contact-form-7-js-extra'>
     <script type='text/javascript' src="{{asset('Dassets/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.4')}}" id='contact-form-7-js'></script>

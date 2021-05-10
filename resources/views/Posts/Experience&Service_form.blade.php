@@ -3,19 +3,37 @@
 <div class="panel-pop panel-pop-login" id="wpqa-question" data-width="690">
     <i class="icon-cancel"></i>
     <div class="panel-pop-content">
-        <form class="form-post wpqa_form" action="{{route('Add_Question')}}" method="post" enctype="multipart/form-data">
+        <form class="form-post wpqa_form" action="{{route('Add_Post')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-inputs clearfix">
+               <div x-data="{ isShowing: false }">
                 <p>
-                    <label for="question-title-451">Question Title<span class="required">*</span></label>
-                    <input name="title" id="question-title-451" class="the-title" type="text" value="">
+
+
+                    <label>Post Type<span class="required">*</span></label>
+
+                    <div >
+                    <label style="margin-bottom: 12px ; cursor: pointer; position: relative ; margin-bottom: 12px ; padding-left: 150px" for="Sr">Service<span></span></label>
+                    <input @click="isShowing = false" name="type"  type="radio" id="Sr" value="Service" checked >
+
+                    <label style="margin-bottom: 12px ; cursor: pointer; position: relative ; margin-bottom: 12px ; padding-left: 35px" for="Ex">Experience<span></span></label>
+                    <input @click="isShowing = true" name="type"  type="radio" id="Ex" value="Experience" >
+                    </div>
+
+                    <span class="form-description">Please choose a type.</span>
+                </p>
+                <p>
+                    <label x-show="!isShowing" for="question-title-451">Service Title<span class="required">*</span></label>
+                    <label x-show="isShowing" for="question-title-451">Experience Title<span class="required">*</span></label>
+                    <input name="title" id="question-title-451" class="the-title" type="text" value="" required>
                     <i class="icon-chat"></i>
 
-                    <span class="form-description">Please choose an appropriate title for the question so it can be answered easily.</span>
+                    <span class="form-description">Please choose an appropriate title for the post.</span>
                 </p>
+               </div>
                 <br>
                 <div class="wpqa_category">
-                    <label for="question-category-451">Category<span class="required">*</span></label>
+                    <label for="question-category-451">Category<span class="required" >*</span></label>
                     <span class="styled-select">
                     <select  name='category' id='question-category-451' class='postform' >
 	                    <option value='-1'>Select a Category</option>
@@ -31,11 +49,11 @@
                         <option class="level-0" value="30">University</option> -->
                     </select>
                     </span><i class="icon-folder"></i>
-                    <span class="form-description">Please choose the appropriate section so the question can be searched easily.</span>
+                    <span class="form-description">Please choose the appropriate section.</span>
                 </div><p class="wpqa_tag">
                     <label for="question_tags-451">Tags</label>
                     <input type="text" class="input question_tags" name="tags" id="question_tags-451" value="" data-seperator=",">
-                    <span class="form-description">Please choose suitable Keywords Ex: <span class="color">question, poll</span>.</span>
+                    <span class="form-description">Please choose suitable Keywords Ex: <span class="color">lifestyle,joy </span>.</span>
                 </p>
                 <br>
                 <!--<p class="wpqa_checkbox_p wpqa_checkbox_poll">
@@ -79,7 +97,7 @@
                     <label for="featured_image-451">Add files</label>
                     <div class="clearfix"></div>
                     <div class="fileinputs">
-                        <input type="file" class="file" name="file[]" id="featured_image-451" multiple>
+                        <input type="file" class="file" name="file" id="featured_image-451" multiple>
                         <i class="icon-camera"></i>
                         <div class="fakefile">
                             <button type="button">Select file</button>
@@ -104,7 +122,7 @@
                 </p><p class="wpqa_checkbox_p">
                     <label for="terms_active-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="terms_active-451" name="terms_active" value="on" ></span>
-                        <span class="wpqa_checkbox_span">By asking your question, you agree to the <a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span>
+                        <span class="wpqa_checkbox_span">By sharing this post, you agree to the <a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span>
                     </label>
                 </p>
                 <br>
@@ -112,7 +130,7 @@
 
             <p class="form-submit"><input type="hidden" name="question_popup" value="popup"><input type="hidden" name="form_type" value="add_question">
                 <input type="hidden" name="wpqa_add_question_nonce" value="468aff96d4">
-                <input type="submit" value="Publish Your Question" class="button-default button-hide-click">
+                <input type="submit" value="Publish Your Post" class="button-default button-hide-click">
                 <span class="load_span"><span class="loader_2"></span></span>
             </p>
 
@@ -122,7 +140,7 @@
 <div class="panel-pop panel-pop-login" id="wpqa-report">
     <i class="icon-cancel"></i>
     <div class="panel-pop-content">
-        <p>Please briefly explain why you feel this answer should be reported.</p>
+        <p>Please briefly explain why you feel this post should be reported.</p>
         <form class="wpqa_form submit-report" method="post">
             <div class="wpqa_error"></div>
             <div class="wpqa_success"></div>

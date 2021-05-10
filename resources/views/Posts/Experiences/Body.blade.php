@@ -4,7 +4,7 @@
         <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
         </div>
     </header>
-    @include('Posts.Question&report_form')
+    @include('Posts.Experience&Service_form')
     <div id="wrap" class="wrap-login">
         <div class="main-content">
             <div class="discy-inner-content menu_sidebar">
@@ -17,23 +17,23 @@
                                         <div class="menu-tabs">
                                             <ul class="menu flex menu-tabs-desktop">
                                                 <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
-                                                    <a href="{{route('QuestionBody')}}">
+                                                    <a href="{{route('postsBody')}}">
                                                         Recent Posts						</a>
                                                 </li>
                                                 <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
-                                                    <a href="{{route('Most_visited')}}">
+                                                    <a href="{{route('VisitedPosts')}}">
                                                         Most Visited						</a>
                                                 </li>
                                                 <li class="ml-5 <?php if($i==4) echo "ml-3 active-tab" ?> ">
-                                                    <a href="{{route('Most_Voted')}}">
+                                                    <a href="{{route('VotedPosts')}}">
                                                         Most Voted						</a>
                                                 </li>
                                                 <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
-                                                    <a href="{{route('answered')}}">
+                                                    <a href="{{route('experiences')}}">
                                                         Expriences						</a>
                                                 </li>
                                                 <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
-                                                    <a href="{{route('Not_answered')}}">
+                                                    <a href="{{route('services')}}">
                                                         Services						</a>
                                                 </li>
                                             </ul>
@@ -45,46 +45,72 @@
                             <section>
                                 <h2 class="screen-reader-text">Discy Latest Questions</h2>
                                 <div class="post-articles question-articles">
-                                    @foreach($posts as $post)
+                                    @forelse($posts as $post)
                                         <article id="post-46" class="article-post article-post-only clearfix post-46 post type-post status-publish format-standard has-post-thumbnail hentry category-work">
                                             <div class="single-inner-content">
                                                 <header class="article-header">
                                                     <div class="post-meta" style="text-align: center">
                                                         <span class="post-date">On:<span class="date-separator"></span>
-                                                            <time class="entry-date published">April 18, 2018</time>
+                                                            <time class="entry-date published">{{$post->created_at}}</time>
                                                         </span>
                                                         <span class="byline">
-                                                            <span class="post-cat">Posted in <a href="http://template.test/category/work/" rel="category tag">Work</a></span>
+                                                            <span class="post-cat">Posted in <a href="http://template.test/category/work/" rel="category tag">{{$post->category->name}}</a></span>
                                                         </span>
                                                         <span class="post-comment">
-					                                            Comments: <a href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/#comments">1</a>
+					                                            Comments: <a href="{{route('addview',[$post->id])}}"><?php echo $post->comments->count() ?></a>
                                                         </span>
-                                                        <span class="post-views">Views: 21</span>
+
+                                                        <span class="post-views">Views: {{$post->views}}</span>
                                                     </div>
                                                     <h2 class="post-title" style="text-align: center">
-                                                        <a class="post-title" href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" rel="bookmark">{{$post->title}}</a>
+                                                        <a class="post-title" href="{{route('addview',[$post->id])}}" rel="bookmark">{{$post->title}}</a>
                                                     </h2>
                                                     <div style="text-align: center;">
-                                                           <a class="post-author"  rel="author" href="http://template.test/profile/root/">{{$post->user->name}}</a>
+                                                           <a class="post-author"  rel="author" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->name}}</a>
                                                     </div>
 
-                                                    <figure class="featured-image post-img">
-                                                        <a href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" title="Highlighting what’s important about questions &#038; Answers on Discy Community!" rel="bookmark">
-                                                            <img class="rounded" alt='Highlighting what’s important about questions &#038; Answers on Discy Community!' width='629' height='420' src='http://template.test/wp-content/uploads/2018/04/team-7-629x420.jpg'>
-                                                        </a>
-                                                    </figure>
+
                                                 </header>
 
                                                 <div class="post-wrap-content post-content ">
                                                     <div class="post-content-text">
-                                                        <div class="all_not_signle_post_content"><p>We want to make it easier to learn more about a question and highlight key facts about it — such as how popular the question is, how many people are interested in it, and who the audience is. To accomplish ...</p></div>
+
+                                                        <div class="all_not_signle_post_content">
+
+                                                            <?php
+                                                            $html = $post->content ;
+                                                            preg_match('<(.*)>', $html, $match);
+                                                            $allez=$match[0];
+                                                            if(strlen($allez)<213)
+                                                                echo "<p class=\"excerpt-question\"> $allez </p>";
+                                                            else { $allez2=substr($allez,0,213)."...";
+                                                                echo "<p class=\"excerpt-question\"> $allez2</p>";}
+                                                            ?>
+                                                                @if($post->files != null && $post->files->count()==1  )
+                                                                    <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
+                                                                @else
+                                                                    <h5 style="text-decoration: blink;"> This question is supported by a files. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check them</b></u></a> </h5>
+                                                                @endif
+                                                        </div>
+
+                                                    </div>
+
+                                                    @livewire('voteit',['post_id'=>$post->id,'var'=>0])
+                                                </div>
+                                                <div class="tagcloud">
+                                                    <div class="question-tags"><i class="icon-tags"></i>
+                                                        <?php
+                                                        $tags =explode ( "," , $post->tags );
+                                                        foreach($tags as $tag)
+                                                            echo "<a href=\"#\">$tag</a>"
+                                                        ?>
                                                     </div>
                                                 </div>
 
-
                                                 <footer>
                                                     <div style="text-align: center">
-                                                        <a class="post-read-more" href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" rel="bookmark" title="Read Highlighting what’s important about questions &#038; Answers on Discy Community!">Read more</a>
+
+                                                        <a class="post-read-more" href="{{route('addview',[$post->id])}}" rel="bookmark" title="Read Highlighting what’s important about questions &#038; Answers on Discy Community!">Read more</a>
                                                         <div class="post-share">
                                                             <span><i class="icon-share"></i><span>Share This Article</span></span>
                                                             <ul>
@@ -94,20 +120,40 @@
                                                                 <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21 - http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="fab fa-whatsapp"></i></a></li>
                                                             </ul>
                                                         </div><!-- End post-share -->
+
                                                     </div>
                                                 </footer>
 
                                 </div><!-- End single-inner-content -->
                                         </article><!-- End article -->
-                                    @endforeach
+                                    @empty
+                                        @if($i==6)
+                                        <center><p class="no-comments">No  Services Yet </p></center>
+                                        @endif
+                                        @if($i==5)
+                                                <center><p class="no-comments">No  Experiences Yet </p></center>
+                                            @endif
+                                            @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  Posts yet </p></center>
+                                            @endif
+                                    @endforelse
+                                    @if(count($posts)!=0)
+                                        @if($i==6)
+                                            <center><p class="no-comments">No  More Services </p></center>
+                                        @endif
+                                        @if($i==5)
+                                            <center><p class="no-comments">No  More Experiences </p></center>
+                                        @endif
+                                        @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  More Posts  </p></center>
+                                        @endif
+                                        @endif
                                 </div><!-- End post-articles -->
-                                <a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>
+
                             </section><!-- End section -->
 
                         </div><!-- End the-main-inner -->
 
                         <!--  --------------------------   Side bar    --------------------------- -->
-                        @include('Posts.sidebar')
+                        @include('Posts.sidebar_experservice')
 
                     </main><!-- End discy-site-content -->
 

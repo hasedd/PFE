@@ -10,6 +10,7 @@ use App\Models\File;
 use App\Models\User;
 use App\Models\View;
 use App\Models\Vote;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,7 +23,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at','desc')->get();
+        $posts = Post::where('type','Question')->orderBy('created_at','desc')->get();
         return view('Posts.questions.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>2
@@ -31,7 +32,7 @@ class PostController extends Controller
     }
     public function indexox()
     {
-        $posts = Post::orderBy('created_at','desc')->get();
+        $posts = Post::where('type','Experience')->orWhere('type','Service')->orderBy('created_at','desc')->get();
         return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>2
@@ -78,6 +79,37 @@ class PostController extends Controller
         $post->content = $request->input('content');
         $post->tags = $request->input('tags');
         $post->save();
+        $nbr_files=count($_FILES['file']['type']);
+        if($nbr_files > 0) {
+            for($i=0;$i<$nbr_files;$i++) {
+                if (isset($_FILES) && !empty($_FILES['file']['name'][$i])) {
+                    $_FILES['file']['name'][$i] = str_replace(' ', '_', $_FILES['file']['name'][$i]);
+                    $post->files()->create(['name' => $_FILES['file']['name'][$i], 'type' => $_FILES['file']['type'][$i], 'size' => $_FILES['file']['size'][$i]]);
+                    $filname = $post->id . $_FILES['file']['name'][$i];
+                    move_uploaded_file($_FILES['file']['tmp_name'][$i], base_path('/public/files/') . $filname);
+                }
+            }
+        }
+        Auth()->user()->points += 5;
+        Auth()->user()->save();
+        return redirect()->route('QuestionBody');
+    }
+
+    public function storePost(Request $request)
+    {
+
+        $post = new Post();
+        $post->type = $request->input('type');
+
+        $post->space = "Public";
+        $post->state = "Open";
+        $post->user_id = Auth::user()->id;
+        $cat = Category::where('name', $request->input('category'))->firstOrFail();
+        $post->category_id = $cat->id;
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+        $post->tags = $request->input('tags');
+        $post->save();
         if (isset($_FILES) && !empty($_FILES['file']['name'])) {
             $_FILES['file']['name']=str_replace(' ','_',$_FILES['file']['name']) ;
             $post->file()->create(['name' => $_FILES['file']['name'], 'type' => $_FILES['file']['type'], 'size' => $_FILES['file']['size']]);
@@ -87,7 +119,7 @@ class PostController extends Controller
 
         Auth()->user()->points += 5;
         Auth()->user()->save();
-        return redirect()->route('QuestionBody');
+        return redirect()->route('postsBody');
     }
 
     /**
@@ -104,24 +136,63 @@ class PostController extends Controller
             'comments' => $post->comments,'bestAnswer' => Comment::where('post_id',$id)->where('isBestAnswer',1)->first(),
         ]);
     }
+    public function showPost($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('Posts.Experiences.show', [
+            'categories' => Category::all(), 'post' => $post,
+            'comments' => $post->comments,'bestAnswer' => Comment::where('post_id',$id)->where('isBestAnswer',1)->first(),
+        ]);
+    }
+
 
     public function MostVisited(){
-        $posts = Post::orderBy('views')->get();
+        $posts = Post::where('type','Question')->orderBy('views')->get();
         return view('Posts.questions.Body', [
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>3
+        ]);
+    }
+    public function MostVisited1(){
+        $posts = Post::where('type','Service')->orWhere('type','Experience')->orderBy('views')->get();
+        return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>3
         ]);
     }
 
     public function MVoted(){
-        $posts = Post::orderBy('votes','desc')->get();
+        $posts = Post::where('type','Question')->orderBy('votes','desc')->get();
         return view('Posts.questions.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>4
         ]);
     }
+    public function MVoted1(){
+        $posts = Post::where('type','Service')->orWhere('type','Experience')->orderBy('votes','desc')->get();
+        return view('Posts.Experiences.Body', [
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>4
+        ]);
+    }
+    public function Experiences(){
+        $posts = Post::where('type','Experience')->orderBy('created_at','desc')->get();
+        return view('Posts.Experiences.Body', [
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>5
+        ]);
+
+    }
+    public function Services(){
+        $posts = Post::where('type','Service')->orderBy('created_at','desc')->get();
+        return view('Posts.Experiences.Body', [
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>6
+        ]);
+
+    }
     public function Answered(){
-        $posts = Post::where('state','Close')->get();
+        $posts = Post::where('type','Question')->where('state','Close')->get();
         return view('Posts.questions.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>5
@@ -129,10 +200,29 @@ class PostController extends Controller
     }
 
     public function NAnswered(){
-        $posts = Post::where('state','Open')->get();
+        $posts = Post::where('type','Question')->where('state','Open')->get();
         return view('Posts.questions.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>6
+        ]);
+    }
+
+
+
+    public function  post_categories($id){
+     $category= Category::find($id);
+     $posts = $category->posts;
+        return view('Posts.questions.Body', [
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>9
+        ]);
+    }
+    public function  questions_categories($id){
+        $category= Category::find($id);
+        $posts = $category->posts;
+        return view('Posts.questions.Body', [
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>9
         ]);
     }
     /**
@@ -157,6 +247,8 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $post=Post::find($id);
+        if($post->type!='Question');
+        $post->type=$request->input('type');
         $categ=$request->input('category');
 
         $cat = Category::where('name', $categ)->firstOrFail();
@@ -174,8 +266,9 @@ class PostController extends Controller
             $filname = $post->id . $post->file->id. $_FILES['file']['name'];
             move_uploaded_file($_FILES['file']['tmp_name'], base_path('/public/files/') . $filname);
         }
-
+       if($post->type=="Question")
         return redirect()->route('QuestionBody');
+       else return redirect()->route('postsBody');
     }
 
     /**
@@ -187,10 +280,13 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        $type=$post->type;
         if($post->file != null )
             $post->file->delete();
         $post->delete();
+        if($type=='Question')
         return  redirect()->route('QuestionBody');
+        else return redirect()->route('postsBody');
     }
 
     public function addview($post_id){
@@ -202,7 +298,9 @@ class PostController extends Controller
             $post->views++;
             $post->save();
         }
+        if($post->type=='Question')
         return redirect()->route('Show_Question',['id'=>$post_id]);
+        else return redirect()->route('Show_Post',['id'=>$post_id]);
     }
 
     public function userprofile($id){
