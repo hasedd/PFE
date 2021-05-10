@@ -4,7 +4,7 @@
                     <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
                     </div>
                 </header>
-                @include('Posts.Question&report_form')
+                @include('espace_enseignant.Question_form')
                 <div id="wrap" class="wrap-login">
                     <div class="main-content">
                         <div class="discy-inner-content menu_sidebar">
@@ -17,25 +17,25 @@
                                                     <div class="menu-tabs">
                                                         <ul class="menu flex menu-tabs-desktop">
                                                             <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
-                                                                <a href="{{route('QuestionBody')}}">
+                                                                <a href="{{route('QuestionProfessors')}}">
                                                                     Recent Questions						</a>
                                                             </li>
 
 
                                                             <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
-                                                                <a href="{{route('answered')}}">
+                                                                <a href="{{route('answered_p')}}">
                                                                     Answered						</a>
                                                             </li>
                                                             <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
-                                                                <a href="{{route('Most_visited')}}">
+                                                                <a href="{{route('Most_visited_p')}}">
                                                                     Most Visited						</a>
                                                             </li>
                                                             <li class="ml-5 <?php if($i==4) echo "ml-3 active-tab" ?> ">
-                                                                <a href="{{route('Most_Voted')}}">
+                                                                <a href="{{route('Most_Voted_p')}}">
                                                                     Most Voted						</a>
                                                             </li>
                                                             <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
-                                                                <a href="{{route('Not_answered')}}">
+                                                                <a href="{{route('Not_answered_p')}}">
                                                                     No Answers						</a>
                                                             </li>
                                                         </ul>
@@ -106,16 +106,6 @@
                                                                                                 <a href="{{route('userprofile',[$post->user->id])}}">
                                                                                                     <i class="icon-bucket"></i>{{$post->user->points}} Points
                                                                                                 </a>
-                                                                                            </li>
-                                                                                            <li class="user-columns-points">
-                                                                                                <?php
-                                                                                                if(App\Models\Follow::where('follows',Auth()->user()->id)->where('followed',$post->user->id)->count())
-                                                                                                    $follow = "UnFollow";
-                                                                                                else $follow = "Follow"
-                                                                                                ?>
-                                                                                                @if( Auth()->user()->id != $post->user->id )
-                                                                                                        <div class="text-center mt-5"><a href="{{route('follow',['id'=>$post->user->id])}}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center h-7">{{$follow}}</a></div>
-                                                                                                @endif
                                                                                             </li>
                                                                                         </ul>
                                                                                     </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>

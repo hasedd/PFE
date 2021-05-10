@@ -1,232 +1,172 @@
 
 <x-app-layout>
-                <header class="bg-gray-light shadow">
-                    <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
-                    </div>
-                </header>
-                @include('Posts.Question&report_form')
-                <div id="wrap" class="wrap-login">
-                    <div class="main-content">
-                        <div class="discy-inner-content menu_sidebar">
-                            <div class="the-main-container">
-                                <main class="all-main-wrap discy-site-content float_l">
-                                    <div class="the-main-inner float_l">
-                                        <div class="clearfix"></div><div id="row-tabs-home" class="row row-tabs">
-                                            <div class="col col12">
-                                                <div class="wrap-tabs">
-                                                    <div class="menu-tabs">
-                                                        <ul class="menu flex menu-tabs-desktop">
-                                                            <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
-                                                                <a href="{{route('QuestionBody')}}">
-                                                                    Recent Questions						</a>
-                                                            </li>
+    <header class="bg-gray-light shadow">
+        <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
+        </div>
+    </header>
+    @include('espace_enseignant.Experience&Service_form')
+    <div id="wrap" class="wrap-login">
+        <div class="main-content">
+            <div class="discy-inner-content menu_sidebar">
+                <div class="the-main-container">
+                    <main class="all-main-wrap discy-site-content float_l">
+                        <div class="the-main-inner float_l">
+                            <div class="clearfix"></div><div id="row-tabs-home" class="row row-tabs">
+                                <div class="col col12">
+                                    <div class="wrap-tabs">
+                                        <div class="menu-tabs">
+                                            <ul class="menu flex menu-tabs-desktop">
+                                                <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
+                                                    <a href="{{route('postsProfessors')}}">
+                                                        Recent Posts						</a>
+                                                </li>
+                                                <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
+                                                    <a href="{{route('VisitedPosts_p')}}">
+                                                        Most Visited						</a>
+                                                </li>
+                                                <li class="ml-5 <?php if($i==4) echo "ml-3 active-tab" ?> ">
+                                                    <a href="{{route('VotedPosts_p')}}">
+                                                        Most Voted						</a>
+                                                </li>
+                                                <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
+                                                    <a href="{{route('experiences_p')}}">
+                                                        Expriences						</a>
+                                                </li>
+                                                <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
+                                                    <a href="{{route('services_p')}}">
+                                                        Services						</a>
+                                                </li>
+                                            </ul>
+                                        </div><!-- End menu-tabs -->
+                                    </div><!-- End wrap-tabs -->
+                                </div><!-- End col9 -->
+                            </div><!-- End row -->
+
+                            <section>
+                                <h2 class="screen-reader-text">Discy Latest Questions</h2>
+                                <div class="post-articles question-articles">
+                                    @forelse($posts as $post)
+                                        <article id="post-46" class="article-post article-post-only clearfix post-46 post type-post status-publish format-standard has-post-thumbnail hentry category-work">
+                                            <div class="single-inner-content">
+                                                <header class="article-header">
+                                                    <div class="post-meta" style="text-align: center">
+                                                        <span class="post-date">On:<span class="date-separator"></span>
+                                                            <time class="entry-date published">{{$post->created_at}}</time>
+                                                        </span>
+                                                        <span class="byline">
+                                                            <span class="post-cat">Posted in <a href="http://template.test/category/work/" rel="category tag">{{$post->category->name}}</a></span>
+                                                        </span>
+                                                        <span class="post-comment">
+					                                            Comments: <a href="{{route('addview',[$post->id])}}"><?php echo $post->comments->count() ?></a>
+                                                        </span>
+
+                                                        <span class="post-views">Views: {{$post->views}}</span>
+                                                    </div>
+                                                    <h2 class="post-title" style="text-align: center">
+                                                        <a class="post-title" href="{{route('addview',[$post->id])}}" rel="bookmark">{{$post->title}}</a>
+                                                    </h2>
+                                                    <div style="text-align: center;">
+                                                           <a class="post-author"  rel="author" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->name}}</a>
+                                                    </div>
 
 
-                                                            <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
-                                                                <a href="{{route('answered')}}">
-                                                                    Answered						</a>
-                                                            </li>
-                                                            <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
-                                                                <a href="{{route('Most_visited')}}">
-                                                                    Most Visited						</a>
-                                                            </li>
-                                                            <li class="ml-5 <?php if($i==4) echo "ml-3 active-tab" ?> ">
-                                                                <a href="{{route('Most_Voted')}}">
-                                                                    Most Voted						</a>
-                                                            </li>
-                                                            <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
-                                                                <a href="{{route('Not_answered')}}">
-                                                                    No Answers						</a>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="discy_hide mobile-tabs"><span class="styled-select"><select class="home_categories">					<option selected='selected' value="http://template.test/?show=recent-questions">
-				Recent Questions					</option>
-									<option value="http://template.test/?show=most-answered">
-				Most Answered					</option>
-									<option value="http://template.test/?show=question-bump">
-				Bump Question					</option>
-									<option value="http://template.test/?show=answers">
-				Answers					</option>
-									<option value="http://template.test/?show=most-visited">
-				Most Visited					</option>
-									<option value="http://template.test/?show=most-voted">
-				Most Voted					</option>
-									<option value="http://template.test/?show=no-answers">
-				No Answers					</option>
-				</select></span></div>
-                                                    </div><!-- End menu-tabs -->
-                                                </div><!-- End wrap-tabs -->
-                                            </div><!-- End col9 -->
-                                        </div><!-- End row -->
+                                                </header>
 
-                                        <section>
-                                            <h2 class="screen-reader-text">Discy Latest Questions</h2>
-                                            <div class="post-articles question-articles">
-                                                @forelse($posts as $post)
-                                                    <article id="post-118" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language">
-                                                        <div class="question-sticky-ribbon">
-                                                            <div>{{$post->state}}</div>
+                                                <div class="post-wrap-content post-content ">
+                                                    <div class="post-content-text">
+
+                                                        <div class="all_not_signle_post_content">
+
+                                                            <?php
+                                                            $html = $post->content ;
+                                                            preg_match('<(.*)>', $html, $match);
+                                                            $allez=$match[0];
+                                                            if(strlen($allez)<213)
+                                                                echo "<p class=\"excerpt-question\"> $allez </p>";
+                                                            else { $allez2=substr($allez,0,213)."...";
+                                                                echo "<p class=\"excerpt-question\"> $allez2</p>";}
+                                                            ?>
+                                                                @if($post->files != null && $post->files->count()==1 )
+                                                                    <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
+                                                                @endif
+                                                                @if ($post->files != null && $post->files->count()>1)
+                                                                    <h5 style="text-decoration: blink;"> This question is supported by a files. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check them</b></u></a> </h5>
+                                                                @endif
                                                         </div>
-                                                        <div class="single-inner-content">
-                                                            <div class="question-inner">
-                                                                <div class="question-image-vote">
-                                                                    <div class="author-image author-image-42">
-                                                                        <a href="{{ route('userprofile',$post->user->id) }}">
-                                                                            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
-                                                                                <img class="h-10 w-10 rounded-full object-cover" src="{{ $post->user->profile_photo_url }}" alt="{{ $post->user->username }}" />
-                                                                            </button>
-                                                                        </a>
-                                                                        <div class="author-image-pop-2">
-                                                                            <div class="post-section user-area user-area-columns_pop">
-                                                                                    <div class="post-inner">
-                                                                                        <div class="author-image author-image-70">
-                                                                                             <a href="{{route('userprofile',[$post->user->id])}}"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
-                                                                                        </div>
-                                                                                    <div class="user-content">
-                                                                                        <div class="user-inner">
-                                                                                            <div class="user-data-columns">
-                                                                                                <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div><!-- End user-content -->
-                                                                                    <div class="user-columns-data">
-                                                                                        <ul>
-                                                                                            <li class="user-columns-questions">
-                                                                                                <a href="{{route('user_questions',[$post->user->id])}}">
-                                                                                                    <i class="icon-book-open"></i>{{ count($post->user->posts) }} Questions
-                                                                                                </a>
-                                                                                            </li>
 
-                                                                                            <li class="user-columns-best-answers">
-                                                                                                <a href="{{route('user_bAnswers',[$post->user->id])}}">
-                                                                                                    <i class="icon-graduation-cap"></i>{{ count($post->user->comments->where('isBestAnswer',true)) }} Best Answers
-                                                                                                </a>
-                                                                                            </li>
-                                                                                            <li class="user-columns-points">
-                                                                                                <a href="{{route('userprofile',[$post->user->id])}}">
-                                                                                                    <i class="icon-bucket"></i>{{$post->user->points}} Points
-                                                                                                </a>
-                                                                                            </li>
-                                                                                            <li class="user-columns-points">
-                                                                                                <?php
-                                                                                                if(App\Models\Follow::where('follows',Auth()->user()->id)->where('followed',$post->user->id)->count())
-                                                                                                    $follow = "UnFollow";
-                                                                                                else $follow = "Follow"
-                                                                                                ?>
-                                                                                                @if( Auth()->user()->id != $post->user->id )
-                                                                                                        <div class="text-center mt-5"><a href="{{route('follow',['id'=>$post->user->id])}}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center h-7">{{$follow}}</a></div>
-                                                                                                @endif
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
-                                                                                </div><!-- End post-inner -->
-                                                                            </div><!-- End post -->
-                                                                        </div>
-                                                                    </div>
-                                                                    <ul class="question-vote question-mobile">
-                                                                        <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
-                                                                        <li class="vote_result" itemprop="upvoteCount">
-                                                                            {{$post->votes}}</li>
-                                                                        <li class="li_loader"><span class="loader_3 fa-spin"></span></li>
-                                                                        <li class="question-vote-down"><a href="#" data-type="question" data-vote-type="down" class="wpqa_vote question_vote_down vote_not_allow" title="Dislike"><i class="icon-down-dir"></i></a></li>
-                                                                    </ul>
-                                                                </div><!-- End question-image-vote -->
-                                                                <div class="question-content question-content-first">
-                                                                    <header class="article-header">
-                                                                        <div class="question-header">
-                                                                            <a class="post-author" itemprop="url" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->useable->firstName}}</a>
-                                                                            <div class="post-meta">
-                                                            <span class="post-date">Asked:
-																<span class="date-separator"></span>
-																<a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
-															</span>
-                                                                 <span class="byline">
-																<span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">{{$post->category->name}}</a></span>
-															</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </header>
-                                                                    <div>
-                                                                        <h2 class="post-title"><a class="post-title" href="{{route('addview',['post_id'=>$post->id])}}" rel="bookmark">{{$post->title}}</a></h2>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="question-not-mobile question-image-vote question-vote-sticky">
-                                                                    @livewire('voteit',['post_id'=>$post->id,'var'=>0])
-                                                                </div><!-- End question-image-vote -->
-                                                                <div class="question-content question-content-second">
-                                                                    <div class="post-wrap-content">
-                                                                    <div class="post-wrap-content">
-                                                                        <div class="question-content-text">
-                                                                            <div class='all_not_signle_post_content'>
-                                                                                <?php
-                                                                                $html = $post->content ;
-                                                                                preg_match('<(.*)>', $html, $match);
-                                                                                $allez=$match[0];
-                                                                                if(strlen($allez)<213)
-                                                                                    echo "<p class=\"excerpt-question\"> $allez </p>";
-                                                                                else { $allez2=substr($allez,0,213)."...";
-                                                                                    echo "<p class=\"excerpt-question\"> $allez2</p>";}
-                                                                                ?>
-                                                                                    @if($post->files != null && $post->files->count()==1 )
-                                                                                        <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
-                                                                                    @endif
-                                                                                    @if ($post->files != null && $post->files->count()>1)
-                                                                                        <h5 style="text-decoration: blink;"> This question is supported by a files. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check them</b></u></a> </h5>
-                                                                                    @endif
-                                                                            </div><!-- End all_not_signle_post_content -->
-                                                                        </div>
-                                                                        <div class="tagcloud">
-                                                                            <div class="question-tags"><i class="icon-tags"></i>
-                                                                                <?php
-                                                                                $tags =explode ( "," , $post->tags );
-                                                                                foreach($tags as $tag)
-                                                                                    echo "<a href=\"#\">$tag</a>"
-                                                                                ?>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wpqa_error"></div>
-                                                                    <div class="wpqa_success"></div>
-                                                                    <footer class="question-footer">
-                                                                        <ul class="footer-meta">
-                                                                            <li class="best-answer-meta"><a href="{{route('addview',['post_id'=>$post->id])}}"><i class="icon-comment"></i><span class='number discy_hide'></span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
-                                                                            <li class="view-stats-meta"><i class="icon-eye"></i>{{$post->views}} <span class='question-span'>Views</span></li>
-                                                                        </ul>
-                                                                        <a class="meta-answer meta-answer-a" href="{{route('addview',['post_id'=>$post->id])}}">Answer</a>
-                                                                    </footer>
-                                                                </div><!-- End question-content-second -->
-                                                                <div class="clearfix"></div>
-                                                            </div><!-- End question-inner -->
-															</div>
-                                                        </div><!-- End single-inner-content -->
-                                                    </article><!-- End article -->
-                                                @empty
+                                                    </div>
 
-                                                    <center><p class="no-comments">No  questions Yet </p></center>
-                                                @endforelse
-                                            </div><!-- End post-articles -->
-											<!-- <a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>-->
-                                            @if(count($posts)!=0)
-                                            <center><p class="no-comments">No more questions</p></center>
+                                                    @livewire('voteit',['post_id'=>$post->id,'var'=>0])
+                                                </div>
+                                                <div class="tagcloud">
+                                                    <div class="question-tags"><i class="icon-tags"></i>
+                                                        <?php
+                                                        $tags =explode ( "," , $post->tags );
+                                                        foreach($tags as $tag)
+                                                            echo "<a href=\"#\">$tag</a>"
+                                                        ?>
+                                                    </div>
+                                                </div>
+
+                                                <footer>
+                                                    <div style="text-align: center">
+
+                                                        <a class="post-read-more" href="{{route('addview',[$post->id])}}" rel="bookmark" title="Read Highlighting what’s important about questions &#038; Answers on Discy Community!">Read more</a>
+                                                        <div class="post-share">
+                                                            <span><i class="icon-share"></i><span>Share This Article</span></span>
+                                                            <ul>
+                                                                <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;t=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-facebook"></i><span>Facebook</span></a></li>
+                                                                <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="icon-twitter"></i></a></li>
+                                                                <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;title=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-linkedin"></i></a></li>
+                                                                <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21 - http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="fab fa-whatsapp"></i></a></li>
+                                                            </ul>
+                                                        </div><!-- End post-share -->
+
+                                                    </div>
+                                                </footer>
+
+                                </div><!-- End single-inner-content -->
+                                        </article><!-- End article -->
+                                    @empty
+                                        @if($i==6)
+                                        <center><p class="no-comments">No  Services Yet </p></center>
+                                        @endif
+                                        @if($i==5)
+                                                <center><p class="no-comments">No  Experiences Yet </p></center>
                                             @endif
-                                        </section><!-- End section -->
+                                            @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  Posts yet </p></center>
+                                            @endif
+                                    @endforelse
+                                    @if(count($posts)!=0)
+                                        @if($i==6)
+                                            <center><p class="no-comments">No  More Services </p></center>
+                                        @endif
+                                        @if($i==5)
+                                            <center><p class="no-comments">No  More Experiences </p></center>
+                                        @endif
+                                        @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  More Posts  </p></center>
+                                        @endif
+                                        @endif
+                                </div><!-- End post-articles -->
 
-                                    </div><!-- End the-main-inner -->
+                            </section><!-- End section -->
 
-                                    <!--  --------------------------   Side bar    --------------------------- -->
-                                        @include('Posts.sidebar')
+                        </div><!-- End the-main-inner -->
 
-                                </main><!-- End discy-site-content -->
+                        <!--  --------------------------   Side bar    --------------------------- -->
+                        @include('Posts.sidebar_experservice')
 
-                                <!--  --------------------------   Nav bar    --------------------------- -->
-                                @include('Posts.navbar')
+                    </main><!-- End discy-site-content -->
 
-                            </div><!-- End the-main-container -->
-                        </div><!-- End discy-inner-content -->
-                    </div><!-- End main-content -->
+                    <!--  --------------------------   Nav bar    --------------------------- -->
+                    @include('Posts.navbar')
 
-                    <!--       ---------------------              FOOTER              --------------------------         -->
-                </div><!-- End wrap -->
+                </div><!-- End the-main-container -->
+            </div><!-- End discy-inner-content -->
+        </div><!-- End main-content -->
+
+        <!--       ---------------------              FOOTER              --------------------------         -->
+    </div><!-- End wrap -->
     <link rel='stylesheet' id='buttons-css'  href="{{asset('Dassets/wp-includes/css/buttons.min.css?ver=5.7')}}" type='text/css' media='all' />
     <link rel='stylesheet' id='mediaelement-css'  href="{{asset('Dassets/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16')}}" type='text/css' media='all' />
     <link rel='stylesheet' id='wp-mediaelement-css'  href="{{asset('Dassets/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.7')}}" type='text/css' media='all' />
