@@ -73,7 +73,6 @@ class PostController extends Controller
         $post->tags = $request->input('tags');
         $post->save();
         $nbr_files=count($_FILES['file']['type']);
-        dd($nbr_files);
         if($nbr_files > 0) {
             for($i=0;$i<$nbr_files;$i++) {
                 if (isset($_FILES) && !empty($_FILES['file']['name'][$i])) {
