@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
         </div>
     </header>
-@include('Posts.Question&report_form')
+    @include('Posts.Question&report_form')
 <!--                     --------------- header---------------                            -->
 
     <div class="main-content">
@@ -110,16 +110,15 @@
                                                 <div class="question-content-text">
                                                     <div class='all_signle_post_content'>
                                                         {!! $post->content !!}
-
-                                                        @if($post->files != null)
-                                                            @foreach($post->files as $file)
-                                                            <div class='featured_image_question'>
-
-                                                                    <embed alt="{{$file->name}} " width='500' height='500' src="{{asset('files/'. $post->id . $file->name)}}">
-
-                                                            </div>
-                                                            @endforeach
-                                                        @endif
+                                                        <div class="text-center mt-5 ml-7">
+                                                            @if($post->files != null)
+                                                                @foreach($post->files as $file)
+                                                                <div class='featured_image_question'>
+                                                                        <embed alt="{{$file->name}} " width='500' height='500' src="{{asset('files/'. $post->id . $file->name)}}">
+                                                                </div>
+                                                                @endforeach
+                                                            @endif
+                                                        </div>
                                                         <div class="clearfix"></div>
                                                     </div><!-- End all_signle_post_content -->								</div>
                                                 <div class="tagcloud"><div class="question-tags"><i class="icon-tags"></i>

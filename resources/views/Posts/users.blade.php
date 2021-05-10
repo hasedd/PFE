@@ -29,21 +29,23 @@
                                 </div><!-- End breadcrumb-left -->
                                 <div class="breadcrumb-right">
                                     <div class="search-form">
-                                        <form method="get" class="search-filter-form">
-													<span class="styled-select user-filter">
-														<select name="user_filter" onchange="this.form.submit()">
-															<option value="user_registered"  selected='selected'>Date Registered</option>
-															<option value="display_name" >Name</option>
-															<option value="ID" >ID</option>
-														</select>
-													</span>
+                                        <form method="get" action="{{route('display_users')}}" class="search-filter-form">
+											<span class="styled-select user-filter">
+                                                <select name="user_filter">
+                                                    <option value="user_registered">Date Registered</option>
+													<option value="display_name">Name</option>
+													<option value="Expert" >Experts</option>
+													<option value="Student" >Students</option>
+													<option value="Teacher" >Teachers</option>
+													<option value="Popular" >Populars</option>
+												</select>
+											</span>
                                         </form>
-                                        <form method="get" action="http://template.test/search/" class="search-input-form main-search-form">
+                                        <form method="get" action="{{route('finduser')}}" class="search-input-form main-search-form">
                                             <input class="search-input live-search live-search-icon" autocomplete='off' type="search" name="search" placeholder="Type to find...">
                                             <div class="loader_2 search_loader"></div>
                                             <div class="search-results results-empty"></div>
-                                            <button class="button-search"><i class="icon-search"></i></button>
-                                            <input type="hidden" name="search_type" class="search_type" value="users">
+                                            <button type="submit" class="button-search"><i class="icon-search"></i></button>
                                         </form>
                                     </div>
                                     <div class="clearfix"></div>

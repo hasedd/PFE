@@ -40,26 +40,7 @@ class PostController extends Controller
         ]);
 
     }
-    public function users()
-    {
-        $users = User::orderBy('name','desc')->get();
-        return view('Posts.users', [
-            'categories' => Category::all(), 'users' => $users,
-            'i'=>2
-        ]);
 
-    }
-    public function follow($id)
-    {
-        $test = Follow::where('follows',Auth()->user()->id)->where('followed',$id)->count();
-        if ($test == 0) {
-            Follow::create(['follows' => Auth()->user()->id, 'followed' => $id]);
-        }else
-        {
-            Follow::where('follows',Auth()->user()->id)->where('followed',$id)->first()->delete();
-        }
-        return redirect()->back();
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -92,6 +73,7 @@ class PostController extends Controller
         $post->tags = $request->input('tags');
         $post->save();
         $nbr_files=count($_FILES['file']['type']);
+        dd($nbr_files);
         if($nbr_files > 0) {
             for($i=0;$i<$nbr_files;$i++) {
                 if (isset($_FILES) && !empty($_FILES['file']['name'][$i])) {
@@ -425,5 +407,49 @@ class PostController extends Controller
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
             ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>4,'followers'=>$followers,'following'=>$following]);
+    }
+
+    public function users()
+    {
+        $users = User::orderBy('name')->get();
+        return view('Posts.users', [
+            'categories' => Category::all(), 'users' => $users,
+            'i'=>2
+        ]);
+
+    }
+    public function follow($id)
+    {
+        $test = Follow::where('follows',Auth()->user()->id)->where('followed',$id)->count();
+        if ($test == 0) {
+            Follow::create(['follows' => Auth()->user()->id, 'followed' => $id]);
+        }else
+        {
+            Follow::where('follows',Auth()->user()->id)->where('followed',$id)->first()->delete();
+        }
+        return redirect()->back();
+    }
+
+    public function finduser(){
+        $username = $_GET['search'];
+        $users = User::Where('username', 'like', '%' . $username . '%')->get();
+        if ($users == null) return redirect()->route('users');
+
+        else return view('Posts.users', [
+            'categories' => Category::all(), 'users' => $users,
+            'i'=>2
+        ]);
+    }
+
+    public function display_users(){
+        $userfilter = $_GET['user_filter'];
+        dd($userfilter);
+        if ($users == null) return redirect()->route('users');
+
+        else return view('Posts.users', [
+            'categories' => Category::all(), 'users' => $users,
+            'i'=>2
+        ]);
+
     }
 }

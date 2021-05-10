@@ -455,8 +455,21 @@
                             <ul class='question-link-list'><li class='edit-profile-cover'><a href={{route('profile.show')}}><i class='icon-cog'></i>Edit profile</a></li></ul>
                         </div>
                         <div class='wpqa-cover-buttons wpqa-cover-followers'><i class='icon-users'></i><span class='cover-count follow-cover-count'>{{count($followers)}}</span>Followers</div>
-                        <div><a class='wpqa-cover-buttons wpqa-cover-questions' href='{{route('user_questions',[Auth()->user()->id])}}'><i class='icon-book-open'></i><span class='cover-count'>{{$nbr_questions}}</span>Questions</a></div>
-
+                        <div>
+                            <a class='wpqa-cover-buttons wpqa-cover-questions' href='{{route('user_questions',[Auth()->user()->id])}}'>
+                                <i class='icon-book-open'></i><span class='cover-count'>{{$nbr_questions}}</span>Questions
+                            </a>
+                        </div>
+                        <?php
+                        if(App\Models\Follow::where('follows',Auth()->user()->id)->where('followed',$user->id)->count())
+                            $follow = "UnFollow";
+                        else $follow = "Follow"
+                        ?>
+                        @if( Auth()->user()->id != $user->id )
+                            <a href="{{route('follow',['id'=>$user->id])}}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center h-7">{{$follow}}</a>
+                        @else
+                            <div class="pb-9"></div>
+                        @endif
                     </div>
                 </div>
                 <div class='clearfix'></div>

@@ -1,5 +1,4 @@
-<div class="put-wrap-pop">
-</div>
+<div class="put-wrap-pop"></div>
 <div class="panel-pop panel-pop-login" id="wpqa-question" data-width="690">
     <i class="icon-cancel"></i>
     <div class="panel-pop-content">

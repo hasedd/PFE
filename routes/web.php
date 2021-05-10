@@ -129,6 +129,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     )->name('delete_file');
     Route::get('/follow/{id}',[PostController::class,'follow']
     )->name('follow');
+    Route::get('/users/finduser',[PostController::class,'finduser']
+    )->name('finduser');
+    Route::get('/users/display',[PostController::class,'display_users']
+    )->name('display_users');
+
 });
 
 

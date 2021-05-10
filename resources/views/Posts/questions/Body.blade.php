@@ -107,6 +107,16 @@
                                                                                                     <i class="icon-bucket"></i>{{$post->user->points}} Points
                                                                                                 </a>
                                                                                             </li>
+                                                                                            <li class="user-columns-points">
+                                                                                                <?php
+                                                                                                if(App\Models\Follow::where('follows',Auth()->user()->id)->where('followed',$post->user->id)->count())
+                                                                                                    $follow = "UnFollow";
+                                                                                                else $follow = "Follow"
+                                                                                                ?>
+                                                                                                @if( Auth()->user()->id != $post->user->id )
+                                                                                                        <div class="text-center mt-5"><a href="{{route('follow',['id'=>$post->user->id])}}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center h-7">{{$follow}}</a></div>
+                                                                                                @endif
+                                                                                            </li>
                                                                                         </ul>
                                                                                     </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
                                                                                 </div><!-- End post-inner -->
