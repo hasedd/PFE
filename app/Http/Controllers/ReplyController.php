@@ -24,7 +24,7 @@ class ReplyController extends Controller
     }
     public function destroy($id) {
         $reply=Reply::find($id);
-        $id=$reply->comment->post->id;
+
         $reply->delete();
         return redirect()->back();
 

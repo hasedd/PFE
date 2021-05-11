@@ -381,7 +381,7 @@
                                                                                         {
                                                                                             $deleteroute=route('delete_reply',[$reply->id]);
 
-                                                                                            $delete="<li><a class='question-delete' href='#' /><i class='icon-trash'></i>Delete</a></li>";
+                                                                                            $delete="<li><a class='question-delete' href=$deleteroute /><i class='icon-trash'></i>Delete</a></li>";
                                                                                             echo $delete ;
                                                                                         }
                                                                                         ?>
