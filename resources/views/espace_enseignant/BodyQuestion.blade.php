@@ -131,7 +131,7 @@
 																<a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
 															</span>
                                                                  <span class="byline">
-																<span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">{{$post->category->name}}</a></span>
+																<span class="post-cat">In: <a href="{{route('questions_categories',[$post->category->id])}}" rel="tag">{{$post->category->name}}</a></span>
 															</span>
                                                                             </div>
                                                                         </div>

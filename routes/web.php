@@ -155,6 +155,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
         ->name('update_question');
     Route::get('/DeleteFile/{id}',[FileController::class,'destroy']
     )->name('delete_file');
+    Route::get('/services_category/{id}', [PostController::class,'services_categories']
+    )->name('services_categories');
+    Route::get('/questions_category/{id}', [PostController::class,'questions_categories']
+    )->name('questions_categories');
+    Route::get('/experiences_category/{id}', [PostController::class,'experiences_categories']
+    )->name('experiences_categories');
+
+
+
 });
 
 

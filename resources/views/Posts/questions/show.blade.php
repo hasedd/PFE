@@ -92,7 +92,7 @@
                                                     <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="{{ route('userprofile',$post->user->id) }}"><span itemprop="name">{{$post->user->useable->firstName}}</span></a></span>
                                                     <div class="post-meta">
                                                         <span class="post-date">Asked:<span class="date-separator"></span> <a href="index.html" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a><span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span>
-                                                        <span class="discy_hide" itemprop="datePublished" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span></span><span class="byline"><span class="post-cat">In: <a href="../../question-category/language/index.html" rel="tag">{{$post->category->name}}</a></span></span>
+                                                        <span class="discy_hide" itemprop="datePublished" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span></span><span class="byline"><span class="post-cat">In: <a href="{{route('questions_categories',[$post->category->id])}}" rel="tag">{{$post->category->name}}</a></span></span>
                                                     </div>
                                                 </div>
                                             </header>

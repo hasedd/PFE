@@ -23,6 +23,7 @@ class PostController extends Controller
      *
      */
     /* -----------------------------------------------------------------------------------------------------*/
+
     public function index()
     {
         $posts = Post::where('type','Question')->orderBy('created_at','desc')->get();
@@ -366,25 +367,35 @@ class PostController extends Controller
         ]);
     }
 
+    public function  questions_categories($id){
 
 
-
-
-
-    public function  post_categories($id){
-     $category= Category::find($id);
-     $posts = $category->posts;
+        $category= Category::find($id);
+        $posts = $category->posts->where('type','Question');
         return view('Posts.questions.Body', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>9
+            'i'=>10,'category_id'=>$id
         ]);
     }
-    public function  questions_categories($id){
-        $category= Category::find($id);
-        $posts = $category->posts;
-        return view('Posts.questions.Body', [
+
+
+    public function  services_categories($id){
+
+     $category= Category::find($id);
+     $posts = $category->posts->where('type','Service');
+        return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>9
+            'i'=>9,'category_id'=>$id
+        ]);
+    }
+
+    public function  experiences_categories($id){
+
+        $category= Category::find($id);
+        $posts = $category->posts->where('type','Experience');
+        return view('Posts.Experiences.Body', [
+            'categories' => Category::all(), 'posts' => $posts,
+            'i'=>11,'category_id'=>$id
         ]);
     }
     /**
