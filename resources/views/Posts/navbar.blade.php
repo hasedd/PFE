@@ -21,6 +21,24 @@
                 <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98"><a class=""  href="{{route('services')}}">Services</a></li>
             </ul>
         </li>
+        @if(\Illuminate\Support\Facades\Auth::user()->useable_type=="Teacher")
+        <li id="menu-item-94" class="nav_menu_open menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-94"><a class=""  href="http://template.test/questions/"><i class="icon-book-open"></i>Private Questions</a>
+            <ul class="sub-menu">
+                <li id="menu-item-95" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95"><a class=""  href="{{route('QuestionProfessors')}}">Recent Questions</a></li>
+                <li id="menu-item-96" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-96"><a class=""  href="{{route('answered_p')}}">Answered Questions</a></li>
+                <li id="menu-item-97" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97"><a class=""  href="{{route('Most_Voted_p')}}">Popular Questions</a></li>
+                <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98"><a class=""  href="{{route('Not_answered_p')}}">Not answered Questions</a></li>
+            </ul>
+        </li>
+        <li id="menu-item-94" class="nav_menu_open menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-94"><a class=""  href="http://template.test/questions/"><i class="icon-newspaper"></i>Private Posts</a>
+            <ul class="sub-menu">
+                <li id="menu-item-95" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95"><a class=""  href="{{route('postsProfessors')}}">Recent Posts</a></li>
+                <li id="menu-item-96" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-96"><a class=""  href="{{route('VotedPosts_p')}}">Popular Posts</a></li>
+                <li id="menu-item-97" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97"><a class=""  href="{{route('experiences_p')}}">Experiences</a></li>
+                <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98"><a class=""  href="{{route('services_p')}}">Services</a></li>
+            </ul>
+        </li>
+        @endif
         <li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a class=""  href="http://template.test/badges/"><i class="icon-trophy"></i>Badges</a></li>
         <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-101"><a class=""  href="{{route('users')}}"><i class="icon-users"></i>Users</a></li>
         <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a class=""  href="{{route('contact')}}"><i class="icon-lifebuoy"></i>Help</a></li>
