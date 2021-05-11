@@ -34,7 +34,7 @@
                                                             <time class="entry-date published">{{$post->created_at}}</time>
                                                         </span>
                                                 <span class="byline">
-                                                            <span class="post-cat">Posted in <a href="" rel="category tag">{{$post->category->name}}</a></span>
+                                                            <span class="post-cat">Posted in <a href="{{route('questions_categories',[$post->category->id])}}" rel="category tag">{{$post->category->name}}</a></span>
                                                         </span>
                                                 <span class="post-comment">
 					                                            Comments: <a href="{{route('addview',[$post->id])}}"><?php echo $post->comments->count() ?></a>

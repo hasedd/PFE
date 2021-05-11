@@ -33,6 +33,10 @@ Route::get('/about', function () {
     return view('About_us');
 })->name('about');
 
+Route::get('/badgets', function () {
+    return view('Posts.badgets',['categories'=>\App\Models\Category::all()]);
+})->name('badgets');
+
 Route::MATCH('POST','/register/next', function () {
     return view('auth.register2');
 })->name('register2');
@@ -155,12 +159,20 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
         ->name('update_question');
     Route::get('/DeleteFile/{id}',[FileController::class,'destroy']
     )->name('delete_file');
+
     Route::get('/follow/{id}',[PostController::class,'follow']
     )->name('follow');
     Route::get('/users/finduser',[PostController::class,'finduser']
     )->name('finduser');
     Route::get('/users/display',[PostController::class,'display_users']
     )->name('display_users');
+
+    Route::get('/services_category/{id}', [PostController::class,'services_categories']
+    )->name('services_categories');
+    Route::get('/questions_category/{id}', [PostController::class,'questions_categories']
+    )->name('questions_categories');
+    Route::get('/experiences_category/{id}', [PostController::class,'experiences_categories']
+    )->name('experiences_categories');
 
 });
 

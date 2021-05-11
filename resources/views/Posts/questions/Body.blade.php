@@ -16,6 +16,23 @@
                                                 <div class="wrap-tabs">
                                                     <div class="menu-tabs">
                                                         <ul class="menu flex menu-tabs-desktop">
+                                                           @if($i==10)
+                                                                <li class="ml-9 <?php if($i==10) echo "ml-2 active-tab" ?>" >
+                                                                    <a href="{{route('questions_categories',[$category_id])}}">
+                                                                         Questions						</a>
+                                                                </li>
+
+
+                                                                <li class="ml-5 <?php if($i==25) echo "ml-3 active-tab" ?>" >
+                                                                    <a href="{{route('services_categories',[$category_id])}}">
+                                                                        Services						</a>
+                                                                </li>
+
+                                                                <li class="ml-5 <?php if($i==25) echo "ml-3 active-tab" ?>" >
+                                                                    <a href="{{route('experiences_categories',[$category_id])}}">
+                                                                        Experiences						</a>
+                                                                </li>
+                                                            @else
                                                             <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
                                                                 <a href="{{route('QuestionBody')}}">
                                                                     Recent Questions						</a>
@@ -38,6 +55,7 @@
                                                                 <a href="{{route('Not_answered')}}">
                                                                     No Answers						</a>
                                                             </li>
+                                                           @endif
                                                         </ul>
                                                         <div class="discy_hide mobile-tabs"><span class="styled-select"><select class="home_categories">					<option selected='selected' value="http://template.test/?show=recent-questions">
 				Recent Questions					</option>
@@ -141,7 +159,7 @@
 																<a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
 															</span>
                                                                  <span class="byline">
-																<span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">{{$post->category->name}}</a></span>
+																<span class="post-cat">In: <a href="{{route('questions_categories',[$post->category->id])}}" rel="tag">{{$post->category->name}}</a></span>
 															</span>
                                                                             </div>
                                                                         </div>
@@ -200,15 +218,14 @@
 															</div>
                                                         </div><!-- End single-inner-content -->
                                                     </article><!-- End article -->
-                                                @empty
 
-                                                    <center><p class="no-comments">No  questions Yet </p></center>
+                                                @empty
+                                                    <center><p class="no-comments">No more questions</p></center>
                                                 @endforelse
+                                                    {{$posts->links()}}
                                             </div><!-- End post-articles -->
 											<!-- <a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>-->
-                                            @if(count($posts)!=0)
-                                            <center><p class="no-comments">No more questions</p></center>
-                                            @endif
+
                                         </section><!-- End section -->
 
                                     </div><!-- End the-main-inner -->

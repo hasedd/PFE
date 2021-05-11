@@ -16,6 +16,23 @@
                                     <div class="wrap-tabs">
                                         <div class="menu-tabs">
                                             <ul class="menu flex menu-tabs-desktop">
+                                                @if($i==9 || $i==11)
+                                                    <li class="ml-9 <?php if($i==10) echo "ml-2 active-tab" ?>" >
+                                                        <a href="{{route('questions_categories',[$category_id])}}">
+                                                            Questions						</a>
+                                                    </li>
+
+
+                                                    <li class="ml-5 <?php if($i==9) echo "ml-3 active-tab" ?>" >
+                                                        <a href="{{route('services_categories',[$category_id])}}">
+                                                            Services						</a>
+                                                    </li>
+
+                                                    <li class="ml-5 <?php if($i==11) echo "ml-3 active-tab" ?>" >
+                                                        <a href="{{route('experiences_categories',[$category_id])}}">
+                                                            Experiences						</a>
+                                                    </li>
+                                                @else
                                                 <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
                                                     <a href="{{route('postsBody')}}">
                                                         Recent Posts						</a>
@@ -36,6 +53,7 @@
                                                     <a href="{{route('services')}}">
                                                         Services						</a>
                                                 </li>
+                                                @endif
                                             </ul>
                                         </div><!-- End menu-tabs -->
                                     </div><!-- End wrap-tabs -->
@@ -54,7 +72,7 @@
                                                             <time class="entry-date published">{{$post->created_at}}</time>
                                                         </span>
                                                         <span class="byline">
-                                                            <span class="post-cat">Posted in <a href="http://template.test/category/work/" rel="category tag">{{$post->category->name}}</a></span>
+                                                            <span class="post-cat">Posted in <a href="{{route('questions_categories',[$post->category->id])}}" rel="category tag">{{$post->category->name}}</a></span>
                                                         </span>
                                                         <span class="post-comment">
 					                                            Comments: <a href="{{route('addview',[$post->id])}}"><?php echo $post->comments->count() ?></a>
@@ -127,26 +145,18 @@
 
                                 </div><!-- End single-inner-content -->
                                         </article><!-- End article -->
+                                        {{$posts->links()}}
                                     @empty
-                                        @if($i==6)
+                                        @if($i==6 || $i==9)
                                         <center><p class="no-comments">No  Services Yet </p></center>
                                         @endif
-                                        @if($i==5)
+                                        @if($i==5 || $i==11 )
                                                 <center><p class="no-comments">No  Experiences Yet </p></center>
                                             @endif
                                             @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  Posts yet </p></center>
                                             @endif
                                     @endforelse
-                                    @if(count($posts)!=0)
-                                        @if($i==6)
-                                            <center><p class="no-comments">No  More Services </p></center>
-                                        @endif
-                                        @if($i==5)
-                                            <center><p class="no-comments">No  More Experiences </p></center>
-                                        @endif
-                                        @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  More Posts  </p></center>
-                                        @endif
-                                        @endif
+                                    {{$posts->links()}}
                                 </div><!-- End post-articles -->
 
                             </section><!-- End section -->

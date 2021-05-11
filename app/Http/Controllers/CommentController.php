@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Badget;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\File;
@@ -128,6 +129,15 @@ class CommentController extends Controller
         $user = User::find($theBest->user_id);
         $user->points += 20;
         $user->save();
+
+        $badegts = Badget::all();
+        foreach ($badegts as $badget){
+            if($theBest->user->points > $badget->min_points && $theBest->user->points < $badget->max_points){
+                $theBest->user->badget = $badget;
+                dd($badget);
+            }
+            else dd($theBest->user->points);
+        }
         return redirect()->back();
     }
     public function cancel_best_answer($id){

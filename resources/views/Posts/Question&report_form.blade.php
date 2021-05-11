@@ -81,7 +81,7 @@
                         <input type="file" class="file" name="file[]" id="featured_image-451" multiple>
                         <i class="icon-camera"></i>
                         <div class="fakefile">
-                            <button type="button">Select file</button>
+                            <button type="button">Select files</button>
                             <span>Browse</span>
                         </div>
                     </div>

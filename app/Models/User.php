@@ -73,6 +73,10 @@ class User extends Authenticatable implements MustVerifyEmail{
         return $this->hasMany(Post::class);
     }
 
+    public function badget(){
+        return $this->belongsTo(Badget::class);
+    }
+
     public function comments()
     {
         return $this->hasMany(Comment::class);
