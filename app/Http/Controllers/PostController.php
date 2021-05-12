@@ -108,7 +108,7 @@ class PostController extends Controller
         $posts = Post::where('type','Experience')->orWhere('type','Service')->orderBy('created_at','desc')->simplePaginate(7);
         return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>2
+            'i'=>7
         ]);
 
     }
@@ -157,14 +157,14 @@ class PostController extends Controller
         $posts = Post::where('type','Service')->orWhere('type','Experience')->orderBy('views','desc')->simplePaginate(7);
         return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>3
+            'i'=>8
         ]);
     }
     public function MVoted1(){
         $posts = Post::where('type','Service')->orWhere('type','Experience')->orderBy('votes','desc')->simplePaginate(7);
         return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>4
+            'i'=>13
         ]);
     }
 
@@ -172,7 +172,7 @@ class PostController extends Controller
         $posts = Post::where('type','Experience')->orderBy('created_at','desc')->simplePaginate(7);
         return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>5
+            'i'=>14
         ]);
 
     }
@@ -180,7 +180,7 @@ class PostController extends Controller
         $posts = Post::where('type','Service')->orderBy('created_at','desc')->simplePaginate(7);
         return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>6
+            'i'=>15
         ]);
     }
     /*------------------------------------------------------------------------------------------*/
@@ -190,7 +190,7 @@ class PostController extends Controller
         $posts = Post::where('space','Professors')->where('type','Question')->orderBy('created_at','desc')->simplePaginate(7);
         return view('espace_enseignant.BodyQuestion', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>2
+            'i'=>16
         ]);
 
     }
@@ -201,7 +201,7 @@ class PostController extends Controller
         })->orderBy('created_at', 'desc')->simplePaginate(7);
         return view('espace_enseignant.BodyPost', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i' => 2
+            'i' => 21
         ]);
     }
 
@@ -307,7 +307,7 @@ class PostController extends Controller
         $posts = Post::where('space','Professors')->where('type','Question')->orderBy('views','desc')->simplePaginate(7);
         return view('espace_enseignant.BodyQuestion', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>3
+            'i'=>18
         ]);
     }
     public function MostVisited1Private(){
@@ -317,7 +317,7 @@ class PostController extends Controller
 
         return view('espace_enseignant.BodyPost', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>3
+            'i'=>22
         ]);
     }
 
@@ -325,7 +325,7 @@ class PostController extends Controller
         $posts = Post::where('space','Professors')->where('type','Question')->orderBy('votes','desc')->simplePaginate(7);
         return view('espace_enseignant.BodyQuestion', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>4
+            'i'=>19
         ]);
     }
     public function MVoted1Private(){
@@ -334,14 +334,14 @@ class PostController extends Controller
         })->orderBy('votes','desc')->simplePaginate(7);
         return view('espace_enseignant.BodyPost', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>4
+            'i'=>23
         ]);
     }
     public function ExperiencesPrivate(){
         $posts = Post::where('space','Professors')->where('type','Experience')->orderBy('created_at','desc')->simplePaginate(7);
         return view('espace_enseignant.BodyPost', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>5
+            'i'=>24
         ]);
 
     }
@@ -349,14 +349,14 @@ class PostController extends Controller
         $posts = Post::where('space','Professors')->where('type','Service')->orderBy('created_at','desc')->simplePaginate(7);
         return view('espace_enseignant.BodyPost', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>6
+            'i'=>25
         ]);
     }
     public function AnsweredPrivate(){
         $posts = Post::where('space','Professors')->where('type','Question')->where('state','Close')->simplePaginate(7);
         return view('espace_enseignant.BodyQuestion', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>5
+            'i'=>17
         ]);
     }
 
@@ -364,15 +364,15 @@ class PostController extends Controller
         $posts = Post::where('space','Professors')->where('type','Question')->where('state','Open')->simplePaginate(7);
         return view('espace_enseignant.BodyQuestion', [
             'categories' => Category::all(), 'posts' => $posts,
-            'i'=>6
+            'i'=>20
         ]);
     }
 
     public function  questions_categories($id){
 
 
-        $category= Category::find($id);
-        $posts = $category->posts->where('type','Question');
+
+        $posts = Post::where('category_id',$id)->where('type','Question')->simplePaginate(7);
         return view('Posts.questions.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>10,'category_id'=>$id
@@ -382,8 +382,7 @@ class PostController extends Controller
 
     public function  services_categories($id){
 
-     $category= Category::find($id);
-     $posts = $category->posts->where('type','Service');
+        $posts = Post::where('category_id',$id)->where('type','Service')->simplePaginate(7);
         return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>9,'category_id'=>$id
@@ -392,8 +391,7 @@ class PostController extends Controller
 
     public function  experiences_categories($id){
 
-        $category= Category::find($id);
-        $posts = $category->posts->where('type','Experience');
+        $posts = Post::where('category_id',$id)->where('type','Experience')->simplePaginate(7);
         return view('Posts.Experiences.Body', [
             'categories' => Category::all(), 'posts' => $posts,
             'i'=>11,'category_id'=>$id
@@ -489,7 +487,7 @@ class PostController extends Controller
         $users = User::orderBy('name','desc')->simplePaginate(7);
         return view('Posts.users', [
             'categories' => Category::all(), 'users' => $users,
-            'i'=>2
+            'i'=>26
         ]);
 
     }
@@ -498,12 +496,12 @@ class PostController extends Controller
         $user = User::findOrfail($id);
         $followers = Follow::where('followed',$id)->simplePaginate(30);
         $following = Follow::where('follows',$id)->simplePaginate(30);
-        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
-        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
-        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
-        $questions = Post::where('user_id',$id)->where('type','question')->simplePaginate(7);
-        $services= Post::where('user_id',$id)->where('type','service')->simplePaginate(7);
-        $experiences = Post::where('user_id',$id)->where('type','experience')->get();
+        $nbr_questions = Post::where('user_id',$id)->where('type','Question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','Service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','Experience')->count();
+        $questions = Post::where('user_id',$id)->where('type','Question')->simplePaginate(7);
+        $services= Post::where('user_id',$id)->where('type','Service')->simplePaginate(7);
+        $experiences = Post::where('user_id',$id)->where('type','Experience')->get();
 
         $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
         $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->simplePaginate(7);
@@ -518,12 +516,12 @@ class PostController extends Controller
         $user = User::findOrfail($id);
         $followers = Follow::where('followed',$id)->simplePaginate(30);
         $following = Follow::where('follows',$id)->simplePaginate(30);
-        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
-        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
-        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
-        $questions = Post::where('user_id',$id)->where('type','question')->simplePaginate(7);
-        $services= Post::where('user_id',$id)->where('type','service')->simplePaginate(7);
-        $experiences = Post::where('user_id',$id)->where('type','experience')->simplePaginate(7);
+        $nbr_questions = Post::where('user_id',$id)->where('type','Question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','Service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','Experience')->count();
+        $questions = Post::where('user_id',$id)->where('type','Question')->simplePaginate(7);
+        $services= Post::where('user_id',$id)->where('type','Service')->simplePaginate(7);
+        $experiences = Post::where('user_id',$id)->where('type','Experience')->get();
 
         $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
         $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->simplePaginate(7);
@@ -531,19 +529,19 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>1,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$questions,'i'=>34,'followers'=>$followers,'following'=>$following]);
     }
     public function userbAnswers($id) {
 
         $user = User::findOrfail($id);
         $followers = Follow::where('followed',$id)->simplePaginate(30);
         $following = Follow::where('follows',$id)->simplePaginate(30);
-        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
-        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
-        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
-        $questions = Post::where('user_id',$id)->where('type','question')->simplePaginate(7);
-        $services= Post::where('user_id',$id)->where('type','service')->simplePaginate(7);
-        $experiences = Post::where('user_id',$id)->where('type','experience')->simplePaginate(7);
+        $nbr_questions = Post::where('user_id',$id)->where('type','Question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','Service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','Experience')->count();
+        $questions = Post::where('user_id',$id)->where('type','Question')->simplePaginate(7);
+        $services= Post::where('user_id',$id)->where('type','Service')->simplePaginate(7);
+        $experiences = Post::where('user_id',$id)->where('type','Experience')->get();
 
         $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
         $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->simplePaginate(7);
@@ -551,19 +549,19 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>2,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$questions,'i'=>35,'followers'=>$followers,'following'=>$following]);
     }
     public function userServices($id) {
 
         $user = User::findOrfail($id);
         $followers = Follow::where('followed',$id)->get();
         $following = Follow::where('follows',$id)->get();
-        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
-        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
-        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
-        $questions = Post::where('user_id',$id)->where('type','question')->get();
-        $services= Post::where('user_id',$id)->where('type','service')->get();
-        $experiences = Post::where('user_id',$id)->where('type','experience')->get();
+        $nbr_questions = Post::where('user_id',$id)->where('type','Question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','Service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','Experience')->count();
+
+        $services= Post::where('user_id',$id)->where('type','Service')->simplePaginate(7);
+
 
         $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
         $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->get();
@@ -571,19 +569,18 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>3,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$services,'i'=>37,'followers'=>$followers,'following'=>$following]);
     }
     public function userExperiences($id) {
 
         $user = User::findOrfail($id);
         $followers = Follow::where('followed',$id)->simplePaginate(30);
         $following = Follow::where('follows',$id)->simplePaginate(30);
-        $nbr_questions = Post::where('user_id',$id)->where('type','question')->count();
-        $nbr_services = Post::where('user_id',$id)->where('type','service')->count();
-        $nbr_experiences = Post::where('user_id',$id)->where('type','experience')->count();
-        $questions = Post::where('user_id',$id)->where('type','question')->simplePaginate();
-        $services= Post::where('user_id',$id)->where('type','service')->simplePaginate(7);
-        $experiences = Post::where('user_id',$id)->where('type','experience')->simplePaginate(7);
+        $nbr_questions = Post::where('user_id',$id)->where('type','Question')->count();
+        $nbr_services = Post::where('user_id',$id)->where('type','Service')->count();
+        $nbr_experiences = Post::where('user_id',$id)->where('type','Experience')->count();
+
+        $experiences = Post::where('user_id',$id)->where('type','Experience')->simplePaginate(7);
 
         $nbr_banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->count();
         $banswers = Comment::where('user_id',$id)->where('isBestAnswer',true)->simplePaginate(7);
@@ -591,7 +588,7 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>4,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$experiences,'i'=>36,'followers'=>$followers,'following'=>$following]);
     }
 
 

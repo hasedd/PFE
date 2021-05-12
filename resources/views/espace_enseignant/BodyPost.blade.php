@@ -16,23 +16,23 @@
                                     <div class="wrap-tabs">
                                         <div class="menu-tabs">
                                             <ul class="menu flex menu-tabs-desktop">
-                                                <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
+                                                <li class="ml-9 <?php if($i==21) echo "ml-2 active-tab" ?>" >
                                                     <a href="{{route('postsProfessors')}}">
                                                         Recent Posts						</a>
                                                 </li>
-                                                <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
+                                                <li  class="ml-5 <?php if($i==22) echo "ml-3 active-tab" ?>" >
                                                     <a href="{{route('VisitedPosts_p')}}">
                                                         Most Visited						</a>
                                                 </li>
-                                                <li class="ml-5 <?php if($i==4) echo "ml-3 active-tab" ?> ">
+                                                <li class="ml-5 <?php if($i==23) echo "ml-3 active-tab" ?> ">
                                                     <a href="{{route('VotedPosts_p')}}">
                                                         Most Voted						</a>
                                                 </li>
-                                                <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
+                                                <li class="ml-5 <?php if($i==24) echo "ml-3 active-tab" ?>" >
                                                     <a href="{{route('experiences_p')}}">
                                                         Expriences						</a>
                                                 </li>
-                                                <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
+                                                <li class="ml-5 <?php if($i==25) echo "ml-3 active-tab" ?>" >
                                                     <a href="{{route('services_p')}}">
                                                         Services						</a>
                                                 </li>
@@ -128,25 +128,26 @@
                                 </div><!-- End single-inner-content -->
                                         </article><!-- End article -->
                                     @empty
-                                        @if($i==6)
+                                        @if($i==25)
                                         <center><p class="no-comments">No  Services Yet </p></center>
                                         @endif
-                                        @if($i==5)
+                                        @if($i==24)
                                                 <center><p class="no-comments">No  Experiences Yet </p></center>
                                             @endif
-                                            @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  Posts yet </p></center>
+                                            @if($i==23 || $i==21 || $i==22)<center><p class="no-comments">No  Posts yet </p></center>
                                             @endif
                                     @endforelse
                                     @if(count($posts)!=0)
-                                        @if($i==6)
+                                        @if($i==25)
                                             <center><p class="no-comments">No  More Services </p></center>
                                         @endif
-                                        @if($i==5)
+                                        @if($i==24)
                                             <center><p class="no-comments">No  More Experiences </p></center>
                                         @endif
-                                        @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  More Posts  </p></center>
+                                        @if($i==23 || $i==22 || $i==21)<center><p class="no-comments">No  More Posts  </p></center>
                                         @endif
                                         @endif
+                                        {{$posts->links()}}
                                 </div><!-- End post-articles -->
 
                             </section><!-- End section -->

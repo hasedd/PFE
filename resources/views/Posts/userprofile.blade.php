@@ -494,19 +494,19 @@
 										<ul class="menu flex menu-tabs-desktop">
                                             <li <?php if($i==0) echo "class='active-tab'"; ?>  >  <a href="{{route('userprofile',[\Illuminate\Support\Facades\Auth::user()->id])}}">
 													About	</a></li>
-											<li <?php if($i==1) echo "class='active-tab'"; ?> >
+											<li <?php if($i==34) echo "class='active-tab'"; ?> >
 												<a href="{{route('user_questions',[\Illuminate\Support\Facades\Auth::user()->id])}}">
 													Questions					</a>
 											</li>
-											<li <?php if($i==2) echo "class='active-tab'"; ?> >
+											<li <?php if($i==35) echo "class='active-tab'"; ?> >
 												<a href="{{route('user_bAnswers',[\Illuminate\Support\Facades\Auth::user()->id])}}">
 													Best Answers					</a>
 											</li>
-											<li <?php if($i==4) echo "class='active-tab'"; ?> >
+											<li <?php if($i==36) echo "class='active-tab'"; ?> >
 												<a href="{{route('user_experiences',[\Illuminate\Support\Facades\Auth::user()->id])}}">
 													Experiences					</a>
 											</li>
-											<li <?php if($i==3) echo "class='active-tab'"; ?> >
+											<li <?php if($i==37) echo "class='active-tab'"; ?> >
 												<a href="{{route('user_services',[\Illuminate\Support\Facades\Auth::user()->id])}}">
 													Services					</a>
 											</li>
@@ -515,8 +515,8 @@
 								</div>
 
                             <section>
-                            <h2 class="screen-reader-text">Discy Latest Questions</h2>
-                                @if( $i == 1)
+                            <h2 class="screen-reader-text">Ask N Provide Latest Questions</h2>
+                                @if( $i == 34)
                             <div class="post-articles question-articles">
                                 @foreach($posts as $post)
                                     <article id="post-118" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language">
@@ -647,10 +647,108 @@
                                             </div>
                                         </div><!-- End single-inner-content -->
                                     </article><!-- End article -->
-                                    {{$posts->links()}}
+
                                 @endforeach
+                                {{$posts->links()}}
                             </div><!-- End post-articles -->
 
+                                @endif
+                            @if($i==36 || $i==37)
+                                    <div class="post-articles question-articles">
+                                        @forelse($posts as $post)
+                                            <article id="post-46" class="article-post article-post-only clearfix post-46 post type-post status-publish format-standard has-post-thumbnail hentry category-work">
+                                                <div class="single-inner-content">
+                                                    <header class="article-header">
+                                                        <div class="post-meta" style="text-align: center">
+                                                        <span class="post-date">On:<span class="date-separator"></span>
+                                                            <time class="entry-date published">{{$post->created_at}}</time>
+                                                        </span>
+                                                            <span class="byline">
+                                                            <span class="post-cat">Posted in <a href="{{route('questions_categories',[$post->category->id])}}" rel="category tag">{{$post->category->name}}</a></span>
+                                                        </span>
+                                                            <span class="post-comment">
+					                                            Comments: <a href="{{route('addview',[$post->id])}}"><?php echo $post->comments->count() ?></a>
+                                                        </span>
+
+                                                            <span class="post-views">Views: {{$post->views}}</span>
+                                                        </div>
+                                                        <h2 class="post-title" style="text-align: center">
+                                                            <a class="post-title" href="{{route('addview',[$post->id])}}" rel="bookmark">{{$post->title}}</a>
+                                                        </h2>
+                                                        <div style="text-align: center;">
+                                                            <a class="post-author"  rel="author" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->name}}</a>
+                                                        </div>
+
+
+                                                    </header>
+
+                                                    <div class="post-wrap-content post-content ">
+                                                        <div class="post-content-text">
+
+                                                            <div class="all_not_signle_post_content">
+
+                                                                <?php
+                                                                $html = $post->content ;
+                                                                preg_match('<(.*)>', $html, $match);
+                                                                $allez=$match[0];
+                                                                if(strlen($allez)<213)
+                                                                    echo "<p class=\"excerpt-question\"> $allez </p>";
+                                                                else { $allez2=substr($allez,0,213)."...";
+                                                                    echo "<p class=\"excerpt-question\"> $allez2</p>";}
+                                                                ?>
+                                                                @if($post->files != null && $post->files->count()==1 )
+                                                                    <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
+                                                                @endif
+                                                                @if ($post->files != null && $post->files->count()>1)
+                                                                    <h5 style="text-decoration: blink;"> This question is supported by a files. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check them</b></u></a> </h5>
+                                                                @endif
+                                                            </div>
+
+                                                        </div>
+
+                                                        @livewire('voteit',['post_id'=>$post->id,'var'=>0])
+                                                    </div>
+                                                    <div class="tagcloud">
+                                                        <div class="question-tags"><i class="icon-tags"></i>
+                                                            <?php
+                                                            $tags =explode ( "," , $post->tags );
+                                                            foreach($tags as $tag)
+                                                                echo "<a href=\"#\">$tag</a>"
+                                                            ?>
+                                                        </div>
+                                                    </div>
+
+                                                    <footer>
+                                                        <div style="text-align: center">
+
+                                                            <a class="post-read-more" href="{{route('addview',[$post->id])}}" rel="bookmark" title="Read Highlighting what’s important about questions &#038; Answers on Discy Community!">Read more</a>
+                                                            <div class="post-share">
+                                                                <span><i class="icon-share"></i><span>Share This Article</span></span>
+                                                                <ul>
+                                                                    <li class="share-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;t=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-facebook"></i><span>Facebook</span></a></li>
+                                                                    <li class="share-twitter"><a target="_blank" href="http://twitter.com/share?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="icon-twitter"></i></a></li>
+                                                                    <li class="share-linkedin"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F&amp;title=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21"><i class="icon-linkedin"></i></a></li>
+                                                                    <li class="share-whatsapp"><a target="_blank" href="https://api.whatsapp.com/send?text=Highlighting+what%E2%80%99s+important+about+questions+%26%23038%3B+Answers+on+Discy+Community%21 - http%3A%2F%2Ftemplate.test%2F2018%2F04%2F18%2Fhighlighting-whats-important-about-questions-answers-on-discy%2F"><i class="fab fa-whatsapp"></i></a></li>
+                                                                </ul>
+                                                            </div><!-- End post-share -->
+
+                                                        </div>
+                                                    </footer>
+
+                                                </div><!-- End single-inner-content -->
+                                            </article><!-- End article -->
+
+                                        @empty
+                                            @if($i==37)
+                                                <center><p class="no-comments">No  Services Yet </p></center>
+                                            @endif
+                                            @if($i==36)
+                                                <center><p class="no-comments">No  Experiences Yet </p></center>
+                                            @endif
+
+                                        @endforelse
+                                        {{$posts->links()}}
+                                    </div>
                                 @endif
                         </section><!-- End section -->
 
@@ -741,7 +839,7 @@
 								</div><!-- End user-follower -->
 							</div><!-- End user-area-content -->
                         @endif
-                        @if($i==2)
+                        @if($i==35)
                         <div id="section-best-answers" class="page-content commentslist section-page-div">
                             <ol class="commentlist clearfix">
                                 @forelse($banswers as $banswer )

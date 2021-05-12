@@ -33,23 +33,23 @@
                                                             Experiences						</a>
                                                     </li>
                                                 @else
-                                                <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
+                                                <li class="ml-9 <?php if($i==7) echo "ml-2 active-tab" ?>" >
                                                     <a href="{{route('postsBody')}}">
                                                         Recent Posts						</a>
                                                 </li>
-                                                <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
+                                                <li  class="ml-5 <?php if($i==8) echo "ml-3 active-tab" ?>" >
                                                     <a href="{{route('VisitedPosts')}}">
                                                         Most Visited						</a>
                                                 </li>
-                                                <li class="ml-5 <?php if($i==4) echo "ml-3 active-tab" ?> ">
+                                                <li class="ml-5 <?php if($i==13) echo "ml-3 active-tab" ?> ">
                                                     <a href="{{route('VotedPosts')}}">
                                                         Most Voted						</a>
                                                 </li>
-                                                <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
+                                                <li class="ml-5 <?php if($i==14) echo "ml-3 active-tab" ?>" >
                                                     <a href="{{route('experiences')}}">
                                                         Expriences						</a>
                                                 </li>
-                                                <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
+                                                <li class="ml-5 <?php if($i==15) echo "ml-3 active-tab" ?>" >
                                                     <a href="{{route('services')}}">
                                                         Services						</a>
                                                 </li>
@@ -147,13 +147,13 @@
                                         </article><!-- End article -->
                                         {{$posts->links()}}
                                     @empty
-                                        @if($i==6 || $i==9)
+                                        @if($i==15 || $i==9)
                                         <center><p class="no-comments">No  Services Yet </p></center>
                                         @endif
-                                        @if($i==5 || $i==11 )
+                                        @if($i==14 || $i==11 )
                                                 <center><p class="no-comments">No  Experiences Yet </p></center>
                                             @endif
-                                            @if($i==2 || $i==3 || $i==4)<center><p class="no-comments">No  Posts yet </p></center>
+                                            @if($i==7 || $i==8 || $i==13)<center><p class="no-comments">No  Posts yet </p></center>
                                             @endif
                                     @endforelse
                                     {{$posts->links()}}

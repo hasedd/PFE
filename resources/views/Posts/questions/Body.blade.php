@@ -220,7 +220,7 @@
                                                     </article><!-- End article -->
 
                                                 @empty
-                                                    <center><p class="no-comments">No more questions</p></center>
+                                                    <center><p class="no-comments">No questions Yet</p></center>
                                                 @endforelse
                                                     {{$posts->links()}}
                                             </div><!-- End post-articles -->

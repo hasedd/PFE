@@ -16,25 +16,25 @@
                                                 <div class="wrap-tabs">
                                                     <div class="menu-tabs">
                                                         <ul class="menu flex menu-tabs-desktop">
-                                                            <li class="ml-9 <?php if($i==2) echo "ml-2 active-tab" ?>" >
+                                                            <li class="ml-9 <?php if($i==16) echo "ml-2 active-tab" ?>" >
                                                                 <a href="{{route('QuestionProfessors')}}">
                                                                     Recent Questions						</a>
                                                             </li>
 
 
-                                                            <li class="ml-5 <?php if($i==5) echo "ml-3 active-tab" ?>" >
+                                                            <li class="ml-5 <?php if($i==17) echo "ml-3 active-tab" ?>" >
                                                                 <a href="{{route('answered_p')}}">
                                                                     Answered						</a>
                                                             </li>
-                                                            <li  class="ml-5 <?php if($i==3) echo "ml-3 active-tab" ?>" >
+                                                            <li  class="ml-5 <?php if($i==18) echo "ml-3 active-tab" ?>" >
                                                                 <a href="{{route('Most_visited_p')}}">
                                                                     Most Visited						</a>
                                                             </li>
-                                                            <li class="ml-5 <?php if($i==4) echo "ml-3 active-tab" ?> ">
+                                                            <li class="ml-5 <?php if($i==19) echo "ml-3 active-tab" ?> ">
                                                                 <a href="{{route('Most_Voted_p')}}">
                                                                     Most Voted						</a>
                                                             </li>
-                                                            <li class="ml-5 <?php if($i==6) echo "ml-3 active-tab" ?>" >
+                                                            <li class="ml-5 <?php if($i==20) echo "ml-3 active-tab" ?>" >
                                                                 <a href="{{route('Not_answered_p')}}">
                                                                     No Answers						</a>
                                                             </li>
@@ -194,6 +194,7 @@
 
                                                     <center><p class="no-comments">No  questions Yet </p></center>
                                                 @endforelse
+                                                    {{$posts->links()}}
                                             </div><!-- End post-articles -->
 											<!-- <a wire:click="load" class="btn btn-dark" href="#"  >Load More Questions</a>-->
                                             @if(count($posts)!=0)
