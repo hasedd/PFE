@@ -33,6 +33,10 @@ Route::get('/about', function () {
     return view('About_us');
 })->name('about');
 
+Route::get('/help', function () {
+    return view('Posts.F&Q',['categories'=>\App\Models\Category::all(),'i'=>27]);
+})->name('help');
+
 Route::get('/badgets', function () {
     return view('Posts.badgets',['categories'=>\App\Models\Category::all()]);
 })->name('badgets');

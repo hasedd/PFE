@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <title>Scisco &#8211; Question &amp; Answer WordPress Theme</title>
+    <title>askNprovide &#8211; open community for morrocan teachers, students, laureates and experts.</title>
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="shortcut icon" href="{{asset("Dassets/wp-content/uploads/2018/04/logo.png")}}" type="image/x-icon">
     <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
     <link rel="alternate" type="application/rss+xml" title="Scisco &raquo; Feed" href="http://rex.test/feed/" />
     <link rel="alternate" type="application/rss+xml" title="Scisco &raquo; Comments Feed" href="http://rex.test/comments/feed/" />
@@ -297,6 +298,16 @@
                                 {{ __('Questions') }}
                             </x-jet-nav-link>
                         </div>
+                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <x-jet-nav-link href="{{ route('experiences') }}" :active="request()->routeIs('QuestionBody')">
+                                    {{ __('Experiences ') }}
+                                </x-jet-nav-link>
+                        </div>
+                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <x-jet-nav-link href="{{ route('services') }}" :active="request()->routeIs('QuestionBody')">
+                                    {{ __('Services ') }}
+                                </x-jet-nav-link>
+                         </div>
                     @endauth
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                         <x-jet-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
@@ -325,9 +336,6 @@
                     @endguest
                         <!-- Settings Dropdown -->
                         <div class="ml-3 relative">
-
-
-
 
                             @auth()
                             <x-jet-dropdown align="right" width="48">

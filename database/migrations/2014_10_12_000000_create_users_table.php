@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->integer('points')->default(0);
+            $table->unsignedBigInteger('badget_id')->nullable();
+            $table->foreign('badget_id')->references('id')->on('badgets');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();

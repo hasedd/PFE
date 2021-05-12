@@ -133,7 +133,7 @@ class CommentController extends Controller
         $badegts = Badget::all();
         foreach ($badegts as $badget){
             if($theBest->user->points > $badget->min_points && $theBest->user->points < $badget->max_points){
-                $theBest->user->badget = $badget;
+                $theBest->user->badget = $badget->id;
                 dd($badget);
             }
             else dd($theBest->user->points);

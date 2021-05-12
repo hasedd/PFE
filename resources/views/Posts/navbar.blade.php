@@ -42,6 +42,7 @@
         </li>
         @endif
         <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==26 ) echo "current_page_item" ?> menu-item-101"><a class=""  href="{{route('users')}}"><i class="icon-users"></i>Users</a></li>
+        <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==27 ) echo "current_page_item" ?> menu-item-103"><a class=""  href="{{route('help')}}"><i class="icon-info"></i>infos</a></li>
         <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a class=""  href="{{route('contact')}}"><i class="icon-lifebuoy"></i>Help</a></li>
 
     </ul>

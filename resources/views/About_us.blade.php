@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <title>About Us &#8211; Scisco</title>
+    <title>About Us &#8211; askNprovide</title>
     <script type="text/javascript">var ajaxurl = "http://rex.test/wp-admin/admin-ajax.php",ap_nonce 	= "ff92a07ff7",apTemplateUrl = "http://rex.test/wp-content/plugins/anspress-question-answer/templates/js-template";apQuestionID = "";aplang = {"loading":"Loading..","sending":"Sending request","file_size_error":"File size is bigger than 0.48 MB","attached_max":"You have already attached maximum numbers of allowed attachments","commented":"commented","comment":"Comment","cancel":"Cancel","update":"Update","your_comment":"Write your comment...","notifications":"Notifications","mark_all_seen":"Mark all as seen","search":"Search","no_permission_comments":"Sorry, you don't have permission to read comments."};disable_q_suggestion = "";</script><script type="text/javascript">AP_Brushes = {"php":"PHP","css":"CSS","xml":"XML\/HTML","jscript":"Javascript","sql":"SQL","bash":"Bash\/Shell","clojure":"Clojure","cpp":"C++\/C","csharp":"C#","delphi":"Delphi","diff":"Diff","erlang":"Erlang","fsharp":"F#","groovy":"Groovy","java":"Java","javafx":"JavaFX","latex":"Latex","plain":"Plain text","matlab":"Matlabkey","objc":"Object","perl":"Perl","powershell":"PowerShell","python":"Python","r":"R","ruby":"Ruby\/Rails","scala":"Scala","vb":"VisualBasic"};</script><meta name='robots' content='noindex, nofollow' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='dns-prefetch' href='//s.w.org' />
     <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+    <link rel="shortcut icon" href="{{asset("Dassets/wp-content/uploads/2018/04/logo.png")}}" type="image/x-icon">
     <link rel="alternate" type="application/rss+xml" title="Scisco &raquo; Feed" href="http://rex.test/feed/" />
     <link rel="alternate" type="application/rss+xml" title="Scisco &raquo; Comments Feed" href="http://rex.test/comments/feed/" />
     <script type="text/javascript">
