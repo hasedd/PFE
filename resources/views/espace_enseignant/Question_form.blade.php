@@ -21,7 +21,7 @@
 	                    <option value='-1'>Select a Category</option>
 	                    @foreach($categories as $category)
                             <option class="level-0" value={{$category->name}}>{{$category->name}}</option>
-                        @endforeach
+                    @endforeach
                     <!-- <option class="level-0" value="6">Communication</option>
 	                    <option class="level-0" value="7">Company</option>
 	                    <option class="level-0" value="20">Language</option>
@@ -44,7 +44,6 @@
                         <span class="wpqa_checkbox_span">Is this question is a poll? If you want to be doing a poll click here.</span>
                     </label>
                 </p>
-
                 <div class="clearfix"></div>
                 <div class="poll_options wpqa_hide"><p class="wpqa_checkbox_p">
                         <label for="question_image_poll-451">

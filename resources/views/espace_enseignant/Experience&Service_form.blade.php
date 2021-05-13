@@ -6,31 +6,31 @@
         <form class="form-post wpqa_form" action="{{route('Add_privatePost')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-inputs clearfix">
-               <div x-data="{ isShowing: false }">
-                <p>
+                <div x-data="{ isShowing: false }">
+                    <p>
 
 
-                    <label>Post Type<span class="required">*</span></label>
+                        <label>Post Type<span class="required">*</span></label>
 
                     <div >
-                    <label style="margin-bottom: 12px ; cursor: pointer; position: relative ; margin-bottom: 12px ; padding-left: 150px" for="Sr">Service<span></span></label>
-                    <input @click="isShowing = false" name="type"  type="radio" id="Sr" value="Service" checked >
+                        <label style="margin-bottom: 12px ; cursor: pointer; position: relative ; margin-bottom: 12px ; padding-left: 150px" for="Sr">Service<span></span></label>
+                        <input @click="isShowing = false" name="type"  type="radio" id="Sr" value="Service" checked >
 
-                    <label style="margin-bottom: 12px ; cursor: pointer; position: relative ; margin-bottom: 12px ; padding-left: 35px" for="Ex">Experience<span></span></label>
-                    <input @click="isShowing = true" name="type"  type="radio" id="Ex" value="Experience" >
+                        <label style="margin-bottom: 12px ; cursor: pointer; position: relative ; margin-bottom: 12px ; padding-left: 35px" for="Ex">Experience<span></span></label>
+                        <input @click="isShowing = true" name="type"  type="radio" id="Ex" value="Experience" >
                     </div>
 
                     <span class="form-description">Please choose a type.</span>
-                </p>
-                <p>
-                    <label x-show="!isShowing" for="question-title-451">Service Title<span class="required">*</span></label>
-                    <label x-show="isShowing" for="question-title-451">Experience Title<span class="required">*</span></label>
-                    <input name="title" id="question-title-451" class="the-title" type="text" value="" required>
-                    <i class="icon-chat"></i>
+                    </p>
+                    <p>
+                        <label x-show="!isShowing" for="question-title-451">Service Title<span class="required">*</span></label>
+                        <label x-show="isShowing" for="question-title-451">Experience Title<span class="required">*</span></label>
+                        <input name="title" id="question-title-451" class="the-title" type="text" value="" required>
+                        <i class="icon-chat"></i>
 
-                    <span class="form-description">Please choose an appropriate title for the post.</span>
-                </p>
-               </div>
+                        <span class="form-description">Please choose an appropriate title for the post.</span>
+                    </p>
+                </div>
                 <br>
                 <div class="wpqa_category">
                     <label for="question-category-451">Category<span class="required" >*</span></label>
@@ -39,7 +39,7 @@
 	                    <option value='-1'>Select a Category</option>
 	                    @foreach($categories as $category)
                             <option class="level-0" value={{$category->name}}>{{$category->name}}</option>
-                        @endforeach
+                    @endforeach
                     <!-- <option class="level-0" value="6">Communication</option>
 	                    <option class="level-0" value="7">Company</option>
 	                    <option class="level-0" value="20">Language</option>
@@ -62,7 +62,6 @@
                         <span class="wpqa_checkbox_span">Is this question is a poll? If you want to be doing a poll click here.</span>
                     </label>
                 </p>
-
                 <div class="clearfix"></div>
                 <div class="poll_options wpqa_hide"><p class="wpqa_checkbox_p">
                         <label for="question_image_poll-451">

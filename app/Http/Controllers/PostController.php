@@ -147,9 +147,20 @@ class PostController extends Controller
         public function showPost($id)
     {
         $post = Post::findOrFail($id);
+        if($post->type == 'Service')
+        $next = Post::where('id','>',$id)->where('type','Service')->orderBy('id')->first();
+        else
+            $next = Post::where('id','>',$id)->where('type','Experience')->orderBy('id')->first();
+        if($post->type == 'Service')
+            $previous= Post::where('id','<',$id)->where('type','Service')->orderBy('id','desc')->first();
+        else
+            $previous = Post::where('id','<',$id)->where('type','Experience')->orderBy('id','desc')->first();
+        $related_posts=Post::where('category_id',$post->category->id)->where('id','!=',$post->id)->where(function ($q)
+        { $q->where('type','Experience')->orWhere('type','Service');  })->orderBy('votes','desc')->take(2)->get();
         return view('Posts.Experiences.show', [
             'categories' => Category::all(), 'post' => $post,
             'comments' => $post->comments,'bestAnswer' => Comment::where('post_id',$id)->where('isBestAnswer',1)->first(),
+            'previous' => $previous , 'next'=>$next , 'related'=>$related_posts,
         ]);
     }
 

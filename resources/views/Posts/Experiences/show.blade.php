@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
         </div>
     </header>
-@include('Posts.Question&report_form')
+@include('Posts.Experience&Service_form')
 <!--                     --------------- header---------------                            -->
 
     <div class="main-content">
@@ -49,10 +49,11 @@
                                             </div>
 
                                             @if($post->files != null)
+                                               <br>
                                                 @foreach($post->files as $file)
                                                     <div class='featured_image_question'>
 
-                                                        <embed alt="{{$file->name}} " width='500' height='500' src="{{asset('files/'. $post->id . $file->name)}}">
+                                                       <center> <embed alt="{{$file->name}} " width='500' height='500' src="{{asset('files/'. $post->id . $file->name)}}"> </center>
 
                                                     </div>
                                                 @endforeach
@@ -62,12 +63,12 @@
 
 
                                         </header>
-
+                                       <br>
                                         <div class="post-wrap-content post-content ">
                                             <div class="post-content-text">
 
                                                 <div class="all_not_signle_post_content">
-                                                    {!! $post->content !!}
+                                                    <center>{!! $post->content !!}</center>
                                                 </div>
 
                                             </div>
@@ -114,7 +115,68 @@
                                         </footer>
 
                                     </div><!-- End single-inner-content -->
+
                                 </article><!-- End article -->
+                                @if(isset($previous)  || isset($next))
+                                <div class="page-navigation page-navigation-single clearfix">
+                                    <div class="row">
+                                        @if(isset($previous))
+                                        <div class="col col6 col-nav-previous">
+
+                                            <div class="nav-previous">
+                                                <div class="navigation-content">
+                                                    <span class="navigation-i"><i class="icon-left-thin"></i></span>
+                                                    <span class="navigation-text">Previous {{$previous->type}}</span>
+                                                    <div class="clearfix"></div>
+                                                    <a href="{{route('Show_Post',[$previous->id])}}" rel="prev">{{$previous->title}}</a>										</div>
+                                            </div>
+
+                                        </div> @endif
+
+                                        @if(isset($next))
+                                        <div class="col col6 col-nav-next">
+
+                                            <div class="nav-next">
+                                                <div class="navigation-content">
+                                                    <span class="navigation-i"><i class="icon-right-thin"></i></span>
+                                                    <span class="navigation-text">Next {{$next->type}}</span>
+                                                    <div class="clearfix"></div>
+                                                    <a href="{{route('Show_Post',[$next->id])}}" rel="next">{{$next->title}}</a>										</div>
+                                            </div>
+
+                                        </div>
+                                            @endif
+                                    </div>
+                                </div>
+                                @endif
+                                <div class="related-post">
+                                    <div class="post-inner">
+                                        <h3 class="section-title">Related Posts</h3>
+                                        <div class="row">
+                                            @foreach($related as $rel_post )
+                                            <div class="col col6">
+                                                <div class="clearfix post-45 post type-post status-publish format-standard has-post-thumbnail hentry category-work">
+                                                    @if($rel_post->files != null)
+                                                        @foreach($rel_post->files as $file)
+                                                    <div class="related-image">
+                                                        <a href="{{route('Show_Post',[$rel_post->id])}}">
+                                                            <embed alt="Organizational and company accounts on Discy Engine the next step" width="269" height="180" src="{{asset('files/'. $rel_post->id . $file->name)}}">									</a>
+                                                    </div>
+                                                            @break
+                                                        @endforeach
+                                                    @endif
+                                                    <div class="post-meta clearfix">
+                                                        <span class="post-date">On:<span class="date-separator"></span> <time class="entry-date published">{{$rel_post->created_at}}</time></span>									</div>
+                                                    <h2 class="post-title"><a class="post-title" href="{{route('Show_Post',[$rel_post->id])}}" title="" rel="bookmark">{{$rel_post->title}}
+
+                                                        </a></h2>
+                                                </div>
+                                            </div>
+                                            @endforeach
+
+                                        </div>			<div class="clearfix"></div>
+                                    </div>
+                                </div>
                                 <!-- End single-inner-content -->
                                 <div class="question-adv-comments question-has-comments">
                                     <div id="comments" class="post-section">
