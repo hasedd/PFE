@@ -21,7 +21,7 @@
                                 <div class="page-section">
                                     <div class="page-wrap-content">
                                         <h2 class="post-title-3"><i class="icon-bucket"></i>Points System</h2>
-                                        <div class="post-content-text"><p>Besides gaining reputation with your questions and answers, you receive badges for being especially helpful. Badges appears on your profile page, questions &amp; answers.</p></div>
+                                        <div class="post-content-text"><p>Besides gaining reputation with your questions and answers, you receive badges for being especially helpful. Badges appears on your profile page, questions &amp; answers , posts & comments.</p></div>
                                         <div class="points-section">
                                             <ul class="row">
                                                 <li class="col col4">
@@ -103,7 +103,7 @@
                                 <div class="page-section">
                                     <div class="page-wrap-content">
                                         <h2 class="post-title-3"><i class="icon-trophy"></i>Badges System</h2>
-                                        <div class="post-content-text"><p>Besides gaining reputation with your questions and answers, you receive badges for being especially helpful. Badges appears on your profile page, questions &amp; answers.</p></div>
+                                        <div class="post-content-text"><p>Besides gaining reputation with your questions and answers, you receive badges for being especially helpful. Badges appears on your profile page, questions &amp; answers, posts &amp; comments.</p></div>
                                         <div class="badges-section">
                                             <ul>
                                                 <li>

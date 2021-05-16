@@ -34,7 +34,15 @@ class PostController extends Controller
         ]);
     }
     public function store(Request $request)
-    {
+    {    $request->validate([
+        'title' => 'required',
+        'category'=>'required|not_in:-1',
+        'tags'=>'required',
+        'content'=>'required',
+        'terms_active'=>'required|in:on'
+
+
+    ]);
 
         $post = new Post();
         $post->type = "Question";
@@ -115,7 +123,15 @@ class PostController extends Controller
 
     public function storePost(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'category'=>'required|not_in:-1',
+            'tags'=>'required',
+            'content'=>'required',
+            'terms_active'=>'required|in:on'
 
+
+        ]);
         $post = new Post();
         $post->type = $request->input('type');
 
@@ -239,7 +255,15 @@ class PostController extends Controller
 
     public function storeinprivate(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'category'=>'required|not_in:-1',
+            'tags'=>'required',
+            'content'=>'required',
+            'terms_active'=>'required|in:on'
 
+
+        ]);
         $post = new Post();
         $post->type = "Question";
         $post->space = "Professors";
@@ -269,7 +293,15 @@ class PostController extends Controller
 
     public function storePostinprivate(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'category'=>'required|not_in:-1',
+            'tags'=>'required',
+            'content'=>'required',
+            'terms_active'=>'required|in:on'
 
+
+        ]);
         $post = new Post();
         $post->type = $request->input('type');
 
@@ -520,7 +552,7 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>0,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$questions,'services'=>$services,'experiences'=>$experiences,'i'=>0,'followers'=>$followers,'following'=>$following,'id'=>$id]);
     }
     public function userQuestions($id) {
 
@@ -540,7 +572,7 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'i'=>34,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$questions,'i'=>34,'followers'=>$followers,'following'=>$following,'id'=>$id]);
     }
     public function userbAnswers($id) {
 
@@ -560,7 +592,7 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$questions,'i'=>35,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$questions,'i'=>35,'followers'=>$followers,'following'=>$following,'id'=>$id]);
     }
     public function userServices($id) {
 
@@ -580,7 +612,7 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$services,'i'=>37,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$services,'i'=>37,'followers'=>$followers,'following'=>$following,'id'=>$id]);
     }
     public function userExperiences($id) {
 
@@ -599,7 +631,7 @@ class PostController extends Controller
         return view('Posts.userprofile',['categories' => Category::all(),'user'=>$user,
             'nbr_questions'=>$nbr_questions,'nbr_services'=>$nbr_services,'nbr_experiences'=>$nbr_experiences,
             'nbr_banswers'=>$nbr_banswers,'banswers'=>$banswers,'answers'=>$answers
-            ,'posts'=>$experiences,'i'=>36,'followers'=>$followers,'following'=>$following]);
+            ,'posts'=>$experiences,'i'=>36,'followers'=>$followers,'following'=>$following,'id'=>$id]);
     }
 
 

@@ -13,6 +13,9 @@ class ReplyController extends Controller
     public function store(Request $request,$comment_id)
     {
         $reply = new Reply();
+        $request->validate([
+            'reply'=>'required',
+        ]);
 
         $reply->comment_id=$comment_id;
         $reply->user_id= Auth::user()->id ;

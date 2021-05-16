@@ -69,7 +69,7 @@
                                                     <div class="post-inner">
 
                                                         <div class="author-image author-image-84">
-                                                            <a href="{{ route('userprofile',$user->id) }}">
+                                                            <a href="{{ route('userprofile',[$user->id]) }}">
                                                                 <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
                                                                     <span class="mx-10 author-image-span"><img class="h-16 w-16 rounded-full object-cover avatar avatar-84 photo" src="{{ $user->profile_photo_url }}" alt="{{ $user->username }}" /></span>
                                                                 </button>
@@ -77,7 +77,7 @@
                                                         </div>
                                                         <div class="user-content mb-5">
                                                             <div class="user-inner">
-                                                                <h4 style="color: #1C3334"><a href="http://template.test/profile/james/"><b>{{$user->username}}</b><div style="color: #6b003e; font-size:12px;  ">{{"\" ".$user->type." \""}}</div></a></h4>
+                                                                <h4 style="color: #1C3334"><a href="{{ route('userprofile',[$user->id]) }}"><b>{{$user->username}}</b><div style="color: #6b003e; font-size:12px;  ">{{"\" ".$user->type." \""}}</div></a></h4>
                                                             </div>
                                                         </div><!-- End user-content -->
                                                         <?php
