@@ -543,6 +543,14 @@ class PostController extends Controller
     public function userprofile($id){
 
         $user = User::findOrfail($id);
+
+        $badegts = Badget::all();
+        foreach ($badegts as $badget){
+            if($user->points >= $badget->min_points && $user->points < $badget->max_points){
+                $user->badget_id = $badget->id;
+                $user->save();
+            }
+        }
         $followers = Follow::where('followed',$id)->simplePaginate(30);
         $following = Follow::where('follows',$id)->simplePaginate(30);
         $nbr_questions = Post::where('user_id',$id)->where('type','Question')->count();
