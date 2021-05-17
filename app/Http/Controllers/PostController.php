@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Badget;
 use App\Models\Category;
 use App\Models\Follow;
 use App\Models\Post;
@@ -61,6 +62,13 @@ class PostController extends Controller
         }
         Auth()->user()->points += 5;
         Auth()->user()->save();
+        $badegts = Badget::all();
+        foreach ($badegts as $badget){
+            if(Auth()->user()->points >= $badget->min_points && Auth()->user()->points < $badget->max_points){
+                Auth()->user()->badget_id = $badget->id;
+                Auth()->user()->save();
+            }
+        }
         return redirect()->route('QuestionBody');
     }
     public function show($id)
@@ -140,8 +148,15 @@ class PostController extends Controller
             }
         }
 
-        Auth()->user()->points += 5;
-        Auth()->user()->save();
+        $post->user->points += 5;
+        $post->user->save();
+        $badegts = Badget::all();
+        foreach ($badegts as $badget){
+            if(Auth()->user()->points >= $badget->min_points && Auth()->user()->points < $badget->max_points){
+                Auth()->user()->badget_id = $badget->id;
+                Auth()->user()->save();
+            }
+        }
         return redirect()->route('postsBody');
     }
         public function showPost($id)
@@ -262,8 +277,15 @@ class PostController extends Controller
                 }
             }
         }
-        Auth()->user()->points += 5;
-        Auth()->user()->save();
+        $post->user->points += 5;
+        $post->user->save();
+        $badegts = Badget::all();
+        foreach ($badegts as $badget){
+            if($post->user->points >= $badget->min_points && $post->user->points < $badget->max_points){
+                $post->user->badget_id = $badget->id;
+                $post->user->save();
+            }
+        }
         return redirect()->back();
     }
 
@@ -295,8 +317,15 @@ class PostController extends Controller
             }
         }
 
-        Auth()->user()->points += 5;
-        Auth()->user()->save();
+        $post->user->points += 5;
+        $post->user->save();
+        $badegts = Badget::all();
+        foreach ($badegts as $badget){
+            if($post->user->points >= $badget->min_points && $post->user->points < $badget->max_points){
+                $post->user->badget_id = $badget->id;
+                $post->user->save();
+            }
+        }
         return redirect()->back();
     }
 
@@ -474,6 +503,15 @@ class PostController extends Controller
         if($post->file != null )
             $post->file->delete();
         $post->delete();
+        $post->user->points -= 5;
+        $post->user->save();
+        $badegts = Badget::all();
+        foreach ($badegts as $badget){
+            if($post->user->points >= $badget->min_points && $post->user->points < $badget->max_points){
+                $post->user->badget_id = $badget->id;
+                $post->user->save();
+            }
+        }
         if($type=='Question')
         return  redirect()->route('QuestionBody');
         else return redirect()->route('postsBody');
@@ -608,9 +646,29 @@ class PostController extends Controller
         $test = Follow::where('follows',Auth()->user()->id)->where('followed',$id)->count();
         if ($test == 0) {
             Follow::create(['follows' => Auth()->user()->id, 'followed' => $id]);
+            $user = User::find($id);
+            $user->points -=5;
+            $badegts = Badget::all();
+            foreach ($badegts as $badget){
+                if($user->points >= $badget->min_points && $user->points < $badget->max_points){
+                    $user->badget_id = $badget->id;
+                    $user->save();
+                }
+            }
+            $user->save();
         }else
         {
             Follow::where('follows',Auth()->user()->id)->where('followed',$id)->first()->delete();
+            $user = User::find($id);
+            $user->points -=5;
+            $user->save();
+            $badegts = Badget::all();
+            foreach ($badegts as $badget){
+                if($user->points >= $badget->min_points && $user->points < $badget->max_points){
+                    $user->badget_id = $badget->id;
+                    $user->save();
+                }
+            }
         }
         return redirect()->back();
     }

@@ -5,11 +5,13 @@
 	text-align: center;
 	line-height: normal;
 	font-display: swap;
+    color: #1C3334;
 }
 .the-icons li {
 	font-size: 14px;
 	line-height: 24px;
 	height: 24px;
+    color: #1C3334;
 }
 .icon-note:before { content: "\266a"; } /* '\266a' */
 .icon-note-beamed:before { content: "\266b"; } /* '\266b' */

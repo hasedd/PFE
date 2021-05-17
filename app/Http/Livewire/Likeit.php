@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Like;
+use App\Models\Post;
 use Livewire\Component;
 
 class Likeit extends Component
@@ -33,6 +34,9 @@ class Likeit extends Component
             {
                 $vote->like ++;
                 $vote->save();
+                $post = Post::find($this->post_id);
+                $post->user->points +=1;
+                $post->user->save();
             }
     }
 
@@ -48,6 +52,9 @@ class Likeit extends Component
             if ($vote->like > -1) {
                 $vote->like--;
                 $vote->save();
+                $post = Post::find($this->post_id);
+                $post->user->points -=1;
+                $post->user->save();
             }
 
     }

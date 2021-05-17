@@ -26,7 +26,7 @@
         @if(\Illuminate\Support\Facades\Auth::user()->useable_type=="Teacher")
         <li id="menu-item-94" class="nav_menu_open menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children <?php if( isset($i) && ($i==16 || $i==17 || $i==20 || $i==19) ) echo "current_page_item" ?> menu-item-94"><a class=""  href="http://template.test/questions/"><i class="icon-book-open"></i>Private Questions</a>
             <ul class="sub-menu">
-                <li id="menu-item-95" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95"><a class=""  href="{{route('QuestionProfessors')}}">Recent Questions</a></li>
+                <li id="menu-item-95" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95" ><a class=""  href="{{route('QuestionProfessors')}}">Recent Questions</a></li>
                 <li id="menu-item-96" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-96"><a class=""  href="{{route('answered_p')}}">Answered Questions</a></li>
                 <li id="menu-item-97" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-97"><a class=""  href="{{route('Most_Voted_p')}}">Popular Questions</a></li>
                 <li id="menu-item-98" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-98"><a class=""  href="{{route('Not_answered_p')}}">Not answered Questions</a></li>
@@ -41,7 +41,8 @@
             </ul>
         </li>
         @endif
-        <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==26 ) echo "current_page_item" ?> menu-item-101"><a class=""  href="{{route('users')}}"><i class="icon-users"></i>Users</a></li>
+        <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==26 ) echo "current_page_item" ?> menu-item-101"><a class=""  href="{{route('users')}}"><i class="icon-users" nn></i>Users</a></li>
+        <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==28 ) echo "current_page_item" ?> menu-item-101"><a class=""  href="{{route('badgets')}}"><i class="icon-trophy"></i>Badges</a></li>
         <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==27 ) echo "current_page_item" ?> menu-item-103"><a class=""  href="{{route('help')}}"><i class="icon-info"></i>infos</a></li>
         <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a class=""  href="{{route('contact')}}"><i class="icon-lifebuoy"></i>Help</a></li>
 

@@ -104,6 +104,17 @@
                                                                                         <div class="user-inner">
                                                                                             <div class="user-data-columns">
                                                                                                 <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
+                                                                                                @if($post->user->badget->title = "begginer")
+                                                                                                <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>
+                                                                                                @elseif($post->user->badget->title = "teacher")
+                                                                                                <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
+                                                                                                @elseif($post->user->badget->title = "explainer")
+                                                                                                <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
+                                                                                                @elseif($post->user->badget->title = "professional")
+                                                                                                <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
+                                                                                                @elseif($post->user->badget->title = "enlightened")
+                                                                                                <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
+                                                                                                @endif
                                                                                             </div>
                                                                                         </div>
                                                                                     </div><!-- End user-content -->

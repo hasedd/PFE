@@ -78,6 +78,17 @@
                                                         <div class="user-content mb-5">
                                                             <div class="user-inner">
                                                                 <h4 style="color: #1C3334"><a href="http://template.test/profile/james/"><b>{{$user->username}}</b><div style="color: #6b003e; font-size:12px;  ">{{"\" ".$user->type." \""}}</div></a></h4>
+                                                                @if($user->badget->title = "begginer")
+                                                                    <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>
+                                                                @elseif($user->badget->title = "teacher")
+                                                                    <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
+                                                                @elseif($user->badget->title = "explainer")
+                                                                    <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
+                                                                @elseif($user->badget->title = "professional")
+                                                                    <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
+                                                                @elseif($user->badget->title = "enlightened")
+                                                                    <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
+                                                                @endif
                                                             </div>
                                                         </div><!-- End user-content -->
                                                         <?php

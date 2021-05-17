@@ -22,7 +22,7 @@
 /*   19 - Panel pop                */
 /*   20 - Forms                    */
 /*   21 - Profile setting          */
-/*   22 - Points & 
+/*   22 - Points &
           Badges sections          */
 /*   23 - Categories               */
 /*   24 - Tags                     */
@@ -3054,8 +3054,8 @@ a.wpqa-cover-buttons {
 	display: inline-block;
 }
 .badge-span {
-	font-size: 11px;
-	padding: 1px 4px 2px;
+	font-size: 13px;
+	padding: 2px 5px 3px;
 	line-height: 15px;
 	display: inline-block;
 	text-transform: capitalize;
@@ -5331,7 +5331,7 @@ ul.question-vote.answer-vote li.dislike_answers i {
 }
 .question-sticky-ribbon div:before,.question-sticky-ribbon div:after {
 	content: "";
-	border-top:   3px solid #6e8900;   
+	border-top:   3px solid #6e8900;
 	border-left:  3px solid transparent;
 	border-right: 3px solid transparent;
 	position:absolute;

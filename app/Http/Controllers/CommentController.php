@@ -132,11 +132,10 @@ class CommentController extends Controller
 
         $badegts = Badget::all();
         foreach ($badegts as $badget){
-            if($theBest->user->points > $badget->min_points && $theBest->user->points < $badget->max_points){
-                $theBest->user->badget = $badget->id;
-                dd($badget);
+            if($theBest->user->points >= $badget->min_points && $theBest->user->points < $badget->max_points){
+                $theBest->user->badget_id = $badget->id;
+                $theBest->user->save();
             }
-            else dd($theBest->user->points);
         }
         return redirect()->back();
     }
@@ -149,6 +148,13 @@ class CommentController extends Controller
         $user = User::find($theBest->user_id);
         $user->points -= 20;
         $user->save();
+        $badegts = Badget::all();
+        foreach ($badegts as $badget){
+            if($theBest->user->points >= $badget->min_points && $theBest->user->points < $badget->max_points){
+                $theBest->user->badget_id = $badget->id;
+                $theBest->user->save();
+            }
+        }
         return redirect()->back();
 
     }
