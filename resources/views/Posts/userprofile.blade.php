@@ -269,22 +269,22 @@
 								<div class="wrap-tabs">
 									<div class="menu-tabs">
 										<ul class="menu flex menu-tabs-desktop">
-                                            <li <?php if($i==0) echo "class='active-tab'"; ?>  >  <a href="{{route('userprofile',[\Illuminate\Support\Facades\Auth::user()->id])}}">
+                                            <li <?php if($i==0) echo "class='active-tab'"; ?>  >  <a href="{{route('userprofile',[$id])}}">
 													About	</a></li>
 											<li <?php if($i==34) echo "class='active-tab'"; ?> >
-												<a href="{{route('user_questions',[\Illuminate\Support\Facades\Auth::user()->id])}}">
+												<a href="{{route('user_questions',[$id])}}">
 													Questions					</a>
 											</li>
 											<li <?php if($i==35) echo "class='active-tab'"; ?> >
-												<a href="{{route('user_bAnswers',[\Illuminate\Support\Facades\Auth::user()->id])}}">
+												<a href="{{route('user_bAnswers',[$id])}}">
 													Best Answers					</a>
 											</li>
 											<li <?php if($i==36) echo "class='active-tab'"; ?> >
-												<a href="{{route('user_experiences',[\Illuminate\Support\Facades\Auth::user()->id])}}">
+												<a href="{{route('user_experiences',[$id])}}">
 													Experiences					</a>
 											</li>
 											<li <?php if($i==37) echo "class='active-tab'"; ?> >
-												<a href="{{route('user_services',[\Illuminate\Support\Facades\Auth::user()->id])}}">
+												<a href="{{route('user_services',[$id])}}">
 													Services					</a>
 											</li>
 										</ul>
@@ -295,7 +295,7 @@
                             <h2 class="screen-reader-text">Ask N Provide Latest Questions</h2>
                                 @if( $i == 34)
                             <div class="post-articles question-articles">
-                                @foreach($posts as $post)
+                                @forelse($posts as $post)
                                     <article id="post-118" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language">
                                         <div class="question-sticky-ribbon">
                                             <div>{{$post->state}}</div>
@@ -425,8 +425,11 @@
                                         </div><!-- End single-inner-content -->
                                     </article><!-- End article -->
 
-                                @endforeach
-                                {{$posts->links()}}
+                                    @empty
+                                        <center><p class="no-comments">No questions Yet</p></center>
+                                    @endforelse
+                                    {{$posts->links()}}
+                                
                             </div><!-- End post-articles -->
 
                                 @endif

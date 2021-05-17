@@ -496,3 +496,12 @@
         }());
     </script>
 </x-app-layout>
+@if($errors->any())
+
+    @foreach($errors->all() as $error)
+        <?php
+        echo '<script type="text/javascript" >  alert("'.$error.'") </script>';
+        ?>
+    @endforeach
+    <script type="text/javascript" >  alert("Please make sure to fill in all fields !") </script>
+@endif

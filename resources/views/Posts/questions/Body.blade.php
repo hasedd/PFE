@@ -302,6 +302,7 @@
         /* <![CDATA[ */
         var userSettings = {"url":"\/","uid":"1","time":"1619304739","secure":""};
         /* ]]> */
+
     </script>
     <script type='text/javascript' src="{{asset('Dassets/wp-includes/js/utils.min.js?ver=5.7')}}" id='utils-js'></script>
     <script type='text/javascript' src="{{asset('Dassets/wp-includes/js/backbone.min.js?ver=1.4.0')}}" id='backbone-js'></script>
@@ -533,3 +534,12 @@
         }());
     </script>
 </x-app-layout>
+@if($errors->any())
+
+    @foreach($errors->all() as $error)
+    <?php
+    echo '<script type="text/javascript" >  alert("'.$error.'") </script>';
+    ?>
+    @endforeach
+    <script type="text/javascript" >  alert("Please make sure to fill in all fields !") </script>
+@endif

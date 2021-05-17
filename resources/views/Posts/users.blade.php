@@ -69,7 +69,7 @@
                                                     <div class="post-inner">
 
                                                         <div class="author-image author-image-84">
-                                                            <a href="{{ route('userprofile',$user->id) }}">
+                                                            <a href="{{ route('userprofile',[$user->id]) }}">
                                                                 <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
                                                                     <span class="mx-10 author-image-span"><img class="h-16 w-16 rounded-full object-cover avatar avatar-84 photo" src="{{ $user->profile_photo_url }}" alt="{{ $user->username }}" /></span>
                                                                 </button>
@@ -89,6 +89,7 @@
                                                                 @elseif($user->badget->title = "enlightened")
                                                                     <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
                                                                 @endif
+
                                                             </div>
                                                         </div><!-- End user-content -->
                                                         <?php

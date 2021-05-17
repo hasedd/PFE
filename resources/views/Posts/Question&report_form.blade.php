@@ -102,7 +102,7 @@
                 </p><p class="wpqa_checkbox_p">
                     <label for="terms_active-451">
                         <span class="wpqa_checkbox"><input type="checkbox" id="terms_active-451" name="terms_active" value="on" ></span>
-                        <span class="wpqa_checkbox_span">By asking your question, you agree to the <a target="_blank" href="http://template.test/faqs/"> Terms of Service </a>  and <a target="_blank" href="http://template.test/faqs/"> Privacy Policy </a>.<span class="required">*</span></span>
+                        <span class="wpqa_checkbox_span">By asking your question, you agree to the <a target="_blank" href="#"> Terms of Service </a>  and <a target="_blank" href="#"> Privacy Policy </a>.<span class="required">*</span></span>
                     </label>
                 </p>
                 <br>

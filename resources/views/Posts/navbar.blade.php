@@ -2,7 +2,7 @@
     <h3 class="screen-reader-text">Explore</h3>
     <ul id="menu-explore" class="menu">
         <li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page_item page-item-64  menu-item-90"><a class=""  href="{{route('homepage')}}"><i class="icon-home"></i>Home</a></li>
-        <li id="menu-item-177" class="wpqa-menu wpqa-add-group-nav menu-item menu-item-type-custom menu-item-object-custom <?php if(isset($i) && $i==99) echo "current_page_item" ?>  menu-item-177 li-add-group"><a class=""  href="http://template.test/add-group/"><i class="icon-network"></i>Add group</a></li>
+
 
         <li id="menu-item-91" class="wpqa-menu wpqa-profile-nav menu-item menu-item-type-custom menu-item-object-custom <?php if(isset($i) && ($i==0 || $i==34 || $i==35 || $i==36 || $i==37 )) echo "current_page_item" ?>  menu-item-91 li-profile"><a class=""  href="{{route('userprofile',[\Illuminate\Support\Facades\Auth::user()->id])}}"><i class="icon-vcard"></i>User Profile</a></li>
 
@@ -41,8 +41,8 @@
             </ul>
         </li>
         @endif
-        <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==26 ) echo "current_page_item" ?> menu-item-101"><a class=""  href="{{route('users')}}"><i class="icon-users" nn></i>Users</a></li>
-        <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==28 ) echo "current_page_item" ?> menu-item-101"><a class=""  href="{{route('badgets')}}"><i class="icon-trophy"></i>Badges</a></li>
+        <li id="menu-item-101" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==26 ) echo "current_page_item" ?> menu-item-101"><a class=""  href="{{route('users')}}"><i class="icon-users"></i>Users</a></li>
+        <li id="menu-item-177" class="wpqa-menu wpqa-add-group-nav menu-item menu-item-type-custom menu-item-object-custom <?php if(isset($i) && $i==99) echo "current_page_item" ?>  menu-item-177 li-add-group"><a class=""  href="{{route('badgets')}}"><i class="icon-trophy"></i>Badges</a></li>
         <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page  <?php if(isset($i) && $i==27 ) echo "current_page_item" ?> menu-item-103"><a class=""  href="{{route('help')}}"><i class="icon-info"></i>infos</a></li>
         <li id="menu-item-103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-103"><a class=""  href="{{route('contact')}}"><i class="icon-lifebuoy"></i>Help</a></li>
 

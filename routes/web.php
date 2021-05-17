@@ -38,7 +38,7 @@ Route::get('/help', function () {
 })->name('help');
 
 Route::get('/badgets', function () {
-    return view('Posts.badgets',['categories'=>\App\Models\Category::all()]);
+    return view('Posts.badgets',['categories'=>\App\Models\Category::all(),'i'=>99]);
 })->name('badgets');
 
 Route::MATCH('POST','/register/next', function () {
