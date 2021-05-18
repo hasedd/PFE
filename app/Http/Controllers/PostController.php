@@ -460,7 +460,15 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {    $request->validate([
+        'title' => 'required',
+        'category'=>'required|not_in:-1',
+        'tags'=>'required',
+        'content'=>'required',
+        'terms_active'=>'required|in:on'
+
+
+    ]);
         $post=Post::find($id);
         if($post->type!='Question')
         $post->type=$request->input('type');
