@@ -4,13 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>root &#8211; Template</title>
-    <meta name='robots' content='max-image-preview:large' />
-    <link rel='dns-prefetch' href='//www.google.com' />
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-    <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel="alternate" type="application/rss+xml" title="Template &raquo; Feed" href="http://template.test/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="Template &raquo; Comments Feed" href="http://template.test/comments/feed/" />
+    <title>askNprovide &#8211;Platforme</title>
     <script type="text/javascript">
         window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/template.test\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7"}};
         !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -45,20 +39,10 @@
     <link rel='stylesheet' id='discy-responsive-css'  href="{{asset('Dassets/wp-content/themes/discy/css/responsive.css?ver=4.4.4')}}" type='text/css' media='all' />
     <link rel='stylesheet' id='discy-skin-default-css'  href="{{asset('Dassets/wp-content/themes/discy/css/skins/skins.css?ver=4.4.4')}}" type='text/css' media='all' />
     <link rel='stylesheet' id='discy-custom-css-css'  href="{{asset('Dassets/wp-content/themes/discy/css/custom.css?ver=4.4.4')}}" type='text/css' media='all' />
+    <link rel="shortcut icon" href="{{asset("Dassets/wp-content/uploads/2018/04/logo.png")}}" type="image/x-icon">
     <script type='text/javascript' src="{{asset('Dassets/wp-includes/js/jquery/jquery.min.js?ver=3.5.1')}}" id='jquery-core-js'></script>
     <script type='text/javascript' src="{{asset('Dassets/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2')}}" id='jquery-migrate-js'></script>
-    <link rel="https://api.w.org/" href="{{asset("Dassets/wp-json/")}}" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://template.test/xmlrpc.php?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{{asset("Dassets/wp-includes/wlwmanifest.xml")}}" />
-    <meta name="generator" content="WordPress 5.7" />
-    <link rel="shortcut icon" href="https://2code.info/demo/themes/Discy/Main/wp-content/themes/discy/images/favicon.png" type="image/x-icon">
-    <meta name="theme-color" content="#2d6ff7">
-    <meta name="msapplication-navbutton-color" content="#2d6ff7">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta property="og:site_name" content="Template">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="root">
-    <meta name="twitter:title" content="root">
-    <meta property="og:url" content="http://template.test/profile/root/">
+    <link rel="https://api.w.org/" href="{{asset("Dassets/wp-json/")}}" /><link rel="EditURI" type="application/rsd+xml" title="RSD" />
     <meta property="og:image" content="{{asset("Dassets/wp-content/uploads/2019/05/screenshot.png")}}">
     <meta name="twitter:image" content="{{asset("Dassets/wp-content/uploads/2019/05/screenshot.png")}}">
     <style type="text/css" media="print">#wpadminbar { display:none; }</style>
@@ -213,23 +197,27 @@
                             <div class='user-content'>
                                 <div class='user-inner'>
                                     <h4><a href="{{route('userprofile',['id'=>$user->id])}}">{{$user->username}}</a></h4></div>
-                                @if($user->badget->title = "begginer")
-                                    <span class="badge-span"  style="background-color: #0d0e11;">Begginer</span>
-                                @elseif($user->badget->title = "teacher")
-                                    <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
-                                @elseif($user->badget->title = "explainer")
+                                @if($user->badget_id == 1)
+                                    @if($user->type="Teacher")
+                                        <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
+                                    @else
+                                        <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>
+                                    @endif
+                                @elseif($user->badget->id == 3)
                                     <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
-                                @elseif($user->badget->title = "professional")
+                                @elseif($user->badget->id == 2)
                                     <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
-                                @elseif($user->badget->title = "enlightened")
+                                @elseif($user->badget->id == 4)
                                     <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
                                 @endif
                             </div>
                         </div>
                     </div>
                     <div class='wpqa-cover-right'><div class='question-list-details'>
+                            @if(Auth()->user()->id == $user->id)
                             <i class='icon-dot-3'></i>
                             <ul class='question-link-list'><li class='edit-profile-cover'><a href={{route('profile.show')}}><i class='icon-cog'></i>Edit profile</a></li></ul>
+                            @endif
                         </div>
                         <div class='wpqa-cover-buttons wpqa-cover-followers'><i class='icon-users'></i><span class='cover-count follow-cover-count'>{{count($followers)}}</span>Followers</div>
                         <div>
@@ -261,29 +249,32 @@
                                 <div class="breadcrumb-left"><span class="crumbs">
 							<span itemscope itemtype="https://schema.org/BreadcrumbList">
 								<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-			<meta itemprop="position" content="1"><a itemprop="item" href="http://template.test/" title="Home"><span itemprop="name"><i class="icon-home"></i>Home</span></a></span><span class="crumbs-span">/</span>root</span>
-						</span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">										<div class="question-navigation edit-profile"><a href={{route('profile.show')}}><i class="icon-pencil"></i>Edit profile</a></div>
+			<meta itemprop="position" content="1"><a itemprop="item" href="http://template.test/" title="Home"><span itemprop="name"><i class="icon-home"></i>Home</span></a></span><span class="crumbs-span">/</span>{{$user->username}}</span>
+						</span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">
+                                    @if(Auth()->user()->id == $user->id)
+                                    <div class="question-navigation edit-profile"><a href={{route('profile.show')}}><i class="icon-pencil"></i>Edit profile</a></div>
+                                    @endif
                                     <div class="clearfix"></div>
                                 </div><!-- End breadcrumb-right --></div><!-- End breadcrumbs-wrap --></div><!-- End breadcrumbs -->
 								<div class="clearfix"></div>
 								<div class="wrap-tabs">
 									<div class="menu-tabs">
 										<ul class="menu flex menu-tabs-desktop">
-                                            <li <?php if($i==0) echo "class='active-tab'"; ?>  >  <a href="{{route('userprofile',[$id])}}">
+                                            <li class="ml-16 <?php if($i==0) echo "active-tab"; ?> " >  <a href="{{route('userprofile',[$id])}}">
 													About	</a></li>
-											<li <?php if($i==34) echo "class='active-tab'"; ?> >
+											<li class="ml-6 <?php if($i==34) echo "active-tab"; ?>" >
 												<a href="{{route('user_questions',[$id])}}">
 													Questions					</a>
 											</li>
-											<li <?php if($i==35) echo "class='active-tab'"; ?> >
+											<li class="ml-6 <?php if($i==35) echo "active-tab"; ?>" >
 												<a href="{{route('user_bAnswers',[$id])}}">
 													Best Answers					</a>
 											</li>
-											<li <?php if($i==36) echo "class='active-tab'"; ?> >
+											<li class="ml-6 <?php if($i==36) echo "active-tab"; ?>" >
 												<a href="{{route('user_experiences',[$id])}}">
 													Experiences					</a>
 											</li>
-											<li <?php if($i==37) echo "class='active-tab'"; ?> >
+											<li class="ml-6 <?php if($i==37) echo "active-tab"; ?>" >
 												<a href="{{route('user_services',[$id])}}">
 													Services					</a>
 											</li>
@@ -313,39 +304,39 @@
                                                             <div class="post-section user-area user-area-columns_pop">
                                                                 <div class="post-inner">
                                                                     <div class="author-image author-image-70">
-                                                                        <a href="http://template.test/profile/root/"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
+                                                                        <a href="#"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
                                                                     </div>
                                                                     <div class="user-content">
                                                                         <div class="user-inner">
                                                                             <div class="user-data-columns">
-                                                                                <h4><a href="http://template.test/profile/root/">{{$post->user->username}}</a></h4>
+                                                                                <h4><a href="#">{{$post->user->username}}</a></h4>
                                                                             </div>
                                                                         </div>
                                                                     </div><!-- End user-content -->
                                                                     <div class="user-columns-data">
                                                                         <ul>
                                                                             <li class="user-columns-questions">
-                                                                                <a href="http://template.test/profile/root/questions/">
+                                                                                <a href="#">
                                                                                     <i class="icon-book-open"></i>{{ count($post->user->posts) }} Posts
                                                                                 </a>
                                                                             </li>
                                                                             <li class="user-columns-answers">
-                                                                                <a href="http://template.test/profile/root/answers/">
+                                                                                <a href="#">
                                                                                     <i class="icon-comment"></i>{{ count($post->user->comments) }} Answers
                                                                                 </a>
                                                                             </li>
                                                                             <li class="user-columns-best-answers">
-                                                                                <a href="http://template.test/profile/root/best-answers/">
+                                                                                <a href="#">
                                                                                     <i class="icon-graduation-cap"></i>{{ count($post->user->comments) }} Best Answers
                                                                                 </a>
                                                                             </li>
                                                                             <li class="user-columns-points">
-                                                                                <a href="http://template.test/profile/root/points/">
+                                                                                <a href="#">
                                                                                     <i class="icon-bucket"></i>{{$post->user->points}} Points
                                                                                 </a>
                                                                             </li>
                                                                         </ul>
-                                                                    </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="http://template.test/profile/root/">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
+                                                                    </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="#">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
                                                                 </div><!-- End post-inner -->
                                                             </div><!-- End post -->
                                                         </div>
@@ -361,14 +352,14 @@
                                                 <div class="question-content question-content-first">
                                                     <header class="article-header">
                                                         <div class="question-header">
-                                                            <a class="post-author" itemprop="url" href="http://template.test/profile/root/">{{$post->user->useable->firstName}}</a>
+                                                            <a class="post-author" itemprop="url" href="#">{{$post->user->useable->firstName}}</a>
                                                             <div class="post-meta">
                                                             <span class="post-date">Asked:
 																<span class="date-separator"></span>
-																<a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
+																<a href="#" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
 															</span>
                                                                 <span class="byline">
-																<span class="post-cat">In: <a href="http://template.test/question-category/language/" rel="tag">{{$post->category->name}}</a></span>
+																<span class="post-cat">In: <a href="#" rel="tag">{{$post->category->name}}</a></span>
 															</span>
                                                             </div>
                                                         </div>
@@ -429,7 +420,7 @@
                                         <center><p class="no-comments">No questions Yet</p></center>
                                     @endforelse
                                     {{$posts->links()}}
-                                
+
                             </div><!-- End post-articles -->
 
                                 @endif
@@ -536,6 +527,10 @@
                         <div class="user-area-content">
 								<div class="post-section user-area user-area-advanced user-advanced user-area-head">
 									<div class="post-inner"><div class="user-content">
+
+                                        @if($user->bio != null)
+                                            {{$user->bio}}
+                                        @endif
 										<div class="social-ul">
                                             <ul>
 												<li class="social-email"><a title="Email" class="tooltip-n" href="mailto:jokyhack55@gmail.com" target="_blank" rel="nofollow"><i class="icon-mail"></i></a></li>
@@ -547,7 +542,7 @@
 									<ul class="row">
 										<li class="col col3 user-questions">
 											<div>
-												<a href="http://template.test/profile/root/questions/"></a>
+												<a href="#"></a>
 												<i class="icon-book-open"></i>
 												<div>
 													<span>{{$nbr_questions}}</span>
@@ -557,7 +552,7 @@
 										</li>
 										<li class="col col3 user-answers">
 											<div>
-												<a href="http://template.test/profile/root/answers/"></a>
+												<a href="#"></a>
 												<i class="icon-comment"></i>
 												<div>
 													<span>{{$answers}}</span>
@@ -567,7 +562,7 @@
 										</li>
 										<li class="col col3 user-best-answers">
 											<div>
-												<a href="http://template.test/profile/root/best-answers/"></a>
+												<a href="#"></a>
 												<i class="icon-graduation-cap"></i>
 												<div>
 													<span>{{$nbr_banswers}}</span>
@@ -577,7 +572,7 @@
 										</li>
 										<li class="col col3 user-points">
 											<div>
-												<a href="http://template.test/profile/root/points/"></a>
+												<a href="#"></a>
 												<i class="icon-bucket"></i>
 												<div>
 													<span>{{$user->points}}</span>
