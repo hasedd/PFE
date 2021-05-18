@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Badget;
 use App\Models\Post;
 use Livewire\Component;
 use App\Models\Vote;
@@ -40,9 +41,18 @@ class Voteit extends Component
             {
                 $vote->vote ++;
                 $vote->save();
+                $post = Post::find($this->post_id);
+                $post->user->points +=1;
+                $post->user->save();
+                $badegts = Badget::all();
+                foreach ($badegts as $badget){
+                    if($post->user->points >= $badget->min_points && $post->user->points < $badget->max_points){
+                        $post->user->badget_id = $badget->id;
+                        $post->user->save();
+                    }
+                }
             }
         }
-        else return;
     }
 
     public function VoteDown()
@@ -60,8 +70,17 @@ class Voteit extends Component
             if ($vote->vote > -1) {
                 $vote->vote--;
                 $vote->save();
+                $post = Post::find($this->post_id);
+                $post->user->points -=1;
+                $post->user->save();
+                $badegts = Badget::all();
+                foreach ($badegts as $badget){
+                    if($post->user->points >= $badget->min_points && $post->user->points < $badget->max_points){
+                        $post->user->badget_id = $badget->id;
+                        $post->user->save();
+                    }
+                }
             }
         }
-        else return;
     }
 }

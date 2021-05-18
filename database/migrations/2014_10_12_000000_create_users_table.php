@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('points')->default(0);
+            $table->integer('points')->default(20);
             $table->unsignedBigInteger('badget_id')->nullable();
             $table->foreign('badget_id')->references('id')->on('badgets');
             $table->rememberToken();

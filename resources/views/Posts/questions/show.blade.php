@@ -17,17 +17,27 @@
 								<span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 
                                     <meta itemprop="position" content="2"><a itemprop="item" href="{{route('QuestionBody')}}" title="Questions"><span itemprop="name">Questions</span></a></span><span class="crumbs-span">/</span><span class="current">Q {{$post->id}}</span></span>
-						            </span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">									<div class="question-navigation">
-                                        <a class="nav-next" href="../why-are-the-british-confused-about-us-calling-bread-rolls-biscuits-when-they-call-bread-rolls-puddings/index.html">Next<i class="icon-right-open"></i></a>
-                                        <a class="nav-previous" href="../is-there-an-english-equivalent-to-the-french-expression-il-faut-dabord-apprendre-a-marcher-avant-de-courir/index.html"><i class="icon-left-open"></i></a>
-                                    </div><!-- End page-navigation -->
+						            </span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">
+
+                                    @if($post->state == "Open")
                                     <div class="question-stats">
                                         <span class="question-stats-process"><i class="icon-flash"></i>In Process</span>
                                     </div><!-- End question-stats -->
-                                    <div class="clearfix"></div>
-                                </div><!-- End breadcrumb-right --></div><!-- End breadcrumbs-wrap --></div><!-- End breadcrumbs -->						<div class="clearfix"></div>		<div class="post-articles question-articles">
+                                    @else
+                                        <div class="question-stats">
+                                             <span class="question-stats-answered question-answered-done"><i class="icon-check"></i>Answered</span>
+                                        </div>
+                                    @endif
+                                        <div class="clearfix"></div>
+                                </div><!-- End breadcrumb-right -->
+                            </div><!-- End breadcrumbs-wrap -->
+                        </div><!-- End breadcrumbs -->
+                        <div class="clearfix"></div>
+                        <div class="post-articles question-articles">
                             <article id="post-118" class="article-question article-post clearfix question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-                                <div class="question-sticky-ribbon"><div>{{$post->state}}</div></div>
+                                @if($n)
+                                    <div class="question-sticky-ribbon"><div>new</div></div>
+                                @endif
                                 <div class="single-inner-content">
                                     <div class="question-inner">
                                         <div class="question-image-vote">
@@ -43,7 +53,7 @@
                                                             <div class="author-image author-image-70">
                                                                 <a href="{{route('userprofile',[$post->user->id])}}">
                                                                     <span>
-                                                                        <img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}">
+                                                                        <img  alt='root' title='root'  class="ml-4" src="{{ $post->user->profile_photo_url }}">
                                                                     </span>
                                                                 </a>
                                                             </div>
@@ -51,6 +61,19 @@
                                                                 <div class="user-inner">
                                                                     <div class="user-data-columns">
                                                                         <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
+                                                                        @if($post->user->badget_id == 1)
+                                                                            @if($post->user->useable_type=="Teacher")
+                                                                                <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
+                                                                            @else
+                                                                                <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>
+                                                                            @endif
+                                                                        @elseif($post->user->badget->id == 3)
+                                                                            <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
+                                                                        @elseif($post->user->badget->id == 2)
+                                                                            <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
+                                                                        @elseif($post->user->badget->id == 4)
+                                                                            <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
+                                                                        @endif
                                                                     </div>
                                                                 </div>
                                                             </div><!-- End user-content -->

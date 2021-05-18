@@ -82,9 +82,9 @@
                                             <div class="post-articles question-articles">
                                                 @forelse($posts as $post)
                                                     <article id="post-118" class="article-question article-post clearfix question-answer-before question-with-comments answer-question-not-jquery question-vote-image discoura-not-credential question-type-normal post-118 question type-question status-publish hentry question-category-language question_tags-english question_tags-language">
-                                                        <div class="question-sticky-ribbon">
-                                                            <div>{{$post->state}}</div>
-                                                        </div>
+                                                        @if($post->created_at->diffinminutes(\Carbon\Carbon::now())<30)
+                                                            <div class="question-sticky-ribbon"><div>new</div></div>
+                                                        @endif
                                                         <div class="single-inner-content">
                                                             <div class="question-inner">
                                                                 <div class="question-image-vote">
@@ -98,12 +98,25 @@
                                                                             <div class="post-section user-area user-area-columns_pop">
                                                                                     <div class="post-inner">
                                                                                         <div class="author-image author-image-70">
-                                                                                             <a href="{{route('userprofile',[$post->user->id])}}"><span><img  alt='root' title='root'  src="{{ $post->user->profile_photo_url }}"></span></a>
+                                                                                             <a href="{{route('userprofile',[$post->user->id])}}"><span><img  alt='root' title='root' class="ml-4"  src="{{ $post->user->profile_photo_url }}"></span></a>
                                                                                         </div>
                                                                                     <div class="user-content">
                                                                                         <div class="user-inner">
                                                                                             <div class="user-data-columns">
                                                                                                 <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
+                                                                                                @if($post->user->badget_id == 1)
+                                                                                                    @if($post->user->useable_type=="Teacher")
+                                                                                                        <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
+                                                                                                    @else
+                                                                                                        <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>
+                                                                                                    @endif
+                                                                                                @elseif($post->user->badget->id == 3)
+                                                                                                    <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
+                                                                                                @elseif($post->user->badget->id == 2)
+                                                                                                    <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
+                                                                                                @elseif($post->user->badget->id == 4)
+                                                                                                    <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
+                                                                                                @endif
                                                                                             </div>
                                                                                         </div>
                                                                                     </div><!-- End user-content -->
@@ -141,6 +154,7 @@
                                                                             </div><!-- End post -->
                                                                         </div>
                                                                     </div>
+
                                                                     <ul class="question-vote question-mobile">
                                                                         <li class="question-vote-up"><a href="#" data-type="question" data-vote-type="up" class="wpqa_vote question_vote_up vote_not_allow" title="Like"><i class="icon-up-dir"></i></a></li>
                                                                         <li class="vote_result" itemprop="upvoteCount">
@@ -154,15 +168,20 @@
                                                                         <div class="question-header">
                                                                             <a class="post-author" itemprop="url" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->useable->firstName}}</a>
                                                                             <div class="post-meta">
-                                                            <span class="post-date">Asked:
-																<span class="date-separator"></span>
-																<a href="http://template.test/question/is-this-statement-i-see-him-last-night-can-be-understood-as-i-saw-him-last-night/" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
-															</span>
-                                                                 <span class="byline">
-																<span class="post-cat">In: <a href="{{route('questions_categories',[$post->category->id])}}" rel="tag">{{$post->category->name}}</a></span>
-															</span>
+                                                                                <span class="post-date">Asked:
+                                                                                    <span class="date-separator"></span>
+                                                                                    <a href="#" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a>
+                                                                                </span>
+                                                                                     <span class="byline">
+                                                                                    <span class="post-cat">In: <a href="{{route('questions_categories',[$post->category->id])}}" rel="tag">{{$post->category->name}}</a></span>
+                                                                                </span>
+                                                                                @if($post->state=="Close")
+                                                                                     <div class="best-answer">Answered</div>
+                                                                                @endif
                                                                             </div>
+
                                                                         </div>
+
                                                                     </header>
                                                                     <div>
                                                                         <h2 class="post-title"><a class="post-title" href="{{route('addview',['post_id'=>$post->id])}}" rel="bookmark">{{$post->title}}</a></h2>
@@ -207,7 +226,16 @@
                                                                     <div class="wpqa_success"></div>
                                                                     <footer class="question-footer">
                                                                         <ul class="footer-meta">
-                                                                            <li class="best-answer-meta"><a href="{{route('addview',['post_id'=>$post->id])}}"><i class="icon-comment"></i><span class='number discy_hide'></span> <span class='question-span'>{{count($post->comments)}} Answers</span></a></li>
+                                                                            @if($post->state=="Close")
+                                                                                <li class="best-answer-meta meta-best-answer">
+                                                                            @else
+                                                                                <li class="best-answer-meta">
+                                                                            @endif
+                                                                                <a href="{{route('addview',['post_id'=>$post->id])}}"><i class="icon-comment"></i>
+                                                                                    <span class='number discy_hide'></span>
+                                                                                    <span class='question-span'>{{count($post->comments)}} Answers</span>
+                                                                                </a>
+                                                                            </li>
                                                                             <li class="view-stats-meta"><i class="icon-eye"></i>{{$post->views}} <span class='question-span'>Views</span></li>
                                                                         </ul>
                                                                         <a class="meta-answer meta-answer-a" href="{{route('addview',['post_id'=>$post->id])}}">Answer</a>

@@ -77,7 +77,20 @@
                                                         </div>
                                                         <div class="user-content mb-5">
                                                             <div class="user-inner">
-                                                                <h4 style="color: #1C3334"><a href="{{ route('userprofile',[$user->id]) }}"><b>{{$user->username}}</b><div style="color: #6b003e; font-size:12px;  ">{{"\" ".$user->type." \""}}</div></a></h4>
+                                                                <h4 style="color: #1C3334"><a href="http://template.test/profile/james/"><b>{{$user->username}}</b><div style="color: #6b003e; font-size:12px;  ">{{"\" ".$user->type." \""}}</div></a></h4>
+                                                                @if($user->badget_id == 1)
+                                                                    @if($user->type="Teacher")
+                                                                        <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
+                                                                    @else
+                                                                    <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>
+                                                                    @endif
+                                                                @elseif($user->badget->id == 3)
+                                                                    <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
+                                                                @elseif($user->badget->id == 2)
+                                                                    <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
+                                                                @elseif($user->badget->id == 4)
+                                                                    <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
+                                                                @endif
                                                             </div>
                                                         </div><!-- End user-content -->
                                                         <?php
