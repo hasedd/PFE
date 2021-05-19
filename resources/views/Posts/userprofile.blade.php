@@ -607,13 +607,13 @@
                                                 </div>
 											</div>
 										</li>
-										<li class="col col6 user-following">
-											<div>
+										<li>
+											<div style="background-color: #f6f6f6">
 												<h4><i class="icon-users"></i>Following</h4>
 												<div>
                                                     @forelse($following as $following)
                                                         <?php $user =  App\Models\User::where('id',$following->followed)->first()?>
-                                                        <a href="{{ route('userprofile',$user->id) }}"><img class="" alt="" title="" src="{{$user->profile_photo_url}}" width="29" height="29"></a>
+                                                        <a href="{{ route('userprofile',$user->id) }}"><img class="mb-3" alt="" title="" src="{{$user->profile_photo_url}}" width="32" height="32"></a>
                                                     @empty
 														<span>User doesn&#039;t follow anyone.</span>
                                                     @endforelse
