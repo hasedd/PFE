@@ -60,7 +60,7 @@
                                                             <div class="user-content">
                                                                 <div class="user-inner">
                                                                     <div class="user-data-columns">
-                                                                        <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
+                                                                        <h4><a style="color: #6b003e;" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
                                                                         @if($post->user->badget_id == 1)
                                                                             @if($post->user->useable_type=="Teacher")
                                                                                 <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
@@ -112,14 +112,15 @@
                                         <div class="question-content question-content-first">
                                             <header class="article-header">
                                                 <div class="question-header">
-                                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="{{ route('userprofile',$post->user->id) }}"><span itemprop="name">{{$post->user->useable->firstName}}</span></a></span>
+                                                    <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="{{ route('userprofile',$post->user->id) }}"><span style="color: #6b003e;">{{$post->user->useable->firstName}}</span></a></span>
                                                     <div class="post-meta">
                                                         <span class="post-date">Asked:<span class="date-separator"></span> <a href="index.html" itemprop="url"><time class="entry-date published">{{date($post->created_at)}}</time></a><span class="discy_hide" itemprop="dateCreated" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span>
                                                         <span class="discy_hide" itemprop="datePublished" datetime="2018-04-19T02:00:31+00:00">2018-04-19T02:00:31+00:00</span></span><span class="byline"><span class="post-cat">In: <a href="{{route('questions_categories',[$post->category->id])}}" rel="tag">{{$post->category->name}}</a></span></span>
                                                     </div>
                                                 </div>
                                             </header>
-                                            <div itemprop="name">
+
+                                            <div itemprop="name" class="mt-3">
                                                 <h1 class="post-title">{{$post->title}}</h1>							</div>
                                         </div><!-- End question-content-first -->
                                         <div class="question-not-mobile question-image-vote question-vote-sticky">
@@ -192,10 +193,6 @@
                                                 echo $edit.$delete ;
                                             }
 
-
-
-
-
                                             ?></ul> 							<div class="clearfix"></div>
                                     </div><!-- End question-bottom -->
                                 </div><!-- End single-inner-content -->
@@ -236,7 +233,20 @@
                                                                                     <div class="user-content">
                                                                                         <div class="user-inner">
                                                                                             <div class="user-data-columns">
-                                                                                                <h4><a href="{{route('userprofile',[$comment->user->id])}}">{{$comment->user->username}}</a></h4>
+                                                                                                <h4><a style="color: #6b003e;" href="{{route('userprofile',[$comment->user->id])}}">{{$comment->user->username}}</a></h4>
+                                                                                                @if($comment->user->badget_id == 1)
+                                                                                                    @if($comment->user->type=="Teacher")
+                                                                                                        <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
+                                                                                                    @else
+                                                                                                        <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>
+                                                                                                    @endif
+                                                                                                @elseif($comment->user->badget->id == 3)
+                                                                                                    <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
+                                                                                                @elseif($comment->user->badget->id == 2)
+                                                                                                    <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
+                                                                                                @elseif($comment->user->badget->id == 4)
+                                                                                                    <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
+                                                                                                @endif
                                                                                             </div>
                                                                                         </div>
                                                                                     </div><!-- End user-content -->
@@ -273,7 +283,7 @@
                                                                         <div class="comment-meta">
                                                                             <div class="comment-author">
                                                                                 <span itemprop="author" itemscope itemtype="http://schema.org/Person">	                    			<a itemprop="url" href="{{ route('userprofile',$comment->user->id) }}">
-                                                                                    <span itemprop="name">{{$comment->user->username}}</span>	                        		</a>
+                                                                                    <span style="color: #6b003e;">{{$comment->user->username}}</span>	                        		</a>
                                                                                 </span>
                                                                             </div>
                                                                             <a href="index.html#comment-64" class="comment-date" itemprop='url'>
@@ -282,8 +292,8 @@
                                                                         </div><!-- End comment-meta -->
                                                                     </div><!-- End author -->
                                                                     <div class="text">
-                                                                        <div itemprop='text' style="color : #0a0c0d ; font-size: 18px; font-family: Candara">
-                                                                            {!! $comment->Content !!}
+                                                                        <div itemprop='text' style="color :black">
+                                                                           <p>{{$comment->Content}}</p>
                                                                         </div>
                                                                                @if($comment->files != null)
                                                                                @foreach($comment->files as $file)
@@ -358,7 +368,7 @@
                                                                         </h3>
                                                                         <form action="{{route('Add_Reply',[$comment->id])}}" method="post" id="commentform" class="post-section comment-form answers-form">
                                                                             @csrf
-                                                                            <p class="comment-login">Logged in as<a class="comment-login-login" href="{{ route('userprofile',\Illuminate\Support\Facades\Auth::user()->id) }}"><i class="icon-user"></i>{{Auth()->user()->username }}</a>
+                                                                            <p class="comment-login">Logged in as<a class="comment-login-login" href="{{ route('userprofile',\Illuminate\Support\Facades\Auth::user()->id) }}"><i style="color: #6b003e;"></i>{{Auth()->user()->username }}</a>
                                                                             </p>
                                                                             <div class="wpqa_error"></div>
                                                                             <div class="form-input form-textarea form-comment-normal">
@@ -385,7 +395,7 @@
                                                                                     <div class="comment-meta">
                                                                                         <header class="article-header">
                                                                                             <div class="question-header">
-                                                                                                <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="{{ route('userprofile',$reply->user->id) }}"><span itemprop="name">{{$reply->user->username}}</span></a></span>
+                                                                                                <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="post-author" itemprop="url" href="{{ route('userprofile',$reply->user->id) }}"><span style="color: #6b003e;">{{$reply->user->username}}</span></a></span>
                                                                                                 <div class="post-meta">
                                                                                                     <span class="discy_hide" itemprop="dateCreated" datetime="2021-05-06T02:50:48+00:00">2021-05-06T02:50:48+00:00</span>Replied to answer on {{$reply->created_at}}
                                                                                                 </div>
@@ -395,7 +405,7 @@
                                                                                 </div><!-- End author -->
                                                                                 <div class="text">
                                                                                     <div itemprop="text">
-                                                                                        {{"@".$reply->comment->user->username." ".$reply->Content}}
+                                                                                        <span style="color: #0A48B3">{{"@".$reply->comment->user->username}}</span><span style="color: black">{{'  '.$reply->Content}}</span>
                                                                                     </div>
                                                                                     <div class="wpqa_error"></div>
                                                                                     <ul class="comment-reply comment-reply-main">

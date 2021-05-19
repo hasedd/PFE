@@ -2,12 +2,7 @@
 <html lang="en-US" class="no-js no-svg">
 <head>
     <meta charset="UTF-8">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>FAQs &#8211; AskNProvide</title>
-    <meta name='robots' content='max-image-preview:large' />
-    <link rel='dns-prefetch' href='//www.google.com' />
-    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-    <link rel='dns-prefetch' href='//s.w.org' />
+    <title>askNprovide &#8211;Platforme</title>
     <style type="text/css">
         img.wp-smiley,
         img.emoji {
@@ -43,11 +38,12 @@
     <link rel="https://api.w.org/" href="{{asset("Dassets/wp-json/")}}" /><link rel="alternate" type="application/json" href="{{asset("Dassets/wp-json/wp/v2/pages/34")}}" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://template.test/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{{asset("Dassets/wp-includes/wlwmanifest.xml")}}" />
     <meta name="generator" content="WordPress 5.7" />
+    <link rel="shortcut icon" href="{{asset("Dassets/wp-content/uploads/2018/04/logo.png")}}" type="image/x-icon">
     <link rel="canonical" href="http://template.test/faqs/" />
     <link rel='shortlink' href='http://template.test/?p=34' />
     <link rel="alternate" type="application/json+oembed" href="{{asset("Dassets/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftemplate.test%2Ffaqs%2F")}}" />
     <link rel="alternate" type="text/xml+oembed" href="{{asset("Dassets/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftemplate.test%2Ffaqs%2F&#038;format=xml")}}" />
-    <link rel="shortcut icon" href="https://2code.info/demo/themes/Discy/Main/wp-content/themes/discy/images/favicon.png" type="image/x-icon">
+
     <meta name="theme-color" content="#2d6ff7">
     <meta name="msapplication-navbutton-color" content="#2d6ff7">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -231,7 +227,7 @@
 
                                     <div class="post-wrap-content">
                                         <div class="post-content-text">
-                                            <p>Find out everything you need to get started by taking the tour. If you still have questions, come back and check out the pinned articles, if you still need help contact us: <a href="mailto:email@domain.com" rel="nofollow">email@domain.com</a></p>
+                                            <p>Find out everything you need to get started by taking the tour. If you still have questions, come back and check out the pinned articles, if you still need help contact us: <a href="mailto:Admin@Asknp.com" rel="nofollow">Admin@Asknp.com</a></p>
                                         </div>
                                         <div class='accordion toggle-accordion'><div class='accordion-content'>
                                                 <h4 class='accordion-title'><a href='#'><i class='icon-plus'></i> What topics can I ask about here?</a></h4>

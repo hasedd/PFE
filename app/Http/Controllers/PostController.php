@@ -579,7 +579,7 @@ class PostController extends Controller
 
     public function users()
     {
-        $users = User::where('id','!=', Auth()->user()->id)->orderBy('name','desc')->simplePaginate(7);
+        $users = User::where('id','!=', Auth()->user()->id)->orderBy('name','desc')->simplePaginate(9);
         $badegts = Badget::all();
         foreach ($users as $user) {
             foreach ($badegts as $badget) {

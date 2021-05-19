@@ -152,8 +152,6 @@
                                                     <div style="text-align: center;">
                                                         <a class="post-author"  rel="author" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a>
                                                     </div>
-
-
                                                 </header>
 
                                                 <div class="post-wrap-content post-content ">

@@ -56,7 +56,7 @@
 
                                 $posts = \App\Models\Post::where('type','Question')->orderBy('votes','desc')->take(3)->get();
                                 foreach( $posts as $post  ) {
-                                    $html = $post->content ;
+                                    $html = $post->title ;
                                     preg_match('<(.*)>', $html, $match);
                                     $allez=$match[0];
                                     if(strlen($allez) < 50 )

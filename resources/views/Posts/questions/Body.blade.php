@@ -88,7 +88,7 @@
                                                                                     <div class="user-content">
                                                                                         <div class="user-inner">
                                                                                             <div class="user-data-columns">
-                                                                                                <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
+                                                                                                <h4><a style="color: #6b003e;" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
                                                                                                 @if($post->user->badget_id == 1)
                                                                                                     @if($post->user->useable_type=="Teacher")
                                                                                                         <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
@@ -151,7 +151,7 @@
                                                                 <div class="question-content question-content-first">
                                                                     <header class="article-header">
                                                                         <div class="question-header">
-                                                                            <a class="post-author" itemprop="url" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->useable->firstName}}</a>
+                                                                            <a class="post-author" style="color: #6b003e;" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->useable->firstName}}</a>
                                                                             <div class="post-meta">
                                                                                 <span class="post-date">Asked:
                                                                                     <span class="date-separator"></span>
@@ -169,7 +169,7 @@
 
                                                                     </header>
                                                                     <div>
-                                                                        <h2 class="post-title"><a class="post-title" href="{{route('addview',['post_id'=>$post->id])}}" rel="bookmark">{{$post->title}}</a></h2>
+                                                                        <h2 class="post-title"><a class="post-title mt-3" href="{{route('addview',['post_id'=>$post->id])}}" rel="bookmark">{{$post->title}}</a></h2>
                                                                     </div>
                                                                 </div>
                                                                 <div class="question-not-mobile question-image-vote question-vote-sticky">
@@ -185,9 +185,9 @@
                                                                                 preg_match('<(.*)>', $html, $match);
                                                                                 $allez=$match[0];
                                                                                 if(strlen($allez)<213)
-                                                                                    echo "<p class=\"excerpt-question\"> $allez </p>";
+                                                                                    echo "<p class=\"excerpt-question\">  $allez  </p>";
                                                                                 else { $allez2=substr($allez,0,213)."...";
-                                                                                    echo "<p class=\"excerpt-question\"> $allez2</p>";}
+                                                                                    echo "<p class=\"excerpt-question\"> $allez2 </p>";}
                                                                                 ?>
                                                                                     @if($post->files != null && $post->files->count()==1 )
                                                                                         <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
@@ -197,7 +197,7 @@
                                                                                     @endif
                                                                             </div><!-- End all_not_signle_post_content -->
                                                                         </div>
-                                                                        <div class="tagcloud">
+                                                                        <div class="tagcloud mt-5">
                                                                             <div class="question-tags"><i class="icon-tags"></i>
                                                                                 <?php
                                                                                 $tags =explode ( "," , $post->tags );

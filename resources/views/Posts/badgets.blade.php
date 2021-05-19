@@ -114,18 +114,7 @@
                                                                 <i class="icon-bucket"></i>
                                                                 <span>10</span>Points													</div>
                                                         </div>
-                                                        <p>You must have a total score of 50 in at least 10 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 10.</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="badge-section">
-                                                        <div class="badge-div">
-                                                            <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
-                                                            <div class="point-div">
-                                                                <i class="icon-bucket"></i>
-                                                                <span>50</span>Points													</div>
-                                                        </div>
-                                                        <p>You must have a total score of 100 in at least 50 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 50.</p>
+                                                        <p>You must have a total score of 1000 in at least 10 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 10.</p>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -134,9 +123,9 @@
                                                             <span class="badge-span" style="background-color: #ffbf00;">Pundit</span>
                                                             <div class="point-div">
                                                                 <i class="icon-bucket"></i>
-                                                                <span>100</span>Points													</div>
+                                                                <span>1000</span>Points													</div>
                                                         </div>
-                                                        <p>You must have a total score of 150 in at least 100 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 100.</p>
+                                                        <p>You must have a total score of 1001 in at least 3000 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 100.</p>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -145,9 +134,9 @@
                                                             <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
                                                             <div class="point-div">
                                                                 <i class="icon-bucket"></i>
-                                                                <span>150</span>Points													</div>
+                                                                <span>3000</span>Points													</div>
                                                         </div>
-                                                        <p>You must have a total score of 200 in at least 150 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 150.</p>
+                                                        <p>You must have a total score of 3001 in at least 6000 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 150.</p>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -156,9 +145,9 @@
                                                             <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
                                                             <div class="point-div">
                                                                 <i class="icon-bucket"></i>
-                                                                <span>1200</span>Points													</div>
+                                                                <span>6000</span>Points													</div>
                                                         </div>
-                                                        <p>You must have a total score of 1250 in at least 1200 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 1200.</p>
+                                                        <p>You must have a total score of 6000 in at least 10000 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 6000.</p>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -167,9 +156,9 @@
                                                             <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
                                                             <div class="point-div">
                                                                 <i class="icon-bucket"></i>
-                                                                <span>250</span>Points													</div>
+                                                                <span>10000</span>Points													</div>
                                                         </div>
-                                                        <p>You must have a total score of 250 in at least 250 non-community wiki answers to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 250.</p>
+                                                        <p>You must have a total score of 10000 to achieve this badge. Highest scoring answer that outscored an accepted answer with score of more than 10000.</p>
                                                     </div>
                                                 </li>
                                             </ul>
