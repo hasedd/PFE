@@ -86,11 +86,15 @@
                     </div>
                     <div class="clearfix"></div>
                 </div><div class="wpqa_textarea">
-                    <label for="question-details-add-451">Details<span class="required">*</span></label><div class="the-details the-textarea"><div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
-
-                            <div id="wp-question-details-add-451-editor-container" class="wp-editor-container"><div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="content" id="question-details-add-451"></textarea></div>
+                    <label for="question-details-add-451">Details<span class="required">*</span></label>
+                    <div class="the-details the-textarea">
+                        <div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active">
+                            <link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
+                            <div id="wp-question-details-add-451-editor-container" class="wp-editor-container">
+                                <div id="qt_question-details-add-451_toolbar" class="quicktags-toolbar"></div>
+                                <textarea class="wp-editor-area" rows="10" autocomplete="off" cols="40" name="content" id="question-details-add-451"></textarea>
+                            </div>
                         </div>
-
                     </div>
                     <span class="form-description">Type the description thoroughly and in details.</span>
                 </div>

@@ -92,6 +92,16 @@
                             {{ __('Questions') }}
                         </x-jet-nav-link>
                     </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('experiences') }}" :active="request()->routeIs('experiences')">
+                            {{ __('Experiences ') }}
+                        </x-jet-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('services') }}" :active="request()->routeIs('services')">
+                            {{ __('Services ') }}
+                        </x-jet-nav-link>
+                    </div>
                 @endauth
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
@@ -150,7 +160,7 @@
                                     {{ __('Manage Account') }}
                                 </div>
 
-                                <x-jet-dropdown-link href="{{ route('userprofile',['id'=>$user->id]) }}">
+                                <x-jet-dropdown-link href="{{ route('userprofile',['id'=>Auth()->user()->id]) }}">
                                     {{ __('Profile') }}
                                 </x-jet-dropdown-link>
 
@@ -198,7 +208,7 @@
                                 <div class='user-inner'>
                                     <h4><a href="{{route('userprofile',['id'=>$user->id])}}">{{$user->username}}</a></h4></div>
                                 @if($user->badget_id == 1)
-                                    @if($user->type="Teacher")
+                                    @if($user->type=="Teacher")
                                         <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
                                     @else
                                         <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>

@@ -425,8 +425,10 @@
                                         </div><!-- End post-inner -->
                                     </div><!-- End post -->
 
-                                    <div id="respond-all">	<div id="respond" class="comment-respond">
-                                            <div class="button-default show-answer-form">Leave  an answer</div><h3 class="section-title comment-form-hide">Leave an answer<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></div></h3><form action="{{route('comments_form',[$post->id])}}" method="post" id="commentform" class="post-section comment-form comment-form-hide answers-form" enctype="multipart/form-data" novalidate><div class="wpqa_form">
+                                    <div id="respond-all">
+                                        <div id="respond" class="comment-respond">
+                                            <div class="button-default show-answer-form">Leave  an answer</div>
+                                            <h3 class="section-title comment-form-hide">Leave an answer<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">Cancel reply</a></div></h3><form action="{{route('comments_form',[$post->id])}}" method="post" id="commentform" class="post-section comment-form comment-form-hide answers-form" enctype="multipart/form-data" novalidate><div class="wpqa_form">
                                                     @csrf
                                                     <label for="featured_image">Featured file</label>
                                                     <div class="fileinputs">
@@ -438,11 +440,11 @@
                                                         <i class="icon-camera"></i>
                                                     </div>
                                                 </div>
-                                                <div class="clearfix"></div><div class="wpqa_error"></div><div class="form-input form-textarea form-comment-editor"><div id="wp-comment-wrap" class="wp-core-ui wp-editor-wrap html-active"><link rel='stylesheet' id='dashicons-css'  href="{{asset('Dassets/wp-includes/css/dashicons.mine23c.css?ver=5.7')}}" type='text/css' media='all' />
-                                                        <link rel='stylesheet' id='editor-buttons-css'  href="{{asset('Dassets/wp-includes/css/editor.mine23c.css?ver=5.7')}}" type='text/css' media='all' />
-                                                        <div id="wp-comment-editor-container" class="wp-editor-container"><div id="qt_comment_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" cols="40" name="comment" id="comment"></textarea></div>
-                                                    </div>
+                                                <div class="clearfix"></div>
+                                                <div class="wpqa_error"></div>
 
+                                                <div class="form-input form-textarea form-comment-editor">
+                                                    <textarea class="wp-editor-area" rows="10" cols="40" name="comment" id="comment"></textarea>
                                                 </div>
 
 

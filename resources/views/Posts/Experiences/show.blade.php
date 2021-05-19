@@ -44,8 +44,75 @@
 
                                             <center><div itemprop="name">
                                                <h1 class="post-title">{{$post->title}}</h1>							</div></center>
+
+                                            <div class="author-image " style="margin-left: 290px" >
+                                                <a href="{{ route('userprofile',$post->user->id) }}">
+                                                    <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                                        <img class="h-10 w-10 rounded-full object-cover" src="{{ $post->user->profile_photo_url }}" alt="{{ $post->user->username }}" />
+                                                    </button>
+                                                </a>
+                                                <div class="author-image-pop-2">
+                                                    <div class="post-section user-area user-area-columns_pop">
+                                                        <div class="post-inner">
+                                                            <div class="author-image author-image-70">
+                                                                <a href="{{route('userprofile',[$post->user->id])}}"><span><img  alt='root' title='root' class="ml-4"  src="{{ $post->user->profile_photo_url }}"></span></a>
+                                                            </div>
+                                                            <div class="user-content">
+                                                                <div class="user-inner">
+                                                                    <div class="user-data-columns">
+                                                                        <h4><a href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a></h4>
+                                                                        @if($post->user->badget_id == 1)
+                                                                            @if($post->user->useable_type=="Teacher")
+                                                                                <span class="badge-span" style="background-color: #de2b2b;">Teacher</span>
+                                                                            @else
+                                                                                <span class="badge-span" style="background-color: #0d0e11;">Begginer</span>
+                                                                            @endif
+                                                                        @elseif($post->user->badget->id == 3)
+                                                                            <span class="badge-span" style="background-color: #30a96f;">Explainer</span>
+                                                                        @elseif($post->user->badget->id == 2)
+                                                                            <span class="badge-span" style="background-color: #6b3de4;">Professional</span>
+                                                                        @elseif($post->user->badget->id == 4)
+                                                                            <span class="badge-span" style="background-color: #d9a34a;">Enlightened</span>
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- End user-content -->
+                                                            <div class="user-columns-data">
+                                                                <ul>
+                                                                    <li class="user-columns-questions">
+                                                                        <a href="{{route('user_questions',[$post->user->id])}}">
+                                                                            <i class="icon-book-open"></i>{{ count($post->user->posts) }} Questions
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="user-columns-best-answers">
+                                                                        <a href="{{route('user_bAnswers',[$post->user->id])}}">
+                                                                            <i class="icon-graduation-cap"></i>{{ count($post->user->comments->where('isBestAnswer',true)) }} Best Answers
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="user-columns-points">
+                                                                        <a href="{{route('userprofile',[$post->user->id])}}">
+                                                                            <i class="icon-bucket"></i>{{$post->user->points}} Points
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="user-columns-points">
+                                                                        <?php
+                                                                        if(App\Models\Follow::where('follows',Auth()->user()->id)->where('followed',$post->user->id)->count())
+                                                                            $follow = "UnFollow";
+                                                                        else $follow = "Follow"
+                                                                        ?>
+                                                                        @if( Auth()->user()->id != $post->user->id )
+                                                                            <div class="text-center mt-5"><a href="{{route('follow',['id'=>$post->user->id])}}" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center h-7">{{$follow}}</a></div>
+                                                                        @endif
+                                                                    </li>
+                                                                </ul>
+                                                            </div><!-- End user-columns-data --><div class="user-follow-profile"><a href="{{route('userprofile',[$post->user->id])}}">View Profile</a></div><!-- End user-follow-profile --><div class="clearfix"></div>
+                                                        </div><!-- End post-inner -->
+                                                    </div><!-- End post -->
+                                                </div>
+                                            </div>
                                             <div style="text-align: center;">
-                                                <a class="post-author"  rel="author" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->name}}</a>
+                                                <a class="post-author"  rel="author" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a>
                                             </div>
 
                                             @if($post->files != null)
@@ -59,15 +126,12 @@
                                                 @endforeach
                                             @endif
 
-
-
-
                                         </header>
                                        <br>
-                                        <div class="post-wrap-content post-content ">
+                                        <div class="post-wrap-content post-content">
                                             <div class="post-content-text">
 
-                                                <div class="all_not_signle_post_content">
+                                                <div class="all_not_signle_post_content" style="color: black">
                                                     <center>{!! $post->content !!}</center>
                                                 </div>
 

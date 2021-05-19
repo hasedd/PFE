@@ -57,21 +57,6 @@
                                                             </li>
                                                            @endif
                                                         </ul>
-                                                        <div class="discy_hide mobile-tabs"><span class="styled-select"><select class="home_categories">					<option selected='selected' value="http://template.test/?show=recent-questions">
-				Recent Questions					</option>
-									<option value="http://template.test/?show=most-answered">
-				Most Answered					</option>
-									<option value="http://template.test/?show=question-bump">
-				Bump Question					</option>
-									<option value="http://template.test/?show=answers">
-				Answers					</option>
-									<option value="http://template.test/?show=most-visited">
-				Most Visited					</option>
-									<option value="http://template.test/?show=most-voted">
-				Most Voted					</option>
-									<option value="http://template.test/?show=no-answers">
-				No Answers					</option>
-				</select></span></div>
                                                     </div><!-- End menu-tabs -->
                                                 </div><!-- End wrap-tabs -->
                                             </div><!-- End col9 -->
