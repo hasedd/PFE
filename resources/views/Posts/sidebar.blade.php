@@ -108,6 +108,49 @@
                 </script>
             </div>
         </div>
+        <section id="users-widget-4" class="widget users-widget"><h2 class="widget-title"><i class="icon-folder mb-4"></i>Top Members</h2>
+            <?php
+                $users= App\Models\User::orderBy('points','desc')->limit(4)->get()
+            ?>
+            @foreach($users as $user)
+            <div class="widget-wrap mb-3">
+                <div class="user-section user-section-small row user-not-normal">
+                    <div class="col col12">
+                        <div class="post-section user-area user-area-small">
+                            <div class="post-inner">
+                                <div class="author-image author-image-42">
+                                    <a href="http://template.test/profile/marko/">
+                                        <span class="author-image-span">
+                                            <img class="" alt="{{$user->username}}" title="{{$user->username}}" src="{{ $user->profile_photo_url }}" width="42" height="42">
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="user-content">
+                                    <div class="user-inner"><h4><a href="http://template.test/profile/marko/">{{$user->username}}</a></h4>
+                                        <div class="user-data">
+                                            <ul>
+                                                <li class="user-questions">
+                                                    <a href="">
+                                                        {{ count($user->posts) }} Posts
+                                                    </a>
+                                                </li>
+                                                <li class="user-points">
+                                                    <a href="http://template.test/profile/marko/points/">
+                                                        {{ $user->points }} Points
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div><!-- End user-data -->
+                                    </div>
+                                </div><!-- End user-content -->
+                                <div class="clearfix"></div>
+                            </div><!-- End post-inner -->
+                        </div><!-- End post -->
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </section>
         <section id="tag_cloud-4" class="widget widget_tag_cloud"><h2 class="widget-title"><i class="icon-folder"></i>Trending Tags</h2><div class="tagcloud">
             <?php
 
@@ -146,5 +189,7 @@
                 <a href="http://template.test/question-tag/programs/" class="tag-cloud-link tag-link-28 tag-link-position-19" style="font-size: 16.4pt;" aria-label="programs (2 items)">programs</a>
                 <a href="http://template.test/question-tag/salary/" class="tag-cloud-link tag-link-29 tag-link-position-20" style="font-size: 8pt;" aria-label="salary (1 item)">salary</a>
                 <a href="http://template.test/question-tag/university/" class="tag-cloud-link tag-link-31 tag-link-position-21" style="font-size: 8pt;" aria-label="university (1 item)">university</a> -->
-            </div> </section>								</div>
+            </div> </section>
+
+    </div>
 </aside><!-- End sidebar -->
