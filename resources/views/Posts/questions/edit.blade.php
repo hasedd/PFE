@@ -168,7 +168,7 @@
                                      </ul>
 
 
-                                @else
+                                @endif
 
                                     <div class="question-multiple-upload question-upload-featured">
                                         <label for="featured_image-451">Add files</label>
@@ -183,7 +183,7 @@
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
-                                @endif
+
                                 <div class="wpqa_textarea">
                                     <label for="question-details-add-451">Details<span class="required">*</span></label><div class="the-details the-textarea"><div id="wp-question-details-add-451-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel='stylesheet' id='editor-buttons-css'  href='Dassets/wp-includes/css/editor.min.css?ver=5.7' type='text/css' media='all' />
 

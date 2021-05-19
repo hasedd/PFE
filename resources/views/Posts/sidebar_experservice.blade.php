@@ -20,7 +20,7 @@
                     <li class="stats-answers">
                         <div>
                             <span class="stats-text">Services</span>
-                            <span class="stats-value"><?php $nbr=\App\Models\Post::where('type','Services')->count(); echo $nbr;?></span>
+                            <span class="stats-value"><?php $nbr=\App\Models\Post::where('type','Service')->count(); echo $nbr;?></span>
                         </div>
                     </li>
                     <li class="stats-best_answers">

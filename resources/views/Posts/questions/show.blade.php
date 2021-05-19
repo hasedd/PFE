@@ -3,7 +3,7 @@
         <div class="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
         </div>
     </header>
-    @include('Posts.Question&report_form')
+@include('Posts.Question&report_form')
 <!--                     --------------- header---------------                            -->
 
     <div class="main-content">
@@ -20,15 +20,15 @@
 						            </span></div><!-- End breadcrumb-left --><div class="breadcrumb-right">
 
                                     @if($post->state == "Open")
-                                    <div class="question-stats">
-                                        <span class="question-stats-process"><i class="icon-flash"></i>In Process</span>
-                                    </div><!-- End question-stats -->
+                                        <div class="question-stats">
+                                            <span class="question-stats-process"><i class="icon-flash"></i>In Process</span>
+                                        </div><!-- End question-stats -->
                                     @else
                                         <div class="question-stats">
-                                             <span class="question-stats-answered question-answered-done"><i class="icon-check"></i>Answered</span>
+                                            <span class="question-stats-answered question-answered-done"><i class="icon-check"></i>Answered</span>
                                         </div>
                                     @endif
-                                        <div class="clearfix"></div>
+                                    <div class="clearfix"></div>
                                 </div><!-- End breadcrumb-right -->
                             </div><!-- End breadcrumbs-wrap -->
                         </div><!-- End breadcrumbs -->
@@ -136,9 +136,9 @@
                                                         <div class="text-center mt-5 ml-7">
                                                             @if($post->files != null)
                                                                 @foreach($post->files as $file)
-                                                                <div class='featured_image_question'>
+                                                                    <div class='featured_image_question'>
                                                                         <embed alt="{{$file->name}} " width='500' height='500' src="{{asset('files/'. $post->id . $file->name)}}">
-                                                                </div>
+                                                                    </div>
                                                                 @endforeach
                                                             @endif
                                                         </div>
@@ -187,15 +187,9 @@
                                                 $editroute=route('edit_post',[$post->id]);
                                                 $edit="<li><a href=$editroute ><i class='icon-pencil'></i>Edit</a></li>";
                                                 $deleteroute=route('delete_post',[$post->id]);
-
                                                 $delete="<li><a class='question-delete' href=$deleteroute data-method='delete'/><i class='icon-trash'></i>Delete</a></li>";
                                                 echo $edit.$delete ;
                                             }
-
-
-
-
-
                                             ?></ul> 							<div class="clearfix"></div>
                                     </div><!-- End question-bottom -->
                                 </div><!-- End single-inner-content -->
@@ -285,15 +279,15 @@
                                                                         <div itemprop='text' style="color : #0a0c0d ; font-size: 18px; font-family: Candara">
                                                                             {!! $comment->Content !!}
                                                                         </div>
-                                                                               @if($comment->files != null)
-                                                                               @foreach($comment->files as $file)
+                                                                        @if($comment->files != null)
+                                                                            @foreach($comment->files as $file)
                                                                                 <div class='featured_image_question'>
 
                                                                                     <embed alt="{{$file->name}} " width='400' height='400' src="{{asset('files/'. $comment->id . $file->name)}}">
 
                                                                                 </div>
                                                                             @endforeach
-                                                                                @endif
+                                                                        @endif
                                                                         <div class="clearfix"></div>
                                                                         <div class="clearfix"></div>
                                                                         <div class="wpqa_error"></div>
@@ -314,7 +308,6 @@
                                                                             if($comment->user->id==Auth()->user()->id )
                                                                             {
                                                                                 $deleteroute=route('delete_comment',[$comment->id]);
-
                                                                                 $delete="<li><a class='question-delete' href=$deleteroute /><i class='icon-trash'></i>Delete</a></li>";
                                                                                 echo $delete ;
                                                                             }
@@ -403,7 +396,6 @@
                                                                                         if($reply->user->id==Auth()->user()->id )
                                                                                         {
                                                                                             $deleteroute=route('delete_reply',[$reply->id]);
-
                                                                                             $delete="<li><a class='question-delete' href=$deleteroute /><i class='icon-trash'></i>Delete</a></li>";
                                                                                             echo $delete ;
                                                                                         }
@@ -443,9 +435,10 @@
                                                 <div class="clearfix"></div>
                                                 <div class="wpqa_error"></div>
 
-                                                <div class="form-input form-textarea form-comment-editor">
-                                                    <textarea class="wp-editor-area" rows="10" cols="40" name="comment" id="comment"></textarea>
-                                                </div>
+                                                <div class="form-input form-textarea form-comment-normal">
+                                                    <textarea name="comment" aria-required="true" placeholder="Answer"></textarea>
+                                                    <i class="icon-pencil"></i>	</div>
+
 
 
 
@@ -699,31 +692,25 @@
         var ajaxurl = "/wp-admin/admin-ajax.php";
         ( function() {
             var init, id, $wrap;
-
             if ( typeof tinymce !== 'undefined' ) {
                 if ( tinymce.Env.ie && tinymce.Env.ie < 11 ) {
                     tinymce.$( '.wp-editor-wrap ' ).removeClass( 'tmce-active' ).addClass( 'html-active' );
                     return;
                 }
-
                 for ( id in tinyMCEPreInit.mceInit ) {
                     init = tinyMCEPreInit.mceInit[id];
                     $wrap = tinymce.$( '#wp-' + id + '-wrap' );
-
                     if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
                         tinymce.init( init );
-
                         if ( ! window.wpActiveEditor ) {
                             window.wpActiveEditor = id;
                         }
                     }
                 }
             }
-
             if ( typeof quicktags !== 'undefined' ) {
                 for ( id in tinyMCEPreInit.qtInit ) {
                     quicktags( tinyMCEPreInit.qtInit[id] );
-
                     if ( ! window.wpActiveEditor ) {
                         window.wpActiveEditor = id;
                     }
@@ -792,9 +779,7 @@
     <script type="text/javascript">
         (function() {
             var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
-
             request = true;
-
             b[c] = b[c].replace( rcs, ' ' );
             // The customizer requires postMessage and CORS (if the site is cross domain).
             b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
