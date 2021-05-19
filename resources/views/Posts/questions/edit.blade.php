@@ -140,9 +140,9 @@
                                 <div class="wpqa_category">
                                     <label for="question-category-451">Category<span class="required">*</span></label>
                                     <span class="styled-select">
-                    <select  name='category' id='question-category-451' value="{{$post->category->name}}" class='postform' >
+                    <select  name='category' id='question-category-451' value="" class='postform' >
 
-	                   @foreach($categories as $category ) <option value={{$category->name}}>{{$category->name}}</option>  @endforeach
+	                   @foreach($categories as $category ) <option value={{$category->name}}  <?php echo ($post->category->name==$category->name)?'selected':'' ?> > {{$category->name}}</option>  @endforeach
 
                     </select>
                     </span><i class="icon-folder"></i>

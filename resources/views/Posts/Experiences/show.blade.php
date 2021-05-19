@@ -332,7 +332,7 @@
                                                                             @foreach($comment->files as $file)
                                                                                 <div class='featured_image_question'>
 
-                                                                                    <embed alt="{{$file->name}} " width='300' height='300' src="{{asset('files/'. $comment->id . $file->name)}}">
+                                                                                    <embed alt="{{$file->name}} " width='400' height='400' src="{{asset('files/'. $comment->id . $file->name)}}">
 
                                                                                 </div>
                                                                             @endforeach
