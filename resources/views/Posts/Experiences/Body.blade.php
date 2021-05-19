@@ -153,10 +153,21 @@
                                                         <a class="post-author"  rel="author" href="{{route('userprofile',[$post->user->id])}}">{{$post->user->username}}</a>
                                                     </div>
                                                 </header>
+                                                @if($post->files != null)
+
+                                                    @foreach($post->files as $file)
+                                                        <figure class="featured-image post-img">
+                                                            <a href="http://template.test/2018/04/18/highlighting-whats-important-about-questions-answers-on-discy/" title="Highlighting what’s important about questions &amp; Answers on Discy Community!" rel="bookmark">
+                                                                <img alt="Highlighting what’s important about questions &amp; Answers on Discy Community!" src=
+                                                                "{{asset('files/'. $post->id . $file->name)}}"  width="768" height="510">
+                                                            </a>
+                                                        </figure>
+                                                        @break
+                                                    @endforeach
+                                                @endif
 
                                                 <div class="post-wrap-content post-content ">
                                                     <div class="post-content-text">
-
                                                         <div class="all_not_signle_post_content">
 
                                                             <?php
@@ -168,10 +179,10 @@
                                                             else { $allez2=substr($allez,0,213)."...";
                                                                 echo "<p class=\"excerpt-question\"> $allez2</p>";}
                                                             ?>
-                                                                @if($post->files != null && $post->files->count()==1 )
+                                                                @if($post->files != null && $post->files->count()==2 )
                                                                     <h5 style="text-decoration: blink;"> This question is supported by a file. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check it</b></u></a> </h5>
                                                                 @endif
-                                                                @if ($post->files != null && $post->files->count()>1)
+                                                                @if ($post->files != null && $post->files->count()>2)
                                                                     <h5 style="text-decoration: blink;"> This question is supported by a files. <a class='question-delete' href="{{route('addview',['post_id'=>$post->id])}}" style="color: #0072fd; "><u><b>Check them</b></u></a> </h5>
                                                                 @endif
                                                         </div>

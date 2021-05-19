@@ -758,4 +758,12 @@ class PostController extends Controller
         ]);
 
     }
+    public function report($id){
+        $post=Post::find($id);
+        $post->signals+=1;
+        $post->save();
+        return redirect()->back();
+
+
+    }
 }

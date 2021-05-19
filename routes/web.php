@@ -177,6 +177,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function (){
     )->name('questions_categories');
     Route::get('/experiences_category/{id}', [PostController::class,'experiences_categories']
     )->name('experiences_categories');
+    Route::post('/post/report/{id}',[PostController::class,'report']
+    )->name('report');
 
 });
 

@@ -153,7 +153,7 @@
                                             <div style="text-align: center">
                                                 <?php
                                                 if(\Illuminate\Support\Facades\Auth::user()->id != $post->user->id )
-                                                    echo  "<a class='report_q' href='index.html'><i class='icon-attention'></i>Report</a>" ;
+                                                    echo  "<a class='report_q post-read-more' href='index.html'><i class='icon-attention'></i> Report </a>" ;
                                                 else {
                                                     $editroute=route('edit_post',[$post->id]);
                                                     $deleteroute=route('delete_post',[$post->id]);
@@ -483,8 +483,9 @@
                                                 </div>
                                                 <div class="clearfix"></div><div class="wpqa_error"></div><div class="form-input form-textarea form-comment-editor"><div id="wp-comment-wrap" class="wp-core-ui wp-editor-wrap html-active"><link rel='stylesheet' id='dashicons-css'  href="{{asset('Dassets/wp-includes/css/dashicons.mine23c.css?ver=5.7')}}" type='text/css' media='all' />
                                                         <link rel='stylesheet' id='editor-buttons-css'  href="{{asset('Dassets/wp-includes/css/editor.mine23c.css?ver=5.7')}}" type='text/css' media='all' />
-                                                        <div id="wp-comment-editor-container" class="wp-editor-container"><div id="qt_comment_toolbar" class="quicktags-toolbar"></div><textarea class="wp-editor-area" rows="10" cols="40" name="comment" id="comment"></textarea></div>
-                                                    </div>
+                                                        <div class="form-input form-textarea form-comment-normal">
+                                                            <textarea name="comment" aria-required="true" placeholder="Comment"></textarea>
+                                                            <i class="icon-pencil"></i>	</div>
 
                                                 </div>
 

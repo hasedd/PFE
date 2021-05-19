@@ -140,7 +140,7 @@
     <i class="icon-cancel"></i>
     <div class="panel-pop-content">
         <p>Please briefly explain why you feel this post should be reported.</p>
-        <form class="wpqa_form submit-report" method="post">
+        <form class="wpqa_form submit-report" method="get" >
             <div class="wpqa_error"></div>
             <div class="wpqa_success"></div>
             <div class="form-inputs clearfix">
