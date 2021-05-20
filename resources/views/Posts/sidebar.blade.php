@@ -119,7 +119,7 @@
                         <div class="post-section user-area user-area-small">
                             <div class="post-inner">
                                 <div class="author-image author-image-42">
-                                    <a href="http://template.test/profile/marko/">
+                                    <a href="{{ route('userprofile',$user->id) }}">
                                         <span class="author-image-span">
                                             <img class="" alt="{{$user->username}}" title="{{$user->username}}" src="{{ $user->profile_photo_url }}" width="42" height="42">
                                         </span>
